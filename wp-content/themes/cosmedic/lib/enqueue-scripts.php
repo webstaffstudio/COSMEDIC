@@ -10,11 +10,13 @@
 
 if ( ! function_exists( 'cosmedic_scripts' ) ) :
 	/**
-	 * cosmedic_scripts
-	 *
-	 * @return void
+	 * Theme scripts
 	 */
 	function cosmedic_scripts() {
+		// avoid bugs with watcher and foundation mediaquery.js
+		if ( getenv( 'APP_ENV' ) === 'development' ) {
+			wp_enqueue_style( 'foundation', 'https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css', false, '6.5.3', 'all' );
+		}
 		// Enqueue the main Stylesheet.
 		wp_enqueue_style( 'main-stylesheet', asset_path( 'styles/main.css' ), false, '1.0.0', 'all' );
 
@@ -22,10 +24,10 @@ if ( ! function_exists( 'cosmedic_scripts' ) ) :
 		wp_deregister_script( 'jquery' );
 
 		// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-		wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-2.2.4.min.js', [], '2.2.4', false );
+		wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-2.2.4.min.js', array(), '2.2.4', false );
 
 		// Enqueue the main JS file.
-		wp_enqueue_script( 'main-javascript', asset_path( 'scripts/main.js' ), [ 'jquery' ], '1.0.0', true );
+		wp_enqueue_script( 'main-javascript', asset_path( 'scripts/main.js' ), array( 'jquery' ), '1.0.0', true );
 
 		// Throw variables from back to front end.
 		$theme_vars = array(
