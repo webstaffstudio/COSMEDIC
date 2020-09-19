@@ -18,7 +18,7 @@ define('LOGGED_IN_SALT',   '&*IzDywt&nmj:YuEeURMoo+_zts))xB2~SEzyr{AHouJT2b Sgll
 define('NONCE_SALT',       '3e*TTuwo!Nc;1mF2ULM)V Stf/DUY0Q#x,0&M+i[6w!bIF?CQn!V&SSwGH=rfPJ?');
 
 
-$table_prefix  = 'fxgpk_';
+$table_prefix  = 'wss_';
 define('WP_DEBUG', true);
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
 $_SERVER['HTTPS'] = 'on';
