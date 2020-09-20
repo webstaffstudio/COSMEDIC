@@ -28,6 +28,7 @@ $theme_includes = [
 	'/lib/acf_field_groups_type.php',          // ACF Field Groups Organizer
 	'/lib/wp_dashboard_customizer.php',        // WP Dashboard customizer
 	'/lib/woo-customizations/woo-brands.php',        // brands
+	'/lib/woo-customizations/woo-product.php',        // product customization
 ];
 
 foreach ( $theme_includes as $file ) {
