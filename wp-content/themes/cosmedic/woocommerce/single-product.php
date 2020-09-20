@@ -14,7 +14,6 @@
  * @package     WooCommerce\Templates
  * @version     1.6.4
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
@@ -29,6 +28,7 @@ get_header( 'shop' ); ?>
  * @hooked woocommerce_breadcrumb - 20
  */
 do_action( 'woocommerce_before_main_content' );
+
 ?>
 
 <?php while ( have_posts() ) : ?>

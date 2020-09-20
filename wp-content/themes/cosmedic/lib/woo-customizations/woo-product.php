@@ -23,6 +23,7 @@ function cosmedic_remove_description_tab( $tabs ) {
 
 }
 
+
 //wc subtitle meta
 //add_action( 'woocommerce_product_options_general_product_data', 'cosmedic_product_country_meta' );
 //
