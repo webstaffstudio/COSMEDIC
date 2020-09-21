@@ -27,6 +27,8 @@ $theme_includes = [
 	'/lib/jetpack.php',                        // Jetpack compatibility file
 	'/lib/acf_field_groups_type.php',          // ACF Field Groups Organizer
 	'/lib/wp_dashboard_customizer.php',        // WP Dashboard customizer
+	'/lib/woo-customizations/woo-brands.php',        // brands
+	'/lib/woo-customizations/woo-product.php',        // product customization
 ];
 
 foreach ( $theme_includes as $file ) {
@@ -76,3 +78,17 @@ add_filter( 'login_errors', 'wp_login_obscure' );
 
 // Disable the theme / plugin text editor in Admin
 define( 'DISALLOW_FILE_EDIT', true );
+
+if (function_exists('acf_add_options_page')) {
+
+	acf_add_options_page();
+
+}
+if (function_exists('acf_set_options_page_title')) {
+	acf_set_options_page_title(__('Theme Options'));
+}
+
+
+
+//custom image sizes
+add_image_size( 'cat_tile', 323, 323, false );
