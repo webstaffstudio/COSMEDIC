@@ -1,0 +1,63 @@
+.page-template-default {
+  .site-content {
+    margin-top: 60px;
+    padding: 26px 0;
+  }
+}
+
+.error404 {
+  .site-content {
+    margin-top: 60px;
+    background-color: #fff;
+    padding: 26px 40px;
+
+    .noroute {
+      text-align: center;
+      padding: 40px 0;
+
+      h1 {
+        margin: 0 0 0.7em;
+        color: #363636;
+        font-size: 28px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.2;
+        text-rendering: optimizeLegibility;
+        text-transform: none;
+      }
+
+      p {
+        font-size: 16px;
+        max-width: 600px;
+        width: 100%;
+        margin: 20px auto;
+      }
+
+      .home-link {
+        background: #89937a;
+        display: inline-block;
+        color: #fff;
+        font-size: 11px;
+        font-weight: normal;
+        letter-spacing: 1.5px;
+        line-height: 38px;
+        border-radius: 3px;
+        border: 1px solid transparent;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: middle;
+        white-space: nowrap;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+        height: 40px;
+        padding: 0 15px;
+
+        &:hover {
+          background: none;
+          color: #000;
+          border-color: #000;
+        }
+      }
+    }
+  }
+}

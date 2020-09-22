@@ -1,0 +1,14 @@
+//global styles
+
+*:focus {
+  outline: none;
+}
+
+a {
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
