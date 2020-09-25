@@ -23,29 +23,18 @@ function cosmedoc_remove_description_tab( $tabs ) {
 
 }
 
+/**
+ * Remove the breadcrumbs
+ */
+add_action( 'woocommerce_before_main_content', 'woo_remove_wc_breadcrumbs' );
+function woo_remove_wc_breadcrumbs() {
+	if (is_product()) {
+		remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+	}
+}
+//custom size image single product gallery
+add_filter( 'woocommerce_gallery_thumbnail_size', 'custom_woocommerce_gallery_thumbnail_size' );
 
-//wc subtitle meta
-//add_action( 'woocommerce_product_options_general_product_data', 'cosmedoc_product_country_meta' );
-//
-//function cosmedoc_product_country_meta() {
-//
-//	woocommerce_wp_text_input(
-//		array(
-//			'id'          => '_product_country',
-//			'label'       => __( 'Страна производитель и ', 'woocommerce' ),
-//			'placeholder' => 'Введите страну....',
-//			'description' => __( 'Страна производитель.', 'woocommerce' )
-//		)
-//	);
-//
-//}
-//
-//add_action( 'woocommerce_process_product_meta', 'cosmedoc_product_country_meta_save' );
-//
-//function cosmedoc_product_country_meta_save( $post_id ){
-//
-//	$product_country = $_POST['_product_country'];
-//	if( !empty( $product_country ) )
-//		update_post_meta( $post_id, '_product_country', esc_attr( $product_country ) );
-//
-//}
+function custom_woocommerce_gallery_thumbnail_size() {
+	return 'large';
+}

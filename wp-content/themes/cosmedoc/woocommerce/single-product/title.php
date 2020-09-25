@@ -20,13 +20,20 @@ if (!defined('ABSPATH')) {
 }
 $id = get_the_ID();
 $term_brand = wp_get_post_terms($id, 'cos_brands');
+$product_subtitle = get_field('product_subtitle');
 ?>
 <?php if ($term_brand && !empty($term_brand)): ?>
 	<div class="brands">
 		<?php foreach ($term_brand as $brand): ?>
-			<a class="brand" href="<?= get_term_link($brand->term_id, 'cos_brands');?>"><span># <?= $brand->name;?></span></a>
+			<a class="brand"
+			   href="<?= get_term_link($brand->term_id, 'cos_brands'); ?>"><span># <?= $brand->name; ?></span></a>
 		<?php endforeach; ?>
 	</div>
 <?php endif; ?>
+	<div class="entry-titles">
+		<?php
+		the_title('<h1 class="product_title entry-title">', '</h1>');
+		?>
+		<?= ($product_subtitle) ? '<h2 class="product-subtitle">' . $product_subtitle . '</h2>' : ''; ?>
+	</div>
 <?php
-the_title('<h1 class="product_title entry-title">', '</h1>');

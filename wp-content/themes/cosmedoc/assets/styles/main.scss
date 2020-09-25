@@ -9,6 +9,9 @@
 @import "layouts/footer";
 @import "layouts/pages";
 
+//woocommerce styles
+@import "layouts/woocommerce/single-product";
+
 /**
  * Import npm dependencies
  *
@@ -16,3 +19,4 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+@import "~slick-carousel/slick/slick.css";
