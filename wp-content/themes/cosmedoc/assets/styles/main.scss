@@ -8,6 +8,7 @@
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/pages";
+@import "layouts/fron-page";
 
 //woocommerce styles
 @import "layouts/woocommerce/single-product";
@@ -19,4 +20,5 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
-@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";

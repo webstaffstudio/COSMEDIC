@@ -11,7 +11,11 @@ body {
   outline: none;
 }
 
-a {
+a[href="#"] {
+  pointer-events: none;
+}
+
+a:not(.hero-slider__content) {
   transition: opacity 0.3s ease-in-out;
 
   &:hover {

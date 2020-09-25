@@ -38,7 +38,6 @@ $global-prototype-breakpoints: false;
 $global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
-
 $print-hrefs: true;
 // 2. Breakpoints
 $breakpoints: (
@@ -250,7 +249,6 @@ $closebutton-size: (
 $closebutton-lineheight: 1;
 $closebutton-color: $dark-gray;
 $closebutton-color-hover: $black;
-
 // 18. Dropdown Menu
 $dropdownmenu-arrows: true;
 $dropdownmenu-arrow-color: $anchor-color;
@@ -265,7 +263,6 @@ $dropdownmenu-submenu-padding: $dropdownmenu-padding;
 $dropdownmenu-border: 0;
 $dropdown-menu-item-color-active: $white;
 $dropdown-menu-item-background-active: transparent;
-
 // 20. Forms
 $fieldset-border: 1px solid $medium-gray;
 $fieldset-padding: rem-calc(20);

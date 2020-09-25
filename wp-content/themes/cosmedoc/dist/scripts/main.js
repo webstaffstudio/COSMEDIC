@@ -12801,11 +12801,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 jQuery(window).load(function () {
-  console.log(__WEBPACK_IMPORTED_MODULE_1_slick_carousel___default.a);
   $("#preloader").fadeOut(1000);
   $(".woocommerce-product-gallery__wrapper").slick({
     dots: true,
     arrows: false
+  });
+  $(".hero-slider").slick({
+    dots: true,
+    arrows: false,
+    fade: true,
+    cssEase: "linear"
   });
 });
 jQuery(document).ready(function () {});

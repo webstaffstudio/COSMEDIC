@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-09-09 00:38:28+0000\n"
+"PO-Revision-Date: 2020-09-24 07:32:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -869,7 +869,7 @@ msgstr "Запустить этот инструмент?"
 
 #: includes/admin/meta-boxes/views/html-order-items.php:254
 msgid "Net Payment"
-msgstr "Платеж нетто"
+msgstr "Чистая выплата"
 
 #. translators: 1: payment date. 2: payment method
 #: includes/admin/meta-boxes/views/html-order-items.php:228
@@ -11910,6 +11910,10 @@ msgstr "Вранча"
 msgid "Vaslui"
 msgstr "Васлуй"
 
+#: i18n/states.php:1242
+msgid "Vâlcea"
+msgstr "Вылча"
+
 #: i18n/states.php:1241
 msgid "Tulcea"
 msgstr "Тулча"
@@ -11934,6 +11938,10 @@ msgstr "Сибиу"
 msgid "Satu Mare"
 msgstr "Сату-Маре"
 
+#: i18n/states.php:1235
+msgid "Sălaj"
+msgstr "Сэлаж"
+
 #: i18n/states.php:1234
 msgid "Prahova"
 msgstr "Прахова"
@@ -11942,9 +11950,29 @@ msgstr "Прахова"
 msgid "Olt"
 msgstr "Олт"
 
+#: i18n/states.php:1232
+msgid "Neamț"
+msgstr "Нямц"
+
+#: i18n/states.php:1231
+msgid "Mureș"
+msgstr "Муреш"
+
+#: i18n/states.php:1230
+msgid "Mehedinți"
+msgstr "Мехединци"
+
+#: i18n/states.php:1229
+msgid "Maramureș"
+msgstr "Марамуреш"
+
 #: i18n/states.php:1228
 msgid "Ilfov"
 msgstr "Илфов"
+
+#: i18n/states.php:1226
+msgid "Ialomița"
+msgstr "Яломица"
 
 #: i18n/states.php:1225
 msgid "Hunedoara"
@@ -11962,6 +11990,10 @@ msgstr "Горж"
 msgid "Giurgiu"
 msgstr "Джурджу"
 
+#: i18n/states.php:1221
+msgid "Galați"
+msgstr "Галац"
+
 #: i18n/states.php:1220
 msgid "Dolj"
 msgstr "Долж"
@@ -11970,17 +12002,53 @@ msgstr "Долж"
 msgid "Covasna"
 msgstr "Ковасна"
 
+#: i18n/states.php:1217
+msgid "Constanța"
+msgstr "Констанца"
+
 #: i18n/states.php:1216
 msgid "Cluj"
 msgstr "Клуж"
+
+#: i18n/states.php:1215
+msgid "Caraș-Severin"
+msgstr "Караш-Северин"
+
+#: i18n/states.php:1213
+msgid "Buzău"
+msgstr "Бузэу"
+
+#: i18n/states.php:1212
+msgid "București"
+msgstr "Бухарест"
+
+#: i18n/states.php:1211
+msgid "Brașov"
+msgstr "Брашов"
 
 #: i18n/states.php:1210
 msgid "Brăila"
 msgstr "Браила"
 
+#: i18n/states.php:1209
+msgid "Botoșani"
+msgstr "Ботошани"
+
+#: i18n/states.php:1208
+msgid "Bistrița-Năsăud"
+msgstr "Бистрица-Нэсэуд"
+
 #: i18n/states.php:1207
 msgid "Bihor"
 msgstr "Бихор"
+
+#: i18n/states.php:1206
+msgid "Bacău"
+msgstr "Бакэу"
+
+#: i18n/states.php:1205
+msgid "Argeș"
+msgstr "Арджеш"
 
 #: i18n/states.php:1204
 msgid "Arad"
@@ -14663,7 +14731,7 @@ msgstr "Ошибка: %s."
 
 #: includes/admin/settings/class-wc-settings-shipping.php:126
 msgid "Enable shipping debug mode to show matching shipping zones and to bypass shipping rate cache."
-msgstr "Включить режим отладки доставки для отображение подходящих зон доставки и обхода кэша тарифа доставки."
+msgstr "Включить режим отладки доставки для отображения подходящих зон доставки и обхода кэша тарифа доставки."
 
 #: includes/admin/settings/views/html-admin-page-shipping-zones.php:103
 #: includes/admin/settings/views/html-admin-page-shipping-zone-methods.php:184
@@ -24212,7 +24280,7 @@ msgstr "Перенаправить в корзину после успешног
 
 #: includes/admin/settings/class-wc-settings-products.php:312
 msgid "Add to cart behaviour"
-msgstr "Добавить в поведение корзины"
+msgstr "Поведение при добавлении в корзину"
 
 #: includes/customizer/class-wc-shop-customizer.php:281
 #: includes/customizer/class-wc-shop-customizer.php:451

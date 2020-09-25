@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Sep 25, 2020 at 07:45 PM
--- Server version: 5.7.25
--- PHP Version: 7.0.33
+-- Хост: 127.0.0.1:3306
+-- Время создания: Сен 26 2020 г., 01:01
+-- Версия сервера: 5.7.25
+-- Версия PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_cosmedic`
+-- База данных: `db_cosmedoc`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_actionscheduler_actions`
+-- Структура таблицы `wss_actionscheduler_actions`
 --
 
 CREATE TABLE `wss_actionscheduler_actions` (
@@ -45,7 +45,7 @@ CREATE TABLE `wss_actionscheduler_actions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_actionscheduler_actions`
+-- Дамп данных таблицы `wss_actionscheduler_actions`
 --
 
 INSERT INTO `wss_actionscheduler_actions` (`action_id`, `hook`, `status`, `scheduled_date_gmt`, `scheduled_date_local`, `args`, `schedule`, `group_id`, `attempts`, `last_attempt_gmt`, `last_attempt_local`, `claim_id`, `extended_args`) VALUES
@@ -55,12 +55,14 @@ INSERT INTO `wss_actionscheduler_actions` (`action_id`, `hook`, `status`, `sched
 (9, 'action_scheduler/migration_hook', 'complete', '2020-09-22 16:33:45', '2020-09-22 16:33:45', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1600792425;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1600792425;}', 1, 1, '2020-09-22 16:33:53', '2020-09-22 16:33:53', 0, NULL),
 (10, 'action_scheduler/migration_hook', 'complete', '2020-09-22 16:34:53', '2020-09-22 16:34:53', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1600792493;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1600792493;}', 1, 1, '2020-09-22 16:35:06', '2020-09-22 16:35:06', 0, NULL),
 (11, 'action_scheduler/migration_hook', 'complete', '2020-09-22 21:39:14', '2020-09-22 21:39:14', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1600810754;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1600810754;}', 1, 1, '2020-09-22 21:40:06', '2020-09-22 21:40:06', 0, NULL),
-(12, 'action_scheduler/migration_hook', 'complete', '2020-09-22 21:41:06', '2020-09-22 21:41:06', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1600810866;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1600810866;}', 1, 1, '2020-09-22 21:41:09', '2020-09-22 21:41:09', 0, NULL);
+(12, 'action_scheduler/migration_hook', 'complete', '2020-09-22 21:41:06', '2020-09-22 21:41:06', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1600810866;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1600810866;}', 1, 1, '2020-09-22 21:41:09', '2020-09-22 21:41:09', 0, NULL),
+(13, 'action_scheduler/migration_hook', 'complete', '2020-09-25 21:53:18', '2020-09-25 21:53:18', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1601070798;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1601070798;}', 1, 1, '2020-09-25 21:53:34', '2020-09-25 21:53:34', 0, NULL),
+(14, 'action_scheduler/migration_hook', 'complete', '2020-09-25 21:54:35', '2020-09-25 21:54:35', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1601070875;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1601070875;}', 1, 1, '2020-09-25 21:54:39', '2020-09-25 21:54:39', 0, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_actionscheduler_claims`
+-- Структура таблицы `wss_actionscheduler_claims`
 --
 
 CREATE TABLE `wss_actionscheduler_claims` (
@@ -71,7 +73,7 @@ CREATE TABLE `wss_actionscheduler_claims` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_actionscheduler_groups`
+-- Структура таблицы `wss_actionscheduler_groups`
 --
 
 CREATE TABLE `wss_actionscheduler_groups` (
@@ -80,7 +82,7 @@ CREATE TABLE `wss_actionscheduler_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_actionscheduler_groups`
+-- Дамп данных таблицы `wss_actionscheduler_groups`
 --
 
 INSERT INTO `wss_actionscheduler_groups` (`group_id`, `slug`) VALUES
@@ -89,7 +91,7 @@ INSERT INTO `wss_actionscheduler_groups` (`group_id`, `slug`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_actionscheduler_logs`
+-- Структура таблицы `wss_actionscheduler_logs`
 --
 
 CREATE TABLE `wss_actionscheduler_logs` (
@@ -101,7 +103,7 @@ CREATE TABLE `wss_actionscheduler_logs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_actionscheduler_logs`
+-- Дамп данных таблицы `wss_actionscheduler_logs`
 --
 
 INSERT INTO `wss_actionscheduler_logs` (`log_id`, `action_id`, `message`, `log_date_gmt`, `log_date_local`) VALUES
@@ -125,12 +127,18 @@ INSERT INTO `wss_actionscheduler_logs` (`log_id`, `action_id`, `message`, `log_d
 (18, 11, 'action complete via WP Cron', '2020-09-22 21:40:06', '2020-09-22 21:40:06'),
 (19, 12, 'action created', '2020-09-22 21:40:06', '2020-09-22 21:40:06'),
 (20, 12, 'action started via WP Cron', '2020-09-22 21:41:09', '2020-09-22 21:41:09'),
-(21, 12, 'action complete via WP Cron', '2020-09-22 21:41:09', '2020-09-22 21:41:09');
+(21, 12, 'action complete via WP Cron', '2020-09-22 21:41:09', '2020-09-22 21:41:09'),
+(22, 13, 'action created', '2020-09-25 21:52:18', '2020-09-25 21:52:18'),
+(23, 13, 'action started via WP Cron', '2020-09-25 21:53:34', '2020-09-25 21:53:34'),
+(24, 13, 'action complete via WP Cron', '2020-09-25 21:53:34', '2020-09-25 21:53:34'),
+(25, 14, 'action created', '2020-09-25 21:53:35', '2020-09-25 21:53:35'),
+(26, 14, 'action started via WP Cron', '2020-09-25 21:54:39', '2020-09-25 21:54:39'),
+(27, 14, 'action complete via WP Cron', '2020-09-25 21:54:39', '2020-09-25 21:54:39');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_commentmeta`
+-- Структура таблицы `wss_commentmeta`
 --
 
 CREATE TABLE `wss_commentmeta` (
@@ -143,7 +151,7 @@ CREATE TABLE `wss_commentmeta` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_comments`
+-- Структура таблицы `wss_comments`
 --
 
 CREATE TABLE `wss_comments` (
@@ -167,7 +175,7 @@ CREATE TABLE `wss_comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_links`
+-- Структура таблицы `wss_links`
 --
 
 CREATE TABLE `wss_links` (
@@ -189,7 +197,7 @@ CREATE TABLE `wss_links` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_options`
+-- Структура таблицы `wss_options`
 --
 
 CREATE TABLE `wss_options` (
@@ -200,7 +208,7 @@ CREATE TABLE `wss_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_options`
+-- Дамп данных таблицы `wss_options`
 --
 
 INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -232,11 +240,11 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (26, 'comment_moderation', '0', 'yes'),
 (27, 'moderation_notify', '1', 'yes'),
 (28, 'permalink_structure', '/%postname%/', 'yes'),
-(29, 'rewrite_rules', 'a:165:{s:24:\"^wc-auth/v([1]{1})/(.*)?\";s:63:\"index.php?wc-auth-version=$matches[1]&wc-auth-route=$matches[2]\";s:22:\"^wc-api/v([1-3]{1})/?$\";s:51:\"index.php?wc-api-version=$matches[1]&wc-api-route=/\";s:24:\"^wc-api/v([1-3]{1})(.*)?\";s:61:\"index.php?wc-api-version=$matches[1]&wc-api-route=$matches[2]\";s:8:\"store/?$\";s:27:\"index.php?post_type=product\";s:38:\"store/feed/(feed|rdf|rss|rss2|atom)/?$\";s:44:\"index.php?post_type=product&feed=$matches[1]\";s:33:\"store/(feed|rdf|rss|rss2|atom)/?$\";s:44:\"index.php?post_type=product&feed=$matches[1]\";s:25:\"store/page/([0-9]{1,})/?$\";s:45:\"index.php?post_type=product&paged=$matches[1]\";s:11:\"^wp-json/?$\";s:22:\"index.php?rest_route=/\";s:14:\"^wp-json/(.*)?\";s:33:\"index.php?rest_route=/$matches[1]\";s:21:\"^index.php/wp-json/?$\";s:22:\"index.php?rest_route=/\";s:24:\"^index.php/wp-json/(.*)?\";s:33:\"index.php?rest_route=/$matches[1]\";s:17:\"^wp-sitemap\\.xml$\";s:23:\"index.php?sitemap=index\";s:17:\"^wp-sitemap\\.xsl$\";s:36:\"index.php?sitemap-stylesheet=sitemap\";s:23:\"^wp-sitemap-index\\.xsl$\";s:34:\"index.php?sitemap-stylesheet=index\";s:48:\"^wp-sitemap-([a-z]+?)-([a-z\\d_-]+?)-(\\d+?)\\.xml$\";s:75:\"index.php?sitemap=$matches[1]&sitemap-subtype=$matches[2]&paged=$matches[3]\";s:34:\"^wp-sitemap-([a-z]+?)-(\\d+?)\\.xml$\";s:47:\"index.php?sitemap=$matches[1]&paged=$matches[2]\";s:47:\"category/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:52:\"index.php?category_name=$matches[1]&feed=$matches[2]\";s:42:\"category/(.+?)/(feed|rdf|rss|rss2|atom)/?$\";s:52:\"index.php?category_name=$matches[1]&feed=$matches[2]\";s:23:\"category/(.+?)/embed/?$\";s:46:\"index.php?category_name=$matches[1]&embed=true\";s:35:\"category/(.+?)/page/?([0-9]{1,})/?$\";s:53:\"index.php?category_name=$matches[1]&paged=$matches[2]\";s:32:\"category/(.+?)/wc-api(/(.*))?/?$\";s:54:\"index.php?category_name=$matches[1]&wc-api=$matches[3]\";s:17:\"category/(.+?)/?$\";s:35:\"index.php?category_name=$matches[1]\";s:44:\"tag/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?tag=$matches[1]&feed=$matches[2]\";s:39:\"tag/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?tag=$matches[1]&feed=$matches[2]\";s:20:\"tag/([^/]+)/embed/?$\";s:36:\"index.php?tag=$matches[1]&embed=true\";s:32:\"tag/([^/]+)/page/?([0-9]{1,})/?$\";s:43:\"index.php?tag=$matches[1]&paged=$matches[2]\";s:29:\"tag/([^/]+)/wc-api(/(.*))?/?$\";s:44:\"index.php?tag=$matches[1]&wc-api=$matches[3]\";s:14:\"tag/([^/]+)/?$\";s:25:\"index.php?tag=$matches[1]\";s:45:\"type/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?post_format=$matches[1]&feed=$matches[2]\";s:40:\"type/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?post_format=$matches[1]&feed=$matches[2]\";s:21:\"type/([^/]+)/embed/?$\";s:44:\"index.php?post_format=$matches[1]&embed=true\";s:33:\"type/([^/]+)/page/?([0-9]{1,})/?$\";s:51:\"index.php?post_format=$matches[1]&paged=$matches[2]\";s:15:\"type/([^/]+)/?$\";s:33:\"index.php?post_format=$matches[1]\";s:51:\"cos_brands/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?cos_brands=$matches[1]&feed=$matches[2]\";s:46:\"cos_brands/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?cos_brands=$matches[1]&feed=$matches[2]\";s:27:\"cos_brands/([^/]+)/embed/?$\";s:43:\"index.php?cos_brands=$matches[1]&embed=true\";s:39:\"cos_brands/([^/]+)/page/?([0-9]{1,})/?$\";s:50:\"index.php?cos_brands=$matches[1]&paged=$matches[2]\";s:21:\"cos_brands/([^/]+)/?$\";s:32:\"index.php?cos_brands=$matches[1]\";s:55:\"product-category/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_cat=$matches[1]&feed=$matches[2]\";s:50:\"product-category/(.+?)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_cat=$matches[1]&feed=$matches[2]\";s:31:\"product-category/(.+?)/embed/?$\";s:44:\"index.php?product_cat=$matches[1]&embed=true\";s:43:\"product-category/(.+?)/page/?([0-9]{1,})/?$\";s:51:\"index.php?product_cat=$matches[1]&paged=$matches[2]\";s:25:\"product-category/(.+?)/?$\";s:33:\"index.php?product_cat=$matches[1]\";s:52:\"product-tag/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_tag=$matches[1]&feed=$matches[2]\";s:47:\"product-tag/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_tag=$matches[1]&feed=$matches[2]\";s:28:\"product-tag/([^/]+)/embed/?$\";s:44:\"index.php?product_tag=$matches[1]&embed=true\";s:40:\"product-tag/([^/]+)/page/?([0-9]{1,})/?$\";s:51:\"index.php?product_tag=$matches[1]&paged=$matches[2]\";s:22:\"product-tag/([^/]+)/?$\";s:33:\"index.php?product_tag=$matches[1]\";s:35:\"product/[^/]+/attachment/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:45:\"product/[^/]+/attachment/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:65:\"product/[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:60:\"product/[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:60:\"product/[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:41:\"product/[^/]+/attachment/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:24:\"product/([^/]+)/embed/?$\";s:40:\"index.php?product=$matches[1]&embed=true\";s:28:\"product/([^/]+)/trackback/?$\";s:34:\"index.php?product=$matches[1]&tb=1\";s:48:\"product/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:46:\"index.php?product=$matches[1]&feed=$matches[2]\";s:43:\"product/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:46:\"index.php?product=$matches[1]&feed=$matches[2]\";s:36:\"product/([^/]+)/page/?([0-9]{1,})/?$\";s:47:\"index.php?product=$matches[1]&paged=$matches[2]\";s:43:\"product/([^/]+)/comment-page-([0-9]{1,})/?$\";s:47:\"index.php?product=$matches[1]&cpage=$matches[2]\";s:33:\"product/([^/]+)/wc-api(/(.*))?/?$\";s:48:\"index.php?product=$matches[1]&wc-api=$matches[3]\";s:39:\"product/[^/]+/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:50:\"product/[^/]+/attachment/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:32:\"product/([^/]+)(?:/([0-9]+))?/?$\";s:46:\"index.php?product=$matches[1]&page=$matches[2]\";s:24:\"product/[^/]+/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:34:\"product/[^/]+/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:54:\"product/[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:49:\"product/[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:49:\"product/[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:30:\"product/[^/]+/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:12:\"robots\\.txt$\";s:18:\"index.php?robots=1\";s:13:\"favicon\\.ico$\";s:19:\"index.php?favicon=1\";s:48:\".*wp-(atom|rdf|rss|rss2|feed|commentsrss2)\\.php$\";s:18:\"index.php?feed=old\";s:20:\".*wp-app\\.php(/.*)?$\";s:19:\"index.php?error=403\";s:18:\".*wp-register.php$\";s:23:\"index.php?register=true\";s:32:\"feed/(feed|rdf|rss|rss2|atom)/?$\";s:27:\"index.php?&feed=$matches[1]\";s:27:\"(feed|rdf|rss|rss2|atom)/?$\";s:27:\"index.php?&feed=$matches[1]\";s:8:\"embed/?$\";s:21:\"index.php?&embed=true\";s:20:\"page/?([0-9]{1,})/?$\";s:28:\"index.php?&paged=$matches[1]\";s:17:\"wc-api(/(.*))?/?$\";s:29:\"index.php?&wc-api=$matches[2]\";s:41:\"comments/feed/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?&feed=$matches[1]&withcomments=1\";s:36:\"comments/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?&feed=$matches[1]&withcomments=1\";s:17:\"comments/embed/?$\";s:21:\"index.php?&embed=true\";s:26:\"comments/wc-api(/(.*))?/?$\";s:29:\"index.php?&wc-api=$matches[2]\";s:44:\"search/(.+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:40:\"index.php?s=$matches[1]&feed=$matches[2]\";s:39:\"search/(.+)/(feed|rdf|rss|rss2|atom)/?$\";s:40:\"index.php?s=$matches[1]&feed=$matches[2]\";s:20:\"search/(.+)/embed/?$\";s:34:\"index.php?s=$matches[1]&embed=true\";s:32:\"search/(.+)/page/?([0-9]{1,})/?$\";s:41:\"index.php?s=$matches[1]&paged=$matches[2]\";s:29:\"search/(.+)/wc-api(/(.*))?/?$\";s:42:\"index.php?s=$matches[1]&wc-api=$matches[3]\";s:14:\"search/(.+)/?$\";s:23:\"index.php?s=$matches[1]\";s:47:\"author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?author_name=$matches[1]&feed=$matches[2]\";s:42:\"author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?author_name=$matches[1]&feed=$matches[2]\";s:23:\"author/([^/]+)/embed/?$\";s:44:\"index.php?author_name=$matches[1]&embed=true\";s:35:\"author/([^/]+)/page/?([0-9]{1,})/?$\";s:51:\"index.php?author_name=$matches[1]&paged=$matches[2]\";s:32:\"author/([^/]+)/wc-api(/(.*))?/?$\";s:52:\"index.php?author_name=$matches[1]&wc-api=$matches[3]\";s:17:\"author/([^/]+)/?$\";s:33:\"index.php?author_name=$matches[1]\";s:69:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$\";s:80:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]\";s:64:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$\";s:80:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]\";s:45:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/embed/?$\";s:74:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&embed=true\";s:57:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/page/?([0-9]{1,})/?$\";s:81:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&paged=$matches[4]\";s:54:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/wc-api(/(.*))?/?$\";s:82:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&wc-api=$matches[5]\";s:39:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$\";s:63:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]\";s:56:\"([0-9]{4})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$\";s:64:\"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]\";s:51:\"([0-9]{4})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$\";s:64:\"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]\";s:32:\"([0-9]{4})/([0-9]{1,2})/embed/?$\";s:58:\"index.php?year=$matches[1]&monthnum=$matches[2]&embed=true\";s:44:\"([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$\";s:65:\"index.php?year=$matches[1]&monthnum=$matches[2]&paged=$matches[3]\";s:41:\"([0-9]{4})/([0-9]{1,2})/wc-api(/(.*))?/?$\";s:66:\"index.php?year=$matches[1]&monthnum=$matches[2]&wc-api=$matches[4]\";s:26:\"([0-9]{4})/([0-9]{1,2})/?$\";s:47:\"index.php?year=$matches[1]&monthnum=$matches[2]\";s:43:\"([0-9]{4})/feed/(feed|rdf|rss|rss2|atom)/?$\";s:43:\"index.php?year=$matches[1]&feed=$matches[2]\";s:38:\"([0-9]{4})/(feed|rdf|rss|rss2|atom)/?$\";s:43:\"index.php?year=$matches[1]&feed=$matches[2]\";s:19:\"([0-9]{4})/embed/?$\";s:37:\"index.php?year=$matches[1]&embed=true\";s:31:\"([0-9]{4})/page/?([0-9]{1,})/?$\";s:44:\"index.php?year=$matches[1]&paged=$matches[2]\";s:28:\"([0-9]{4})/wc-api(/(.*))?/?$\";s:45:\"index.php?year=$matches[1]&wc-api=$matches[3]\";s:13:\"([0-9]{4})/?$\";s:26:\"index.php?year=$matches[1]\";s:27:\".?.+?/attachment/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:37:\".?.+?/attachment/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:57:\".?.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:52:\".?.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:52:\".?.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:33:\".?.+?/attachment/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:16:\"(.?.+?)/embed/?$\";s:41:\"index.php?pagename=$matches[1]&embed=true\";s:20:\"(.?.+?)/trackback/?$\";s:35:\"index.php?pagename=$matches[1]&tb=1\";s:40:\"(.?.+?)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:47:\"index.php?pagename=$matches[1]&feed=$matches[2]\";s:35:\"(.?.+?)/(feed|rdf|rss|rss2|atom)/?$\";s:47:\"index.php?pagename=$matches[1]&feed=$matches[2]\";s:28:\"(.?.+?)/page/?([0-9]{1,})/?$\";s:48:\"index.php?pagename=$matches[1]&paged=$matches[2]\";s:35:\"(.?.+?)/comment-page-([0-9]{1,})/?$\";s:48:\"index.php?pagename=$matches[1]&cpage=$matches[2]\";s:25:\"(.?.+?)/wc-api(/(.*))?/?$\";s:49:\"index.php?pagename=$matches[1]&wc-api=$matches[3]\";s:28:\"(.?.+?)/order-pay(/(.*))?/?$\";s:52:\"index.php?pagename=$matches[1]&order-pay=$matches[3]\";s:33:\"(.?.+?)/order-received(/(.*))?/?$\";s:57:\"index.php?pagename=$matches[1]&order-received=$matches[3]\";s:25:\"(.?.+?)/orders(/(.*))?/?$\";s:49:\"index.php?pagename=$matches[1]&orders=$matches[3]\";s:29:\"(.?.+?)/view-order(/(.*))?/?$\";s:53:\"index.php?pagename=$matches[1]&view-order=$matches[3]\";s:28:\"(.?.+?)/downloads(/(.*))?/?$\";s:52:\"index.php?pagename=$matches[1]&downloads=$matches[3]\";s:31:\"(.?.+?)/edit-account(/(.*))?/?$\";s:55:\"index.php?pagename=$matches[1]&edit-account=$matches[3]\";s:31:\"(.?.+?)/edit-address(/(.*))?/?$\";s:55:\"index.php?pagename=$matches[1]&edit-address=$matches[3]\";s:34:\"(.?.+?)/payment-methods(/(.*))?/?$\";s:58:\"index.php?pagename=$matches[1]&payment-methods=$matches[3]\";s:32:\"(.?.+?)/lost-password(/(.*))?/?$\";s:56:\"index.php?pagename=$matches[1]&lost-password=$matches[3]\";s:34:\"(.?.+?)/customer-logout(/(.*))?/?$\";s:58:\"index.php?pagename=$matches[1]&customer-logout=$matches[3]\";s:37:\"(.?.+?)/add-payment-method(/(.*))?/?$\";s:61:\"index.php?pagename=$matches[1]&add-payment-method=$matches[3]\";s:40:\"(.?.+?)/delete-payment-method(/(.*))?/?$\";s:64:\"index.php?pagename=$matches[1]&delete-payment-method=$matches[3]\";s:45:\"(.?.+?)/set-default-payment-method(/(.*))?/?$\";s:69:\"index.php?pagename=$matches[1]&set-default-payment-method=$matches[3]\";s:31:\".?.+?/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:42:\".?.+?/attachment/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:24:\"(.?.+?)(?:/([0-9]+))?/?$\";s:47:\"index.php?pagename=$matches[1]&page=$matches[2]\";s:27:\"[^/]+/attachment/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:37:\"[^/]+/attachment/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:57:\"[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:52:\"[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:52:\"[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:33:\"[^/]+/attachment/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:16:\"([^/]+)/embed/?$\";s:37:\"index.php?name=$matches[1]&embed=true\";s:20:\"([^/]+)/trackback/?$\";s:31:\"index.php?name=$matches[1]&tb=1\";s:40:\"([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:43:\"index.php?name=$matches[1]&feed=$matches[2]\";s:35:\"([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:43:\"index.php?name=$matches[1]&feed=$matches[2]\";s:28:\"([^/]+)/page/?([0-9]{1,})/?$\";s:44:\"index.php?name=$matches[1]&paged=$matches[2]\";s:35:\"([^/]+)/comment-page-([0-9]{1,})/?$\";s:44:\"index.php?name=$matches[1]&cpage=$matches[2]\";s:25:\"([^/]+)/wc-api(/(.*))?/?$\";s:45:\"index.php?name=$matches[1]&wc-api=$matches[3]\";s:31:\"[^/]+/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:42:\"[^/]+/attachment/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:24:\"([^/]+)(?:/([0-9]+))?/?$\";s:43:\"index.php?name=$matches[1]&page=$matches[2]\";s:16:\"[^/]+/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:26:\"[^/]+/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:46:\"[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:41:\"[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:41:\"[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:22:\"[^/]+/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";}', 'yes'),
+(29, 'rewrite_rules', 'a:166:{s:24:\"^wc-auth/v([1]{1})/(.*)?\";s:63:\"index.php?wc-auth-version=$matches[1]&wc-auth-route=$matches[2]\";s:22:\"^wc-api/v([1-3]{1})/?$\";s:51:\"index.php?wc-api-version=$matches[1]&wc-api-route=/\";s:24:\"^wc-api/v([1-3]{1})(.*)?\";s:61:\"index.php?wc-api-version=$matches[1]&wc-api-route=$matches[2]\";s:8:\"store/?$\";s:27:\"index.php?post_type=product\";s:38:\"store/feed/(feed|rdf|rss|rss2|atom)/?$\";s:44:\"index.php?post_type=product&feed=$matches[1]\";s:33:\"store/(feed|rdf|rss|rss2|atom)/?$\";s:44:\"index.php?post_type=product&feed=$matches[1]\";s:25:\"store/page/([0-9]{1,})/?$\";s:45:\"index.php?post_type=product&paged=$matches[1]\";s:11:\"^wp-json/?$\";s:22:\"index.php?rest_route=/\";s:14:\"^wp-json/(.*)?\";s:33:\"index.php?rest_route=/$matches[1]\";s:21:\"^index.php/wp-json/?$\";s:22:\"index.php?rest_route=/\";s:24:\"^index.php/wp-json/(.*)?\";s:33:\"index.php?rest_route=/$matches[1]\";s:17:\"^wp-sitemap\\.xml$\";s:23:\"index.php?sitemap=index\";s:17:\"^wp-sitemap\\.xsl$\";s:36:\"index.php?sitemap-stylesheet=sitemap\";s:23:\"^wp-sitemap-index\\.xsl$\";s:34:\"index.php?sitemap-stylesheet=index\";s:48:\"^wp-sitemap-([a-z]+?)-([a-z\\d_-]+?)-(\\d+?)\\.xml$\";s:75:\"index.php?sitemap=$matches[1]&sitemap-subtype=$matches[2]&paged=$matches[3]\";s:34:\"^wp-sitemap-([a-z]+?)-(\\d+?)\\.xml$\";s:47:\"index.php?sitemap=$matches[1]&paged=$matches[2]\";s:47:\"category/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:52:\"index.php?category_name=$matches[1]&feed=$matches[2]\";s:42:\"category/(.+?)/(feed|rdf|rss|rss2|atom)/?$\";s:52:\"index.php?category_name=$matches[1]&feed=$matches[2]\";s:23:\"category/(.+?)/embed/?$\";s:46:\"index.php?category_name=$matches[1]&embed=true\";s:35:\"category/(.+?)/page/?([0-9]{1,})/?$\";s:53:\"index.php?category_name=$matches[1]&paged=$matches[2]\";s:32:\"category/(.+?)/wc-api(/(.*))?/?$\";s:54:\"index.php?category_name=$matches[1]&wc-api=$matches[3]\";s:17:\"category/(.+?)/?$\";s:35:\"index.php?category_name=$matches[1]\";s:44:\"tag/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?tag=$matches[1]&feed=$matches[2]\";s:39:\"tag/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?tag=$matches[1]&feed=$matches[2]\";s:20:\"tag/([^/]+)/embed/?$\";s:36:\"index.php?tag=$matches[1]&embed=true\";s:32:\"tag/([^/]+)/page/?([0-9]{1,})/?$\";s:43:\"index.php?tag=$matches[1]&paged=$matches[2]\";s:29:\"tag/([^/]+)/wc-api(/(.*))?/?$\";s:44:\"index.php?tag=$matches[1]&wc-api=$matches[3]\";s:14:\"tag/([^/]+)/?$\";s:25:\"index.php?tag=$matches[1]\";s:45:\"type/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?post_format=$matches[1]&feed=$matches[2]\";s:40:\"type/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?post_format=$matches[1]&feed=$matches[2]\";s:21:\"type/([^/]+)/embed/?$\";s:44:\"index.php?post_format=$matches[1]&embed=true\";s:33:\"type/([^/]+)/page/?([0-9]{1,})/?$\";s:51:\"index.php?post_format=$matches[1]&paged=$matches[2]\";s:15:\"type/([^/]+)/?$\";s:33:\"index.php?post_format=$matches[1]\";s:51:\"cos_brands/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?cos_brands=$matches[1]&feed=$matches[2]\";s:46:\"cos_brands/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?cos_brands=$matches[1]&feed=$matches[2]\";s:27:\"cos_brands/([^/]+)/embed/?$\";s:43:\"index.php?cos_brands=$matches[1]&embed=true\";s:39:\"cos_brands/([^/]+)/page/?([0-9]{1,})/?$\";s:50:\"index.php?cos_brands=$matches[1]&paged=$matches[2]\";s:21:\"cos_brands/([^/]+)/?$\";s:32:\"index.php?cos_brands=$matches[1]\";s:55:\"product-category/(.+?)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_cat=$matches[1]&feed=$matches[2]\";s:50:\"product-category/(.+?)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_cat=$matches[1]&feed=$matches[2]\";s:31:\"product-category/(.+?)/embed/?$\";s:44:\"index.php?product_cat=$matches[1]&embed=true\";s:43:\"product-category/(.+?)/page/?([0-9]{1,})/?$\";s:51:\"index.php?product_cat=$matches[1]&paged=$matches[2]\";s:25:\"product-category/(.+?)/?$\";s:33:\"index.php?product_cat=$matches[1]\";s:52:\"product-tag/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_tag=$matches[1]&feed=$matches[2]\";s:47:\"product-tag/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?product_tag=$matches[1]&feed=$matches[2]\";s:28:\"product-tag/([^/]+)/embed/?$\";s:44:\"index.php?product_tag=$matches[1]&embed=true\";s:40:\"product-tag/([^/]+)/page/?([0-9]{1,})/?$\";s:51:\"index.php?product_tag=$matches[1]&paged=$matches[2]\";s:22:\"product-tag/([^/]+)/?$\";s:33:\"index.php?product_tag=$matches[1]\";s:35:\"product/[^/]+/attachment/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:45:\"product/[^/]+/attachment/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:65:\"product/[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:60:\"product/[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:60:\"product/[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:41:\"product/[^/]+/attachment/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:24:\"product/([^/]+)/embed/?$\";s:40:\"index.php?product=$matches[1]&embed=true\";s:28:\"product/([^/]+)/trackback/?$\";s:34:\"index.php?product=$matches[1]&tb=1\";s:48:\"product/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:46:\"index.php?product=$matches[1]&feed=$matches[2]\";s:43:\"product/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:46:\"index.php?product=$matches[1]&feed=$matches[2]\";s:36:\"product/([^/]+)/page/?([0-9]{1,})/?$\";s:47:\"index.php?product=$matches[1]&paged=$matches[2]\";s:43:\"product/([^/]+)/comment-page-([0-9]{1,})/?$\";s:47:\"index.php?product=$matches[1]&cpage=$matches[2]\";s:33:\"product/([^/]+)/wc-api(/(.*))?/?$\";s:48:\"index.php?product=$matches[1]&wc-api=$matches[3]\";s:39:\"product/[^/]+/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:50:\"product/[^/]+/attachment/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:32:\"product/([^/]+)(?:/([0-9]+))?/?$\";s:46:\"index.php?product=$matches[1]&page=$matches[2]\";s:24:\"product/[^/]+/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:34:\"product/[^/]+/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:54:\"product/[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:49:\"product/[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:49:\"product/[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:30:\"product/[^/]+/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:12:\"robots\\.txt$\";s:18:\"index.php?robots=1\";s:13:\"favicon\\.ico$\";s:19:\"index.php?favicon=1\";s:48:\".*wp-(atom|rdf|rss|rss2|feed|commentsrss2)\\.php$\";s:18:\"index.php?feed=old\";s:20:\".*wp-app\\.php(/.*)?$\";s:19:\"index.php?error=403\";s:18:\".*wp-register.php$\";s:23:\"index.php?register=true\";s:32:\"feed/(feed|rdf|rss|rss2|atom)/?$\";s:27:\"index.php?&feed=$matches[1]\";s:27:\"(feed|rdf|rss|rss2|atom)/?$\";s:27:\"index.php?&feed=$matches[1]\";s:8:\"embed/?$\";s:21:\"index.php?&embed=true\";s:20:\"page/?([0-9]{1,})/?$\";s:28:\"index.php?&paged=$matches[1]\";s:27:\"comment-page-([0-9]{1,})/?$\";s:40:\"index.php?&page_id=123&cpage=$matches[1]\";s:17:\"wc-api(/(.*))?/?$\";s:29:\"index.php?&wc-api=$matches[2]\";s:41:\"comments/feed/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?&feed=$matches[1]&withcomments=1\";s:36:\"comments/(feed|rdf|rss|rss2|atom)/?$\";s:42:\"index.php?&feed=$matches[1]&withcomments=1\";s:17:\"comments/embed/?$\";s:21:\"index.php?&embed=true\";s:26:\"comments/wc-api(/(.*))?/?$\";s:29:\"index.php?&wc-api=$matches[2]\";s:44:\"search/(.+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:40:\"index.php?s=$matches[1]&feed=$matches[2]\";s:39:\"search/(.+)/(feed|rdf|rss|rss2|atom)/?$\";s:40:\"index.php?s=$matches[1]&feed=$matches[2]\";s:20:\"search/(.+)/embed/?$\";s:34:\"index.php?s=$matches[1]&embed=true\";s:32:\"search/(.+)/page/?([0-9]{1,})/?$\";s:41:\"index.php?s=$matches[1]&paged=$matches[2]\";s:29:\"search/(.+)/wc-api(/(.*))?/?$\";s:42:\"index.php?s=$matches[1]&wc-api=$matches[3]\";s:14:\"search/(.+)/?$\";s:23:\"index.php?s=$matches[1]\";s:47:\"author/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?author_name=$matches[1]&feed=$matches[2]\";s:42:\"author/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:50:\"index.php?author_name=$matches[1]&feed=$matches[2]\";s:23:\"author/([^/]+)/embed/?$\";s:44:\"index.php?author_name=$matches[1]&embed=true\";s:35:\"author/([^/]+)/page/?([0-9]{1,})/?$\";s:51:\"index.php?author_name=$matches[1]&paged=$matches[2]\";s:32:\"author/([^/]+)/wc-api(/(.*))?/?$\";s:52:\"index.php?author_name=$matches[1]&wc-api=$matches[3]\";s:17:\"author/([^/]+)/?$\";s:33:\"index.php?author_name=$matches[1]\";s:69:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$\";s:80:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]\";s:64:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$\";s:80:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&feed=$matches[4]\";s:45:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/embed/?$\";s:74:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&embed=true\";s:57:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/page/?([0-9]{1,})/?$\";s:81:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&paged=$matches[4]\";s:54:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/wc-api(/(.*))?/?$\";s:82:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&wc-api=$matches[5]\";s:39:\"([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/?$\";s:63:\"index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]\";s:56:\"([0-9]{4})/([0-9]{1,2})/feed/(feed|rdf|rss|rss2|atom)/?$\";s:64:\"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]\";s:51:\"([0-9]{4})/([0-9]{1,2})/(feed|rdf|rss|rss2|atom)/?$\";s:64:\"index.php?year=$matches[1]&monthnum=$matches[2]&feed=$matches[3]\";s:32:\"([0-9]{4})/([0-9]{1,2})/embed/?$\";s:58:\"index.php?year=$matches[1]&monthnum=$matches[2]&embed=true\";s:44:\"([0-9]{4})/([0-9]{1,2})/page/?([0-9]{1,})/?$\";s:65:\"index.php?year=$matches[1]&monthnum=$matches[2]&paged=$matches[3]\";s:41:\"([0-9]{4})/([0-9]{1,2})/wc-api(/(.*))?/?$\";s:66:\"index.php?year=$matches[1]&monthnum=$matches[2]&wc-api=$matches[4]\";s:26:\"([0-9]{4})/([0-9]{1,2})/?$\";s:47:\"index.php?year=$matches[1]&monthnum=$matches[2]\";s:43:\"([0-9]{4})/feed/(feed|rdf|rss|rss2|atom)/?$\";s:43:\"index.php?year=$matches[1]&feed=$matches[2]\";s:38:\"([0-9]{4})/(feed|rdf|rss|rss2|atom)/?$\";s:43:\"index.php?year=$matches[1]&feed=$matches[2]\";s:19:\"([0-9]{4})/embed/?$\";s:37:\"index.php?year=$matches[1]&embed=true\";s:31:\"([0-9]{4})/page/?([0-9]{1,})/?$\";s:44:\"index.php?year=$matches[1]&paged=$matches[2]\";s:28:\"([0-9]{4})/wc-api(/(.*))?/?$\";s:45:\"index.php?year=$matches[1]&wc-api=$matches[3]\";s:13:\"([0-9]{4})/?$\";s:26:\"index.php?year=$matches[1]\";s:27:\".?.+?/attachment/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:37:\".?.+?/attachment/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:57:\".?.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:52:\".?.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:52:\".?.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:33:\".?.+?/attachment/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:16:\"(.?.+?)/embed/?$\";s:41:\"index.php?pagename=$matches[1]&embed=true\";s:20:\"(.?.+?)/trackback/?$\";s:35:\"index.php?pagename=$matches[1]&tb=1\";s:40:\"(.?.+?)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:47:\"index.php?pagename=$matches[1]&feed=$matches[2]\";s:35:\"(.?.+?)/(feed|rdf|rss|rss2|atom)/?$\";s:47:\"index.php?pagename=$matches[1]&feed=$matches[2]\";s:28:\"(.?.+?)/page/?([0-9]{1,})/?$\";s:48:\"index.php?pagename=$matches[1]&paged=$matches[2]\";s:35:\"(.?.+?)/comment-page-([0-9]{1,})/?$\";s:48:\"index.php?pagename=$matches[1]&cpage=$matches[2]\";s:25:\"(.?.+?)/wc-api(/(.*))?/?$\";s:49:\"index.php?pagename=$matches[1]&wc-api=$matches[3]\";s:28:\"(.?.+?)/order-pay(/(.*))?/?$\";s:52:\"index.php?pagename=$matches[1]&order-pay=$matches[3]\";s:33:\"(.?.+?)/order-received(/(.*))?/?$\";s:57:\"index.php?pagename=$matches[1]&order-received=$matches[3]\";s:25:\"(.?.+?)/orders(/(.*))?/?$\";s:49:\"index.php?pagename=$matches[1]&orders=$matches[3]\";s:29:\"(.?.+?)/view-order(/(.*))?/?$\";s:53:\"index.php?pagename=$matches[1]&view-order=$matches[3]\";s:28:\"(.?.+?)/downloads(/(.*))?/?$\";s:52:\"index.php?pagename=$matches[1]&downloads=$matches[3]\";s:31:\"(.?.+?)/edit-account(/(.*))?/?$\";s:55:\"index.php?pagename=$matches[1]&edit-account=$matches[3]\";s:31:\"(.?.+?)/edit-address(/(.*))?/?$\";s:55:\"index.php?pagename=$matches[1]&edit-address=$matches[3]\";s:34:\"(.?.+?)/payment-methods(/(.*))?/?$\";s:58:\"index.php?pagename=$matches[1]&payment-methods=$matches[3]\";s:32:\"(.?.+?)/lost-password(/(.*))?/?$\";s:56:\"index.php?pagename=$matches[1]&lost-password=$matches[3]\";s:34:\"(.?.+?)/customer-logout(/(.*))?/?$\";s:58:\"index.php?pagename=$matches[1]&customer-logout=$matches[3]\";s:37:\"(.?.+?)/add-payment-method(/(.*))?/?$\";s:61:\"index.php?pagename=$matches[1]&add-payment-method=$matches[3]\";s:40:\"(.?.+?)/delete-payment-method(/(.*))?/?$\";s:64:\"index.php?pagename=$matches[1]&delete-payment-method=$matches[3]\";s:45:\"(.?.+?)/set-default-payment-method(/(.*))?/?$\";s:69:\"index.php?pagename=$matches[1]&set-default-payment-method=$matches[3]\";s:31:\".?.+?/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:42:\".?.+?/attachment/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:24:\"(.?.+?)(?:/([0-9]+))?/?$\";s:47:\"index.php?pagename=$matches[1]&page=$matches[2]\";s:27:\"[^/]+/attachment/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:37:\"[^/]+/attachment/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:57:\"[^/]+/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:52:\"[^/]+/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:52:\"[^/]+/attachment/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:33:\"[^/]+/attachment/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";s:16:\"([^/]+)/embed/?$\";s:37:\"index.php?name=$matches[1]&embed=true\";s:20:\"([^/]+)/trackback/?$\";s:31:\"index.php?name=$matches[1]&tb=1\";s:40:\"([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:43:\"index.php?name=$matches[1]&feed=$matches[2]\";s:35:\"([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:43:\"index.php?name=$matches[1]&feed=$matches[2]\";s:28:\"([^/]+)/page/?([0-9]{1,})/?$\";s:44:\"index.php?name=$matches[1]&paged=$matches[2]\";s:35:\"([^/]+)/comment-page-([0-9]{1,})/?$\";s:44:\"index.php?name=$matches[1]&cpage=$matches[2]\";s:25:\"([^/]+)/wc-api(/(.*))?/?$\";s:45:\"index.php?name=$matches[1]&wc-api=$matches[3]\";s:31:\"[^/]+/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:42:\"[^/]+/attachment/([^/]+)/wc-api(/(.*))?/?$\";s:51:\"index.php?attachment=$matches[1]&wc-api=$matches[3]\";s:24:\"([^/]+)(?:/([0-9]+))?/?$\";s:43:\"index.php?name=$matches[1]&page=$matches[2]\";s:16:\"[^/]+/([^/]+)/?$\";s:32:\"index.php?attachment=$matches[1]\";s:26:\"[^/]+/([^/]+)/trackback/?$\";s:37:\"index.php?attachment=$matches[1]&tb=1\";s:46:\"[^/]+/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:41:\"[^/]+/([^/]+)/(feed|rdf|rss|rss2|atom)/?$\";s:49:\"index.php?attachment=$matches[1]&feed=$matches[2]\";s:41:\"[^/]+/([^/]+)/comment-page-([0-9]{1,})/?$\";s:50:\"index.php?attachment=$matches[1]&cpage=$matches[2]\";s:22:\"[^/]+/([^/]+)/embed/?$\";s:43:\"index.php?attachment=$matches[1]&embed=true\";}', 'yes'),
 (30, 'hack_file', '0', 'yes'),
 (31, 'blog_charset', 'UTF-8', 'yes'),
 (32, 'moderation_keys', '', 'no'),
-(33, 'active_plugins', 'a:11:{i:0;s:34:\"advanced-custom-fields-pro/acf.php\";i:1;s:33:\"classic-editor/classic-editor.php\";i:2;s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";i:3;s:36:\"contact-form-7/wp-contact-form-7.php\";i:4;s:43:\"custom-post-type-ui/custom-post-type-ui.php\";i:5;s:22:\"cyr2lat/cyr-to-lat.php\";i:6;s:35:\"pre-orders-for-woocommerce/main.php\";i:7;s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";i:8;s:21:\"safe-svg/safe-svg.php\";i:9;s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";i:10;s:27:\"woocommerce/woocommerce.php\";}', 'yes'),
+(33, 'active_plugins', 'a:12:{i:0;s:34:\"advanced-custom-fields-pro/acf.php\";i:1;s:33:\"classic-editor/classic-editor.php\";i:2;s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";i:3;s:36:\"contact-form-7/wp-contact-form-7.php\";i:4;s:43:\"custom-post-type-ui/custom-post-type-ui.php\";i:5;s:22:\"cyr2lat/cyr-to-lat.php\";i:6;s:35:\"pre-orders-for-woocommerce/main.php\";i:7;s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";i:8;s:21:\"safe-svg/safe-svg.php\";i:9;s:45:\"taxonomy-terms-order/taxonomy-terms-order.php\";i:10;s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";i:11;s:27:\"woocommerce/woocommerce.php\";}', 'yes'),
 (34, 'category_base', '', 'yes'),
 (35, 'ping_sites', 'http://rpc.pingomatic.com/', 'yes'),
 (36, 'comment_max_links', '2', 'yes'),
@@ -254,7 +262,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (50, 'upload_path', '', 'yes'),
 (51, 'blog_public', '0', 'yes'),
 (52, 'default_link_category', '2', 'yes'),
-(53, 'show_on_front', 'posts', 'yes'),
+(53, 'show_on_front', 'page', 'yes'),
 (54, 'tag_base', '', 'yes'),
 (55, 'show_avatars', '1', 'yes'),
 (56, 'avatar_rating', 'G', 'yes'),
@@ -285,7 +293,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (81, 'uninstall_plugins', 'a:0:{}', 'no'),
 (82, 'timezone_string', '', 'yes'),
 (83, 'page_for_posts', '0', 'yes'),
-(84, 'page_on_front', '0', 'yes'),
+(84, 'page_on_front', '123', 'yes'),
 (85, 'default_post_format', '0', 'yes'),
 (86, 'link_manager_enabled', '0', 'yes'),
 (87, 'finished_splitting_shared_terms', '1', 'yes'),
@@ -304,7 +312,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (100, 'widget_archives', 'a:2:{i:2;a:3:{s:5:\"title\";s:0:\"\";s:5:\"count\";i:0;s:8:\"dropdown\";i:0;}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (101, 'widget_meta', 'a:2:{i:2;a:1:{s:5:\"title\";s:0:\"\";}s:12:\"_multiwidget\";i:1;}', 'yes'),
 (102, 'sidebars_widgets', 'a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}s:13:\"array_version\";i:3;}', 'yes'),
-(103, 'cron', 'a:21:{i:1601050084;a:1:{s:26:\"action_scheduler_run_queue\";a:1:{s:32:\"0d04ed39571b55704c122d726248bbac\";a:3:{s:8:\"schedule\";s:12:\"every_minute\";s:4:\"args\";a:1:{i:0;s:7:\"WP Cron\";}s:8:\"interval\";i:60;}}}i:1601050328;a:1:{s:33:\"wc_admin_process_orders_milestone\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1601050334;a:1:{s:29:\"wc_admin_unsnooze_admin_notes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1601051231;a:1:{s:32:\"woocommerce_cancel_unpaid_orders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:0:{}}}}i:1601052066;a:1:{s:28:\"check_for_released_preorders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1601052816;a:1:{s:20:\"dc_start_stock_alert\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1601053149;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1601053925;a:1:{s:28:\"woocommerce_cleanup_sessions\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1601074749;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1601076917;a:1:{s:20:\"mce_12hours_cron_job\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:7:\"12hours\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1601078400;a:1:{s:27:\"woocommerce_scheduled_sales\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601117948;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601117960;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601117961;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601118728;a:1:{s:14:\"wc_admin_daily\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601118735;a:2:{s:33:\"woocommerce_cleanup_personal_data\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:30:\"woocommerce_tracker_send_event\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601120117;a:1:{s:18:\"mce_4days_cron_job\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"4days\";s:4:\"args\";a:0:{}s:8:\"interval\";i:345600;}}}i:1601129525;a:1:{s:24:\"woocommerce_cleanup_logs\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601463947;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1601723585;a:1:{s:25:\"woocommerce_geoip_updater\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:11:\"fifteendays\";s:4:\"args\";a:0:{}s:8:\"interval\";i:1296000;}}}s:7:\"version\";i:2;}', 'yes'),
+(103, 'cron', 'a:20:{i:1601071324;a:1:{s:26:\"action_scheduler_run_queue\";a:1:{s:32:\"0d04ed39571b55704c122d726248bbac\";a:3:{s:8:\"schedule\";s:12:\"every_minute\";s:4:\"args\";a:1:{i:0;s:7:\"WP Cron\";}s:8:\"interval\";i:60;}}}i:1601071928;a:1:{s:33:\"wc_admin_process_orders_milestone\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1601071934;a:1:{s:29:\"wc_admin_unsnooze_admin_notes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1601073666;a:1:{s:28:\"check_for_released_preorders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1601074416;a:1:{s:20:\"dc_start_stock_alert\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1601074749;a:4:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1601074877;a:1:{s:32:\"woocommerce_cancel_unpaid_orders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:0:{}}}}i:1601076917;a:1:{s:20:\"mce_12hours_cron_job\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:7:\"12hours\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1601078400;a:1:{s:27:\"woocommerce_scheduled_sales\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601097125;a:1:{s:28:\"woocommerce_cleanup_sessions\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1601117948;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601117960;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601117961;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601118728;a:1:{s:14:\"wc_admin_daily\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601118735;a:2:{s:33:\"woocommerce_cleanup_personal_data\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:30:\"woocommerce_tracker_send_event\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601120117;a:1:{s:18:\"mce_4days_cron_job\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"4days\";s:4:\"args\";a:0:{}s:8:\"interval\";i:345600;}}}i:1601129525;a:1:{s:24:\"woocommerce_cleanup_logs\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1601463947;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1601723585;a:1:{s:25:\"woocommerce_geoip_updater\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:11:\"fifteendays\";s:4:\"args\";a:0:{}s:8:\"interval\";i:1296000;}}}s:7:\"version\";i:2;}', 'yes'),
 (104, 'widget_pages', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (105, 'widget_calendar', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (106, 'widget_media_audio', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
@@ -324,7 +332,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (148, 'auto_plugin_theme_update_emails', 'a:0:{}', 'no'),
 (149, 'finished_updating_comment_type', '1', 'yes'),
 (150, 'db_upgraded', '', 'yes'),
-(154, 'recently_activated', 'a:0:{}', 'yes'),
+(154, 'recently_activated', 'a:1:{s:43:\"custom-taxonomy-order-ne/customtaxorder.php\";i:1601070738;}', 'yes'),
 (157, 'acf_version', '5.9.1', 'yes'),
 (160, 'cptui_new_install', 'false', 'yes'),
 (173, 'acf_pro_license', 'YToyOntzOjM6ImtleSI7czo3NjoiYjNKa1pYSmZhV1E5TVRZd05qWTJmSFI1Y0dVOVpHVjJaV3h2Y0dWeWZHUmhkR1U5TWpBeE9TMHdOUzB4TmlBeE1Eb3dNam95TkE9PSI7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9jb3NtZWRpYy5sb2NhbCI7fQ==', 'yes'),
@@ -446,7 +454,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (301, 'woocommerce_version', '4.5.2', 'yes'),
 (302, 'woocommerce_db_version', '4.5.2', 'yes'),
 (303, 'woocommerce_homescreen_enabled', 'yes', 'yes'),
-(306, 'action_scheduler_lock_async-request-runner', '1601050108', 'yes'),
+(306, 'action_scheduler_lock_async-request-runner', '1601071337', 'yes'),
 (307, 'woocommerce_maxmind_geolocation_settings', 'a:1:{s:15:\"database_prefix\";s:32:\"gJQ44YYu5wv4lVzzciE6zVAGUhMZBvVN\";}', 'yes'),
 (308, '_transient_woocommerce_webhook_ids_status_active', 'a:0:{}', 'yes'),
 (309, 'widget_woocommerce_widget_cart', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
@@ -466,7 +474,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (328, 'wc_admin_note_home_screen_feedback_homescreen_accessed', '1600427529', 'yes'),
 (330, 'woocommerce_meta_box_errors', 'a:0:{}', 'yes'),
 (331, 'wc_blocks_db_schema_version', '260', 'yes'),
-(347, '_transient_product_query-transient-version', '1601028671', 'yes'),
+(347, '_transient_product_query-transient-version', '1601070997', 'yes'),
 (348, 'category_children', 'a:0:{}', 'yes'),
 (350, '_transient_wc_count_comments', 'O:8:\"stdClass\":7:{s:14:\"total_comments\";i:0;s:3:\"all\";i:0;s:9:\"moderated\";i:0;s:8:\"approved\";i:0;s:4:\"spam\";i:0;s:5:\"trash\";i:0;s:12:\"post-trashed\";i:0;}', 'yes'),
 (353, '_transient_woocommerce_reports-transient-version', '1600427710', 'yes'),
@@ -541,7 +549,6 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (1409, 'mce_conten_panel_welcome', '', 'no'),
 (1410, 'mce_conten_panel_lateralbanner', '', 'no'),
 (1419, 'secret_key', '9&J;3:lP0u|Amq^0J5!:0TfHdR/%_RR@m{vAFN),Y):pe5JlY:Ckl*#X>FG1Mi#B', 'no'),
-(1423, 'product_cat_children', 'a:0:{}', 'yes'),
 (1503, 'options_social_links_0_link', 'https://www.instagram.com/', 'no'),
 (1504, '_options_social_links_0_link', 'field_5f69f1390497c', 'no'),
 (1505, 'options_social_links_1_link', 'https://www.facebook.com/', 'no'),
@@ -558,9 +565,6 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (1539, '_options_subscribe_description', 'field_5f69f58f1c17d', 'no'),
 (1764, 'dc_woo_product_stock_alert_general_settings_name', 'a:17:{s:9:\"is_enable\";s:6:\"Enable\";s:20:\"is_enable_backorders\";s:6:\"Enable\";s:10:\"alert_text\";s:0:\"\";s:16:\"alert_text_color\";s:6:\"fbfbfb\";s:11:\"button_text\";s:0:\"\";s:23:\"unsubscribe_button_text\";s:0:\"\";s:19:\"shown_interest_text\";s:0:\"\";s:23:\"button_background_color\";s:6:\"fbfbfb\";s:19:\"button_border_color\";s:6:\"fbfbfb\";s:17:\"button_text_color\";s:6:\"fbfbfb\";s:31:\"button_background_color_onhover\";s:6:\"fbfbfb\";s:27:\"button_border_color_onhover\";s:6:\"fbfbfb\";s:25:\"button_text_color_onhover\";s:6:\"fbfbfb\";s:13:\"alert_success\";s:0:\"\";s:17:\"alert_email_exist\";s:0:\"\";s:11:\"valid_email\";s:0:\"\";s:25:\"alert_unsubscribe_message\";s:0:\"\";}', 'yes'),
 (1765, 'dc_product_stock_alert_activate', '1', 'yes'),
-(1772, '_transient_timeout_wc_term_counts', '1603620581', 'no'),
-(1773, '_transient_wc_term_counts', 'a:4:{i:25;s:1:\"5\";i:26;s:1:\"2\";i:24;s:1:\"3\";i:23;s:1:\"2\";}', 'no'),
-(1784, 'action_scheduler_migration_status', 'complete', 'yes'),
 (1796, '_transient_health-check-site-status-result', '{\"good\":\"10\",\"recommended\":\"8\",\"critical\":\"2\"}', 'yes'),
 (1801, '_site_transient_timeout_browser_ce4e9e986b0fbc713624d54b83c36283', '1601495378', 'no'),
 (1802, '_site_transient_browser_ce4e9e986b0fbc713624d54b83c36283', 'a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:13:\"85.0.4183.121\";s:8:\"platform\";s:7:\"Windows\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}', 'no'),
@@ -573,7 +577,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (1831, '_transient_acf_plugin_updates', 'a:4:{s:7:\"plugins\";a:0:{}s:10:\"expiration\";i:172800;s:6:\"status\";i:1;s:7:\"checked\";a:1:{s:34:\"advanced-custom-fields-pro/acf.php\";s:5:\"5.9.1\";}}', 'no'),
 (1836, '_transient_timeout__woocommerce_helper_updates', '1601071126', 'no'),
 (1837, '_transient__woocommerce_helper_updates', 'a:4:{s:4:\"hash\";s:32:\"d751713988987e9331980363e24189ce\";s:7:\"updated\";i:1601027926;s:8:\"products\";a:0:{}s:6:\"errors\";a:1:{i:0;s:10:\"http-error\";}}', 'no'),
-(1846, '_transient_timeout_wc_related_68', '1601132100', 'no'),
+(1846, '_transient_timeout_wc_related_68', '1601143373', 'no'),
 (1847, '_transient_wc_related_68', 'a:1:{s:50:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=68\";a:2:{i:0;s:2:\"58\";i:1;s:2:\"64\";}}', 'no'),
 (1851, '_transient_timeout_wc_related_41', '1601114948', 'no'),
 (1852, '_transient_wc_related_41', 'a:1:{s:50:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=41\";a:4:{i:0;s:2:\"22\";i:1;s:2:\"50\";i:2;s:2:\"53\";i:3;s:2:\"56\";}}', 'no'),
@@ -605,34 +609,37 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (1877, '_transient_dash_v2_88ae138922fe95674369b1cb3d215a2b', '<div class=\"rss-widget\"><ul><li><a class=\'rsswidget\' href=\'https://wordpress.org/news/2020/09/wordpress-5-5-1-maintenance-release/\'>WordPress 5.5.1 Maintenance Release</a></li></ul></div><div class=\"rss-widget\"><ul><li><a class=\'rsswidget\' href=\'https://wptavern.com/google-officially-releases-its-web-stories-for-wordpress-plugin?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=google-officially-releases-its-web-stories-for-wordpress-plugin\'>WPTavern: Google Officially Releases Its Web Stories for WordPress Plugin</a></li><li><a class=\'rsswidget\' href=\'https://wptavern.com/w3c-drops-wordpress-from-consideration-for-redesign-narrows-cms-shortlist-to-statamic-and-craft?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=w3c-drops-wordpress-from-consideration-for-redesign-narrows-cms-shortlist-to-statamic-and-craft\'>WPTavern: W3C Drops WordPress from Consideration for Redesign, Narrows CMS Shortlist to Statamic and Craft</a></li><li><a class=\'rsswidget\' href=\'https://wptavern.com/first-look-at-twenty-twenty-one-wordpresss-upcoming-default-theme?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=first-look-at-twenty-twenty-one-wordpresss-upcoming-default-theme\'>WPTavern: First Look at Twenty Twenty-One, WordPress’s Upcoming Default Theme</a></li></ul></div>', 'no'),
 (1897, '_transient_timeout_wc_related_56', '1601116236', 'no'),
 (1898, '_transient_wc_related_56', 'a:1:{s:50:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=56\";a:4:{i:0;s:2:\"22\";i:1;s:2:\"41\";i:2;s:2:\"50\";i:3;s:2:\"53\";}}', 'no'),
-(1936, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.5.1.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.5.1.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-5.5.1-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-5.5.1-new-bundled.zip\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"5.5.1\";s:7:\"version\";s:5:\"5.5.1\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1601045533;s:15:\"version_checked\";s:5:\"5.5.1\";s:12:\"translations\";a:1:{i:0;a:7:{s:4:\"type\";s:4:\"core\";s:4:\"slug\";s:7:\"default\";s:8:\"language\";s:5:\"ru_RU\";s:7:\"version\";s:5:\"5.5.1\";s:7:\"updated\";s:19:\"2020-09-25 11:32:11\";s:7:\"package\";s:64:\"https://downloads.wordpress.org/translation/core/5.5.1/ru_RU.zip\";s:10:\"autoupdate\";b:1;}}}', 'no'),
-(1937, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1601045536;s:7:\"checked\";a:2:{s:8:\"cosmedoc\";s:5:\"2.0.0\";s:23:\"empty-theme/empty-theme\";s:5:\"1.0.0\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
-(2004, '_transient_timeout_wc_related_64', '1601133348', 'no'),
+(2004, '_transient_timeout_wc_related_64', '1601143017', 'no'),
 (2005, '_transient_wc_related_64', 'a:1:{s:50:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=64\";a:2:{i:0;s:2:\"58\";i:1;s:2:\"68\";}}', 'no'),
 (2029, '_transient_timeout_wc_related_58', '1601132095', 'no'),
 (2030, '_transient_wc_related_58', 'a:1:{s:50:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=58\";a:2:{i:0;s:2:\"64\";i:1;s:2:\"68\";}}', 'no'),
 (2081, '_transient_timeout_orders-all-statuses', '1601648067', 'no'),
 (2082, '_transient_orders-all-statuses', 'a:2:{s:7:\"version\";s:10:\"1600427710\";s:5:\"value\";a:0:{}}', 'no'),
-(2083, '_transient_timeout_woocommerce_admin_low_out_of_stock_count', '1601046867', 'no'),
-(2084, '_transient_woocommerce_admin_low_out_of_stock_count', '1', 'no'),
 (2184, '_transient_timeout_wc_related_22', '1601131215', 'no'),
 (2185, '_transient_wc_related_22', 'a:1:{s:50:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=22\";a:4:{i:0;s:2:\"41\";i:1;s:2:\"50\";i:2;s:2:\"53\";i:3;s:2:\"56\";}}', 'no'),
 (2187, '_transient_timeout_wc_shipping_method_count', '1603636872', 'no'),
 (2188, '_transient_wc_shipping_method_count', 'a:2:{s:7:\"version\";s:10:\"1600601881\";s:5:\"value\";i:0;}', 'no'),
-(2202, '_transient_timeout__woocommerce_helper_subscriptions', '1601046408', 'no'),
-(2203, '_transient__woocommerce_helper_subscriptions', 'a:0:{}', 'no'),
-(2204, '_site_transient_timeout_theme_roots', '1601047308', 'no'),
-(2205, '_site_transient_theme_roots', 'a:2:{s:8:\"cosmedoc\";s:7:\"/themes\";s:23:\"empty-theme/empty-theme\";s:7:\"/themes\";}', 'no'),
-(2206, '_site_transient_timeout_poptags_40cd750bba9870f18aada2478b24840a', '1601056308', 'no'),
-(2207, '_site_transient_poptags_40cd750bba9870f18aada2478b24840a', 'O:8:\"stdClass\":100:{s:6:\"widget\";a:3:{s:4:\"name\";s:6:\"widget\";s:4:\"slug\";s:6:\"widget\";s:5:\"count\";i:4724;}s:11:\"woocommerce\";a:3:{s:4:\"name\";s:11:\"woocommerce\";s:4:\"slug\";s:11:\"woocommerce\";s:5:\"count\";i:4368;}s:4:\"post\";a:3:{s:4:\"name\";s:4:\"post\";s:4:\"slug\";s:4:\"post\";s:5:\"count\";i:2684;}s:5:\"admin\";a:3:{s:4:\"name\";s:5:\"admin\";s:4:\"slug\";s:5:\"admin\";s:5:\"count\";i:2563;}s:5:\"posts\";a:3:{s:4:\"name\";s:5:\"posts\";s:4:\"slug\";s:5:\"posts\";s:5:\"count\";i:1976;}s:9:\"shortcode\";a:3:{s:4:\"name\";s:9:\"shortcode\";s:4:\"slug\";s:9:\"shortcode\";s:5:\"count\";i:1825;}s:8:\"comments\";a:3:{s:4:\"name\";s:8:\"comments\";s:4:\"slug\";s:8:\"comments\";s:5:\"count\";i:1805;}s:7:\"twitter\";a:3:{s:4:\"name\";s:7:\"twitter\";s:4:\"slug\";s:7:\"twitter\";s:5:\"count\";i:1490;}s:6:\"images\";a:3:{s:4:\"name\";s:6:\"images\";s:4:\"slug\";s:6:\"images\";s:5:\"count\";i:1488;}s:6:\"google\";a:3:{s:4:\"name\";s:6:\"google\";s:4:\"slug\";s:6:\"google\";s:5:\"count\";i:1482;}s:8:\"facebook\";a:3:{s:4:\"name\";s:8:\"facebook\";s:4:\"slug\";s:8:\"facebook\";s:5:\"count\";i:1458;}s:3:\"seo\";a:3:{s:4:\"name\";s:3:\"seo\";s:4:\"slug\";s:3:\"seo\";s:5:\"count\";i:1455;}s:5:\"image\";a:3:{s:4:\"name\";s:5:\"image\";s:4:\"slug\";s:5:\"image\";s:5:\"count\";i:1443;}s:7:\"sidebar\";a:3:{s:4:\"name\";s:7:\"sidebar\";s:4:\"slug\";s:7:\"sidebar\";s:5:\"count\";i:1306;}s:5:\"email\";a:3:{s:4:\"name\";s:5:\"email\";s:4:\"slug\";s:5:\"email\";s:5:\"count\";i:1223;}s:7:\"gallery\";a:3:{s:4:\"name\";s:7:\"gallery\";s:4:\"slug\";s:7:\"gallery\";s:5:\"count\";i:1205;}s:9:\"ecommerce\";a:3:{s:4:\"name\";s:9:\"ecommerce\";s:4:\"slug\";s:9:\"ecommerce\";s:5:\"count\";i:1158;}s:4:\"page\";a:3:{s:4:\"name\";s:4:\"page\";s:4:\"slug\";s:4:\"page\";s:5:\"count\";i:1134;}s:6:\"social\";a:3:{s:4:\"name\";s:6:\"social\";s:4:\"slug\";s:6:\"social\";s:5:\"count\";i:1105;}s:5:\"login\";a:3:{s:4:\"name\";s:5:\"login\";s:4:\"slug\";s:5:\"login\";s:5:\"count\";i:1013;}s:8:\"security\";a:3:{s:4:\"name\";s:8:\"security\";s:4:\"slug\";s:8:\"security\";s:5:\"count\";i:903;}s:5:\"video\";a:3:{s:4:\"name\";s:5:\"video\";s:4:\"slug\";s:5:\"video\";s:5:\"count\";i:900;}s:7:\"widgets\";a:3:{s:4:\"name\";s:7:\"widgets\";s:4:\"slug\";s:7:\"widgets\";s:5:\"count\";i:882;}s:5:\"links\";a:3:{s:4:\"name\";s:5:\"links\";s:4:\"slug\";s:5:\"links\";s:5:\"count\";i:881;}s:10:\"e-commerce\";a:3:{s:4:\"name\";s:10:\"e-commerce\";s:4:\"slug\";s:10:\"e-commerce\";s:5:\"count\";i:811;}s:4:\"spam\";a:3:{s:4:\"name\";s:4:\"spam\";s:4:\"slug\";s:4:\"spam\";s:5:\"count\";i:802;}s:6:\"slider\";a:3:{s:4:\"name\";s:6:\"slider\";s:4:\"slug\";s:6:\"slider\";s:5:\"count\";i:793;}s:7:\"content\";a:3:{s:4:\"name\";s:7:\"content\";s:4:\"slug\";s:7:\"content\";s:5:\"count\";i:782;}s:9:\"analytics\";a:3:{s:4:\"name\";s:9:\"analytics\";s:4:\"slug\";s:9:\"analytics\";s:5:\"count\";i:775;}s:10:\"buddypress\";a:3:{s:4:\"name\";s:10:\"buddypress\";s:4:\"slug\";s:10:\"buddypress\";s:5:\"count\";i:753;}s:4:\"form\";a:3:{s:4:\"name\";s:4:\"form\";s:4:\"slug\";s:4:\"form\";s:5:\"count\";i:750;}s:5:\"media\";a:3:{s:4:\"name\";s:5:\"media\";s:4:\"slug\";s:5:\"media\";s:5:\"count\";i:726;}s:3:\"rss\";a:3:{s:4:\"name\";s:3:\"rss\";s:4:\"slug\";s:3:\"rss\";s:5:\"count\";i:720;}s:5:\"pages\";a:3:{s:4:\"name\";s:5:\"pages\";s:4:\"slug\";s:5:\"pages\";s:5:\"count\";i:704;}s:6:\"search\";a:3:{s:4:\"name\";s:6:\"search\";s:4:\"slug\";s:6:\"search\";s:5:\"count\";i:702;}s:6:\"editor\";a:3:{s:4:\"name\";s:6:\"editor\";s:4:\"slug\";s:6:\"editor\";s:5:\"count\";i:686;}s:4:\"menu\";a:3:{s:4:\"name\";s:4:\"menu\";s:4:\"slug\";s:4:\"menu\";s:5:\"count\";i:663;}s:6:\"jquery\";a:3:{s:4:\"name\";s:6:\"jquery\";s:4:\"slug\";s:6:\"jquery\";s:5:\"count\";i:663;}s:4:\"feed\";a:3:{s:4:\"name\";s:4:\"feed\";s:4:\"slug\";s:4:\"feed\";s:5:\"count\";i:657;}s:8:\"category\";a:3:{s:4:\"name\";s:8:\"category\";s:4:\"slug\";s:8:\"category\";s:5:\"count\";i:650;}s:4:\"ajax\";a:3:{s:4:\"name\";s:4:\"ajax\";s:4:\"slug\";s:4:\"ajax\";s:5:\"count\";i:636;}s:5:\"embed\";a:3:{s:4:\"name\";s:5:\"embed\";s:4:\"slug\";s:5:\"embed\";s:5:\"count\";i:635;}s:12:\"contact-form\";a:3:{s:4:\"name\";s:12:\"contact form\";s:4:\"slug\";s:12:\"contact-form\";s:5:\"count\";i:613;}s:7:\"payment\";a:3:{s:4:\"name\";s:7:\"payment\";s:4:\"slug\";s:7:\"payment\";s:5:\"count\";i:600;}s:3:\"css\";a:3:{s:4:\"name\";s:3:\"css\";s:4:\"slug\";s:3:\"css\";s:5:\"count\";i:589;}s:7:\"youtube\";a:3:{s:4:\"name\";s:7:\"youtube\";s:4:\"slug\";s:7:\"youtube\";s:5:\"count\";i:583;}s:10:\"javascript\";a:3:{s:4:\"name\";s:10:\"javascript\";s:4:\"slug\";s:10:\"javascript\";s:5:\"count\";i:581;}s:4:\"link\";a:3:{s:4:\"name\";s:4:\"link\";s:4:\"slug\";s:4:\"link\";s:5:\"count\";i:578;}s:5:\"share\";a:3:{s:4:\"name\";s:5:\"share\";s:4:\"slug\";s:5:\"share\";s:5:\"count\";i:563;}s:9:\"gutenberg\";a:3:{s:4:\"name\";s:9:\"gutenberg\";s:4:\"slug\";s:9:\"gutenberg\";s:5:\"count\";i:561;}s:9:\"affiliate\";a:3:{s:4:\"name\";s:9:\"affiliate\";s:4:\"slug\";s:9:\"affiliate\";s:5:\"count\";i:557;}s:5:\"theme\";a:3:{s:4:\"name\";s:5:\"theme\";s:4:\"slug\";s:5:\"theme\";s:5:\"count\";i:556;}s:7:\"comment\";a:3:{s:4:\"name\";s:7:\"comment\";s:4:\"slug\";s:7:\"comment\";s:5:\"count\";i:552;}s:10:\"responsive\";a:3:{s:4:\"name\";s:10:\"responsive\";s:4:\"slug\";s:10:\"responsive\";s:5:\"count\";i:551;}s:9:\"dashboard\";a:3:{s:4:\"name\";s:9:\"dashboard\";s:4:\"slug\";s:9:\"dashboard\";s:5:\"count\";i:543;}s:6:\"custom\";a:3:{s:4:\"name\";s:6:\"custom\";s:4:\"slug\";s:6:\"custom\";s:5:\"count\";i:533;}s:3:\"ads\";a:3:{s:4:\"name\";s:3:\"ads\";s:4:\"slug\";s:3:\"ads\";s:5:\"count\";i:532;}s:15:\"payment-gateway\";a:3:{s:4:\"name\";s:15:\"payment gateway\";s:4:\"slug\";s:15:\"payment-gateway\";s:5:\"count\";i:525;}s:10:\"categories\";a:3:{s:4:\"name\";s:10:\"categories\";s:4:\"slug\";s:10:\"categories\";s:5:\"count\";i:522;}s:3:\"api\";a:3:{s:4:\"name\";s:3:\"api\";s:4:\"slug\";s:3:\"api\";s:5:\"count\";i:520;}s:7:\"contact\";a:3:{s:4:\"name\";s:7:\"contact\";s:4:\"slug\";s:7:\"contact\";s:5:\"count\";i:520;}s:4:\"user\";a:3:{s:4:\"name\";s:4:\"user\";s:4:\"slug\";s:4:\"user\";s:5:\"count\";i:505;}s:4:\"tags\";a:3:{s:4:\"name\";s:4:\"tags\";s:4:\"slug\";s:4:\"tags\";s:5:\"count\";i:496;}s:6:\"button\";a:3:{s:4:\"name\";s:6:\"button\";s:4:\"slug\";s:6:\"button\";s:5:\"count\";i:492;}s:6:\"mobile\";a:3:{s:4:\"name\";s:6:\"mobile\";s:4:\"slug\";s:6:\"mobile\";s:5:\"count\";i:483;}s:5:\"users\";a:3:{s:4:\"name\";s:5:\"users\";s:4:\"slug\";s:5:\"users\";s:5:\"count\";i:478;}s:6:\"events\";a:3:{s:4:\"name\";s:6:\"events\";s:4:\"slug\";s:6:\"events\";s:5:\"count\";i:477;}s:9:\"marketing\";a:3:{s:4:\"name\";s:9:\"marketing\";s:4:\"slug\";s:9:\"marketing\";s:5:\"count\";i:463;}s:4:\"chat\";a:3:{s:4:\"name\";s:4:\"chat\";s:4:\"slug\";s:4:\"chat\";s:5:\"count\";i:455;}s:10:\"navigation\";a:3:{s:4:\"name\";s:10:\"navigation\";s:4:\"slug\";s:10:\"navigation\";s:5:\"count\";i:441;}s:8:\"calendar\";a:3:{s:4:\"name\";s:8:\"calendar\";s:4:\"slug\";s:8:\"calendar\";s:5:\"count\";i:440;}s:5:\"popup\";a:3:{s:4:\"name\";s:5:\"popup\";s:4:\"slug\";s:5:\"popup\";s:5:\"count\";i:439;}s:5:\"photo\";a:3:{s:4:\"name\";s:5:\"photo\";s:4:\"slug\";s:5:\"photo\";s:5:\"count\";i:438;}s:9:\"slideshow\";a:3:{s:4:\"name\";s:9:\"slideshow\";s:4:\"slug\";s:9:\"slideshow\";s:5:\"count\";i:433;}s:5:\"block\";a:3:{s:4:\"name\";s:5:\"block\";s:4:\"slug\";s:5:\"block\";s:5:\"count\";i:432;}s:5:\"forms\";a:3:{s:4:\"name\";s:5:\"forms\";s:4:\"slug\";s:5:\"forms\";s:5:\"count\";i:425;}s:5:\"stats\";a:3:{s:4:\"name\";s:5:\"stats\";s:4:\"slug\";s:5:\"stats\";s:5:\"count\";i:424;}s:6:\"photos\";a:3:{s:4:\"name\";s:6:\"photos\";s:4:\"slug\";s:6:\"photos\";s:5:\"count\";i:423;}s:9:\"elementor\";a:3:{s:4:\"name\";s:9:\"elementor\";s:4:\"slug\";s:9:\"elementor\";s:5:\"count\";i:418;}s:14:\"contact-form-7\";a:3:{s:4:\"name\";s:14:\"contact form 7\";s:4:\"slug\";s:14:\"contact-form-7\";s:5:\"count\";i:415;}s:10:\"newsletter\";a:3:{s:4:\"name\";s:10:\"newsletter\";s:4:\"slug\";s:10:\"newsletter\";s:5:\"count\";i:414;}s:10:\"statistics\";a:3:{s:4:\"name\";s:10:\"statistics\";s:4:\"slug\";s:10:\"statistics\";s:5:\"count\";i:412;}s:4:\"news\";a:3:{s:4:\"name\";s:4:\"news\";s:4:\"slug\";s:4:\"news\";s:5:\"count\";i:403;}s:10:\"shortcodes\";a:3:{s:4:\"name\";s:10:\"shortcodes\";s:4:\"slug\";s:10:\"shortcodes\";s:5:\"count\";i:398;}s:12:\"social-media\";a:3:{s:4:\"name\";s:12:\"social media\";s:4:\"slug\";s:12:\"social-media\";s:5:\"count\";i:398;}s:8:\"redirect\";a:3:{s:4:\"name\";s:8:\"redirect\";s:4:\"slug\";s:8:\"redirect\";s:5:\"count\";i:392;}s:11:\"performance\";a:3:{s:4:\"name\";s:11:\"performance\";s:4:\"slug\";s:11:\"performance\";s:5:\"count\";i:387;}s:4:\"code\";a:3:{s:4:\"name\";s:4:\"code\";s:4:\"slug\";s:4:\"code\";s:5:\"count\";i:384;}s:7:\"plugins\";a:3:{s:4:\"name\";s:7:\"plugins\";s:4:\"slug\";s:7:\"plugins\";s:5:\"count\";i:379;}s:8:\"shipping\";a:3:{s:4:\"name\";s:8:\"shipping\";s:4:\"slug\";s:8:\"shipping\";s:5:\"count\";i:379;}s:9:\"multisite\";a:3:{s:4:\"name\";s:9:\"multisite\";s:4:\"slug\";s:9:\"multisite\";s:5:\"count\";i:378;}s:12:\"notification\";a:3:{s:4:\"name\";s:12:\"notification\";s:4:\"slug\";s:12:\"notification\";s:5:\"count\";i:375;}s:3:\"url\";a:3:{s:4:\"name\";s:3:\"url\";s:4:\"slug\";s:3:\"url\";s:5:\"count\";i:372;}s:4:\"meta\";a:3:{s:4:\"name\";s:4:\"meta\";s:4:\"slug\";s:4:\"meta\";s:5:\"count\";i:366;}s:4:\"list\";a:3:{s:4:\"name\";s:4:\"list\";s:4:\"slug\";s:4:\"list\";s:5:\"count\";i:360;}s:8:\"tracking\";a:3:{s:4:\"name\";s:8:\"tracking\";s:4:\"slug\";s:8:\"tracking\";s:5:\"count\";i:355;}s:16:\"google-analytics\";a:3:{s:4:\"name\";s:16:\"google analytics\";s:4:\"slug\";s:16:\"google-analytics\";s:5:\"count\";i:349;}s:5:\"cache\";a:3:{s:4:\"name\";s:5:\"cache\";s:4:\"slug\";s:5:\"cache\";s:5:\"count\";i:345;}s:6:\"import\";a:3:{s:4:\"name\";s:6:\"import\";s:4:\"slug\";s:6:\"import\";s:5:\"count\";i:343;}s:16:\"custom-post-type\";a:3:{s:4:\"name\";s:16:\"custom post type\";s:4:\"slug\";s:16:\"custom-post-type\";s:5:\"count\";i:341;}}', 'no'),
-(2210, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1601045611;s:7:\"checked\";a:12:{s:34:\"advanced-custom-fields-pro/acf.php\";s:5:\"5.9.1\";s:33:\"classic-editor/classic-editor.php\";s:3:\"1.6\";s:36:\"contact-form-7/wp-contact-form-7.php\";s:5:\"5.2.2\";s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";s:6:\"0.5.22\";s:43:\"custom-post-type-ui/custom-post-type-ui.php\";s:5:\"1.8.1\";s:22:\"cyr2lat/cyr-to-lat.php\";s:5:\"4.5.0\";s:35:\"pre-orders-for-woocommerce/main.php\";s:5:\"1.0.8\";s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";s:5:\"1.8.3\";s:21:\"safe-svg/safe-svg.php\";s:5:\"1.9.9\";s:27:\"woocommerce/woocommerce.php\";s:5:\"4.5.2\";s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";s:5:\"1.7.0\";s:24:\"wordpress-seo/wp-seo.php\";s:4:\"14.9\";}s:8:\"response\";a:1:{s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";O:8:\"stdClass\":12:{s:2:\"id\";s:48:\"w.org/plugins/contact-form-7-mailchimp-extension\";s:4:\"slug\";s:34:\"contact-form-7-mailchimp-extension\";s:6:\"plugin\";s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";s:11:\"new_version\";s:6:\"0.5.23\";s:3:\"url\";s:65:\"https://wordpress.org/plugins/contact-form-7-mailchimp-extension/\";s:7:\"package\";s:77:\"https://downloads.wordpress.org/plugin/contact-form-7-mailchimp-extension.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:87:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/icon-256x256.png?rev=1072113\";s:2:\"1x\";s:87:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/icon-128x128.png?rev=1072113\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:90:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/banner-1544x500.png?rev=1072092\";s:2:\"1x\";s:89:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/banner-772x250.png?rev=1625715\";}s:11:\"banners_rtl\";a:0:{}s:6:\"tested\";s:5:\"5.5.9\";s:12:\"requires_php\";b:0;s:13:\"compatibility\";O:8:\"stdClass\":0:{}}}s:12:\"translations\";a:2:{i:0;a:7:{s:4:\"type\";s:6:\"plugin\";s:4:\"slug\";s:14:\"contact-form-7\";s:8:\"language\";s:5:\"ru_RU\";s:7:\"version\";s:5:\"5.2.2\";s:7:\"updated\";s:19:\"2020-03-08 18:19:01\";s:7:\"package\";s:81:\"https://downloads.wordpress.org/translation/plugin/contact-form-7/5.2.2/ru_RU.zip\";s:10:\"autoupdate\";b:1;}i:1;a:7:{s:4:\"type\";s:6:\"plugin\";s:4:\"slug\";s:11:\"woocommerce\";s:8:\"language\";s:5:\"ru_RU\";s:7:\"version\";s:5:\"4.5.2\";s:7:\"updated\";s:19:\"2020-09-24 07:32:27\";s:7:\"package\";s:78:\"https://downloads.wordpress.org/translation/plugin/woocommerce/4.5.2/ru_RU.zip\";s:10:\"autoupdate\";b:1;}}s:9:\"no_update\";a:10:{s:33:\"classic-editor/classic-editor.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/classic-editor\";s:4:\"slug\";s:14:\"classic-editor\";s:6:\"plugin\";s:33:\"classic-editor/classic-editor.php\";s:11:\"new_version\";s:3:\"1.6\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/classic-editor/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/plugin/classic-editor.1.6.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/classic-editor/assets/icon-256x256.png?rev=1998671\";s:2:\"1x\";s:67:\"https://ps.w.org/classic-editor/assets/icon-128x128.png?rev=1998671\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:70:\"https://ps.w.org/classic-editor/assets/banner-1544x500.png?rev=1998671\";s:2:\"1x\";s:69:\"https://ps.w.org/classic-editor/assets/banner-772x250.png?rev=1998676\";}s:11:\"banners_rtl\";a:0:{}}s:36:\"contact-form-7/wp-contact-form-7.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/contact-form-7\";s:4:\"slug\";s:14:\"contact-form-7\";s:6:\"plugin\";s:36:\"contact-form-7/wp-contact-form-7.php\";s:11:\"new_version\";s:5:\"5.2.2\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/contact-form-7/\";s:7:\"package\";s:63:\"https://downloads.wordpress.org/plugin/contact-form-7.5.2.2.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:67:\"https://ps.w.org/contact-form-7/assets/icon-256x256.png?rev=2279696\";s:2:\"1x\";s:59:\"https://ps.w.org/contact-form-7/assets/icon.svg?rev=2339255\";s:3:\"svg\";s:59:\"https://ps.w.org/contact-form-7/assets/icon.svg?rev=2339255\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:69:\"https://ps.w.org/contact-form-7/assets/banner-1544x500.png?rev=860901\";s:2:\"1x\";s:68:\"https://ps.w.org/contact-form-7/assets/banner-772x250.png?rev=880427\";}s:11:\"banners_rtl\";a:0:{}}s:43:\"custom-post-type-ui/custom-post-type-ui.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:33:\"w.org/plugins/custom-post-type-ui\";s:4:\"slug\";s:19:\"custom-post-type-ui\";s:6:\"plugin\";s:43:\"custom-post-type-ui/custom-post-type-ui.php\";s:11:\"new_version\";s:5:\"1.8.1\";s:3:\"url\";s:50:\"https://wordpress.org/plugins/custom-post-type-ui/\";s:7:\"package\";s:68:\"https://downloads.wordpress.org/plugin/custom-post-type-ui.1.8.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:72:\"https://ps.w.org/custom-post-type-ui/assets/icon-256x256.png?rev=1069557\";s:2:\"1x\";s:72:\"https://ps.w.org/custom-post-type-ui/assets/icon-128x128.png?rev=1069557\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:75:\"https://ps.w.org/custom-post-type-ui/assets/banner-1544x500.png?rev=1069557\";s:2:\"1x\";s:74:\"https://ps.w.org/custom-post-type-ui/assets/banner-772x250.png?rev=1069557\";}s:11:\"banners_rtl\";a:0:{}}s:22:\"cyr2lat/cyr-to-lat.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/cyr2lat\";s:4:\"slug\";s:7:\"cyr2lat\";s:6:\"plugin\";s:22:\"cyr2lat/cyr-to-lat.php\";s:11:\"new_version\";s:5:\"4.5.0\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/cyr2lat/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/cyr2lat.4.5.0.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:60:\"https://ps.w.org/cyr2lat/assets/icon-256x256.jpg?rev=2022835\";s:2:\"1x\";s:52:\"https://ps.w.org/cyr2lat/assets/icon.svg?rev=2022835\";s:3:\"svg\";s:52:\"https://ps.w.org/cyr2lat/assets/icon.svg?rev=2022835\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:63:\"https://ps.w.org/cyr2lat/assets/banner-1544x500.png?rev=2022835\";s:2:\"1x\";s:62:\"https://ps.w.org/cyr2lat/assets/banner-772x250.png?rev=2022835\";}s:11:\"banners_rtl\";a:0:{}}s:35:\"pre-orders-for-woocommerce/main.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:40:\"w.org/plugins/pre-orders-for-woocommerce\";s:4:\"slug\";s:26:\"pre-orders-for-woocommerce\";s:6:\"plugin\";s:35:\"pre-orders-for-woocommerce/main.php\";s:11:\"new_version\";s:5:\"1.0.8\";s:3:\"url\";s:57:\"https://wordpress.org/plugins/pre-orders-for-woocommerce/\";s:7:\"package\";s:75:\"https://downloads.wordpress.org/plugin/pre-orders-for-woocommerce.1.0.8.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:79:\"https://ps.w.org/pre-orders-for-woocommerce/assets/icon-256x256.jpg?rev=2281163\";s:2:\"1x\";s:79:\"https://ps.w.org/pre-orders-for-woocommerce/assets/icon-128x128.jpg?rev=2281163\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:82:\"https://ps.w.org/pre-orders-for-woocommerce/assets/banner-1544x500.jpg?rev=2281163\";s:2:\"1x\";s:81:\"https://ps.w.org/pre-orders-for-woocommerce/assets/banner-772x250.jpg?rev=2281163\";}s:11:\"banners_rtl\";a:0:{}}s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:43:\"w.org/plugins/product-import-export-for-woo\";s:4:\"slug\";s:29:\"product-import-export-for-woo\";s:6:\"plugin\";s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";s:11:\"new_version\";s:5:\"1.8.3\";s:3:\"url\";s:60:\"https://wordpress.org/plugins/product-import-export-for-woo/\";s:7:\"package\";s:78:\"https://downloads.wordpress.org/plugin/product-import-export-for-woo.1.8.3.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:82:\"https://ps.w.org/product-import-export-for-woo/assets/icon-256x256.png?rev=2010403\";s:2:\"1x\";s:82:\"https://ps.w.org/product-import-export-for-woo/assets/icon-128x128.jpg?rev=1906359\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:85:\"https://ps.w.org/product-import-export-for-woo/assets/banner-1544x500.jpg?rev=2065538\";s:2:\"1x\";s:84:\"https://ps.w.org/product-import-export-for-woo/assets/banner-772x250.jpg?rev=2065542\";}s:11:\"banners_rtl\";a:0:{}}s:21:\"safe-svg/safe-svg.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:22:\"w.org/plugins/safe-svg\";s:4:\"slug\";s:8:\"safe-svg\";s:6:\"plugin\";s:21:\"safe-svg/safe-svg.php\";s:11:\"new_version\";s:5:\"1.9.9\";s:3:\"url\";s:39:\"https://wordpress.org/plugins/safe-svg/\";s:7:\"package\";s:57:\"https://downloads.wordpress.org/plugin/safe-svg.1.9.9.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:61:\"https://ps.w.org/safe-svg/assets/icon-256x256.png?rev=1706191\";s:2:\"1x\";s:53:\"https://ps.w.org/safe-svg/assets/icon.svg?rev=1706191\";s:3:\"svg\";s:53:\"https://ps.w.org/safe-svg/assets/icon.svg?rev=1706191\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/safe-svg/assets/banner-1544x500.png?rev=1706191\";s:2:\"1x\";s:63:\"https://ps.w.org/safe-svg/assets/banner-772x250.png?rev=1706191\";}s:11:\"banners_rtl\";a:0:{}}s:27:\"woocommerce/woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:25:\"w.org/plugins/woocommerce\";s:4:\"slug\";s:11:\"woocommerce\";s:6:\"plugin\";s:27:\"woocommerce/woocommerce.php\";s:11:\"new_version\";s:5:\"4.5.2\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/woocommerce/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/woocommerce.4.5.2.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/woocommerce/assets/icon-256x256.png?rev=2366418\";s:2:\"1x\";s:64:\"https://ps.w.org/woocommerce/assets/icon-128x128.png?rev=2366418\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/woocommerce/assets/banner-1544x500.png?rev=2366418\";s:2:\"1x\";s:66:\"https://ps.w.org/woocommerce/assets/banner-772x250.png?rev=2366418\";}s:11:\"banners_rtl\";a:0:{}}s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:45:\"w.org/plugins/woocommerce-product-stock-alert\";s:4:\"slug\";s:31:\"woocommerce-product-stock-alert\";s:6:\"plugin\";s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";s:11:\"new_version\";s:5:\"1.7.0\";s:3:\"url\";s:62:\"https://wordpress.org/plugins/woocommerce-product-stock-alert/\";s:7:\"package\";s:80:\"https://downloads.wordpress.org/plugin/woocommerce-product-stock-alert.1.7.0.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:84:\"https://ps.w.org/woocommerce-product-stock-alert/assets/icon-256x256.png?rev=1592392\";s:2:\"1x\";s:84:\"https://ps.w.org/woocommerce-product-stock-alert/assets/icon-128x128.png?rev=1592392\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:86:\"https://ps.w.org/woocommerce-product-stock-alert/assets/banner-772x250.jpg?rev=2371395\";}s:11:\"banners_rtl\";a:0:{}}s:24:\"wordpress-seo/wp-seo.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:27:\"w.org/plugins/wordpress-seo\";s:4:\"slug\";s:13:\"wordpress-seo\";s:6:\"plugin\";s:24:\"wordpress-seo/wp-seo.php\";s:11:\"new_version\";s:4:\"14.9\";s:3:\"url\";s:44:\"https://wordpress.org/plugins/wordpress-seo/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/plugin/wordpress-seo.14.9.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:66:\"https://ps.w.org/wordpress-seo/assets/icon-256x256.png?rev=2363699\";s:2:\"1x\";s:58:\"https://ps.w.org/wordpress-seo/assets/icon.svg?rev=2363699\";s:3:\"svg\";s:58:\"https://ps.w.org/wordpress-seo/assets/icon.svg?rev=2363699\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:69:\"https://ps.w.org/wordpress-seo/assets/banner-1544x500.png?rev=1843435\";s:2:\"1x\";s:68:\"https://ps.w.org/wordpress-seo/assets/banner-772x250.png?rev=1843435\";}s:11:\"banners_rtl\";a:2:{s:2:\"2x\";s:73:\"https://ps.w.org/wordpress-seo/assets/banner-1544x500-rtl.png?rev=1843435\";s:2:\"1x\";s:72:\"https://ps.w.org/wordpress-seo/assets/banner-772x250-rtl.png?rev=1843435\";}}}}', 'no'),
 (2212, 'dc_product_stock_alert_installed', '1', 'yes'),
-(2213, 'dc_product_stock_alert_cron_start', '1', 'yes');
+(2213, 'dc_product_stock_alert_cron_start', '1', 'yes'),
+(2440, '_transient_timeout_wc_term_counts', '1603659283', 'no'),
+(2441, '_transient_wc_term_counts', 'a:5:{i:27;s:1:\"0\";i:28;s:1:\"0\";i:25;s:1:\"5\";i:24;s:1:\"3\";i:26;s:1:\"2\";}', 'no'),
+(2465, '_transient_timeout_woocommerce_admin_low_out_of_stock_count', '1601072111', 'no'),
+(2466, '_transient_woocommerce_admin_low_out_of_stock_count', '1', 'no'),
+(2483, '_site_transient_timeout_theme_roots', '1601071249', 'no'),
+(2484, '_site_transient_theme_roots', 'a:2:{s:8:\"cosmedoc\";s:7:\"/themes\";s:23:\"empty-theme/empty-theme\";s:7:\"/themes\";}', 'no'),
+(2485, '_site_transient_timeout_poptags_40cd750bba9870f18aada2478b24840a', '1601080258', 'no'),
+(2486, '_site_transient_poptags_40cd750bba9870f18aada2478b24840a', 'O:8:\"stdClass\":100:{s:6:\"widget\";a:3:{s:4:\"name\";s:6:\"widget\";s:4:\"slug\";s:6:\"widget\";s:5:\"count\";i:4724;}s:11:\"woocommerce\";a:3:{s:4:\"name\";s:11:\"woocommerce\";s:4:\"slug\";s:11:\"woocommerce\";s:5:\"count\";i:4369;}s:4:\"post\";a:3:{s:4:\"name\";s:4:\"post\";s:4:\"slug\";s:4:\"post\";s:5:\"count\";i:2684;}s:5:\"admin\";a:3:{s:4:\"name\";s:5:\"admin\";s:4:\"slug\";s:5:\"admin\";s:5:\"count\";i:2563;}s:5:\"posts\";a:3:{s:4:\"name\";s:5:\"posts\";s:4:\"slug\";s:5:\"posts\";s:5:\"count\";i:1976;}s:9:\"shortcode\";a:3:{s:4:\"name\";s:9:\"shortcode\";s:4:\"slug\";s:9:\"shortcode\";s:5:\"count\";i:1825;}s:8:\"comments\";a:3:{s:4:\"name\";s:8:\"comments\";s:4:\"slug\";s:8:\"comments\";s:5:\"count\";i:1805;}s:7:\"twitter\";a:3:{s:4:\"name\";s:7:\"twitter\";s:4:\"slug\";s:7:\"twitter\";s:5:\"count\";i:1490;}s:6:\"images\";a:3:{s:4:\"name\";s:6:\"images\";s:4:\"slug\";s:6:\"images\";s:5:\"count\";i:1488;}s:6:\"google\";a:3:{s:4:\"name\";s:6:\"google\";s:4:\"slug\";s:6:\"google\";s:5:\"count\";i:1482;}s:8:\"facebook\";a:3:{s:4:\"name\";s:8:\"facebook\";s:4:\"slug\";s:8:\"facebook\";s:5:\"count\";i:1458;}s:3:\"seo\";a:3:{s:4:\"name\";s:3:\"seo\";s:4:\"slug\";s:3:\"seo\";s:5:\"count\";i:1455;}s:5:\"image\";a:3:{s:4:\"name\";s:5:\"image\";s:4:\"slug\";s:5:\"image\";s:5:\"count\";i:1443;}s:7:\"sidebar\";a:3:{s:4:\"name\";s:7:\"sidebar\";s:4:\"slug\";s:7:\"sidebar\";s:5:\"count\";i:1306;}s:5:\"email\";a:3:{s:4:\"name\";s:5:\"email\";s:4:\"slug\";s:5:\"email\";s:5:\"count\";i:1223;}s:7:\"gallery\";a:3:{s:4:\"name\";s:7:\"gallery\";s:4:\"slug\";s:7:\"gallery\";s:5:\"count\";i:1205;}s:9:\"ecommerce\";a:3:{s:4:\"name\";s:9:\"ecommerce\";s:4:\"slug\";s:9:\"ecommerce\";s:5:\"count\";i:1158;}s:4:\"page\";a:3:{s:4:\"name\";s:4:\"page\";s:4:\"slug\";s:4:\"page\";s:5:\"count\";i:1134;}s:6:\"social\";a:3:{s:4:\"name\";s:6:\"social\";s:4:\"slug\";s:6:\"social\";s:5:\"count\";i:1105;}s:5:\"login\";a:3:{s:4:\"name\";s:5:\"login\";s:4:\"slug\";s:5:\"login\";s:5:\"count\";i:1013;}s:8:\"security\";a:3:{s:4:\"name\";s:8:\"security\";s:4:\"slug\";s:8:\"security\";s:5:\"count\";i:903;}s:5:\"video\";a:3:{s:4:\"name\";s:5:\"video\";s:4:\"slug\";s:5:\"video\";s:5:\"count\";i:900;}s:7:\"widgets\";a:3:{s:4:\"name\";s:7:\"widgets\";s:4:\"slug\";s:7:\"widgets\";s:5:\"count\";i:882;}s:5:\"links\";a:3:{s:4:\"name\";s:5:\"links\";s:4:\"slug\";s:5:\"links\";s:5:\"count\";i:881;}s:10:\"e-commerce\";a:3:{s:4:\"name\";s:10:\"e-commerce\";s:4:\"slug\";s:10:\"e-commerce\";s:5:\"count\";i:811;}s:4:\"spam\";a:3:{s:4:\"name\";s:4:\"spam\";s:4:\"slug\";s:4:\"spam\";s:5:\"count\";i:802;}s:6:\"slider\";a:3:{s:4:\"name\";s:6:\"slider\";s:4:\"slug\";s:6:\"slider\";s:5:\"count\";i:793;}s:7:\"content\";a:3:{s:4:\"name\";s:7:\"content\";s:4:\"slug\";s:7:\"content\";s:5:\"count\";i:782;}s:9:\"analytics\";a:3:{s:4:\"name\";s:9:\"analytics\";s:4:\"slug\";s:9:\"analytics\";s:5:\"count\";i:775;}s:10:\"buddypress\";a:3:{s:4:\"name\";s:10:\"buddypress\";s:4:\"slug\";s:10:\"buddypress\";s:5:\"count\";i:753;}s:4:\"form\";a:3:{s:4:\"name\";s:4:\"form\";s:4:\"slug\";s:4:\"form\";s:5:\"count\";i:750;}s:5:\"media\";a:3:{s:4:\"name\";s:5:\"media\";s:4:\"slug\";s:5:\"media\";s:5:\"count\";i:726;}s:3:\"rss\";a:3:{s:4:\"name\";s:3:\"rss\";s:4:\"slug\";s:3:\"rss\";s:5:\"count\";i:720;}s:5:\"pages\";a:3:{s:4:\"name\";s:5:\"pages\";s:4:\"slug\";s:5:\"pages\";s:5:\"count\";i:704;}s:6:\"search\";a:3:{s:4:\"name\";s:6:\"search\";s:4:\"slug\";s:6:\"search\";s:5:\"count\";i:702;}s:6:\"editor\";a:3:{s:4:\"name\";s:6:\"editor\";s:4:\"slug\";s:6:\"editor\";s:5:\"count\";i:686;}s:4:\"menu\";a:3:{s:4:\"name\";s:4:\"menu\";s:4:\"slug\";s:4:\"menu\";s:5:\"count\";i:663;}s:6:\"jquery\";a:3:{s:4:\"name\";s:6:\"jquery\";s:4:\"slug\";s:6:\"jquery\";s:5:\"count\";i:663;}s:4:\"feed\";a:3:{s:4:\"name\";s:4:\"feed\";s:4:\"slug\";s:4:\"feed\";s:5:\"count\";i:657;}s:8:\"category\";a:3:{s:4:\"name\";s:8:\"category\";s:4:\"slug\";s:8:\"category\";s:5:\"count\";i:650;}s:4:\"ajax\";a:3:{s:4:\"name\";s:4:\"ajax\";s:4:\"slug\";s:4:\"ajax\";s:5:\"count\";i:636;}s:5:\"embed\";a:3:{s:4:\"name\";s:5:\"embed\";s:4:\"slug\";s:5:\"embed\";s:5:\"count\";i:635;}s:12:\"contact-form\";a:3:{s:4:\"name\";s:12:\"contact form\";s:4:\"slug\";s:12:\"contact-form\";s:5:\"count\";i:613;}s:7:\"payment\";a:3:{s:4:\"name\";s:7:\"payment\";s:4:\"slug\";s:7:\"payment\";s:5:\"count\";i:600;}s:3:\"css\";a:3:{s:4:\"name\";s:3:\"css\";s:4:\"slug\";s:3:\"css\";s:5:\"count\";i:589;}s:7:\"youtube\";a:3:{s:4:\"name\";s:7:\"youtube\";s:4:\"slug\";s:7:\"youtube\";s:5:\"count\";i:583;}s:10:\"javascript\";a:3:{s:4:\"name\";s:10:\"javascript\";s:4:\"slug\";s:10:\"javascript\";s:5:\"count\";i:581;}s:4:\"link\";a:3:{s:4:\"name\";s:4:\"link\";s:4:\"slug\";s:4:\"link\";s:5:\"count\";i:578;}s:5:\"share\";a:3:{s:4:\"name\";s:5:\"share\";s:4:\"slug\";s:5:\"share\";s:5:\"count\";i:563;}s:9:\"gutenberg\";a:3:{s:4:\"name\";s:9:\"gutenberg\";s:4:\"slug\";s:9:\"gutenberg\";s:5:\"count\";i:561;}s:9:\"affiliate\";a:3:{s:4:\"name\";s:9:\"affiliate\";s:4:\"slug\";s:9:\"affiliate\";s:5:\"count\";i:557;}s:5:\"theme\";a:3:{s:4:\"name\";s:5:\"theme\";s:4:\"slug\";s:5:\"theme\";s:5:\"count\";i:556;}s:7:\"comment\";a:3:{s:4:\"name\";s:7:\"comment\";s:4:\"slug\";s:7:\"comment\";s:5:\"count\";i:552;}s:10:\"responsive\";a:3:{s:4:\"name\";s:10:\"responsive\";s:4:\"slug\";s:10:\"responsive\";s:5:\"count\";i:551;}s:9:\"dashboard\";a:3:{s:4:\"name\";s:9:\"dashboard\";s:4:\"slug\";s:9:\"dashboard\";s:5:\"count\";i:543;}s:6:\"custom\";a:3:{s:4:\"name\";s:6:\"custom\";s:4:\"slug\";s:6:\"custom\";s:5:\"count\";i:533;}s:3:\"ads\";a:3:{s:4:\"name\";s:3:\"ads\";s:4:\"slug\";s:3:\"ads\";s:5:\"count\";i:532;}s:15:\"payment-gateway\";a:3:{s:4:\"name\";s:15:\"payment gateway\";s:4:\"slug\";s:15:\"payment-gateway\";s:5:\"count\";i:525;}s:10:\"categories\";a:3:{s:4:\"name\";s:10:\"categories\";s:4:\"slug\";s:10:\"categories\";s:5:\"count\";i:522;}s:3:\"api\";a:3:{s:4:\"name\";s:3:\"api\";s:4:\"slug\";s:3:\"api\";s:5:\"count\";i:520;}s:7:\"contact\";a:3:{s:4:\"name\";s:7:\"contact\";s:4:\"slug\";s:7:\"contact\";s:5:\"count\";i:520;}s:4:\"user\";a:3:{s:4:\"name\";s:4:\"user\";s:4:\"slug\";s:4:\"user\";s:5:\"count\";i:505;}s:4:\"tags\";a:3:{s:4:\"name\";s:4:\"tags\";s:4:\"slug\";s:4:\"tags\";s:5:\"count\";i:496;}s:6:\"button\";a:3:{s:4:\"name\";s:6:\"button\";s:4:\"slug\";s:6:\"button\";s:5:\"count\";i:492;}s:6:\"mobile\";a:3:{s:4:\"name\";s:6:\"mobile\";s:4:\"slug\";s:6:\"mobile\";s:5:\"count\";i:483;}s:5:\"users\";a:3:{s:4:\"name\";s:5:\"users\";s:4:\"slug\";s:5:\"users\";s:5:\"count\";i:478;}s:6:\"events\";a:3:{s:4:\"name\";s:6:\"events\";s:4:\"slug\";s:6:\"events\";s:5:\"count\";i:477;}s:9:\"marketing\";a:3:{s:4:\"name\";s:9:\"marketing\";s:4:\"slug\";s:9:\"marketing\";s:5:\"count\";i:463;}s:4:\"chat\";a:3:{s:4:\"name\";s:4:\"chat\";s:4:\"slug\";s:4:\"chat\";s:5:\"count\";i:455;}s:10:\"navigation\";a:3:{s:4:\"name\";s:10:\"navigation\";s:4:\"slug\";s:10:\"navigation\";s:5:\"count\";i:441;}s:8:\"calendar\";a:3:{s:4:\"name\";s:8:\"calendar\";s:4:\"slug\";s:8:\"calendar\";s:5:\"count\";i:440;}s:5:\"popup\";a:3:{s:4:\"name\";s:5:\"popup\";s:4:\"slug\";s:5:\"popup\";s:5:\"count\";i:440;}s:5:\"photo\";a:3:{s:4:\"name\";s:5:\"photo\";s:4:\"slug\";s:5:\"photo\";s:5:\"count\";i:438;}s:9:\"slideshow\";a:3:{s:4:\"name\";s:9:\"slideshow\";s:4:\"slug\";s:9:\"slideshow\";s:5:\"count\";i:433;}s:5:\"block\";a:3:{s:4:\"name\";s:5:\"block\";s:4:\"slug\";s:5:\"block\";s:5:\"count\";i:432;}s:5:\"forms\";a:3:{s:4:\"name\";s:5:\"forms\";s:4:\"slug\";s:5:\"forms\";s:5:\"count\";i:425;}s:5:\"stats\";a:3:{s:4:\"name\";s:5:\"stats\";s:4:\"slug\";s:5:\"stats\";s:5:\"count\";i:424;}s:6:\"photos\";a:3:{s:4:\"name\";s:6:\"photos\";s:4:\"slug\";s:6:\"photos\";s:5:\"count\";i:423;}s:9:\"elementor\";a:3:{s:4:\"name\";s:9:\"elementor\";s:4:\"slug\";s:9:\"elementor\";s:5:\"count\";i:418;}s:14:\"contact-form-7\";a:3:{s:4:\"name\";s:14:\"contact form 7\";s:4:\"slug\";s:14:\"contact-form-7\";s:5:\"count\";i:415;}s:10:\"newsletter\";a:3:{s:4:\"name\";s:10:\"newsletter\";s:4:\"slug\";s:10:\"newsletter\";s:5:\"count\";i:414;}s:10:\"statistics\";a:3:{s:4:\"name\";s:10:\"statistics\";s:4:\"slug\";s:10:\"statistics\";s:5:\"count\";i:412;}s:4:\"news\";a:3:{s:4:\"name\";s:4:\"news\";s:4:\"slug\";s:4:\"news\";s:5:\"count\";i:403;}s:10:\"shortcodes\";a:3:{s:4:\"name\";s:10:\"shortcodes\";s:4:\"slug\";s:10:\"shortcodes\";s:5:\"count\";i:398;}s:12:\"social-media\";a:3:{s:4:\"name\";s:12:\"social media\";s:4:\"slug\";s:12:\"social-media\";s:5:\"count\";i:398;}s:8:\"redirect\";a:3:{s:4:\"name\";s:8:\"redirect\";s:4:\"slug\";s:8:\"redirect\";s:5:\"count\";i:392;}s:11:\"performance\";a:3:{s:4:\"name\";s:11:\"performance\";s:4:\"slug\";s:11:\"performance\";s:5:\"count\";i:387;}s:4:\"code\";a:3:{s:4:\"name\";s:4:\"code\";s:4:\"slug\";s:4:\"code\";s:5:\"count\";i:384;}s:7:\"plugins\";a:3:{s:4:\"name\";s:7:\"plugins\";s:4:\"slug\";s:7:\"plugins\";s:5:\"count\";i:379;}s:8:\"shipping\";a:3:{s:4:\"name\";s:8:\"shipping\";s:4:\"slug\";s:8:\"shipping\";s:5:\"count\";i:379;}s:9:\"multisite\";a:3:{s:4:\"name\";s:9:\"multisite\";s:4:\"slug\";s:9:\"multisite\";s:5:\"count\";i:378;}s:12:\"notification\";a:3:{s:4:\"name\";s:12:\"notification\";s:4:\"slug\";s:12:\"notification\";s:5:\"count\";i:375;}s:3:\"url\";a:3:{s:4:\"name\";s:3:\"url\";s:4:\"slug\";s:3:\"url\";s:5:\"count\";i:372;}s:4:\"meta\";a:3:{s:4:\"name\";s:4:\"meta\";s:4:\"slug\";s:4:\"meta\";s:5:\"count\";i:366;}s:4:\"list\";a:3:{s:4:\"name\";s:4:\"list\";s:4:\"slug\";s:4:\"list\";s:5:\"count\";i:360;}s:8:\"tracking\";a:3:{s:4:\"name\";s:8:\"tracking\";s:4:\"slug\";s:8:\"tracking\";s:5:\"count\";i:355;}s:16:\"google-analytics\";a:3:{s:4:\"name\";s:16:\"google analytics\";s:4:\"slug\";s:16:\"google-analytics\";s:5:\"count\";i:349;}s:5:\"cache\";a:3:{s:4:\"name\";s:5:\"cache\";s:4:\"slug\";s:5:\"cache\";s:5:\"count\";i:345;}s:6:\"import\";a:3:{s:4:\"name\";s:6:\"import\";s:4:\"slug\";s:6:\"import\";s:5:\"count\";i:343;}s:16:\"custom-post-type\";a:3:{s:4:\"name\";s:16:\"custom post type\";s:4:\"slug\";s:16:\"custom-post-type\";s:5:\"count\";i:341;}}', 'no'),
+(2507, 'product_cat_children', 'a:0:{}', 'yes'),
+(2512, '_transient_timeout_as-post-store-dependencies-met', '1601157138', 'no'),
+(2513, '_transient_as-post-store-dependencies-met', 'yes', 'no'),
+(2514, '_transient_timeout__woocommerce_helper_subscriptions', '1601071647', 'no'),
+(2515, '_transient__woocommerce_helper_subscriptions', 'a:0:{}', 'no'),
+(2519, 'action_scheduler_migration_status', 'complete', 'yes');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_postmeta`
+-- Структура таблицы `wss_postmeta`
 --
 
 CREATE TABLE `wss_postmeta` (
@@ -643,7 +650,7 @@ CREATE TABLE `wss_postmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_postmeta`
+-- Дамп данных таблицы `wss_postmeta`
 --
 
 INSERT INTO `wss_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -1100,7 +1107,7 @@ INSERT INTO `wss_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (461, 84, '_menu_item_xfn', ''),
 (462, 84, '_menu_item_url', ''),
 (464, 85, '_edit_last', '1'),
-(465, 85, '_edit_lock', '1600780214:1'),
+(465, 85, '_edit_lock', '1601062786:1'),
 (466, 89, '_form', '[email* your-email placeholder \"Ваш E-mail\"]<button id=\'submit\' class=\'wpcf7-form-control wpcf7-submit\'>Подписаться</button>'),
 (467, 89, '_mail', 'a:9:{s:6:\"active\";b:1;s:7:\"subject\";s:25:\"Cosmedoc \"[your-subject]\"\";s:6:\"sender\";s:35:\"Cosmedoc <wordpress@cosmedoc.local>\";s:9:\"recipient\";s:19:\"irwintram@gmail.com\";s:4:\"body\";s:168:\"From: [your-name] <[your-email]>\nSubject: [your-subject]\n\nMessage Body:\n[your-message]\n\n-- \nThis e-mail was sent from a contact form on Cosmedoc (http://cosmedoc.local)\";s:18:\"additional_headers\";s:22:\"Reply-To: [your-email]\";s:11:\"attachments\";s:0:\"\";s:8:\"use_html\";b:0;s:13:\"exclude_blank\";b:0;}'),
 (468, 89, '_mail_2', 'a:9:{s:6:\"active\";b:0;s:7:\"subject\";s:25:\"Cosmedoc \"[your-subject]\"\";s:6:\"sender\";s:35:\"Cosmedoc <wordpress@cosmedoc.local>\";s:9:\"recipient\";s:12:\"[your-email]\";s:4:\"body\";s:110:\"Message Body:\n[your-message]\n\n-- \nThis e-mail was sent from a contact form on Cosmedoc (http://cosmedoc.local)\";s:18:\"additional_headers\";s:29:\"Reply-To: irwintram@gmail.com\";s:11:\"attachments\";s:0:\"\";s:8:\"use_html\";b:0;s:13:\"exclude_blank\";b:0;}'),
@@ -1258,12 +1265,249 @@ INSERT INTO `wss_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (635, 119, '_wp_trash_meta_status', 'publish'),
 (636, 119, '_wp_trash_meta_time', '1601043386'),
 (637, 120, '_wp_trash_meta_status', 'publish'),
-(638, 120, '_wp_trash_meta_time', '1601043404');
+(638, 120, '_wp_trash_meta_time', '1601043404'),
+(640, 123, '_edit_last', '1'),
+(641, 123, '_wp_page_template', 'default'),
+(642, 123, '_edit_lock', '1601070971:1'),
+(643, 125, '_edit_last', '1'),
+(644, 125, '_edit_lock', '1601070974:1'),
+(645, 131, '_wp_attached_file', '2020/09/2_volosy_d1.jpg'),
+(646, 131, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1500;s:6:\"height\";i:750;s:4:\"file\";s:23:\"2020/09/2_volosy_d1.jpg\";s:5:\"sizes\";a:11:{s:6:\"medium\";a:4:{s:4:\"file\";s:23:\"2_volosy_d1-300x150.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:5:\"large\";a:4:{s:4:\"file\";s:24:\"2_volosy_d1-1024x512.jpg\";s:5:\"width\";i:1024;s:6:\"height\";i:512;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:9:\"thumbnail\";a:4:{s:4:\"file\";s:23:\"2_volosy_d1-150x150.jpg\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:23:\"2_volosy_d1-768x384.jpg\";s:5:\"width\";i:768;s:6:\"height\";i:384;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:8:\"cat_tile\";a:4:{s:4:\"file\";s:23:\"2_volosy_d1-323x162.jpg\";s:5:\"width\";i:323;s:6:\"height\";i:162;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:21:\"woocommerce_thumbnail\";a:5:{s:4:\"file\";s:23:\"2_volosy_d1-300x300.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";s:9:\"uncropped\";b:0;}s:18:\"woocommerce_single\";a:4:{s:4:\"file\";s:23:\"2_volosy_d1-600x300.jpg\";s:5:\"width\";i:600;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:29:\"woocommerce_gallery_thumbnail\";a:4:{s:4:\"file\";s:23:\"2_volosy_d1-100x100.jpg\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:12:\"shop_catalog\";a:4:{s:4:\"file\";s:23:\"2_volosy_d1-300x300.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:11:\"shop_single\";a:4:{s:4:\"file\";s:23:\"2_volosy_d1-600x300.jpg\";s:5:\"width\";i:600;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:14:\"shop_thumbnail\";a:4:{s:4:\"file\";s:23:\"2_volosy_d1-100x100.jpg\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/jpeg\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(647, 131, '_wp_attachment_image_alt', 'image1'),
+(648, 123, 'slider_0_image', '131'),
+(649, 123, '_slider_0_image', 'field_5f6e31fd4e732'),
+(650, 123, 'slider_0_title', 'Маска в подарок'),
+(651, 123, '_slider_0_title', 'field_5f6e31db4e731'),
+(652, 123, 'slider_0_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(653, 123, '_slider_0_description', 'field_5f6e324b4e733'),
+(654, 123, 'slider_0_link', 'a:3:{s:5:\"title\";s:12:\"Купить\";s:3:\"url\";s:28:\"http://cosmedoc.local/about/\";s:6:\"target\";s:0:\"\";}'),
+(655, 123, '_slider_0_link', 'field_5f6e32694e734'),
+(656, 123, 'slider', '3'),
+(657, 123, '_slider', 'field_5f6e318f4e730'),
+(658, 132, 'slider_0_image', '131'),
+(659, 132, '_slider_0_image', 'field_5f6e31fd4e732'),
+(660, 132, 'slider_0_title', 'Маска в подарок'),
+(661, 132, '_slider_0_title', 'field_5f6e31db4e731'),
+(662, 132, 'slider_0_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(663, 132, '_slider_0_description', 'field_5f6e324b4e733'),
+(664, 132, 'slider_0_link', 'a:3:{s:5:\"title\";s:12:\"Купить\";s:3:\"url\";s:28:\"http://cosmedoc.local/about/\";s:6:\"target\";s:0:\"\";}'),
+(665, 132, '_slider_0_link', 'field_5f6e32694e734'),
+(666, 132, 'slider', '1'),
+(667, 132, '_slider', 'field_5f6e318f4e730'),
+(668, 133, '_wp_attached_file', '2020/09/2_atmosfera_d1.jpg'),
+(669, 133, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1500;s:6:\"height\";i:750;s:4:\"file\";s:26:\"2020/09/2_atmosfera_d1.jpg\";s:5:\"sizes\";a:11:{s:6:\"medium\";a:4:{s:4:\"file\";s:26:\"2_atmosfera_d1-300x150.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:5:\"large\";a:4:{s:4:\"file\";s:27:\"2_atmosfera_d1-1024x512.jpg\";s:5:\"width\";i:1024;s:6:\"height\";i:512;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:9:\"thumbnail\";a:4:{s:4:\"file\";s:26:\"2_atmosfera_d1-150x150.jpg\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:26:\"2_atmosfera_d1-768x384.jpg\";s:5:\"width\";i:768;s:6:\"height\";i:384;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:8:\"cat_tile\";a:4:{s:4:\"file\";s:26:\"2_atmosfera_d1-323x162.jpg\";s:5:\"width\";i:323;s:6:\"height\";i:162;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:21:\"woocommerce_thumbnail\";a:5:{s:4:\"file\";s:26:\"2_atmosfera_d1-300x300.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";s:9:\"uncropped\";b:0;}s:18:\"woocommerce_single\";a:4:{s:4:\"file\";s:26:\"2_atmosfera_d1-600x300.jpg\";s:5:\"width\";i:600;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:29:\"woocommerce_gallery_thumbnail\";a:4:{s:4:\"file\";s:26:\"2_atmosfera_d1-100x100.jpg\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:12:\"shop_catalog\";a:4:{s:4:\"file\";s:26:\"2_atmosfera_d1-300x300.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:11:\"shop_single\";a:4:{s:4:\"file\";s:26:\"2_atmosfera_d1-600x300.jpg\";s:5:\"width\";i:600;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:14:\"shop_thumbnail\";a:4:{s:4:\"file\";s:26:\"2_atmosfera_d1-100x100.jpg\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/jpeg\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(670, 133, '_wp_attachment_image_alt', 'image2'),
+(671, 134, '_wp_attached_file', '2020/09/2_telo_d1.jpg'),
+(672, 134, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1500;s:6:\"height\";i:750;s:4:\"file\";s:21:\"2020/09/2_telo_d1.jpg\";s:5:\"sizes\";a:11:{s:6:\"medium\";a:4:{s:4:\"file\";s:21:\"2_telo_d1-300x150.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:5:\"large\";a:4:{s:4:\"file\";s:22:\"2_telo_d1-1024x512.jpg\";s:5:\"width\";i:1024;s:6:\"height\";i:512;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:9:\"thumbnail\";a:4:{s:4:\"file\";s:21:\"2_telo_d1-150x150.jpg\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:12:\"medium_large\";a:4:{s:4:\"file\";s:21:\"2_telo_d1-768x384.jpg\";s:5:\"width\";i:768;s:6:\"height\";i:384;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:8:\"cat_tile\";a:4:{s:4:\"file\";s:21:\"2_telo_d1-323x162.jpg\";s:5:\"width\";i:323;s:6:\"height\";i:162;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:21:\"woocommerce_thumbnail\";a:5:{s:4:\"file\";s:21:\"2_telo_d1-300x300.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";s:9:\"uncropped\";b:0;}s:18:\"woocommerce_single\";a:4:{s:4:\"file\";s:21:\"2_telo_d1-600x300.jpg\";s:5:\"width\";i:600;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:29:\"woocommerce_gallery_thumbnail\";a:4:{s:4:\"file\";s:21:\"2_telo_d1-100x100.jpg\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:12:\"shop_catalog\";a:4:{s:4:\"file\";s:21:\"2_telo_d1-300x300.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:11:\"shop_single\";a:4:{s:4:\"file\";s:21:\"2_telo_d1-600x300.jpg\";s:5:\"width\";i:600;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:14:\"shop_thumbnail\";a:4:{s:4:\"file\";s:21:\"2_telo_d1-100x100.jpg\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/jpeg\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(673, 134, '_wp_attachment_image_alt', 'image3'),
+(674, 123, 'slider_1_image', '133'),
+(675, 123, '_slider_1_image', 'field_5f6e31fd4e732'),
+(676, 123, 'slider_1_title', 'Маска в подарок'),
+(677, 123, '_slider_1_title', 'field_5f6e31db4e731'),
+(678, 123, 'slider_1_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(679, 123, '_slider_1_description', 'field_5f6e324b4e733'),
+(680, 123, 'slider_1_link', ''),
+(681, 123, '_slider_1_link', 'field_5f6e32694e734'),
+(682, 123, 'slider_2_image', '134'),
+(683, 123, '_slider_2_image', 'field_5f6e31fd4e732'),
+(684, 123, 'slider_2_title', 'Маска в подарок'),
+(685, 123, '_slider_2_title', 'field_5f6e31db4e731'),
+(686, 123, 'slider_2_description', ''),
+(687, 123, '_slider_2_description', 'field_5f6e324b4e733'),
+(688, 123, 'slider_2_link', ''),
+(689, 123, '_slider_2_link', 'field_5f6e32694e734'),
+(690, 135, 'slider_0_image', '131'),
+(691, 135, '_slider_0_image', 'field_5f6e31fd4e732'),
+(692, 135, 'slider_0_title', 'Маска в подарок'),
+(693, 135, '_slider_0_title', 'field_5f6e31db4e731'),
+(694, 135, 'slider_0_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(695, 135, '_slider_0_description', 'field_5f6e324b4e733'),
+(696, 135, 'slider_0_link', 'a:3:{s:5:\"title\";s:12:\"Купить\";s:3:\"url\";s:28:\"http://cosmedoc.local/about/\";s:6:\"target\";s:0:\"\";}'),
+(697, 135, '_slider_0_link', 'field_5f6e32694e734'),
+(698, 135, 'slider', '3'),
+(699, 135, '_slider', 'field_5f6e318f4e730'),
+(700, 135, 'slider_1_image', '133'),
+(701, 135, '_slider_1_image', 'field_5f6e31fd4e732'),
+(702, 135, 'slider_1_title', 'Маска в подарок'),
+(703, 135, '_slider_1_title', 'field_5f6e31db4e731'),
+(704, 135, 'slider_1_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(705, 135, '_slider_1_description', 'field_5f6e324b4e733'),
+(706, 135, 'slider_1_link', ''),
+(707, 135, '_slider_1_link', 'field_5f6e32694e734'),
+(708, 135, 'slider_2_image', '134'),
+(709, 135, '_slider_2_image', 'field_5f6e31fd4e732'),
+(710, 135, 'slider_2_title', 'Маска в подарок'),
+(711, 135, '_slider_2_title', 'field_5f6e31db4e731'),
+(712, 135, 'slider_2_description', ''),
+(713, 135, '_slider_2_description', 'field_5f6e324b4e733'),
+(714, 135, 'slider_2_link', ''),
+(715, 135, '_slider_2_link', 'field_5f6e32694e734'),
+(716, 139, '_wp_attached_file', '2020/09/2_all_products_m1.jpg'),
+(717, 139, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:750;s:6:\"height\";i:750;s:4:\"file\";s:29:\"2020/09/2_all_products_m1.jpg\";s:5:\"sizes\";a:9:{s:6:\"medium\";a:4:{s:4:\"file\";s:29:\"2_all_products_m1-300x300.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:9:\"thumbnail\";a:4:{s:4:\"file\";s:29:\"2_all_products_m1-150x150.jpg\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:8:\"cat_tile\";a:4:{s:4:\"file\";s:29:\"2_all_products_m1-323x323.jpg\";s:5:\"width\";i:323;s:6:\"height\";i:323;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:21:\"woocommerce_thumbnail\";a:5:{s:4:\"file\";s:29:\"2_all_products_m1-300x300.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";s:9:\"uncropped\";b:0;}s:18:\"woocommerce_single\";a:4:{s:4:\"file\";s:29:\"2_all_products_m1-600x600.jpg\";s:5:\"width\";i:600;s:6:\"height\";i:600;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:29:\"woocommerce_gallery_thumbnail\";a:4:{s:4:\"file\";s:29:\"2_all_products_m1-100x100.jpg\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:12:\"shop_catalog\";a:4:{s:4:\"file\";s:29:\"2_all_products_m1-300x300.jpg\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:11:\"shop_single\";a:4:{s:4:\"file\";s:29:\"2_all_products_m1-600x600.jpg\";s:5:\"width\";i:600;s:6:\"height\";i:600;s:9:\"mime-type\";s:10:\"image/jpeg\";}s:14:\"shop_thumbnail\";a:4:{s:4:\"file\";s:29:\"2_all_products_m1-100x100.jpg\";s:5:\"width\";i:100;s:6:\"height\";i:100;s:9:\"mime-type\";s:10:\"image/jpeg\";}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(718, 139, '_wp_attachment_image_alt', 'all product'),
+(719, 123, 'image_for_all_product', '139'),
+(720, 123, '_image_for_all_product', 'field_5f6e55394e01c'),
+(721, 123, 'products_cat', 'a:5:{i:0;s:2:\"24\";i:1;s:2:\"25\";i:2;s:2:\"26\";i:3;s:2:\"27\";i:4;s:2:\"28\";}'),
+(722, 123, '_products_cat', 'field_5f6e4cfe0f658'),
+(723, 140, 'slider_0_image', '131'),
+(724, 140, '_slider_0_image', 'field_5f6e31fd4e732'),
+(725, 140, 'slider_0_title', 'Маска в подарок'),
+(726, 140, '_slider_0_title', 'field_5f6e31db4e731'),
+(727, 140, 'slider_0_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(728, 140, '_slider_0_description', 'field_5f6e324b4e733'),
+(729, 140, 'slider_0_link', 'a:3:{s:5:\"title\";s:12:\"Купить\";s:3:\"url\";s:28:\"http://cosmedoc.local/about/\";s:6:\"target\";s:0:\"\";}'),
+(730, 140, '_slider_0_link', 'field_5f6e32694e734'),
+(731, 140, 'slider', '3'),
+(732, 140, '_slider', 'field_5f6e318f4e730'),
+(733, 140, 'slider_1_image', '133'),
+(734, 140, '_slider_1_image', 'field_5f6e31fd4e732'),
+(735, 140, 'slider_1_title', 'Маска в подарок'),
+(736, 140, '_slider_1_title', 'field_5f6e31db4e731'),
+(737, 140, 'slider_1_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(738, 140, '_slider_1_description', 'field_5f6e324b4e733'),
+(739, 140, 'slider_1_link', ''),
+(740, 140, '_slider_1_link', 'field_5f6e32694e734'),
+(741, 140, 'slider_2_image', '134'),
+(742, 140, '_slider_2_image', 'field_5f6e31fd4e732'),
+(743, 140, 'slider_2_title', 'Маска в подарок'),
+(744, 140, '_slider_2_title', 'field_5f6e31db4e731'),
+(745, 140, 'slider_2_description', ''),
+(746, 140, '_slider_2_description', 'field_5f6e324b4e733'),
+(747, 140, 'slider_2_link', ''),
+(748, 140, '_slider_2_link', 'field_5f6e32694e734'),
+(749, 140, 'image_for_all_product', '139'),
+(750, 140, '_image_for_all_product', 'field_5f6e55394e01c'),
+(751, 140, 'products_cat', 'a:5:{i:0;s:2:\"27\";i:1;s:2:\"28\";i:2;s:2:\"25\";i:3;s:2:\"24\";i:4;s:2:\"26\";}'),
+(752, 140, '_products_cat', 'field_5f6e4cfe0f658'),
+(753, 141, 'slider_0_image', '131'),
+(754, 141, '_slider_0_image', 'field_5f6e31fd4e732'),
+(755, 141, 'slider_0_title', 'Маска в подарок'),
+(756, 141, '_slider_0_title', 'field_5f6e31db4e731'),
+(757, 141, 'slider_0_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(758, 141, '_slider_0_description', 'field_5f6e324b4e733'),
+(759, 141, 'slider_0_link', 'a:3:{s:5:\"title\";s:12:\"Купить\";s:3:\"url\";s:28:\"http://cosmedoc.local/about/\";s:6:\"target\";s:0:\"\";}'),
+(760, 141, '_slider_0_link', 'field_5f6e32694e734'),
+(761, 141, 'slider', '3'),
+(762, 141, '_slider', 'field_5f6e318f4e730'),
+(763, 141, 'slider_1_image', '133'),
+(764, 141, '_slider_1_image', 'field_5f6e31fd4e732'),
+(765, 141, 'slider_1_title', 'Маска в подарок'),
+(766, 141, '_slider_1_title', 'field_5f6e31db4e731'),
+(767, 141, 'slider_1_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(768, 141, '_slider_1_description', 'field_5f6e324b4e733'),
+(769, 141, 'slider_1_link', ''),
+(770, 141, '_slider_1_link', 'field_5f6e32694e734'),
+(771, 141, 'slider_2_image', '134'),
+(772, 141, '_slider_2_image', 'field_5f6e31fd4e732'),
+(773, 141, 'slider_2_title', 'Маска в подарок'),
+(774, 141, '_slider_2_title', 'field_5f6e31db4e731'),
+(775, 141, 'slider_2_description', ''),
+(776, 141, '_slider_2_description', 'field_5f6e324b4e733'),
+(777, 141, 'slider_2_link', ''),
+(778, 141, '_slider_2_link', 'field_5f6e32694e734'),
+(779, 141, 'image_for_all_product', '139'),
+(780, 141, '_image_for_all_product', 'field_5f6e55394e01c'),
+(781, 141, 'products_cat', 'a:5:{i:0;s:2:\"27\";i:1;s:2:\"28\";i:2;s:2:\"25\";i:3;s:2:\"24\";i:4;s:2:\"26\";}'),
+(782, 141, '_products_cat', 'field_5f6e4cfe0f658'),
+(783, 142, 'slider_0_image', '131'),
+(784, 142, '_slider_0_image', 'field_5f6e31fd4e732'),
+(785, 142, 'slider_0_title', 'Маска в подарок'),
+(786, 142, '_slider_0_title', 'field_5f6e31db4e731'),
+(787, 142, 'slider_0_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(788, 142, '_slider_0_description', 'field_5f6e324b4e733'),
+(789, 142, 'slider_0_link', 'a:3:{s:5:\"title\";s:12:\"Купить\";s:3:\"url\";s:28:\"http://cosmedoc.local/about/\";s:6:\"target\";s:0:\"\";}'),
+(790, 142, '_slider_0_link', 'field_5f6e32694e734'),
+(791, 142, 'slider', '3'),
+(792, 142, '_slider', 'field_5f6e318f4e730'),
+(793, 142, 'slider_1_image', '133'),
+(794, 142, '_slider_1_image', 'field_5f6e31fd4e732'),
+(795, 142, 'slider_1_title', 'Маска в подарок'),
+(796, 142, '_slider_1_title', 'field_5f6e31db4e731'),
+(797, 142, 'slider_1_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(798, 142, '_slider_1_description', 'field_5f6e324b4e733'),
+(799, 142, 'slider_1_link', ''),
+(800, 142, '_slider_1_link', 'field_5f6e32694e734'),
+(801, 142, 'slider_2_image', '134'),
+(802, 142, '_slider_2_image', 'field_5f6e31fd4e732'),
+(803, 142, 'slider_2_title', 'Маска в подарок'),
+(804, 142, '_slider_2_title', 'field_5f6e31db4e731'),
+(805, 142, 'slider_2_description', ''),
+(806, 142, '_slider_2_description', 'field_5f6e324b4e733'),
+(807, 142, 'slider_2_link', ''),
+(808, 142, '_slider_2_link', 'field_5f6e32694e734'),
+(809, 142, 'image_for_all_product', '139'),
+(810, 142, '_image_for_all_product', 'field_5f6e55394e01c'),
+(811, 142, 'products_cat', 'a:5:{i:0;s:2:\"27\";i:1;s:2:\"28\";i:2;s:2:\"25\";i:3;s:2:\"24\";i:4;s:2:\"26\";}'),
+(812, 142, '_products_cat', 'field_5f6e4cfe0f658'),
+(813, 143, 'slider_0_image', '131'),
+(814, 143, '_slider_0_image', 'field_5f6e31fd4e732'),
+(815, 143, 'slider_0_title', 'Маска в подарок'),
+(816, 143, '_slider_0_title', 'field_5f6e31db4e731'),
+(817, 143, 'slider_0_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(818, 143, '_slider_0_description', 'field_5f6e324b4e733'),
+(819, 143, 'slider_0_link', 'a:3:{s:5:\"title\";s:12:\"Купить\";s:3:\"url\";s:28:\"http://cosmedoc.local/about/\";s:6:\"target\";s:0:\"\";}'),
+(820, 143, '_slider_0_link', 'field_5f6e32694e734'),
+(821, 143, 'slider', '3'),
+(822, 143, '_slider', 'field_5f6e318f4e730'),
+(823, 143, 'slider_1_image', '133'),
+(824, 143, '_slider_1_image', 'field_5f6e31fd4e732'),
+(825, 143, 'slider_1_title', 'Маска в подарок'),
+(826, 143, '_slider_1_title', 'field_5f6e31db4e731'),
+(827, 143, 'slider_1_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(828, 143, '_slider_1_description', 'field_5f6e324b4e733'),
+(829, 143, 'slider_1_link', ''),
+(830, 143, '_slider_1_link', 'field_5f6e32694e734'),
+(831, 143, 'slider_2_image', '134'),
+(832, 143, '_slider_2_image', 'field_5f6e31fd4e732'),
+(833, 143, 'slider_2_title', 'Маска в подарок'),
+(834, 143, '_slider_2_title', 'field_5f6e31db4e731'),
+(835, 143, 'slider_2_description', ''),
+(836, 143, '_slider_2_description', 'field_5f6e324b4e733'),
+(837, 143, 'slider_2_link', ''),
+(838, 143, '_slider_2_link', 'field_5f6e32694e734'),
+(839, 143, 'image_for_all_product', '139'),
+(840, 143, '_image_for_all_product', 'field_5f6e55394e01c'),
+(841, 143, 'products_cat', 'a:5:{i:0;s:2:\"24\";i:1;s:2:\"25\";i:2;s:2:\"26\";i:3;s:2:\"27\";i:4;s:2:\"28\";}'),
+(842, 143, '_products_cat', 'field_5f6e4cfe0f658'),
+(843, 123, 'slider_products', 'a:5:{i:0;s:2:\"68\";i:1;s:2:\"64\";i:2;s:2:\"22\";i:3;s:2:\"58\";i:4;s:2:\"53\";}'),
+(844, 123, '_slider_products', 'field_5f6e6726fa1a0'),
+(845, 145, 'slider_0_image', '131'),
+(846, 145, '_slider_0_image', 'field_5f6e31fd4e732'),
+(847, 145, 'slider_0_title', 'Маска в подарок'),
+(848, 145, '_slider_0_title', 'field_5f6e31db4e731'),
+(849, 145, 'slider_0_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(850, 145, '_slider_0_description', 'field_5f6e324b4e733'),
+(851, 145, 'slider_0_link', 'a:3:{s:5:\"title\";s:12:\"Купить\";s:3:\"url\";s:28:\"http://cosmedoc.local/about/\";s:6:\"target\";s:0:\"\";}'),
+(852, 145, '_slider_0_link', 'field_5f6e32694e734'),
+(853, 145, 'slider', '3'),
+(854, 145, '_slider', 'field_5f6e318f4e730'),
+(855, 145, 'slider_1_image', '133'),
+(856, 145, '_slider_1_image', 'field_5f6e31fd4e732'),
+(857, 145, 'slider_1_title', 'Маска в подарок'),
+(858, 145, '_slider_1_title', 'field_5f6e31db4e731'),
+(859, 145, 'slider_1_description', 'При покупки на сумму от 15000 руб маска в подарок.'),
+(860, 145, '_slider_1_description', 'field_5f6e324b4e733'),
+(861, 145, 'slider_1_link', ''),
+(862, 145, '_slider_1_link', 'field_5f6e32694e734'),
+(863, 145, 'slider_2_image', '134'),
+(864, 145, '_slider_2_image', 'field_5f6e31fd4e732'),
+(865, 145, 'slider_2_title', 'Маска в подарок'),
+(866, 145, '_slider_2_title', 'field_5f6e31db4e731'),
+(867, 145, 'slider_2_description', ''),
+(868, 145, '_slider_2_description', 'field_5f6e324b4e733'),
+(869, 145, 'slider_2_link', ''),
+(870, 145, '_slider_2_link', 'field_5f6e32694e734'),
+(871, 145, 'image_for_all_product', '139'),
+(872, 145, '_image_for_all_product', 'field_5f6e55394e01c'),
+(873, 145, 'products_cat', 'a:5:{i:0;s:2:\"24\";i:1;s:2:\"25\";i:2;s:2:\"26\";i:3;s:2:\"27\";i:4;s:2:\"28\";}'),
+(874, 145, '_products_cat', 'field_5f6e4cfe0f658'),
+(875, 145, 'slider_products', 'a:5:{i:0;s:2:\"68\";i:1;s:2:\"64\";i:2;s:2:\"22\";i:3;s:2:\"58\";i:4;s:2:\"53\";}'),
+(876, 145, '_slider_products', 'field_5f6e6726fa1a0');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_posts`
+-- Структура таблицы `wss_posts`
 --
 
 CREATE TABLE `wss_posts` (
@@ -1293,7 +1537,7 @@ CREATE TABLE `wss_posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_posts`
+-- Дамп данных таблицы `wss_posts`
 --
 
 INSERT INTO `wss_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -1408,12 +1652,37 @@ INSERT INTO `wss_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (117, 1, '2020-09-22 16:51:35', '2020-09-22 16:51:35', '<h1 style=\"text-align: center;\">Контакты</h1>\r\n\r\n<hr />\r\n<p style=\"text-align: center;\">Если у Вас возникли вопросы,\r\nто свяжитесь с нами по почте или телефону\r\nв рабочее время салона.</p>\r\n<p style=\"text-align: center;\"><a href=\"mailto:support@keeplooking.ru\">support@keeplooking.ru</a></p>\r\n<p style=\"text-align: center;\"><a href=\"tel:+7 499 350 80 50\">+7 499 350 80 50</a></p>\r\n\r\n\r\n<hr />\r\n\r\n<h2 style=\"text-align: center;\">САЛОНЫ И ТОЧКИ САМОВЫВОЗА</h2>\r\n<img class=\"size-medium wp-image-44 aligncenter\" src=\"http://cosmedoc.local/wp-content/uploads/2020/09/kl_ss003_1_4-300x300.jpg\" alt=\"\" width=\"300\" height=\"300\" />\r\n<p style=\"text-align: center;\">127051, МОСКВА\r\nПетровский бульвар, 23</p>\r\n<a href=\"tel:+7 499 350 80 50\">+7 499 350 80 50 доб. 1</a>\r\n\r\n123317, МОСКВА\r\nДЦ Москва-Сити, Пресненская набержная, 8, башня «Город столиц»\r\n\r\n<a href=\"tel:+7 499 350 80 50\">+7 499 350 80 50 доб. 2</a>\r\n\r\nЧасы работы ПН-ВС 10:00-22:00\r\nбез перерывов и выходных\r\n\r\n<hr />\r\n\r\n&nbsp;', 'Контакты', '', 'inherit', 'closed', 'closed', '', '78-revision-v1', '', '', '2020-09-22 16:51:35', '2020-09-22 16:51:35', '', 78, 'http://cosmedoc.local/78-revision-v1/', 0, 'revision', '', 0),
 (118, 1, '2020-09-25 10:11:11', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-09-25 10:11:11', '0000-00-00 00:00:00', '', 0, 'http://cosmedoc.local/?p=118', 0, 'post', '', 0),
 (119, 1, '2020-09-25 14:16:26', '2020-09-25 14:16:26', '{\n    \"woocommerce_thumbnail_image_width\": {\n        \"value\": \"600\",\n        \"type\": \"option\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2020-09-25 14:16:26\"\n    }\n}', '', '', 'trash', 'closed', 'closed', '', '67d64a11-9331-4c29-a54a-f272b2c44c15', '', '', '2020-09-25 14:16:26', '2020-09-25 14:16:26', '', 0, 'http://cosmedoc.local/67d64a11-9331-4c29-a54a-f272b2c44c15/', 0, 'customize_changeset', '', 0),
-(120, 1, '2020-09-25 14:16:43', '2020-09-25 14:16:43', '{\n    \"woocommerce_thumbnail_image_width\": {\n        \"value\": \"300\",\n        \"type\": \"option\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2020-09-25 14:16:43\"\n    }\n}', '', '', 'trash', 'closed', 'closed', '', '6ab99808-d6a0-4006-836b-93b208b5a905', '', '', '2020-09-25 14:16:43', '2020-09-25 14:16:43', '', 0, 'http://cosmedoc.local/6ab99808-d6a0-4006-836b-93b208b5a905/', 0, 'customize_changeset', '', 0);
+(120, 1, '2020-09-25 14:16:43', '2020-09-25 14:16:43', '{\n    \"woocommerce_thumbnail_image_width\": {\n        \"value\": \"300\",\n        \"type\": \"option\",\n        \"user_id\": 1,\n        \"date_modified_gmt\": \"2020-09-25 14:16:43\"\n    }\n}', '', '', 'trash', 'closed', 'closed', '', '6ab99808-d6a0-4006-836b-93b208b5a905', '', '', '2020-09-25 14:16:43', '2020-09-25 14:16:43', '', 0, 'http://cosmedoc.local/6ab99808-d6a0-4006-836b-93b208b5a905/', 0, 'customize_changeset', '', 0),
+(121, 1, '2020-09-25 17:56:17', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2020-09-25 17:56:17', '0000-00-00 00:00:00', '', 0, 'http://cosmedoc.local/?post_type=acf-field-group&p=121', 0, 'acf-field-group', '', 0),
+(122, 1, '2020-09-25 18:03:50', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2020-09-25 18:03:50', '0000-00-00 00:00:00', '', 0, 'http://cosmedoc.local/?post_type=acf-field-group&p=122', 0, 'acf-field-group', '', 0),
+(123, 1, '2020-09-25 18:04:43', '2020-09-25 18:04:43', '', 'Главная Страница', '', 'publish', 'closed', 'closed', '', 'glavnaya-stranicza', '', '', '2020-09-25 21:56:37', '2020-09-25 21:56:37', '', 0, 'http://cosmedoc.local/?page_id=123', 0, 'page', '', 0),
+(124, 1, '2020-09-25 18:04:43', '2020-09-25 18:04:43', '', 'Главная Страница', '', 'inherit', 'closed', 'closed', '', '123-revision-v1', '', '', '2020-09-25 18:04:43', '2020-09-25 18:04:43', '', 123, 'http://cosmedoc.local/123-revision-v1/', 0, 'revision', '', 0),
+(125, 1, '2020-09-25 18:10:36', '2020-09-25 18:10:36', 'a:7:{s:8:\"location\";a:1:{i:0;a:1:{i:0;a:3:{s:5:\"param\";s:4:\"page\";s:8:\"operator\";s:2:\"==\";s:5:\"value\";s:3:\"123\";}}}s:8:\"position\";s:6:\"normal\";s:5:\"style\";s:7:\"default\";s:15:\"label_placement\";s:3:\"top\";s:21:\"instruction_placement\";s:5:\"label\";s:14:\"hide_on_screen\";a:14:{i:0;s:9:\"permalink\";i:1;s:11:\"the_content\";i:2;s:7:\"excerpt\";i:3;s:10:\"discussion\";i:4;s:8:\"comments\";i:5;s:9:\"revisions\";i:6;s:4:\"slug\";i:7;s:6:\"author\";i:8;s:6:\"format\";i:9;s:15:\"page_attributes\";i:10;s:14:\"featured_image\";i:11;s:10:\"categories\";i:12;s:4:\"tags\";i:13;s:15:\"send-trackbacks\";}s:11:\"description\";s:0:\"\";}', 'Главная Страница', 'glavnaya-stranicza', 'publish', 'closed', 'closed', '', 'group_5f6e316ac0ca4', '', '', '2020-09-25 21:56:13', '2020-09-25 21:56:13', '', 0, 'http://cosmedoc.local/?post_type=acf-field-group&#038;p=125', 0, 'acf-field-group', '', 0),
+(126, 1, '2020-09-25 18:10:36', '2020-09-25 18:10:36', 'a:10:{s:4:\"type\";s:8:\"repeater\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"collapsed\";s:0:\"\";s:3:\"min\";i:1;s:3:\"max\";s:0:\"\";s:6:\"layout\";s:5:\"block\";s:12:\"button_label\";s:27:\"Добавить Слайд\";}', 'Слайдер', 'slider', 'publish', 'closed', 'closed', '', 'field_5f6e318f4e730', '', '', '2020-09-25 18:10:36', '2020-09-25 18:10:36', '', 125, 'http://cosmedoc.local/?post_type=acf-field&p=126', 0, 'acf-field', '', 0),
+(127, 1, '2020-09-25 18:10:36', '2020-09-25 18:10:36', 'a:15:{s:4:\"type\";s:5:\"image\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:2:\"50\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"return_format\";s:5:\"array\";s:12:\"preview_size\";s:6:\"medium\";s:7:\"library\";s:3:\"all\";s:9:\"min_width\";s:0:\"\";s:10:\"min_height\";s:0:\"\";s:8:\"min_size\";s:0:\"\";s:9:\"max_width\";s:0:\"\";s:10:\"max_height\";s:0:\"\";s:8:\"max_size\";s:0:\"\";s:10:\"mime_types\";s:0:\"\";}', 'Картинка', 'image', 'publish', 'closed', 'closed', '', 'field_5f6e31fd4e732', '', '', '2020-09-25 18:10:36', '2020-09-25 18:10:36', '', 126, 'http://cosmedoc.local/?post_type=acf-field&p=127', 0, 'acf-field', '', 0),
+(128, 1, '2020-09-25 18:10:36', '2020-09-25 18:10:36', 'a:10:{s:4:\"type\";s:4:\"text\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:2:\"50\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:7:\"prepend\";s:0:\"\";s:6:\"append\";s:0:\"\";s:9:\"maxlength\";s:0:\"\";}', 'Заголовок', 'title', 'publish', 'closed', 'closed', '', 'field_5f6e31db4e731', '', '', '2020-09-25 18:10:36', '2020-09-25 18:10:36', '', 126, 'http://cosmedoc.local/?post_type=acf-field&p=128', 1, 'acf-field', '', 0),
+(129, 1, '2020-09-25 18:10:36', '2020-09-25 18:10:36', 'a:10:{s:4:\"type\";s:8:\"textarea\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:2:\"50\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:9:\"maxlength\";i:300;s:4:\"rows\";s:0:\"\";s:9:\"new_lines\";s:2:\"br\";}', 'Описания', 'description', 'publish', 'closed', 'closed', '', 'field_5f6e324b4e733', '', '', '2020-09-25 18:10:36', '2020-09-25 18:10:36', '', 126, 'http://cosmedoc.local/?post_type=acf-field&p=129', 2, 'acf-field', '', 0),
+(130, 1, '2020-09-25 18:10:36', '2020-09-25 18:10:36', 'a:6:{s:4:\"type\";s:4:\"link\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:2:\"50\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"return_format\";s:5:\"array\";}', 'Ссылка', 'link', 'publish', 'closed', 'closed', '', 'field_5f6e32694e734', '', '', '2020-09-25 18:10:36', '2020-09-25 18:10:36', '', 126, 'http://cosmedoc.local/?post_type=acf-field&p=130', 3, 'acf-field', '', 0),
+(131, 1, '2020-09-25 18:11:30', '2020-09-25 18:11:30', '', '2_volosy_d[1]', '', 'inherit', 'open', 'closed', '', '2_volosy_d1', '', '', '2020-09-25 18:11:45', '2020-09-25 18:11:45', '', 123, 'http://cosmedoc.local/wp-content/uploads/2020/09/2_volosy_d1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(132, 1, '2020-09-25 18:13:50', '2020-09-25 18:13:50', '', 'Главная Страница', '', 'inherit', 'closed', 'closed', '', '123-revision-v1', '', '', '2020-09-25 18:13:50', '2020-09-25 18:13:50', '', 123, 'http://cosmedoc.local/123-revision-v1/', 0, 'revision', '', 0),
+(133, 1, '2020-09-25 18:39:37', '2020-09-25 18:39:37', '', '2_atmosfera_d[1]', '', 'inherit', 'open', 'closed', '', '2_atmosfera_d1', '', '', '2020-09-25 18:39:49', '2020-09-25 18:39:49', '', 123, 'http://cosmedoc.local/wp-content/uploads/2020/09/2_atmosfera_d1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(134, 1, '2020-09-25 18:40:47', '2020-09-25 18:40:47', '', '2_telo_d[1]', '', 'inherit', 'open', 'closed', '', '2_telo_d1', '', '', '2020-09-25 18:40:55', '2020-09-25 18:40:55', '', 123, 'http://cosmedoc.local/wp-content/uploads/2020/09/2_telo_d1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(135, 1, '2020-09-25 18:41:15', '2020-09-25 18:41:15', '', 'Главная Страница', '', 'inherit', 'closed', 'closed', '', '123-revision-v1', '', '', '2020-09-25 18:41:15', '2020-09-25 18:41:15', '', 123, 'http://cosmedoc.local/123-revision-v1/', 0, 'revision', '', 0),
+(136, 1, '2020-09-25 20:02:50', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2020-09-25 20:02:50', '0000-00-00 00:00:00', '', 0, 'http://cosmedoc.local/?post_type=acf-field-group&p=136', 0, 'acf-field-group', '', 0),
+(137, 1, '2020-09-25 20:05:44', '2020-09-25 20:05:44', 'a:13:{s:4:\"type\";s:8:\"taxonomy\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:2:\"50\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:8:\"taxonomy\";s:11:\"product_cat\";s:10:\"field_type\";s:8:\"checkbox\";s:8:\"add_term\";i:0;s:10:\"save_terms\";i:1;s:10:\"load_terms\";i:1;s:13:\"return_format\";s:6:\"object\";s:8:\"multiple\";i:0;s:10:\"allow_null\";i:0;}', 'Категории Продуктов', 'products_cat', 'publish', 'closed', 'closed', '', 'field_5f6e4cfe0f658', '', '', '2020-09-25 20:54:31', '2020-09-25 20:54:31', '', 125, 'http://cosmedoc.local/?post_type=acf-field&#038;p=137', 2, 'acf-field', '', 0),
+(138, 1, '2020-09-25 20:39:43', '2020-09-25 20:39:43', 'a:15:{s:4:\"type\";s:5:\"image\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:1;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:2:\"50\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"return_format\";s:2:\"id\";s:12:\"preview_size\";s:6:\"medium\";s:7:\"library\";s:3:\"all\";s:9:\"min_width\";s:0:\"\";s:10:\"min_height\";s:0:\"\";s:8:\"min_size\";s:0:\"\";s:9:\"max_width\";s:0:\"\";s:10:\"max_height\";s:0:\"\";s:8:\"max_size\";s:0:\"\";s:10:\"mime_types\";s:0:\"\";}', 'Картинка Для Всех Товаров', 'image_for_all_product', 'publish', 'closed', 'closed', '', 'field_5f6e55394e01c', '', '', '2020-09-25 21:28:00', '2020-09-25 21:28:00', '', 125, 'http://cosmedoc.local/?post_type=acf-field&#038;p=138', 1, 'acf-field', '', 0),
+(139, 1, '2020-09-25 20:42:39', '2020-09-25 20:42:39', '', '2_all_products_m[1]', '', 'inherit', 'open', 'closed', '', '2_all_products_m1', '', '', '2020-09-25 20:42:48', '2020-09-25 20:42:48', '', 123, 'http://cosmedoc.local/wp-content/uploads/2020/09/2_all_products_m1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(140, 1, '2020-09-25 20:42:55', '2020-09-25 20:42:55', '', 'Главная Страница', '', 'inherit', 'closed', 'closed', '', '123-revision-v1', '', '', '2020-09-25 20:42:55', '2020-09-25 20:42:55', '', 123, 'http://cosmedoc.local/123-revision-v1/', 0, 'revision', '', 0),
+(141, 1, '2020-09-25 20:50:22', '2020-09-25 20:50:22', '', 'Главная Страница', '', 'inherit', 'closed', 'closed', '', '123-revision-v1', '', '', '2020-09-25 20:50:22', '2020-09-25 20:50:22', '', 123, 'http://cosmedoc.local/123-revision-v1/', 0, 'revision', '', 0),
+(142, 1, '2020-09-25 20:52:44', '2020-09-25 20:52:44', '', 'Главная Страница', '', 'inherit', 'closed', 'closed', '', '123-revision-v1', '', '', '2020-09-25 20:52:44', '2020-09-25 20:52:44', '', 123, 'http://cosmedoc.local/123-revision-v1/', 0, 'revision', '', 0),
+(143, 1, '2020-09-25 20:53:20', '2020-09-25 20:53:20', '', 'Главная Страница', '', 'inherit', 'closed', 'closed', '', '123-revision-v1', '', '', '2020-09-25 20:53:20', '2020-09-25 20:53:20', '', 123, 'http://cosmedoc.local/123-revision-v1/', 0, 'revision', '', 0),
+(144, 1, '2020-09-25 21:56:13', '2020-09-25 21:56:13', 'a:12:{s:4:\"type\";s:12:\"relationship\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:9:\"post_type\";a:1:{i:0;s:7:\"product\";}s:8:\"taxonomy\";s:0:\"\";s:7:\"filters\";a:1:{i:0;s:6:\"search\";}s:8:\"elements\";a:1:{i:0;s:14:\"featured_image\";}s:3:\"min\";i:4;s:3:\"max\";s:0:\"\";s:13:\"return_format\";s:6:\"object\";}', 'Слайдер Товаров', 'slider_products', 'publish', 'closed', 'closed', '', 'field_5f6e6726fa1a0', '', '', '2020-09-25 21:56:13', '2020-09-25 21:56:13', '', 125, 'http://cosmedoc.local/?post_type=acf-field&p=144', 3, 'acf-field', '', 0),
+(145, 1, '2020-09-25 21:56:37', '2020-09-25 21:56:37', '', 'Главная Страница', '', 'inherit', 'closed', 'closed', '', '123-revision-v1', '', '', '2020-09-25 21:56:37', '2020-09-25 21:56:37', '', 123, 'http://cosmedoc.local/123-revision-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_termmeta`
+-- Структура таблицы `wss_termmeta`
 --
 
 CREATE TABLE `wss_termmeta` (
@@ -1424,23 +1693,23 @@ CREATE TABLE `wss_termmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_termmeta`
+-- Дамп данных таблицы `wss_termmeta`
 --
 
 INSERT INTO `wss_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUES
-(1, 24, 'order', '0'),
+(1, 24, 'order', '3'),
 (2, 24, 'display_type', ''),
 (3, 24, 'thumbnail_id', '9'),
-(4, 25, 'order', '0'),
+(4, 25, 'order', '2'),
 (5, 25, 'display_type', ''),
 (6, 25, 'thumbnail_id', '10'),
-(7, 26, 'order', '0'),
+(7, 26, 'order', '4'),
 (8, 26, 'display_type', ''),
 (9, 26, 'thumbnail_id', '11'),
-(10, 27, 'order', '0'),
+(10, 27, 'order', '5'),
 (11, 27, 'display_type', ''),
 (12, 27, 'thumbnail_id', '12'),
-(13, 28, 'order', '0'),
+(13, 28, 'order', '6'),
 (14, 28, 'display_type', ''),
 (15, 28, 'thumbnail_id', '13'),
 (20, 25, 'product_count_product_cat', '5'),
@@ -1459,84 +1728,88 @@ INSERT INTO `wss_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALU
 (33, 47, 'order_pa_strana-proizvoditel', '0'),
 (34, 49, 'order_pa_kolichestvo-tovara', '0'),
 (35, 51, 'order_pa_strana-proizvoditel', '0'),
-(36, 52, 'order_pa_weight', '0');
+(36, 52, 'order_pa_weight', '0'),
+(37, 27, 'product_count_product_cat', '0'),
+(38, 28, 'product_count_product_cat', '0'),
+(39, 23, 'order', '1');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_terms`
+-- Структура таблицы `wss_terms`
 --
 
 CREATE TABLE `wss_terms` (
   `term_id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
   `slug` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `term_group` bigint(10) NOT NULL DEFAULT '0'
+  `term_group` bigint(10) NOT NULL DEFAULT '0',
+  `term_order` int(4) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_terms`
+-- Дамп данных таблицы `wss_terms`
 --
 
-INSERT INTO `wss_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
-(1, 'Uncategorized', 'uncategorized', 0),
-(2, 'Template', 'template', 0),
-(3, 'Option', 'option', 0),
-(4, 'Post Type', 'post-type', 0),
-(5, 'Flexible Content', 'flexible-content', 0),
-(6, 'Block', 'block', 0),
-(7, 'Taxonomy', 'taxonomy', 0),
-(8, 'User', 'user', 0),
-(9, 'Menu Item', 'menu-item', 0),
-(10, 'simple', 'simple', 0),
-(11, 'grouped', 'grouped', 0),
-(12, 'variable', 'variable', 0),
-(13, 'external', 'external', 0),
-(14, 'exclude-from-search', 'exclude-from-search', 0),
-(15, 'exclude-from-catalog', 'exclude-from-catalog', 0),
-(16, 'featured', 'featured', 0),
-(17, 'outofstock', 'outofstock', 0),
-(18, 'rated-1', 'rated-1', 0),
-(19, 'rated-2', 'rated-2', 0),
-(20, 'rated-3', 'rated-3', 0),
-(21, 'rated-4', 'rated-4', 0),
-(22, 'rated-5', 'rated-5', 0),
-(23, 'Uncategorized', 'uncategorized', 0),
-(24, 'Лицо', 'liczo', 0),
-(25, 'Волосы', 'volosy', 0),
-(26, 'Тело', 'telo', 0),
-(27, 'Аксессуары', 'aksessuary', 0),
-(28, 'Атмосфера', 'atmosfera', 0),
-(30, 'Rated green', 'rated-green', 0),
-(31, 'Rated Green', 'rated-green', 0),
-(32, 'Rated Green', 'rated-green', 0),
-(33, 'LA SULTANE DE SABA', 'la-sultane-de-saba', 0),
-(34, 'Франция', 'francziya', 0),
-(35, '300 мл', '300-ml', 0),
-(36, 'AUTHENTIC BEAUTY CONCEPT', 'authentic-beauty-concept', 0),
-(37, 'Германия', 'germaniya', 0),
-(38, '100 мл', '100-ml', 0),
-(39, '22|11', '2211', 0),
-(40, 'Россия', 'rossiya', 0),
-(41, '125 мл', '125-ml', 0),
-(42, 'KEVIN MURPHY', 'kevin-murphy', 0),
-(43, 'Австралия', 'avstraliya', 0),
-(44, 'США', 'ssha', 0),
-(45, '10 мл', '10-ml', 0),
-(46, 'PERRICONE MD', 'perricone-md', 0),
-(47, 'Япония', 'yaponiya', 0),
-(48, 'PURE LIFT', 'pure-lift', 0),
-(49, '1 шт', '1-sht', 0),
-(50, 'GENOSYS', 'genosys', 0),
-(51, 'Южная Корея', 'yuzhnaya-koreya', 0),
-(52, '50 мл', '50-ml', 0),
-(53, 'Home Menu', 'home-menu', 0),
-(54, 'Footer Menu', 'footer-menu', 0);
+INSERT INTO `wss_terms` (`term_id`, `name`, `slug`, `term_group`, `term_order`) VALUES
+(1, 'Uncategorized', 'uncategorized', 0, 0),
+(2, 'Template', 'template', 0, 0),
+(3, 'Option', 'option', 0, 0),
+(4, 'Post Type', 'post-type', 0, 0),
+(5, 'Flexible Content', 'flexible-content', 0, 0),
+(6, 'Block', 'block', 0, 0),
+(7, 'Taxonomy', 'taxonomy', 0, 0),
+(8, 'User', 'user', 0, 0),
+(9, 'Menu Item', 'menu-item', 0, 0),
+(10, 'simple', 'simple', 0, 0),
+(11, 'grouped', 'grouped', 0, 0),
+(12, 'variable', 'variable', 0, 0),
+(13, 'external', 'external', 0, 0),
+(14, 'exclude-from-search', 'exclude-from-search', 0, 0),
+(15, 'exclude-from-catalog', 'exclude-from-catalog', 0, 0),
+(16, 'featured', 'featured', 0, 0),
+(17, 'outofstock', 'outofstock', 0, 0),
+(18, 'rated-1', 'rated-1', 0, 0),
+(19, 'rated-2', 'rated-2', 0, 0),
+(20, 'rated-3', 'rated-3', 0, 0),
+(21, 'rated-4', 'rated-4', 0, 0),
+(22, 'rated-5', 'rated-5', 0, 0),
+(23, 'Uncategorized', 'uncategorized', 0, 0),
+(24, 'Лицо', 'liczo', 0, 0),
+(25, 'Волосы', 'volosy', 0, 0),
+(26, 'Тело', 'telo', 0, 0),
+(27, 'Аксессуары', 'aksessuary', 0, 0),
+(28, 'Атмосфера', 'atmosfera', 0, 0),
+(30, 'Rated green', 'rated-green', 0, 0),
+(31, 'Rated Green', 'rated-green', 0, 0),
+(32, 'Rated Green', 'rated-green', 0, 0),
+(33, 'LA SULTANE DE SABA', 'la-sultane-de-saba', 0, 0),
+(34, 'Франция', 'francziya', 0, 0),
+(35, '300 мл', '300-ml', 0, 0),
+(36, 'AUTHENTIC BEAUTY CONCEPT', 'authentic-beauty-concept', 0, 0),
+(37, 'Германия', 'germaniya', 0, 0),
+(38, '100 мл', '100-ml', 0, 0),
+(39, '22|11', '2211', 0, 0),
+(40, 'Россия', 'rossiya', 0, 0),
+(41, '125 мл', '125-ml', 0, 0),
+(42, 'KEVIN MURPHY', 'kevin-murphy', 0, 0),
+(43, 'Австралия', 'avstraliya', 0, 0),
+(44, 'США', 'ssha', 0, 0),
+(45, '10 мл', '10-ml', 0, 0),
+(46, 'PERRICONE MD', 'perricone-md', 0, 0),
+(47, 'Япония', 'yaponiya', 0, 0),
+(48, 'PURE LIFT', 'pure-lift', 0, 0),
+(49, '1 шт', '1-sht', 0, 0),
+(50, 'GENOSYS', 'genosys', 0, 0),
+(51, 'Южная Корея', 'yuzhnaya-koreya', 0, 0),
+(52, '50 мл', '50-ml', 0, 0),
+(53, 'Home Menu', 'home-menu', 0, 0),
+(54, 'Footer Menu', 'footer-menu', 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_term_relationships`
+-- Структура таблицы `wss_term_relationships`
 --
 
 CREATE TABLE `wss_term_relationships` (
@@ -1546,7 +1819,7 @@ CREATE TABLE `wss_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_term_relationships`
+-- Дамп данных таблицы `wss_term_relationships`
 --
 
 INSERT INTO `wss_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -1616,12 +1889,17 @@ INSERT INTO `wss_term_relationships` (`object_id`, `term_taxonomy_id`, `term_ord
 (103, 54, 0),
 (104, 54, 0),
 (106, 54, 0),
-(107, 54, 0);
+(107, 54, 0),
+(123, 24, 0),
+(123, 25, 0),
+(123, 26, 0),
+(123, 27, 0),
+(123, 28, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_term_taxonomy`
+-- Структура таблицы `wss_term_taxonomy`
 --
 
 CREATE TABLE `wss_term_taxonomy` (
@@ -1634,7 +1912,7 @@ CREATE TABLE `wss_term_taxonomy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_term_taxonomy`
+-- Дамп данных таблицы `wss_term_taxonomy`
 --
 
 INSERT INTO `wss_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
@@ -1695,7 +1973,7 @@ INSERT INTO `wss_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `des
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_usermeta`
+-- Структура таблицы `wss_usermeta`
 --
 
 CREATE TABLE `wss_usermeta` (
@@ -1706,7 +1984,7 @@ CREATE TABLE `wss_usermeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_usermeta`
+-- Дамп данных таблицы `wss_usermeta`
 --
 
 INSERT INTO `wss_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -1725,7 +2003,7 @@ INSERT INTO `wss_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 (13, 1, 'wss_user_level', '10'),
 (14, 1, 'dismissed_wp_pointers', ''),
 (15, 1, 'show_welcome_panel', '1'),
-(16, 1, 'session_tokens', 'a:3:{s:64:\"a70787b69b47861284fe6bc82bd2b92da5397a7cdf369d1c50f5b0fe24349573\";a:4:{s:10:\"expiration\";i:1601636360;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36\";s:5:\"login\";i:1600426760;}s:64:\"3cb56729a3c1be4adef9ba65d92499f210cf2f34236f88fee6d5dd1eb3984b51\";a:4:{s:10:\"expiration\";i:1601063376;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36\";s:5:\"login\";i:1600890576;}s:64:\"f410766db1806b2bfeac644511452e8f389129d995c6c54e97c3a6dee674f1a8\";a:4:{s:10:\"expiration\";i:1601201469;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36\";s:5:\"login\";i:1601028669;}}'),
+(16, 1, 'session_tokens', 'a:2:{s:64:\"a70787b69b47861284fe6bc82bd2b92da5397a7cdf369d1c50f5b0fe24349573\";a:4:{s:10:\"expiration\";i:1601636360;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36\";s:5:\"login\";i:1600426760;}s:64:\"f410766db1806b2bfeac644511452e8f389129d995c6c54e97c3a6dee674f1a8\";a:4:{s:10:\"expiration\";i:1601201469;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36\";s:5:\"login\";i:1601028669;}}'),
 (17, 1, 'wss_dashboard_quick_press_last_post_id', '118'),
 (18, 1, 'community-events-location', 'a:1:{s:2:\"ip\";s:9:\"127.0.0.0\";}'),
 (19, 1, '_woocommerce_tracks_anon_id', 'woo:UlmwLMQ1eYyvavNAMFmJOFyo'),
@@ -1747,7 +2025,7 @@ INSERT INTO `wss_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_users`
+-- Структура таблицы `wss_users`
 --
 
 CREATE TABLE `wss_users` (
@@ -1764,7 +2042,7 @@ CREATE TABLE `wss_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_users`
+-- Дамп данных таблицы `wss_users`
 --
 
 INSERT INTO `wss_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
@@ -1773,7 +2051,7 @@ INSERT INTO `wss_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_admin_notes`
+-- Структура таблицы `wss_wc_admin_notes`
 --
 
 CREATE TABLE `wss_wc_admin_notes` (
@@ -1796,7 +2074,7 @@ CREATE TABLE `wss_wc_admin_notes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_wc_admin_notes`
+-- Дамп данных таблицы `wss_wc_admin_notes`
 --
 
 INSERT INTO `wss_wc_admin_notes` (`note_id`, `name`, `type`, `locale`, `title`, `content`, `content_data`, `status`, `source`, `date_created`, `date_reminder`, `is_snoozable`, `layout`, `image`, `is_deleted`, `icon`) VALUES
@@ -1810,7 +2088,7 @@ INSERT INTO `wss_wc_admin_notes` (`note_id`, `name`, `type`, `locale`, `title`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_admin_note_actions`
+-- Структура таблицы `wss_wc_admin_note_actions`
 --
 
 CREATE TABLE `wss_wc_admin_note_actions` (
@@ -1825,7 +2103,7 @@ CREATE TABLE `wss_wc_admin_note_actions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_wc_admin_note_actions`
+-- Дамп данных таблицы `wss_wc_admin_note_actions`
 --
 
 INSERT INTO `wss_wc_admin_note_actions` (`action_id`, `note_id`, `name`, `label`, `query`, `status`, `is_primary`, `actioned_text`) VALUES
@@ -1839,7 +2117,7 @@ INSERT INTO `wss_wc_admin_note_actions` (`action_id`, `note_id`, `name`, `label`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_category_lookup`
+-- Структура таблицы `wss_wc_category_lookup`
 --
 
 CREATE TABLE `wss_wc_category_lookup` (
@@ -1848,7 +2126,7 @@ CREATE TABLE `wss_wc_category_lookup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_wc_category_lookup`
+-- Дамп данных таблицы `wss_wc_category_lookup`
 --
 
 INSERT INTO `wss_wc_category_lookup` (`category_tree_id`, `category_id`) VALUES
@@ -1857,7 +2135,7 @@ INSERT INTO `wss_wc_category_lookup` (`category_tree_id`, `category_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_customer_lookup`
+-- Структура таблицы `wss_wc_customer_lookup`
 --
 
 CREATE TABLE `wss_wc_customer_lookup` (
@@ -1878,7 +2156,7 @@ CREATE TABLE `wss_wc_customer_lookup` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_download_log`
+-- Структура таблицы `wss_wc_download_log`
 --
 
 CREATE TABLE `wss_wc_download_log` (
@@ -1892,7 +2170,7 @@ CREATE TABLE `wss_wc_download_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_order_coupon_lookup`
+-- Структура таблицы `wss_wc_order_coupon_lookup`
 --
 
 CREATE TABLE `wss_wc_order_coupon_lookup` (
@@ -1905,7 +2183,7 @@ CREATE TABLE `wss_wc_order_coupon_lookup` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_order_product_lookup`
+-- Структура таблицы `wss_wc_order_product_lookup`
 --
 
 CREATE TABLE `wss_wc_order_product_lookup` (
@@ -1927,7 +2205,7 @@ CREATE TABLE `wss_wc_order_product_lookup` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_order_stats`
+-- Структура таблицы `wss_wc_order_stats`
 --
 
 CREATE TABLE `wss_wc_order_stats` (
@@ -1948,7 +2226,7 @@ CREATE TABLE `wss_wc_order_stats` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_order_tax_lookup`
+-- Структура таблицы `wss_wc_order_tax_lookup`
 --
 
 CREATE TABLE `wss_wc_order_tax_lookup` (
@@ -1963,7 +2241,7 @@ CREATE TABLE `wss_wc_order_tax_lookup` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_product_meta_lookup`
+-- Структура таблицы `wss_wc_product_meta_lookup`
 --
 
 CREATE TABLE `wss_wc_product_meta_lookup` (
@@ -1984,7 +2262,7 @@ CREATE TABLE `wss_wc_product_meta_lookup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_wc_product_meta_lookup`
+-- Дамп данных таблицы `wss_wc_product_meta_lookup`
 --
 
 INSERT INTO `wss_wc_product_meta_lookup` (`product_id`, `sku`, `virtual`, `downloadable`, `min_price`, `max_price`, `onsale`, `stock_quantity`, `stock_status`, `rating_count`, `average_rating`, `total_sales`, `tax_status`, `tax_class`) VALUES
@@ -2002,7 +2280,7 @@ INSERT INTO `wss_wc_product_meta_lookup` (`product_id`, `sku`, `virtual`, `downl
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_reserved_stock`
+-- Структура таблицы `wss_wc_reserved_stock`
 --
 
 CREATE TABLE `wss_wc_reserved_stock` (
@@ -2016,7 +2294,7 @@ CREATE TABLE `wss_wc_reserved_stock` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_tax_rate_classes`
+-- Структура таблицы `wss_wc_tax_rate_classes`
 --
 
 CREATE TABLE `wss_wc_tax_rate_classes` (
@@ -2026,7 +2304,7 @@ CREATE TABLE `wss_wc_tax_rate_classes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_wc_tax_rate_classes`
+-- Дамп данных таблицы `wss_wc_tax_rate_classes`
 --
 
 INSERT INTO `wss_wc_tax_rate_classes` (`tax_rate_class_id`, `name`, `slug`) VALUES
@@ -2036,7 +2314,7 @@ INSERT INTO `wss_wc_tax_rate_classes` (`tax_rate_class_id`, `name`, `slug`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_wc_webhooks`
+-- Структура таблицы `wss_wc_webhooks`
 --
 
 CREATE TABLE `wss_wc_webhooks` (
@@ -2059,7 +2337,7 @@ CREATE TABLE `wss_wc_webhooks` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_api_keys`
+-- Структура таблицы `wss_woocommerce_api_keys`
 --
 
 CREATE TABLE `wss_woocommerce_api_keys` (
@@ -2077,7 +2355,7 @@ CREATE TABLE `wss_woocommerce_api_keys` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_attribute_taxonomies`
+-- Структура таблицы `wss_woocommerce_attribute_taxonomies`
 --
 
 CREATE TABLE `wss_woocommerce_attribute_taxonomies` (
@@ -2090,7 +2368,7 @@ CREATE TABLE `wss_woocommerce_attribute_taxonomies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_woocommerce_attribute_taxonomies`
+-- Дамп данных таблицы `wss_woocommerce_attribute_taxonomies`
 --
 
 INSERT INTO `wss_woocommerce_attribute_taxonomies` (`attribute_id`, `attribute_name`, `attribute_label`, `attribute_type`, `attribute_orderby`, `attribute_public`) VALUES
@@ -2101,7 +2379,7 @@ INSERT INTO `wss_woocommerce_attribute_taxonomies` (`attribute_id`, `attribute_n
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_downloadable_product_permissions`
+-- Структура таблицы `wss_woocommerce_downloadable_product_permissions`
 --
 
 CREATE TABLE `wss_woocommerce_downloadable_product_permissions` (
@@ -2121,7 +2399,7 @@ CREATE TABLE `wss_woocommerce_downloadable_product_permissions` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_log`
+-- Структура таблицы `wss_woocommerce_log`
 --
 
 CREATE TABLE `wss_woocommerce_log` (
@@ -2136,7 +2414,7 @@ CREATE TABLE `wss_woocommerce_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_order_itemmeta`
+-- Структура таблицы `wss_woocommerce_order_itemmeta`
 --
 
 CREATE TABLE `wss_woocommerce_order_itemmeta` (
@@ -2149,7 +2427,7 @@ CREATE TABLE `wss_woocommerce_order_itemmeta` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_order_items`
+-- Структура таблицы `wss_woocommerce_order_items`
 --
 
 CREATE TABLE `wss_woocommerce_order_items` (
@@ -2162,7 +2440,7 @@ CREATE TABLE `wss_woocommerce_order_items` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_payment_tokenmeta`
+-- Структура таблицы `wss_woocommerce_payment_tokenmeta`
 --
 
 CREATE TABLE `wss_woocommerce_payment_tokenmeta` (
@@ -2175,7 +2453,7 @@ CREATE TABLE `wss_woocommerce_payment_tokenmeta` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_payment_tokens`
+-- Структура таблицы `wss_woocommerce_payment_tokens`
 --
 
 CREATE TABLE `wss_woocommerce_payment_tokens` (
@@ -2190,7 +2468,7 @@ CREATE TABLE `wss_woocommerce_payment_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_sessions`
+-- Структура таблицы `wss_woocommerce_sessions`
 --
 
 CREATE TABLE `wss_woocommerce_sessions` (
@@ -2201,16 +2479,16 @@ CREATE TABLE `wss_woocommerce_sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Dumping data for table `wss_woocommerce_sessions`
+-- Дамп данных таблицы `wss_woocommerce_sessions`
 --
 
 INSERT INTO `wss_woocommerce_sessions` (`session_id`, `session_key`, `session_value`, `session_expiry`) VALUES
-(3, '1', 'a:7:{s:4:\"cart\";s:417:\"a:1:{s:32:\"9f61408e3afb633e50cdf1b20de6f466\";a:11:{s:3:\"key\";s:32:\"9f61408e3afb633e50cdf1b20de6f466\";s:10:\"product_id\";i:56;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:10;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:35700;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:35700;s:8:\"line_tax\";i:0;}}\";s:11:\"cart_totals\";s:414:\"a:15:{s:8:\"subtotal\";s:8:\"35700.00\";s:12:\"subtotal_tax\";d:0;s:14:\"shipping_total\";s:4:\"0.00\";s:12:\"shipping_tax\";i:0;s:14:\"shipping_taxes\";a:0:{}s:14:\"discount_total\";i:0;s:12:\"discount_tax\";i:0;s:19:\"cart_contents_total\";s:8:\"35700.00\";s:17:\"cart_contents_tax\";i:0;s:19:\"cart_contents_taxes\";a:0:{}s:9:\"fee_total\";s:4:\"0.00\";s:7:\"fee_tax\";i:0;s:9:\"fee_taxes\";a:0:{}s:5:\"total\";s:8:\"35700.00\";s:9:\"total_tax\";d:0;}\";s:15:\"applied_coupons\";s:6:\"a:0:{}\";s:22:\"coupon_discount_totals\";s:6:\"a:0:{}\";s:26:\"coupon_discount_tax_totals\";s:6:\"a:0:{}\";s:21:\"removed_cart_contents\";s:6:\"a:0:{}\";s:8:\"customer\";s:707:\"a:26:{s:2:\"id\";s:1:\"1\";s:13:\"date_modified\";s:0:\"\";s:8:\"postcode\";s:0:\"\";s:4:\"city\";s:0:\"\";s:9:\"address_1\";s:0:\"\";s:7:\"address\";s:0:\"\";s:9:\"address_2\";s:0:\"\";s:5:\"state\";s:0:\"\";s:7:\"country\";s:2:\"IL\";s:17:\"shipping_postcode\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:18:\"shipping_address_1\";s:0:\"\";s:16:\"shipping_address\";s:0:\"\";s:18:\"shipping_address_2\";s:0:\"\";s:14:\"shipping_state\";s:0:\"\";s:16:\"shipping_country\";s:2:\"IL\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:10:\"first_name\";s:0:\"\";s:9:\"last_name\";s:0:\"\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:19:\"irwintram@gmail.com\";s:19:\"shipping_first_name\";s:0:\"\";s:18:\"shipping_last_name\";s:0:\"\";s:16:\"shipping_company\";s:0:\"\";}\";}', 1601201472);
+(4, 'a699af631c54ef25694fc17ffcd3c54d', 'a:1:{s:8:\"customer\";s:707:\"a:26:{s:2:\"id\";s:1:\"1\";s:13:\"date_modified\";s:0:\"\";s:8:\"postcode\";s:0:\"\";s:4:\"city\";s:0:\"\";s:9:\"address_1\";s:0:\"\";s:7:\"address\";s:0:\"\";s:9:\"address_2\";s:0:\"\";s:5:\"state\";s:0:\"\";s:7:\"country\";s:2:\"IL\";s:17:\"shipping_postcode\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:18:\"shipping_address_1\";s:0:\"\";s:16:\"shipping_address\";s:0:\"\";s:18:\"shipping_address_2\";s:0:\"\";s:14:\"shipping_state\";s:0:\"\";s:16:\"shipping_country\";s:2:\"IL\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:10:\"first_name\";s:0:\"\";s:9:\"last_name\";s:0:\"\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:19:\"irwintram@gmail.com\";s:19:\"shipping_first_name\";s:0:\"\";s:18:\"shipping_last_name\";s:0:\"\";s:16:\"shipping_company\";s:0:\"\";}\";}', 1601229384);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_shipping_zones`
+-- Структура таблицы `wss_woocommerce_shipping_zones`
 --
 
 CREATE TABLE `wss_woocommerce_shipping_zones` (
@@ -2222,7 +2500,7 @@ CREATE TABLE `wss_woocommerce_shipping_zones` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_shipping_zone_locations`
+-- Структура таблицы `wss_woocommerce_shipping_zone_locations`
 --
 
 CREATE TABLE `wss_woocommerce_shipping_zone_locations` (
@@ -2235,7 +2513,7 @@ CREATE TABLE `wss_woocommerce_shipping_zone_locations` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_shipping_zone_methods`
+-- Структура таблицы `wss_woocommerce_shipping_zone_methods`
 --
 
 CREATE TABLE `wss_woocommerce_shipping_zone_methods` (
@@ -2249,7 +2527,7 @@ CREATE TABLE `wss_woocommerce_shipping_zone_methods` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_tax_rates`
+-- Структура таблицы `wss_woocommerce_tax_rates`
 --
 
 CREATE TABLE `wss_woocommerce_tax_rates` (
@@ -2268,7 +2546,7 @@ CREATE TABLE `wss_woocommerce_tax_rates` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wss_woocommerce_tax_rate_locations`
+-- Структура таблицы `wss_woocommerce_tax_rate_locations`
 --
 
 CREATE TABLE `wss_woocommerce_tax_rate_locations` (
@@ -2279,11 +2557,11 @@ CREATE TABLE `wss_woocommerce_tax_rate_locations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Indexes for dumped tables
+-- Индексы сохранённых таблиц
 --
 
 --
--- Indexes for table `wss_actionscheduler_actions`
+-- Индексы таблицы `wss_actionscheduler_actions`
 --
 ALTER TABLE `wss_actionscheduler_actions`
   ADD PRIMARY KEY (`action_id`),
@@ -2296,21 +2574,21 @@ ALTER TABLE `wss_actionscheduler_actions`
   ADD KEY `claim_id` (`claim_id`);
 
 --
--- Indexes for table `wss_actionscheduler_claims`
+-- Индексы таблицы `wss_actionscheduler_claims`
 --
 ALTER TABLE `wss_actionscheduler_claims`
   ADD PRIMARY KEY (`claim_id`),
   ADD KEY `date_created_gmt` (`date_created_gmt`);
 
 --
--- Indexes for table `wss_actionscheduler_groups`
+-- Индексы таблицы `wss_actionscheduler_groups`
 --
 ALTER TABLE `wss_actionscheduler_groups`
   ADD PRIMARY KEY (`group_id`),
   ADD KEY `slug` (`slug`(191));
 
 --
--- Indexes for table `wss_actionscheduler_logs`
+-- Индексы таблицы `wss_actionscheduler_logs`
 --
 ALTER TABLE `wss_actionscheduler_logs`
   ADD PRIMARY KEY (`log_id`),
@@ -2318,7 +2596,7 @@ ALTER TABLE `wss_actionscheduler_logs`
   ADD KEY `log_date_gmt` (`log_date_gmt`);
 
 --
--- Indexes for table `wss_commentmeta`
+-- Индексы таблицы `wss_commentmeta`
 --
 ALTER TABLE `wss_commentmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -2326,7 +2604,7 @@ ALTER TABLE `wss_commentmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wss_comments`
+-- Индексы таблицы `wss_comments`
 --
 ALTER TABLE `wss_comments`
   ADD PRIMARY KEY (`comment_ID`),
@@ -2338,14 +2616,14 @@ ALTER TABLE `wss_comments`
   ADD KEY `woo_idx_comment_type` (`comment_type`);
 
 --
--- Indexes for table `wss_links`
+-- Индексы таблицы `wss_links`
 --
 ALTER TABLE `wss_links`
   ADD PRIMARY KEY (`link_id`),
   ADD KEY `link_visible` (`link_visible`);
 
 --
--- Indexes for table `wss_options`
+-- Индексы таблицы `wss_options`
 --
 ALTER TABLE `wss_options`
   ADD PRIMARY KEY (`option_id`),
@@ -2353,7 +2631,7 @@ ALTER TABLE `wss_options`
   ADD KEY `autoload` (`autoload`);
 
 --
--- Indexes for table `wss_postmeta`
+-- Индексы таблицы `wss_postmeta`
 --
 ALTER TABLE `wss_postmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -2361,7 +2639,7 @@ ALTER TABLE `wss_postmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wss_posts`
+-- Индексы таблицы `wss_posts`
 --
 ALTER TABLE `wss_posts`
   ADD PRIMARY KEY (`ID`),
@@ -2371,7 +2649,7 @@ ALTER TABLE `wss_posts`
   ADD KEY `post_author` (`post_author`);
 
 --
--- Indexes for table `wss_termmeta`
+-- Индексы таблицы `wss_termmeta`
 --
 ALTER TABLE `wss_termmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -2379,7 +2657,7 @@ ALTER TABLE `wss_termmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wss_terms`
+-- Индексы таблицы `wss_terms`
 --
 ALTER TABLE `wss_terms`
   ADD PRIMARY KEY (`term_id`),
@@ -2387,14 +2665,14 @@ ALTER TABLE `wss_terms`
   ADD KEY `name` (`name`(191));
 
 --
--- Indexes for table `wss_term_relationships`
+-- Индексы таблицы `wss_term_relationships`
 --
 ALTER TABLE `wss_term_relationships`
   ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Indexes for table `wss_term_taxonomy`
+-- Индексы таблицы `wss_term_taxonomy`
 --
 ALTER TABLE `wss_term_taxonomy`
   ADD PRIMARY KEY (`term_taxonomy_id`),
@@ -2402,7 +2680,7 @@ ALTER TABLE `wss_term_taxonomy`
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Indexes for table `wss_usermeta`
+-- Индексы таблицы `wss_usermeta`
 --
 ALTER TABLE `wss_usermeta`
   ADD PRIMARY KEY (`umeta_id`),
@@ -2410,7 +2688,7 @@ ALTER TABLE `wss_usermeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Indexes for table `wss_users`
+-- Индексы таблицы `wss_users`
 --
 ALTER TABLE `wss_users`
   ADD PRIMARY KEY (`ID`),
@@ -2419,26 +2697,26 @@ ALTER TABLE `wss_users`
   ADD KEY `user_email` (`user_email`);
 
 --
--- Indexes for table `wss_wc_admin_notes`
+-- Индексы таблицы `wss_wc_admin_notes`
 --
 ALTER TABLE `wss_wc_admin_notes`
   ADD PRIMARY KEY (`note_id`);
 
 --
--- Indexes for table `wss_wc_admin_note_actions`
+-- Индексы таблицы `wss_wc_admin_note_actions`
 --
 ALTER TABLE `wss_wc_admin_note_actions`
   ADD PRIMARY KEY (`action_id`),
   ADD KEY `note_id` (`note_id`);
 
 --
--- Indexes for table `wss_wc_category_lookup`
+-- Индексы таблицы `wss_wc_category_lookup`
 --
 ALTER TABLE `wss_wc_category_lookup`
   ADD PRIMARY KEY (`category_tree_id`,`category_id`);
 
 --
--- Indexes for table `wss_wc_customer_lookup`
+-- Индексы таблицы `wss_wc_customer_lookup`
 --
 ALTER TABLE `wss_wc_customer_lookup`
   ADD PRIMARY KEY (`customer_id`),
@@ -2446,7 +2724,7 @@ ALTER TABLE `wss_wc_customer_lookup`
   ADD KEY `email` (`email`);
 
 --
--- Indexes for table `wss_wc_download_log`
+-- Индексы таблицы `wss_wc_download_log`
 --
 ALTER TABLE `wss_wc_download_log`
   ADD PRIMARY KEY (`download_log_id`),
@@ -2454,7 +2732,7 @@ ALTER TABLE `wss_wc_download_log`
   ADD KEY `timestamp` (`timestamp`);
 
 --
--- Indexes for table `wss_wc_order_coupon_lookup`
+-- Индексы таблицы `wss_wc_order_coupon_lookup`
 --
 ALTER TABLE `wss_wc_order_coupon_lookup`
   ADD PRIMARY KEY (`order_id`,`coupon_id`),
@@ -2462,7 +2740,7 @@ ALTER TABLE `wss_wc_order_coupon_lookup`
   ADD KEY `date_created` (`date_created`);
 
 --
--- Indexes for table `wss_wc_order_product_lookup`
+-- Индексы таблицы `wss_wc_order_product_lookup`
 --
 ALTER TABLE `wss_wc_order_product_lookup`
   ADD PRIMARY KEY (`order_item_id`),
@@ -2472,7 +2750,7 @@ ALTER TABLE `wss_wc_order_product_lookup`
   ADD KEY `date_created` (`date_created`);
 
 --
--- Indexes for table `wss_wc_order_stats`
+-- Индексы таблицы `wss_wc_order_stats`
 --
 ALTER TABLE `wss_wc_order_stats`
   ADD PRIMARY KEY (`order_id`),
@@ -2481,7 +2759,7 @@ ALTER TABLE `wss_wc_order_stats`
   ADD KEY `status` (`status`(191));
 
 --
--- Indexes for table `wss_wc_order_tax_lookup`
+-- Индексы таблицы `wss_wc_order_tax_lookup`
 --
 ALTER TABLE `wss_wc_order_tax_lookup`
   ADD PRIMARY KEY (`order_id`,`tax_rate_id`),
@@ -2489,7 +2767,7 @@ ALTER TABLE `wss_wc_order_tax_lookup`
   ADD KEY `date_created` (`date_created`);
 
 --
--- Indexes for table `wss_wc_product_meta_lookup`
+-- Индексы таблицы `wss_wc_product_meta_lookup`
 --
 ALTER TABLE `wss_wc_product_meta_lookup`
   ADD PRIMARY KEY (`product_id`),
@@ -2501,27 +2779,27 @@ ALTER TABLE `wss_wc_product_meta_lookup`
   ADD KEY `min_max_price` (`min_price`,`max_price`);
 
 --
--- Indexes for table `wss_wc_reserved_stock`
+-- Индексы таблицы `wss_wc_reserved_stock`
 --
 ALTER TABLE `wss_wc_reserved_stock`
   ADD PRIMARY KEY (`order_id`,`product_id`);
 
 --
--- Indexes for table `wss_wc_tax_rate_classes`
+-- Индексы таблицы `wss_wc_tax_rate_classes`
 --
 ALTER TABLE `wss_wc_tax_rate_classes`
   ADD PRIMARY KEY (`tax_rate_class_id`),
   ADD UNIQUE KEY `slug` (`slug`(191));
 
 --
--- Indexes for table `wss_wc_webhooks`
+-- Индексы таблицы `wss_wc_webhooks`
 --
 ALTER TABLE `wss_wc_webhooks`
   ADD PRIMARY KEY (`webhook_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `wss_woocommerce_api_keys`
+-- Индексы таблицы `wss_woocommerce_api_keys`
 --
 ALTER TABLE `wss_woocommerce_api_keys`
   ADD PRIMARY KEY (`key_id`),
@@ -2529,14 +2807,14 @@ ALTER TABLE `wss_woocommerce_api_keys`
   ADD KEY `consumer_secret` (`consumer_secret`);
 
 --
--- Indexes for table `wss_woocommerce_attribute_taxonomies`
+-- Индексы таблицы `wss_woocommerce_attribute_taxonomies`
 --
 ALTER TABLE `wss_woocommerce_attribute_taxonomies`
   ADD PRIMARY KEY (`attribute_id`),
   ADD KEY `attribute_name` (`attribute_name`(20));
 
 --
--- Indexes for table `wss_woocommerce_downloadable_product_permissions`
+-- Индексы таблицы `wss_woocommerce_downloadable_product_permissions`
 --
 ALTER TABLE `wss_woocommerce_downloadable_product_permissions`
   ADD PRIMARY KEY (`permission_id`),
@@ -2546,14 +2824,14 @@ ALTER TABLE `wss_woocommerce_downloadable_product_permissions`
   ADD KEY `user_order_remaining_expires` (`user_id`,`order_id`,`downloads_remaining`,`access_expires`);
 
 --
--- Indexes for table `wss_woocommerce_log`
+-- Индексы таблицы `wss_woocommerce_log`
 --
 ALTER TABLE `wss_woocommerce_log`
   ADD PRIMARY KEY (`log_id`),
   ADD KEY `level` (`level`);
 
 --
--- Indexes for table `wss_woocommerce_order_itemmeta`
+-- Индексы таблицы `wss_woocommerce_order_itemmeta`
 --
 ALTER TABLE `wss_woocommerce_order_itemmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -2561,14 +2839,14 @@ ALTER TABLE `wss_woocommerce_order_itemmeta`
   ADD KEY `meta_key` (`meta_key`(32));
 
 --
--- Indexes for table `wss_woocommerce_order_items`
+-- Индексы таблицы `wss_woocommerce_order_items`
 --
 ALTER TABLE `wss_woocommerce_order_items`
   ADD PRIMARY KEY (`order_item_id`),
   ADD KEY `order_id` (`order_id`);
 
 --
--- Indexes for table `wss_woocommerce_payment_tokenmeta`
+-- Индексы таблицы `wss_woocommerce_payment_tokenmeta`
 --
 ALTER TABLE `wss_woocommerce_payment_tokenmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -2576,27 +2854,27 @@ ALTER TABLE `wss_woocommerce_payment_tokenmeta`
   ADD KEY `meta_key` (`meta_key`(32));
 
 --
--- Indexes for table `wss_woocommerce_payment_tokens`
+-- Индексы таблицы `wss_woocommerce_payment_tokens`
 --
 ALTER TABLE `wss_woocommerce_payment_tokens`
   ADD PRIMARY KEY (`token_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `wss_woocommerce_sessions`
+-- Индексы таблицы `wss_woocommerce_sessions`
 --
 ALTER TABLE `wss_woocommerce_sessions`
   ADD PRIMARY KEY (`session_id`),
   ADD UNIQUE KEY `session_key` (`session_key`);
 
 --
--- Indexes for table `wss_woocommerce_shipping_zones`
+-- Индексы таблицы `wss_woocommerce_shipping_zones`
 --
 ALTER TABLE `wss_woocommerce_shipping_zones`
   ADD PRIMARY KEY (`zone_id`);
 
 --
--- Indexes for table `wss_woocommerce_shipping_zone_locations`
+-- Индексы таблицы `wss_woocommerce_shipping_zone_locations`
 --
 ALTER TABLE `wss_woocommerce_shipping_zone_locations`
   ADD PRIMARY KEY (`location_id`),
@@ -2604,13 +2882,13 @@ ALTER TABLE `wss_woocommerce_shipping_zone_locations`
   ADD KEY `location_type_code` (`location_type`(10),`location_code`(20));
 
 --
--- Indexes for table `wss_woocommerce_shipping_zone_methods`
+-- Индексы таблицы `wss_woocommerce_shipping_zone_methods`
 --
 ALTER TABLE `wss_woocommerce_shipping_zone_methods`
   ADD PRIMARY KEY (`instance_id`);
 
 --
--- Indexes for table `wss_woocommerce_tax_rates`
+-- Индексы таблицы `wss_woocommerce_tax_rates`
 --
 ALTER TABLE `wss_woocommerce_tax_rates`
   ADD PRIMARY KEY (`tax_rate_id`),
@@ -2620,7 +2898,7 @@ ALTER TABLE `wss_woocommerce_tax_rates`
   ADD KEY `tax_rate_priority` (`tax_rate_priority`);
 
 --
--- Indexes for table `wss_woocommerce_tax_rate_locations`
+-- Индексы таблицы `wss_woocommerce_tax_rate_locations`
 --
 ALTER TABLE `wss_woocommerce_tax_rate_locations`
   ADD PRIMARY KEY (`location_id`),
@@ -2628,225 +2906,225 @@ ALTER TABLE `wss_woocommerce_tax_rate_locations`
   ADD KEY `location_type_code` (`location_type`(10),`location_code`(20));
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT для сохранённых таблиц
 --
 
 --
--- AUTO_INCREMENT for table `wss_actionscheduler_actions`
+-- AUTO_INCREMENT для таблицы `wss_actionscheduler_actions`
 --
 ALTER TABLE `wss_actionscheduler_actions`
-  MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `wss_actionscheduler_claims`
+-- AUTO_INCREMENT для таблицы `wss_actionscheduler_claims`
 --
 ALTER TABLE `wss_actionscheduler_claims`
-  MODIFY `claim_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=294;
+  MODIFY `claim_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=492;
 
 --
--- AUTO_INCREMENT for table `wss_actionscheduler_groups`
+-- AUTO_INCREMENT для таблицы `wss_actionscheduler_groups`
 --
 ALTER TABLE `wss_actionscheduler_groups`
   MODIFY `group_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `wss_actionscheduler_logs`
+-- AUTO_INCREMENT для таблицы `wss_actionscheduler_logs`
 --
 ALTER TABLE `wss_actionscheduler_logs`
-  MODIFY `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `wss_commentmeta`
+-- AUTO_INCREMENT для таблицы `wss_commentmeta`
 --
 ALTER TABLE `wss_commentmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_comments`
+-- AUTO_INCREMENT для таблицы `wss_comments`
 --
 ALTER TABLE `wss_comments`
   MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_links`
+-- AUTO_INCREMENT для таблицы `wss_links`
 --
 ALTER TABLE `wss_links`
   MODIFY `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_options`
+-- AUTO_INCREMENT для таблицы `wss_options`
 --
 ALTER TABLE `wss_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2294;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2529;
 
 --
--- AUTO_INCREMENT for table `wss_postmeta`
+-- AUTO_INCREMENT для таблицы `wss_postmeta`
 --
 ALTER TABLE `wss_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=639;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=877;
 
 --
--- AUTO_INCREMENT for table `wss_posts`
+-- AUTO_INCREMENT для таблицы `wss_posts`
 --
 ALTER TABLE `wss_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
 
 --
--- AUTO_INCREMENT for table `wss_termmeta`
+-- AUTO_INCREMENT для таблицы `wss_termmeta`
 --
 ALTER TABLE `wss_termmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
--- AUTO_INCREMENT for table `wss_terms`
+-- AUTO_INCREMENT для таблицы `wss_terms`
 --
 ALTER TABLE `wss_terms`
   MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
--- AUTO_INCREMENT for table `wss_term_taxonomy`
+-- AUTO_INCREMENT для таблицы `wss_term_taxonomy`
 --
 ALTER TABLE `wss_term_taxonomy`
   MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
--- AUTO_INCREMENT for table `wss_usermeta`
+-- AUTO_INCREMENT для таблицы `wss_usermeta`
 --
 ALTER TABLE `wss_usermeta`
-  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT for table `wss_users`
+-- AUTO_INCREMENT для таблицы `wss_users`
 --
 ALTER TABLE `wss_users`
   MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `wss_wc_admin_notes`
+-- AUTO_INCREMENT для таблицы `wss_wc_admin_notes`
 --
 ALTER TABLE `wss_wc_admin_notes`
   MODIFY `note_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `wss_wc_admin_note_actions`
+-- AUTO_INCREMENT для таблицы `wss_wc_admin_note_actions`
 --
 ALTER TABLE `wss_wc_admin_note_actions`
   MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `wss_wc_customer_lookup`
+-- AUTO_INCREMENT для таблицы `wss_wc_customer_lookup`
 --
 ALTER TABLE `wss_wc_customer_lookup`
   MODIFY `customer_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_wc_download_log`
+-- AUTO_INCREMENT для таблицы `wss_wc_download_log`
 --
 ALTER TABLE `wss_wc_download_log`
   MODIFY `download_log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_wc_tax_rate_classes`
+-- AUTO_INCREMENT для таблицы `wss_wc_tax_rate_classes`
 --
 ALTER TABLE `wss_wc_tax_rate_classes`
   MODIFY `tax_rate_class_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `wss_wc_webhooks`
+-- AUTO_INCREMENT для таблицы `wss_wc_webhooks`
 --
 ALTER TABLE `wss_wc_webhooks`
   MODIFY `webhook_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_api_keys`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_api_keys`
 --
 ALTER TABLE `wss_woocommerce_api_keys`
   MODIFY `key_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_attribute_taxonomies`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_attribute_taxonomies`
 --
 ALTER TABLE `wss_woocommerce_attribute_taxonomies`
   MODIFY `attribute_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_downloadable_product_permissions`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_downloadable_product_permissions`
 --
 ALTER TABLE `wss_woocommerce_downloadable_product_permissions`
   MODIFY `permission_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_log`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_log`
 --
 ALTER TABLE `wss_woocommerce_log`
   MODIFY `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_order_itemmeta`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_order_itemmeta`
 --
 ALTER TABLE `wss_woocommerce_order_itemmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_order_items`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_order_items`
 --
 ALTER TABLE `wss_woocommerce_order_items`
   MODIFY `order_item_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_payment_tokenmeta`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_payment_tokenmeta`
 --
 ALTER TABLE `wss_woocommerce_payment_tokenmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_payment_tokens`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_payment_tokens`
 --
 ALTER TABLE `wss_woocommerce_payment_tokens`
   MODIFY `token_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_sessions`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_sessions`
 --
 ALTER TABLE `wss_woocommerce_sessions`
-  MODIFY `session_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `session_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_shipping_zones`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_shipping_zones`
 --
 ALTER TABLE `wss_woocommerce_shipping_zones`
   MODIFY `zone_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_shipping_zone_locations`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_shipping_zone_locations`
 --
 ALTER TABLE `wss_woocommerce_shipping_zone_locations`
   MODIFY `location_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_shipping_zone_methods`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_shipping_zone_methods`
 --
 ALTER TABLE `wss_woocommerce_shipping_zone_methods`
   MODIFY `instance_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_tax_rates`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_tax_rates`
 --
 ALTER TABLE `wss_woocommerce_tax_rates`
   MODIFY `tax_rate_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `wss_woocommerce_tax_rate_locations`
+-- AUTO_INCREMENT для таблицы `wss_woocommerce_tax_rate_locations`
 --
 ALTER TABLE `wss_woocommerce_tax_rate_locations`
   MODIFY `location_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Ограничения внешнего ключа сохраненных таблиц
 --
 
 --
--- Constraints for table `wss_wc_download_log`
+-- Ограничения внешнего ключа таблицы `wss_wc_download_log`
 --
 ALTER TABLE `wss_wc_download_log`
   ADD CONSTRAINT `fk_wss_wc_download_log_permission_id` FOREIGN KEY (`permission_id`) REFERENCES `wss_woocommerce_downloadable_product_permissions` (`permission_id`) ON DELETE CASCADE;

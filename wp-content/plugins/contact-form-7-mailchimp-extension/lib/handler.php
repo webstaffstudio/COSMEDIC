@@ -184,6 +184,12 @@ function wpcf7_mch_subscribe_remote($obj) {
 	if ( $cf7_mch['api-validation'] != 1 )
 		 return ;
 
+  $api   = isset( $cf7_mch['api'] ) ? $cf7_mch['api'] : '';
+  $pos  = strpos($api,"-");
+
+  if ($pos === false )
+      return ;
+
   $submission = WPCF7_Submission::get_instance();
 
   $logfileEnabled = isset($cf7_mch['logfileEnabled']) && !is_null($cf7_mch['logfileEnabled']) ? $cf7_mch['logfileEnabled'] : false;
