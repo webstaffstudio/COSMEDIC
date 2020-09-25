@@ -1,0 +1,153 @@
+/* stylelint-disable */
+.woocommerce {
+  &.single {
+    span.onsale {
+      display: none;
+    }
+
+    .woocommerce-product-gallery {
+      max-width: 720px;
+      width: 100% !important;
+      height: 720px;
+
+      figure {
+        position: relative;
+      }
+
+      .slick-slider {
+        a {
+          pointer-events: none;
+        }
+
+        .slick-dots {
+          padding-left: 0;
+          margin-bottom: 0;
+          margin-left: 0;
+          list-style: none;
+          display: flex;
+          position: absolute;
+          bottom: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+
+          li {
+            margin: 0 4px;
+
+            &.slick-active {
+              button {
+                cursor: pointer;
+                background-color: #363636;
+              }
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            button {
+              width: 4px;
+              height: 4px;
+              border-radius: 50px;
+              font-size: 0;
+              background: #c7c6c4;
+            }
+          }
+        }
+      }
+    }
+
+    .entry-summary {
+      font-size: 14px;
+      line-height: 1.5;
+      color: $primary-color;
+      max-width: 440px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 140px 0;
+
+      h1,
+      h2.product-subtitle {
+        margin: 0 0 5px;
+        font-size: 14px;
+        text-transform: none;
+        line-height: 20px;
+      }
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      .brands {
+        margin-bottom: 5px;
+
+        a {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #c7c6c4;
+        }
+      }
+
+      .entry-titles {
+        margin-bottom: 5px;
+      }
+
+      .price {
+        color: $primary-color;
+        display: block;
+        text-align: left;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $primary-color;
+      }
+
+      .cart {
+        .button {
+          @extend .cosmedoc-btn;
+
+          line-height: initial;
+        }
+      }
+
+      .stock {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          background-repeat: no-repeat;
+          height: 20px;
+          width: 20px;
+          margin-right: 5px;
+          background-image: url("assets/images/cosmedoc.svg");
+        }
+
+        &.in-stock {
+          color: $green-color;
+
+          &::before {
+            background-position: -79px -272px;
+          }
+        }
+
+        &.out-of-stock {
+          color: #e88565;
+
+          &::before {
+            background-position: -3px -272px;
+          }
+        }
+      }
+
+      .alert_container {
+        .stock_alert_button {
+          @extend .cosmedoc-btn;
+        }
+      }
+    }
+  }
+}

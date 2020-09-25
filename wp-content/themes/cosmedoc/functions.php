@@ -9,7 +9,7 @@
 /**
  * Text domain definition
  */
-defined( 'THEME_TD' ) ? THEME_TD : define( 'THEME_TD', 'cosmedoc' );
+defined('THEME_TD') ? THEME_TD : define('THEME_TD', 'cosmedoc');
 
 // Load modules
 $theme_includes = [
@@ -31,16 +31,16 @@ $theme_includes = [
 	'/lib/woo-customizations/woo-product.php',        // product customization
 ];
 
-foreach ( $theme_includes as $file ) {
-	if ( ! locate_template( $file ) ) {
+foreach ($theme_includes as $file) {
+	if (!locate_template($file)) {
 		/* translators: %s error*/
-		trigger_error( esc_html( sprintf( esc_html( __('Error locating %s for inclusion', 'cosmedoc') ), $file ) ), E_USER_ERROR ); // phpcs:ignore
+		trigger_error(esc_html(sprintf(esc_html(__('Error locating %s for inclusion', 'cosmedoc')), $file)), E_USER_ERROR); // phpcs:ignore
 		continue;
 	}
 
-	require_once locate_template( $file );
+	require_once locate_template($file);
 }
-unset( $file, $filepath );
+unset($file, $filepath);
 
 
 /**
@@ -49,19 +49,20 @@ unset( $file, $filepath );
  * @param array $classes - classes
  * @return array
  */
-function wp_has_sidebar( $classes ) {
-	if ( is_active_sidebar( 'sidebar' ) ) {
+function wp_has_sidebar($classes)
+{
+	if (is_active_sidebar('sidebar')) {
 		// add 'class-name' to the $classes array
 		$classes[] = 'has_sidebar';
 	}
 	return $classes;
 }
 
-add_filter( 'body_class', 'wp_has_sidebar' );
+add_filter('body_class', 'wp_has_sidebar');
 
 // Remove the version number of WP
 // Warning - this info is also available in the readme.html file in your root directory - delete this file!
-remove_action( 'wp_head', 'wp_generator' );
+remove_action('wp_head', 'wp_generator');
 
 
 /**
@@ -69,15 +70,16 @@ remove_action( 'wp_head', 'wp_generator' );
  *
  * @return string
  */
-function wp_login_obscure() {
+function wp_login_obscure()
+{
 	return '<strong>Error</strong>: wrong username or password';
 }
 
-add_filter( 'login_errors', 'wp_login_obscure' );
+add_filter('login_errors', 'wp_login_obscure');
 
 
 // Disable the theme / plugin text editor in Admin
-define( 'DISALLOW_FILE_EDIT', true );
+define('DISALLOW_FILE_EDIT', true);
 
 if (function_exists('acf_add_options_page')) {
 
@@ -89,6 +91,5 @@ if (function_exists('acf_set_options_page_title')) {
 }
 
 
-
 //custom image sizes
-add_image_size( 'cat_tile', 323, 323, false );
+add_image_size('cat_tile', 323, 323, false);
