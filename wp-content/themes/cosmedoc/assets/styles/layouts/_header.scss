@@ -1,4 +1,5 @@
 // Preloader
+/* stylelint-disable */
 #preloader {
   position: fixed;
   top: 0;
@@ -85,8 +86,98 @@
   width: 100%;
   z-index: 10;
   position: fixed;
+  min-height: 50px;
   top: 0;
   background-color: $white;
+
+  &__mobile {
+    .header__logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header__links {
+      position: absolute;
+      right: 40px;
+      top: 12px;
+      z-index: 1;
+      padding-right: 0;
+
+      @include breakpoint(small down) {
+        right: 10px;
+      }
+    }
+
+    .link-search {
+      position: absolute;
+      left: 90px;
+      top: 12px;
+
+      @include breakpoint(small down) {
+        left: 45px;
+      }
+    }
+
+    .toggle-button {
+      position: absolute;
+      left: 40px;
+      top: 19px;
+      height: 21px;
+      width: 20px;
+      z-index: 100;
+      cursor: pointer;
+
+      &.is-closed {
+        .menu-bar-top {
+          top: 0;
+        }
+
+        .menu-bar-middle {
+          top: 7px;
+        }
+
+        .menu-bar-bottom {
+          bottom: 6px;
+        }
+      }
+
+      &.is-open {
+        .menu-bar {
+          transition: all 0.5s ease-in-out;
+        }
+
+        .menu-bar-top {
+          transform: rotate(45deg) translate(7px, 7px);
+          top: 0;
+        }
+
+        .menu-bar-middle {
+          opacity: 0;
+          top: 9px;
+          transform: translateX(-20px);
+        }
+
+        .menu-bar-bottom {
+          bottom: 0;
+          transform: rotate(-45deg) translate(7px, -7px);
+        }
+      }
+
+      @include breakpoint(small down) {
+        left: 10px;
+      }
+
+      .menu-bar {
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background: #363636;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
 
   &__row {
     @include flex-grid-row();
@@ -107,6 +198,14 @@
     align-items: center;
     display: flex;
     justify-content: center;
+
+    .brand__img {
+      min-width: 197px;
+
+      @include breakpoint(small down) {
+        min-width: 155px;
+      }
+    }
   }
 
   &__brand {
@@ -175,6 +274,14 @@
           }
         }
 
+        &-wishlist {
+          padding: 0 10px;
+
+          .icon {
+            background-position: -151px -145px;
+          }
+        }
+
         &-cart {
           padding-left: 10px;
 
@@ -206,6 +313,162 @@
       text-transform: uppercase;
       font-size: 13px;
       letter-spacing: 1.77px;
+    }
+  }
+
+  .menu-wrap {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+
+    &.is-closed {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &__header {
+      min-height: 50px;
+      background-color: #fff;
+      width: 100%;
+      position: relative;
+
+      .header__links-link {
+        position: absolute;
+
+        &.link-wishlist {
+          right: 40px;
+          top: 14px;
+          z-index: 1;
+          padding-right: 0;
+
+          @include breakpoint(small down) {
+            right: 10px;
+          }
+        }
+
+        &.link-account {
+          left: 90px;
+          top: 14px;
+
+          @include breakpoint(small down) {
+            left: 45px;
+          }
+        }
+      }
+    }
+
+    &__intro {
+      height: 139px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+
+      &::before {
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #89937a;
+        opacity: 0.5;
+        z-index: 2;
+      }
+
+      > h3 {
+        color: #fff;
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+      }
+    }
+
+    .menu__content {
+      padding: 0 10px;
+      height: 100%;
+
+      .cosmedoc-btn {
+        width: 100%;
+      }
+    }
+
+    .menu__content,
+    .is-drilldown {
+      background: #f3f4f1;
+      margin: 0 auto;
+      max-width: 100% !important;
+
+      #menu-mobile-menu {
+        flex-direction: column;
+
+        ul {
+          background: #f3f4f1;
+        }
+
+        li a {
+          padding: 11px 15px 9px 10px;
+          border-bottom: 1px solid #363636;
+          text-align: left;
+          text-decoration: none;
+          position: relative;
+          display: block;
+          color: #363636;
+          font-size: 14px;
+          line-height: 30px;
+          background: #f3f4f1;
+        }
+      }
+    }
+
+    .drilldown .is-drilldown-submenu-parent > a::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 40px;
+      background: transparent url("images/cosmedoc.svg") no-repeat -1px -225px;
+      border: 0;
+      margin-top: 0;
+    }
+
+    .drilldown .js-drilldown-back > a {
+      padding-left: 30px !important;
+    }
+
+    .drilldown .js-drilldown-back > a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 40px;
+      border: 0;
+      background: transparent url("images/cosmedoc.svg") no-repeat -30px -223px;
+    }
+
+    .drilldown .is-drilldown-submenu {
+      top: 51px;
+      position: fixed;
+      padding: 0 10px;
+    }
+
+    .drilldown .is-drilldown-submenu.is-active {
+      z-index: 100;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 51px;
     }
   }
 }

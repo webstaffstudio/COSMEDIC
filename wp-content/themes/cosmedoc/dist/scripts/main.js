@@ -12790,7 +12790,7 @@ module.exports = __webpack_require__(41);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* WEBPACK VAR INJECTION */(function($, jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slick_carousel__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_slick_carousel__);
@@ -12800,6 +12800,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  // Import everything from autoload
 
 
+var windowWidth = $(window).width(),
+    scrollPos = 0;
 jQuery(window).load(function () {
   $("#preloader").fadeOut(1000);
   $(".woocommerce-product-gallery__wrapper").slick({
@@ -12813,7 +12815,69 @@ jQuery(window).load(function () {
     cssEase: "linear"
   });
 });
-jQuery(document).ready(function () {});
+jQuery(document).ready(function () {
+  /* Humburger start */
+  var trigger = $("#hamburger"),
+      menuContainer = $(".menu-wrap");
+  var isClosed = true;
+
+  var burgerTime = function burgerTime() {
+    if (isClosed == true) {
+      trigger.removeClass("is-open");
+      trigger.addClass("is-closed");
+      menuContainer.removeClass("is-open");
+      menuContainer.addClass("is-closed");
+      $("body").removeClass("overflow").css({
+        overflow: "",
+        width: "",
+        position: "",
+        top: ""
+      });
+
+      if (scrollPos != 0) {
+        $(window).scrollTop(scrollPos);
+      }
+
+      isClosed = false; // // Enable scrolling.
+      // document.ontouchmove = function() {
+      //   return true;
+      // };
+    } else {
+      trigger.removeClass("is-closed");
+      trigger.addClass("is-open");
+      menuContainer.removeClass("is-closed");
+      menuContainer.addClass("is-open");
+      scrollPos = pageYOffset || (document.documentElement.clientHeight ? document.documentElement.scrollTop : document.body.scrollTop);
+      $("body").addClass("overflow").css({
+        overflow: "hidden",
+        width: "100%",
+        position: "fixed",
+        top: -scrollPos
+      });
+      isClosed = true; // if (window.innerHeight > window.innerWidth) {
+      //   //portrait
+      //   // Disable scrolling.
+      //   document.ontouchmove = e => {
+      //     e.preventDefault();
+      //   };
+      // }
+    }
+  };
+
+  burgerTime();
+  trigger.click(function () {
+    burgerTime();
+  });
+  $(window).on("resize ", function () {
+    // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
+    if ($(window).width() != windowWidth) {
+      // Update the window width for next time
+      isClosed = true;
+      burgerTime();
+    }
+  });
+  /* Humburger end */
+});
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(0)))
 
 /***/ }),

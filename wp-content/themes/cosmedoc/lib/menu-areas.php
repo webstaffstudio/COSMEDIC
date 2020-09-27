@@ -18,6 +18,7 @@ function register_theme_menus() {
 		array(
 			'primary'     => __( 'Primary Menu', 'cosmedoc' ),
 			'footer_menu' => __( 'Footer Menu', 'cosmedoc' ),
+			'mobile_menu' => __( 'Mobile Menu', 'cosmedoc' ),
 		)
 	);
 }

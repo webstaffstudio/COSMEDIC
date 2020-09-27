@@ -1,6 +1,10 @@
 .page-template-default {
   .site-content {
     margin-top: 60px;
+
+    @include breakpoint(large down) {
+      margin-top: -11px;
+    }
   }
 }
 
