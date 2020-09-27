@@ -12820,6 +12820,10 @@ jQuery(document).ready(function () {
   var trigger = $("#hamburger"),
       menuContainer = $(".menu-wrap");
   var isClosed = true;
+  $(".link-search").on("click", function (e) {
+    e.preventDefault();
+    $(".header__search").toggleClass("is-opened");
+  });
 
   var burgerTime = function burgerTime() {
     if (isClosed == true) {
@@ -12827,7 +12831,7 @@ jQuery(document).ready(function () {
       trigger.addClass("is-closed");
       menuContainer.removeClass("is-open");
       menuContainer.addClass("is-closed");
-      $("body").removeClass("overflow").css({
+      $("body").css({
         overflow: "",
         width: "",
         position: "",
@@ -12838,29 +12842,20 @@ jQuery(document).ready(function () {
         $(window).scrollTop(scrollPos);
       }
 
-      isClosed = false; // // Enable scrolling.
-      // document.ontouchmove = function() {
-      //   return true;
-      // };
+      isClosed = false;
     } else {
       trigger.removeClass("is-closed");
       trigger.addClass("is-open");
       menuContainer.removeClass("is-closed");
       menuContainer.addClass("is-open");
       scrollPos = pageYOffset || (document.documentElement.clientHeight ? document.documentElement.scrollTop : document.body.scrollTop);
-      $("body").addClass("overflow").css({
+      $("body").css({
         overflow: "hidden",
         width: "100%",
         position: "fixed",
         top: -scrollPos
       });
-      isClosed = true; // if (window.innerHeight > window.innerWidth) {
-      //   //portrait
-      //   // Disable scrolling.
-      //   document.ontouchmove = e => {
-      //     e.preventDefault();
-      //   };
-      // }
+      isClosed = true;
     }
   };
 
@@ -12877,6 +12872,20 @@ jQuery(document).ready(function () {
     }
   });
   /* Humburger end */
+});
+$(document).keydown(function (e) {
+  var code = e.keyCode || e.which;
+
+  if (code === 27) {
+    $(".header__search").removeClass("is-opened");
+    $("body").css({
+      overflow: "",
+      position: "",
+      width: "",
+      height: "",
+      top: ""
+    });
+  }
 });
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(0)))
 

@@ -52,7 +52,7 @@
 		</nav><!-- /.nav-primary -->
 
 		<div class="header__links">
-			<a href="#" class="header__links-link link link-search">
+			<a href="#search" class="header__links-link link link-search">
 				<span class="icon"></span>
 			</a>
 			<a href="#" class="header__links-link link link-account">
@@ -72,7 +72,7 @@
      <div class="menu-bar menu-bar-middle"></div>
      <div class="menu-bar menu-bar-bottom"></div>
 	</span>
-	<a href="#" class="header__links-link link link-search">
+	<a href="#search" class="header__links-link link link-search">
 		<span class="icon"></span>
 	</a>
 	<a class="header__logo" href="<?php echo esc_url(home_url()); ?>">
@@ -131,5 +131,8 @@
 	</div>
 </header>
 
+<div class="header__search">
+	<?php echo do_shortcode('[wcas-search-form]');?>
+</div>
 
 <main id="content" class="site-content">

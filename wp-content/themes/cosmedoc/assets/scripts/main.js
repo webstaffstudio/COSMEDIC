@@ -29,6 +29,11 @@ jQuery(document).ready(() => {
 
   let isClosed = true;
 
+  $(".link-search").on("click", function(e) {
+    e.preventDefault();
+    $(".header__search").toggleClass("is-opened");
+  });
+
   const burgerTime = () => {
     if (isClosed == true) {
       trigger.removeClass("is-open");
@@ -36,14 +41,12 @@ jQuery(document).ready(() => {
       menuContainer.removeClass("is-open");
       menuContainer.addClass("is-closed");
 
-      $("body")
-        .removeClass("overflow")
-        .css({
-          overflow: "",
-          width: "",
-          position: "",
-          top: "",
-        });
+      $("body").css({
+        overflow: "",
+        width: "",
+        position: "",
+        top: "",
+      });
       if (scrollPos != 0) {
         $(window).scrollTop(scrollPos);
       }
@@ -59,14 +62,12 @@ jQuery(document).ready(() => {
           ? document.documentElement.scrollTop
           : document.body.scrollTop);
 
-      $("body")
-        .addClass("overflow")
-        .css({
-          overflow: "hidden",
-          width: "100%",
-          position: "fixed",
-          top: -scrollPos,
-        });
+      $("body").css({
+        overflow: "hidden",
+        width: "100%",
+        position: "fixed",
+        top: -scrollPos,
+      });
       isClosed = true;
     }
   };
@@ -86,4 +87,18 @@ jQuery(document).ready(() => {
   });
 
   /* Humburger end */
+});
+
+$(document).keydown(function(e) {
+  const code = e.keyCode || e.which;
+  if (code === 27) {
+    $(".header__search").removeClass("is-opened");
+    $("body").css({
+      overflow: "",
+      position: "",
+      width: "",
+      height: "",
+      top: "",
+    });
+  }
 });

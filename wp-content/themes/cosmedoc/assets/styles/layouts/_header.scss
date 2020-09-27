@@ -84,7 +84,7 @@
 .header {
   border-bottom: 1px solid $primary-color;
   width: 100%;
-  z-index: 10;
+  z-index: 99;
   position: fixed;
   min-height: 50px;
   top: 0;
@@ -470,6 +470,41 @@
       width: 100%;
       top: 51px;
     }
+  }
+}
+
+.header__search {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 98;
+  transform: translateY(-100%);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+
+  @include breakpoint(medium down) {
+    top: 49px;
+  }
+
+  .dgwt-wcas-close:not(.dgwt-wcas-inner-preloader) {
+    background: transparent url("images/cosmedoc.svg") no-repeat;
+    background-position: 0 -168px;
+    opacity: 1;
+    transition: none;
+  }
+
+  #dgwt-wcas-search-input-1dec {
+    border: 0;
+  }
+
+  > div {
+    max-width: 100%;
+  }
+
+  &.is-opened {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
   }
 }
 

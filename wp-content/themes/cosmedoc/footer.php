@@ -30,7 +30,7 @@ $fields = get_fields('option');
 			</div>
 		</div>
 		<div class="site-footer__links grid-x">
-			<nav class="nav-footer cell medium-9">
+			<nav class="nav-footer cell medium-12 large-9">
 				<?php
 				if (has_nav_menu('footer_menu')) :
 					wp_nav_menu(
@@ -43,7 +43,7 @@ $fields = get_fields('option');
 				endif;
 				?>
 			</nav><!-- .nav-primary -->
-			<div class="site-footer__links__social cell medium-3">
+			<div class="site-footer__links__social cell medium-12 large-3">
 				<?php
 				$socials = $fields['social_links'];
 				if ($socials) : ?>

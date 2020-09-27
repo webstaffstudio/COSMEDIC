@@ -16719,7 +16719,7 @@ a:not(.hero-slider__content):hover {
 .header {
   border-bottom: 1px solid #363636;
   width: 100%;
-  z-index: 10;
+  z-index: 99;
   position: fixed;
   min-height: 50px;
   top: 0;
@@ -17320,19 +17320,79 @@ a:not(.hero-slider__content):hover {
   top: 51px;
 }
 
-/* line 477, assets/styles/layouts/_header.scss */
+/* line 476, assets/styles/layouts/_header.scss */
+
+.header__search {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 98;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 63.99875em) {
+  /* line 476, assets/styles/layouts/_header.scss */
+
+  .header__search {
+    top: 49px;
+  }
+}
+
+/* line 490, assets/styles/layouts/_header.scss */
+
+.header__search .dgwt-wcas-close:not(.dgwt-wcas-inner-preloader) {
+  background: transparent url(../images/cosmedoc.svg) no-repeat;
+  background-position: 0 -168px;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none;
+}
+
+/* line 497, assets/styles/layouts/_header.scss */
+
+.header__search #dgwt-wcas-search-input-1dec {
+  border: 0;
+}
+
+/* line 501, assets/styles/layouts/_header.scss */
+
+.header__search > div {
+  max-width: 100%;
+}
+
+/* line 505, assets/styles/layouts/_header.scss */
+
+.header__search.is-opened {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 512, assets/styles/layouts/_header.scss */
 
 .logged-in.admin-bar .header {
   top: 32px;
 }
 
-/* line 1, assets/styles/layouts/_footer.scss */
+/* stylelint-disable */
+
+/* line 2, assets/styles/layouts/_footer.scss */
 
 .site-footer {
   padding: 12px 10px 10px;
 }
 
-/* line 4, assets/styles/layouts/_footer.scss */
+/* line 5, assets/styles/layouts/_footer.scss */
 
 .site-footer__info {
   display: -webkit-box;
@@ -17346,32 +17406,40 @@ a:not(.hero-slider__content):hover {
           justify-content: space-between;
 }
 
-/* line 10, assets/styles/layouts/_footer.scss */
+/* line 11, assets/styles/layouts/_footer.scss */
 
 .site-footer__info__copyright > p {
   margin: 0;
 }
 
-/* line 17, assets/styles/layouts/_footer.scss */
+/* line 18, assets/styles/layouts/_footer.scss */
 
 .other-pages {
   padding-top: 55px;
 }
 
-/* line 20, assets/styles/layouts/_footer.scss */
+@media screen and (max-width: 63.99875em) {
+  /* line 18, assets/styles/layouts/_footer.scss */
+
+  .other-pages {
+    padding-top: 0;
+  }
+}
+
+/* line 25, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer {
   /* Social Links */
 }
 
-/* line 21, assets/styles/layouts/_footer.scss */
+/* line 26, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .site-footer__info {
   border-top: 1px solid #d8d8d8;
   padding: 26px 0;
 }
 
-/* line 26, assets/styles/layouts/_footer.scss */
+/* line 31, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .site-footer__links {
   text-align: left;
@@ -17380,14 +17448,14 @@ a:not(.hero-slider__content):hover {
   border-top: 1px solid #d8d8d8;
 }
 
-/* line 33, assets/styles/layouts/_footer.scss */
+/* line 38, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .site-footer__links__social .footer-description {
   line-height: 20px;
   font-size: 14px;
 }
 
-/* line 39, assets/styles/layouts/_footer.scss */
+/* line 44, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .site-footer__links #footer-menu {
   -webkit-box-pack: justify;
@@ -17395,20 +17463,20 @@ a:not(.hero-slider__content):hover {
           justify-content: space-between;
 }
 
-/* line 42, assets/styles/layouts/_footer.scss */
+/* line 47, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .site-footer__links #footer-menu .active > a {
   color: inherit;
 }
 
-/* line 46, assets/styles/layouts/_footer.scss */
+/* line 51, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .site-footer__links #footer-menu > .menu-item {
   padding: 0;
   margin-right: 30px;
 }
 
-/* line 50, assets/styles/layouts/_footer.scss */
+/* line 55, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .site-footer__links #footer-menu > .menu-item > a {
   pointer-events: none;
@@ -17419,7 +17487,7 @@ a:not(.hero-slider__content):hover {
   padding: 0;
 }
 
-/* line 60, assets/styles/layouts/_footer.scss */
+/* line 65, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .site-footer__links #footer-menu > .menu-item > ul li a {
   padding: 0;
@@ -17430,7 +17498,7 @@ a:not(.hero-slider__content):hover {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 67, assets/styles/layouts/_footer.scss */
+/* line 72, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .site-footer__links #footer-menu > .menu-item > ul li a:hover {
   opacity: 0.5;
@@ -17438,7 +17506,7 @@ a:not(.hero-slider__content):hover {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 77, assets/styles/layouts/_footer.scss */
+/* line 82, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-title {
   max-width: 960px;
@@ -17447,7 +17515,7 @@ a:not(.hero-slider__content):hover {
   text-align: center;
 }
 
-/* line 83, assets/styles/layouts/_footer.scss */
+/* line 88, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-title .title {
   margin-bottom: 22px;
@@ -17457,7 +17525,7 @@ a:not(.hero-slider__content):hover {
   line-height: 1.2;
 }
 
-/* line 91, assets/styles/layouts/_footer.scss */
+/* line 96, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-title .description {
   font-size: 14px;
@@ -17467,7 +17535,7 @@ a:not(.hero-slider__content):hover {
   width: 100%;
 }
 
-/* line 100, assets/styles/layouts/_footer.scss */
+/* line 105, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form {
   max-width: 555px;
@@ -17478,7 +17546,7 @@ a:not(.hero-slider__content):hover {
   width: 100%;
 }
 
-/* line 108, assets/styles/layouts/_footer.scss */
+/* line 113, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form .wpcf7-response-output {
   border-top: 0;
@@ -17492,7 +17560,7 @@ a:not(.hero-slider__content):hover {
   padding: 7px 10px 7px 20px;
 }
 
-/* line 119, assets/styles/layouts/_footer.scss */
+/* line 124, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form .wpcf7-response-output::before {
   content: "";
@@ -17509,37 +17577,37 @@ a:not(.hero-slider__content):hover {
           transform: translateY(-50%);
 }
 
-/* line 134, assets/styles/layouts/_footer.scss */
+/* line 139, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form .wpcf7 form.invalid .wpcf7-response-output {
   border-left: 5px solid #e88565;
 }
 
-/* line 137, assets/styles/layouts/_footer.scss */
+/* line 142, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form .wpcf7 form.invalid .wpcf7-response-output::before {
   border-left: 6px solid #e88565;
 }
 
-/* line 142, assets/styles/layouts/_footer.scss */
+/* line 147, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form .wpcf7 form.sent .wpcf7-response-output {
   border-left: 5px solid #89937a;
 }
 
-/* line 145, assets/styles/layouts/_footer.scss */
+/* line 150, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form .wpcf7 form.sent .wpcf7-response-output::before {
   border-left: 6px solid #89937a;
 }
 
-/* line 150, assets/styles/layouts/_footer.scss */
+/* line 155, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form form {
   position: relative;
 }
 
-/* line 153, assets/styles/layouts/_footer.scss */
+/* line 158, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form form > p {
   display: -webkit-box;
@@ -17551,20 +17619,20 @@ a:not(.hero-slider__content):hover {
   margin-bottom: 0;
 }
 
-/* line 159, assets/styles/layouts/_footer.scss */
+/* line 164, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form form .wpcf7-not-valid-tip {
   position: absolute;
   bottom: -18px;
 }
 
-/* line 165, assets/styles/layouts/_footer.scss */
+/* line 170, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form .your-email {
   margin-right: 20px;
 }
 
-/* line 169, assets/styles/layouts/_footer.scss */
+/* line 174, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form input[type="email"] {
   width: 100%;
@@ -17585,7 +17653,7 @@ a:not(.hero-slider__content):hover {
   margin-bottom: 0;
 }
 
-/* line 186, assets/styles/layouts/_footer.scss */
+/* line 191, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form input[type="email"].wpcf7-not-valid {
   border-color: #e88565;
@@ -17593,7 +17661,7 @@ a:not(.hero-slider__content):hover {
   background-position: 100% 50%;
 }
 
-/* line 193, assets/styles/layouts/_footer.scss */
+/* line 198, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form span.wpcf7-not-valid-tip {
   color: #e88565;
@@ -17603,7 +17671,7 @@ a:not(.hero-slider__content):hover {
   text-transform: none;
 }
 
-/* line 201, assets/styles/layouts/_footer.scss */
+/* line 206, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form .wpcf7-submit {
   background: #89937a;
@@ -17626,7 +17694,7 @@ a:not(.hero-slider__content):hover {
   cursor: pointer;
 }
 
-/* line 220, assets/styles/layouts/_footer.scss */
+/* line 225, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .newsletter-form .wpcf7-submit:hover {
   background: none;
@@ -17634,7 +17702,7 @@ a:not(.hero-slider__content):hover {
   border-color: #000;
 }
 
-/* line 230, assets/styles/layouts/_footer.scss */
+/* line 235, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links {
   list-style: none;
@@ -17649,7 +17717,7 @@ a:not(.hero-slider__content):hover {
 }
 
 @media screen and (max-width: 39.99875em) {
-  /* line 230, assets/styles/layouts/_footer.scss */
+  /* line 235, assets/styles/layouts/_footer.scss */
 
   .other-pages.site-footer .social_links {
     margin: 0 auto;
@@ -17657,7 +17725,7 @@ a:not(.hero-slider__content):hover {
   }
 }
 
-/* line 242, assets/styles/layouts/_footer.scss */
+/* line 247, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links > li .link {
   display: inline-block;
@@ -17674,7 +17742,7 @@ a:not(.hero-slider__content):hover {
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
-/* line 253, assets/styles/layouts/_footer.scss */
+/* line 258, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links > li .link:hover {
   -webkit-transform: translate(0, -3px);
@@ -17683,7 +17751,7 @@ a:not(.hero-slider__content):hover {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 258, assets/styles/layouts/_footer.scss */
+/* line 263, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links > li .link::before {
   font-family: "FontAwesome", sans-serif;
@@ -17693,7 +17761,7 @@ a:not(.hero-slider__content):hover {
   font-size: 20px;
 }
 
-/* line 266, assets/styles/layouts/_footer.scss */
+/* line 271, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links > li .link[href*="facebook"]::before {
   font-family: "FontAwesome", sans-serif;
@@ -17703,7 +17771,7 @@ a:not(.hero-slider__content):hover {
   font-size: 20px;
 }
 
-/* line 274, assets/styles/layouts/_footer.scss */
+/* line 279, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links > li .link[href*="instagram"]::before {
   font-family: "FontAwesome", sans-serif;
@@ -17713,7 +17781,7 @@ a:not(.hero-slider__content):hover {
   font-size: 20px;
 }
 
-/* line 282, assets/styles/layouts/_footer.scss */
+/* line 287, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links > li .link[href*="linkedin"]::before {
   font-family: "FontAwesome", sans-serif;
@@ -17723,7 +17791,7 @@ a:not(.hero-slider__content):hover {
   font-size: 20px;
 }
 
-/* line 290, assets/styles/layouts/_footer.scss */
+/* line 295, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links > li .link[href*="google"]::before {
   font-family: "FontAwesome", sans-serif;
@@ -17733,7 +17801,7 @@ a:not(.hero-slider__content):hover {
   font-size: 20px;
 }
 
-/* line 298, assets/styles/layouts/_footer.scss */
+/* line 303, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links > li .link[href*="twitter"]::before {
   font-family: "FontAwesome", sans-serif;
@@ -17743,7 +17811,7 @@ a:not(.hero-slider__content):hover {
   font-size: 20px;
 }
 
-/* line 306, assets/styles/layouts/_footer.scss */
+/* line 311, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links > li .link[href*="pinterest"]::before {
   font-family: "FontAwesome", sans-serif;
@@ -17753,7 +17821,7 @@ a:not(.hero-slider__content):hover {
   font-size: 20px;
 }
 
-/* line 314, assets/styles/layouts/_footer.scss */
+/* line 319, assets/styles/layouts/_footer.scss */
 
 .other-pages.site-footer .social_links > li .link[href*="youtube"]::before {
   font-family: "FontAwesome", sans-serif;
@@ -17763,21 +17831,168 @@ a:not(.hero-slider__content):hover {
   font-size: 20px;
 }
 
-/* line 2, assets/styles/layouts/_pages.scss */
-
-.page-template-default .site-content {
-  margin-top: 60px;
-}
-
 @media screen and (max-width: 74.99875em) {
-  /* line 2, assets/styles/layouts/_pages.scss */
+  /* line 331, assets/styles/layouts/_footer.scss */
 
-  .page-template-default .site-content {
-    margin-top: -11px;
+  .nav-footer {
+    margin-bottom: 30px;
   }
 }
 
-/* line 12, assets/styles/layouts/_pages.scss */
+/* line 336, assets/styles/layouts/_footer.scss */
+
+.nav-footer .menu-item-has-children {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 39.99875em) {
+  /* line 340, assets/styles/layouts/_footer.scss */
+
+  .nav-footer #footer-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* line 344, assets/styles/layouts/_footer.scss */
+
+  .nav-footer #footer-menu > .menu-item {
+    margin-right: 0 !important;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 39.99875em) {
+  /* line 353, assets/styles/layouts/_footer.scss */
+
+  .site-footer__links__social {
+    text-align: center;
+    max-width: 325px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* line 359, assets/styles/layouts/_footer.scss */
+
+  .site-footer__links__social .social_links {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 20px !important;
+  }
+
+  /* line 365, assets/styles/layouts/_footer.scss */
+
+  .site-footer__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* line 370, assets/styles/layouts/_footer.scss */
+
+  .wpcf7-form > p {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* line 373, assets/styles/layouts/_footer.scss */
+
+  .wpcf7-form > p .your-email {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-right: 0 !important;
+  }
+}
+
+/* stylelint-disable */
+
+/* line 3, assets/styles/layouts/_pages.scss */
+
+.page-template-default:not(.home) h1,
+.page-template-default:not(.home) h2,
+.page-template-default:not(.home) h3,
+.page-template-default:not(.home) h4,
+.page-template-default:not(.home) h5,
+.page-template-default:not(.home) h6 {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 28px;
+}
+
+/* line 15, assets/styles/layouts/_pages.scss */
+
+.page-template-default:not(.home) hr {
+  border-bottom: 1px solid #363636;
+  margin-bottom: 30px;
+}
+
+/* line 20, assets/styles/layouts/_pages.scss */
+
+.page-template-default:not(.home) p {
+  color: #363636;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+/* line 27, assets/styles/layouts/_pages.scss */
+
+.page-template-default:not(.home) img {
+  display: block;
+}
+
+/* line 30, assets/styles/layouts/_pages.scss */
+
+.page-template-default:not(.home) img.aligncenter {
+  margin: 0 auto;
+}
+
+/* line 34, assets/styles/layouts/_pages.scss */
+
+.page-template-default:not(.home) img.alignright {
+  margin: 0 0 0 auto;
+}
+
+/* line 39, assets/styles/layouts/_pages.scss */
+
+.page-template-default:not(.home) .site-content {
+  max-width: 1440px;
+  width: 100%;
+  margin: 60px auto 0;
+  padding: 26px 40px 0;
+}
+
+/* line 45, assets/styles/layouts/_pages.scss */
+
+.page-template-default:not(.home) .site-content .entry-content {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 63.99875em) {
+  /* line 39, assets/styles/layouts/_pages.scss */
+
+  .page-template-default:not(.home) .site-content {
+    margin: -11px auto 0;
+  }
+}
+
+@media screen and (max-width: 39.99875em) {
+  /* line 39, assets/styles/layouts/_pages.scss */
+
+  .page-template-default:not(.home) .site-content {
+    padding: 30px 10px;
+  }
+}
+
+/* line 62, assets/styles/layouts/_pages.scss */
 
 .error404 .site-content {
   margin-top: 60px;
@@ -17785,14 +18000,14 @@ a:not(.hero-slider__content):hover {
   padding: 26px 40px;
 }
 
-/* line 17, assets/styles/layouts/_pages.scss */
+/* line 67, assets/styles/layouts/_pages.scss */
 
 .error404 .site-content .noroute {
   text-align: center;
   padding: 40px 0;
 }
 
-/* line 21, assets/styles/layouts/_pages.scss */
+/* line 71, assets/styles/layouts/_pages.scss */
 
 .error404 .site-content .noroute h1 {
   margin: 0 0 0.7em;
@@ -17805,7 +18020,7 @@ a:not(.hero-slider__content):hover {
   text-transform: none;
 }
 
-/* line 32, assets/styles/layouts/_pages.scss */
+/* line 82, assets/styles/layouts/_pages.scss */
 
 .error404 .site-content .noroute p {
   font-size: 16px;
@@ -17814,7 +18029,7 @@ a:not(.hero-slider__content):hover {
   margin: 20px auto;
 }
 
-/* line 39, assets/styles/layouts/_pages.scss */
+/* line 89, assets/styles/layouts/_pages.scss */
 
 .error404 .site-content .noroute .home-link {
   background: #89937a;
@@ -17836,7 +18051,7 @@ a:not(.hero-slider__content):hover {
   padding: 0 15px;
 }
 
-/* line 58, assets/styles/layouts/_pages.scss */
+/* line 108, assets/styles/layouts/_pages.scss */
 
 .error404 .site-content .noroute .home-link:hover {
   background: none;
@@ -17844,7 +18059,15 @@ a:not(.hero-slider__content):hover {
   border-color: #000;
 }
 
-/* line 2, assets/styles/layouts/_fron-page.scss */
+@media screen and (max-width: 63.99875em) {
+  /* line 1, assets/styles/layouts/_fron-page.scss */
+
+  .site-content {
+    margin: -11px auto 0;
+  }
+}
+
+/* line 8, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section {
   height: 600px;
@@ -17852,14 +18075,14 @@ a:not(.hero-slider__content):hover {
 }
 
 @media screen and (max-width: 39.99875em) {
-  /* line 2, assets/styles/layouts/_fron-page.scss */
+  /* line 8, assets/styles/layouts/_fron-page.scss */
 
   .front-page .hero-section {
     margin-bottom: 0;
   }
 }
 
-/* line 10, assets/styles/layouts/_fron-page.scss */
+/* line 16, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section .hero-slider,
 .front-page .hero-section .slick-list,
@@ -17869,13 +18092,13 @@ a:not(.hero-slider__content):hover {
   height: 100%;
 }
 
-/* line 18, assets/styles/layouts/_fron-page.scss */
+/* line 24, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section .slick-slide > div {
   height: 100%;
 }
 
-/* line 22, assets/styles/layouts/_fron-page.scss */
+/* line 28, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section .hero-slider__content {
   display: -webkit-box !important;
@@ -17896,13 +18119,13 @@ a:not(.hero-slider__content):hover {
   background-size: cover;
 }
 
-/* line 32, assets/styles/layouts/_fron-page.scss */
+/* line 38, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section .hero-slider {
   position: relative;
 }
 
-/* line 35, assets/styles/layouts/_fron-page.scss */
+/* line 41, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section .hero-slider__title {
   font-size: 50px;
@@ -17915,7 +18138,7 @@ a:not(.hero-slider__content):hover {
   text-align: center;
 }
 
-/* line 46, assets/styles/layouts/_fron-page.scss */
+/* line 52, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section .hero-slider__description {
   font-size: 24px;
@@ -17928,19 +18151,19 @@ a:not(.hero-slider__content):hover {
   text-align: center;
 }
 
-/* line 57, assets/styles/layouts/_fron-page.scss */
+/* line 63, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section .hero-slider .slick-dots {
   bottom: 35px;
 }
 
-/* line 60, assets/styles/layouts/_fron-page.scss */
+/* line 66, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section .hero-slider .slick-dots li:hover {
   opacity: 0.5;
 }
 
-/* line 64, assets/styles/layouts/_fron-page.scss */
+/* line 70, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section .hero-slider .slick-dots li button::before {
   font-size: 10px;
@@ -17948,13 +18171,13 @@ a:not(.hero-slider__content):hover {
   opacity: 1;
 }
 
-/* line 70, assets/styles/layouts/_fron-page.scss */
+/* line 76, assets/styles/layouts/_fron-page.scss */
 
 .front-page .hero-section .hero-slider .slick-dots li.slick-active button::before {
   color: #000;
 }
 
-/* line 78, assets/styles/layouts/_fron-page.scss */
+/* line 84, assets/styles/layouts/_fron-page.scss */
 
 .front-page .product-category .store-grid {
   display: grid;
@@ -17969,7 +18192,7 @@ a:not(.hero-slider__content):hover {
 }
 
 @media screen and (max-width: 63.99875em) {
-  /* line 78, assets/styles/layouts/_fron-page.scss */
+  /* line 84, assets/styles/layouts/_fron-page.scss */
 
   .front-page .product-category .store-grid {
     grid-template-columns: 1fr 1fr;
@@ -17977,7 +18200,7 @@ a:not(.hero-slider__content):hover {
 }
 
 @media screen and (max-width: 39.99875em) {
-  /* line 78, assets/styles/layouts/_fron-page.scss */
+  /* line 84, assets/styles/layouts/_fron-page.scss */
 
   .front-page .product-category .store-grid {
     margin-bottom: 0;
@@ -17986,7 +18209,7 @@ a:not(.hero-slider__content):hover {
   }
 }
 
-/* line 99, assets/styles/layouts/_fron-page.scss */
+/* line 105, assets/styles/layouts/_fron-page.scss */
 
 .front-page .product-category .store-grid li a {
   position: relative;
@@ -17997,7 +18220,7 @@ a:not(.hero-slider__content):hover {
   overflow: hidden;
 }
 
-/* line 107, assets/styles/layouts/_fron-page.scss */
+/* line 113, assets/styles/layouts/_fron-page.scss */
 
 .front-page .product-category .store-grid li a::before {
   content: "";
@@ -18015,20 +18238,20 @@ a:not(.hero-slider__content):hover {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 122, assets/styles/layouts/_fron-page.scss */
+/* line 128, assets/styles/layouts/_fron-page.scss */
 
 .front-page .product-category .store-grid li a > img {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-/* line 126, assets/styles/layouts/_fron-page.scss */
+/* line 132, assets/styles/layouts/_fron-page.scss */
 
 .front-page .product-category .store-grid li a:hover {
   opacity: 1;
 }
 
-/* line 129, assets/styles/layouts/_fron-page.scss */
+/* line 135, assets/styles/layouts/_fron-page.scss */
 
 .front-page .product-category .store-grid li a:hover > img {
   -webkit-transform: scale(1.2);
@@ -18037,7 +18260,7 @@ a:not(.hero-slider__content):hover {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 134, assets/styles/layouts/_fron-page.scss */
+/* line 140, assets/styles/layouts/_fron-page.scss */
 
 .front-page .product-category .store-grid li a:hover::before {
   opacity: 0.4;
@@ -18045,7 +18268,7 @@ a:not(.hero-slider__content):hover {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 141, assets/styles/layouts/_fron-page.scss */
+/* line 147, assets/styles/layouts/_fron-page.scss */
 
 .front-page .product-category .store-grid .item-name {
   -webkit-transition: 0.25s;
