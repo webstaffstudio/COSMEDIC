@@ -1,0 +1,14 @@
+2020-09-26T15:56:09+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\single-product\product-attributes.php on line 38
+
+2020-09-26T15:58:23+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\single-product\product-attributes.php on line 38
+
+2020-09-26T15:58:27+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\single-product\product-attributes.php on line 38
+
+2020-09-26T15:58:28+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\single-product\product-attributes.php on line 38
+
+2020-09-26T21:25:20+00:00 CRITICAL syntax error, unexpected ';' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\single-product\product-attributes.php on line 53
+
+2020-09-26T21:29:01+00:00 CRITICAL syntax error, unexpected '?' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\single-product\product-attributes.php on line 59
+
+2020-09-26T21:29:01+00:00 CRITICAL syntax error, unexpected '?' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\single-product\product-attributes.php on line 59
+

@@ -4,7 +4,7 @@ $mode_of_application = get_field('mode_of_application');
 $composition = get_field('composition');
 ?>
 <?php if ($about || $mode_of_application || $composition): ?>
-	<h2 class="about-title"><?= __('О товаре', THEME_TD); ?></h2>
+	<h2 class="about-title" id="about_product"><?= __('О товаре', THEME_TD); ?></h2>
 	<ul class="accordion" data-accordion="owy3ap-accordion" data-allow-all-closed="true" role="tablist">
 		<?php if ($about): ?>
 			<li class="accordion__item" data-accordion-item="" role="presentation">

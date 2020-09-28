@@ -12,6 +12,12 @@ function change_existing_currency_symbol( $currency_symbol, $currency ) {
 	return $currency_symbol;
 }
 
+//Show currency symbol
+function show_currency_symbol( ) {
+	global  $woocommerce;
+	echo get_woocommerce_currency_symbol();
+}
+
 //remove tabs at single product page
 add_filter( 'woocommerce_product_tabs', 'cosmedoc_remove_description_tab', 11 );
 
