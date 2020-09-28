@@ -1,3 +1,9 @@
+.site-content {
+  @include breakpoint(medium down) {
+    margin: -11px auto 0;
+  }
+}
+
 .front-page {
   .hero-section {
     height: 600px;
