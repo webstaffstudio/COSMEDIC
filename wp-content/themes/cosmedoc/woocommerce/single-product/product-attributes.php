@@ -18,7 +18,7 @@
  */
 
 defined('ABSPATH') || exit;
-$cross_sale = get_field('cross_sale');
+
 global $product;
 ?>
 
@@ -34,43 +34,5 @@ global $product;
 		<?= '<span class="sku">' . __('Артикул: ', THEME_TD) . $product->get_sku() . '</span>'; ?>
 		<a href="#about_product" class="cosmedoc-btn" id="about_anchor"><?= __('Подробнее о товаре', THEME_TD); ?></a>
 	</div>
-
-<?php if ($cross_sale): ?>
-	<h2 class="cosmedoc-title"><?= __('С этим покупают', THEME_TD); ?></h2>
-	<div class="cross-sale">
-		<div class="cross-sale__list product-list-slider">
-			<?php foreach ($cross_sale as $cross_product):
-				$id = $cross_product->ID;
-				$title = $cross_product->post_title;
-				$brand_terms = get_the_terms($id, 'cos_brands');
-				$product = wc_get_product($id);
-				$product_thumb = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'single-post-thumbnail');
-				$link = get_the_permalink($id);
-				?>
-				<div class="cross-sale__list--product product">
-					<a href="<?= $link; ?>" class="link product__thumbnail">
-						<img src="<?= $product_thumb[0]; ?>" alt=""/>
-					</a>
-					<div class="product-descr">
-						<?= (isset($brand_terms[0]->name)) ? '<div class="product__brand">' . $brand_terms[0]->name . '</div>' : ''; ?>
-						<a class="product__title" href="<?= $link; ?>"><h3><?= $title; ?></h3></a>
-						<div class="product__price">
-							<?php if (!empty($product->get_sale_price())): ?>
-								<span class="regular has-sale"><?= $product->get_regular_price(); ?><span
-										class="currency"><?= show_currency_symbol(); ?></span></span>
-								<span class="sale"><?= $product->get_sale_price(); ?><span
-										class="currency"><?= show_currency_symbol(); ?></span></span>
-							<?php else: ?>
-								<span class="regular"><?= $product->get_regular_price() ?><span
-										class="currency"><?= show_currency_symbol(); ?></span></span>
-							<?php endif; ?>
-						</div>
-						<a class="cosmedoc-btn"
-						   href="<?= $product->add_to_cart_url(); ?>"><?= __('Добавить в корзину', THEME_TD); ?></a>
-					</div>
-				</div>
-			<?php endforeach; ?>
-		</div>
-	</div>
-<?php endif; ?>
+<?php get_template_part('/woocommerce/cross-sale-slider/cross-sale-slider'); ?>
 <?php get_template_part('/woocommerce/single-product/about-accordeon');
