@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.5.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-09-25 11:32:11+0000\n"
+"PO-Revision-Date: 2020-09-28 14:46:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1655,7 +1655,7 @@ msgstr "Записи"
 
 #: wp-includes/customize/class-wp-customize-nav-menu-locations-control.php:54
 msgid "https://wordpress.org/support/article/wordpress-widgets/"
-msgstr "https://wordpress.org/support/article/wordpress-widgets/"
+msgstr "https://ru.wordpress.org/support/article/wordpress-widgets/"
 
 #. translators: 1: UTC abbreviation and offset, 2: UTC offset.
 #: wp-includes/customize/class-wp-customize-date-time-control.php:252
@@ -1833,7 +1833,7 @@ msgstr "От сервера получен неожиданные ответ. Ф
 
 #: wp-load.php:83 wp-admin/setup-config.php:194
 msgid "https://wordpress.org/support/article/editing-wp-config-php/"
-msgstr "https://wordpress.org/support/article/editing-wp-config-php/"
+msgstr "https://ru.wordpress.org/support/article/editing-wp-config-php/"
 
 #: wp-login.php:740
 msgid "Remind me later"

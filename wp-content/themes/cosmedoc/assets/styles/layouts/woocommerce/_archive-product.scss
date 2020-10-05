@@ -1,0 +1,23 @@
+.hero__section {
+  height: 540px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include breakpoint(769px down) {
+    height: 320px;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -18482,6 +18482,39 @@ a:not(.hero-slider__content):hover {
   background-position: -3px -272px;
 }
 
+/* line 1, assets/styles/layouts/woocommerce/_archive-product.scss */
+
+.hero__section {
+  height: 540px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media screen and (max-width: 48.0625em) {
+  /* line 1, assets/styles/layouts/woocommerce/_archive-product.scss */
+
+  .hero__section {
+    height: 320px;
+  }
+}
+
+/* line 12, assets/styles/layouts/woocommerce/_archive-product.scss */
+
+.hero__section__title {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 /**
  * Import npm dependencies
  *
