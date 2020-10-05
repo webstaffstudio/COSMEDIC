@@ -55,7 +55,7 @@
 			<a href="#search" class="header__links-link link link-search">
 				<span class="icon"></span>
 			</a>
-			<a href="#" class="header__links-link link link-account">
+			<a title="account" href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" class="header__links-link link link-account">
 				<span class="icon"></span>
 			</a>
 			<a href="#" class="header__links-link link link-cart  no-count">
@@ -92,7 +92,7 @@
 	</div>
 	<div class="menu-wrap is-closed">
 		<div class="menu-wrap__header">
-			<a href="#" class="header__links-link link link-account">
+			<a title="account" href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" class="header__links-link link link-account">
 				<span class="icon"></span>
 			</a>
 			<a href="#" class="header__links-link link link-wishlist">
