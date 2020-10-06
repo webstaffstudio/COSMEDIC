@@ -24,28 +24,40 @@ a:not(.hero-slider__content) {
   }
 }
 
-.cosmedoc-btn {
-  background-color: #89937a;
-  display: inline-block;
-  color: #fff;
-  font-size: 11px;
-  font-weight: normal;
-  letter-spacing: 1.5px;
-  line-height: 38px;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
-  white-space: nowrap;
-  transition: 0.3s ease;
-  height: 40px;
-  min-width: 210px;
-  cursor: pointer;
+.cosmedoc-btn,
+.button {
+  background-color: #89937a !important;
+  display: inline-block !important;
+  color: #fff !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  letter-spacing: 1.5px !important;
+  line-height: 38px !important;
+  border-radius: 3px !important;
+  border: 1px solid transparent !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  transition: 0.3s ease !important;
+  height: 40px !important;
+  min-width: 210px !important;
+  cursor: pointer !important;
+  padding: 0 !important;
 
   &:hover {
-    background-color: transparent;
-    color: #000;
-    border-color: #000;
+    background-color: transparent !important;
+    color: #000 !important;
+    border-color: #000 !important;
+  }
+}
+
+.site-content ul:not(.woocommerce-error) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-size: inherit;
   }
 }

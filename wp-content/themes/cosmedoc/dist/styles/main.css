@@ -16596,35 +16596,52 @@ a:not(.hero-slider__content):hover {
 
 .cosmedoc-btn,
 .woocommerce.single .entry-summary .cart .button,
-.woocommerce.single .entry-summary .alert_container .stock_alert_button {
-  background-color: #89937a;
-  display: inline-block;
-  color: #fff;
-  font-size: 11px;
-  font-weight: normal;
-  letter-spacing: 1.5px;
-  line-height: 38px;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
-  white-space: nowrap;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  height: 40px;
-  min-width: 210px;
-  cursor: pointer;
+.woocommerce.single .entry-summary .alert_container .stock_alert_button,
+.button {
+  background-color: #89937a !important;
+  display: inline-block !important;
+  color: #fff !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  letter-spacing: 1.5px !important;
+  line-height: 38px !important;
+  border-radius: 3px !important;
+  border: 1px solid transparent !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  -webkit-transition: 0.3s ease !important;
+  transition: 0.3s ease !important;
+  height: 40px !important;
+  min-width: 210px !important;
+  cursor: pointer !important;
+  padding: 0 !important;
 }
 
-/* line 46, assets/styles/common/_global.scss */
+/* line 48, assets/styles/common/_global.scss */
 
 .cosmedoc-btn:hover,
 .woocommerce.single .entry-summary .cart .button:hover,
-.woocommerce.single .entry-summary .alert_container .stock_alert_button:hover {
-  background-color: transparent;
-  color: #000;
-  border-color: #000;
+.woocommerce.single .entry-summary .alert_container .stock_alert_button:hover,
+.button:hover {
+  background-color: transparent !important;
+  color: #000 !important;
+  border-color: #000 !important;
+}
+
+/* line 55, assets/styles/common/_global.scss */
+
+.site-content ul:not(.woocommerce-error) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 60, assets/styles/common/_global.scss */
+
+.site-content ul:not(.woocommerce-error) li {
+  font-size: inherit;
 }
 
 /* stylelint-disable */
@@ -17047,7 +17064,7 @@ a:not(.hero-slider__content):hover {
 /* line 280, assets/styles/layouts/_header.scss */
 
 .header__links-link.link-wishlist .icon {
-  background-position: -151px -145px;
+  background-position: -154px -143px;
 }
 
 /* line 285, assets/styles/layouts/_header.scss */
@@ -18513,6 +18530,467 @@ a:not(.hero-slider__content):hover {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+/* stylelint-disable */
+
+/* line 2, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-notices-wrapper {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 9, assets/styles/layouts/woocommerce/_account.scss */
+
+.page-id-191 .woocommerce-notices-wrapper {
+  max-width: 460px;
+}
+
+/* line 14, assets/styles/layouts/woocommerce/_account.scss */
+
+.password-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+}
+
+/* line 24, assets/styles/layouts/woocommerce/_account.scss */
+
+.show-password-input {
+  position: absolute;
+  right: 0.7em;
+  top: 0.7em;
+  cursor: pointer;
+}
+
+/* line 30, assets/styles/layouts/woocommerce/_account.scss */
+
+.show-password-input::after {
+  font-family: "WooCommerce", san-serif;
+  speak: none;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 0.618em;
+  content: "\E010";
+  text-decoration: none;
+}
+
+/* line 44, assets/styles/layouts/woocommerce/_account.scss */
+
+.back-to-login {
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* line 49, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-message,
+.woocommerce-error {
+  color: #000;
+  border-left: 5px solid #89937a;
+  background-color: #eff5ea;
+  border-top: 0;
+  padding: 7px 10px 7px 20px;
+  font-size: 12px;
+  position: relative;
+}
+
+/* line 59, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-message::before,
+.woocommerce-error::before {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #89937a;
+  border-right: none;
+  top: 50%;
+  left: 0;
+  margin-top: -6px;
+}
+
+/* line 74, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-error {
+  border-left: 5px solid #b81c23 !important;
+  background-color: #faebe7 !important;
+}
+
+/* line 78, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-error::before {
+  border-left: 6px solid #b81c23 !important;
+}
+
+/* line 83, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account {
+  background-color: #fff;
+}
+
+/* line 86, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .account-title {
+  border-bottom: 1px solid #000;
+  margin-bottom: 30px;
+}
+
+/* line 91, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .page-title h1 {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 0;
+  display: inline-block;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* line 100, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .top-right {
+  float: right;
+}
+
+/* line 103, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .top-right a {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  font-weight: normal;
+  line-height: 13px;
+}
+
+/* line 111, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .top-right a span {
+  padding: 0 4px;
+}
+
+/* line 117, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account label {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  line-height: 16px !important;
+}
+
+/* line 123, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account label em {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 129, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account input[type="text"],
+.woocommerce-account input[type="password"] {
+  line-height: 36px;
+  padding: 2px 8px 0;
+  border-radius: 3px;
+  border: 1px solid #c7c6c4;
+  font-size: 16px;
+  height: 40px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 100%;
+}
+
+/* line 141, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .u-columns#customer_login {
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 146, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .u-columns#customer_login .lost_password {
+  text-align: center;
+}
+
+/* line 149, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .u-columns#customer_login .lost_password > a {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  font-weight: normal;
+  line-height: 13px;
+}
+
+/* line 159, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .u-columns#customer_login .cosmedoc-btn,
+.woocommerce-account .u-columns#customer_login .woocommerce.single .entry-summary .cart .button,
+.woocommerce.single .entry-summary .cart .woocommerce-account .u-columns#customer_login .button,
+.woocommerce-account .u-columns#customer_login .woocommerce.single .entry-summary .alert_container .stock_alert_button,
+.woocommerce.single .entry-summary .alert_container .woocommerce-account .u-columns#customer_login .stock_alert_button {
+  width: 100%;
+  word-break: break-word;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 23.4375em) {
+  /* line 159, assets/styles/layouts/woocommerce/_account.scss */
+
+  .woocommerce-account .u-columns#customer_login .cosmedoc-btn,
+  .woocommerce-account .u-columns#customer_login .woocommerce.single .entry-summary .cart .button,
+  .woocommerce.single .entry-summary .cart .woocommerce-account .u-columns#customer_login .button,
+  .woocommerce-account .u-columns#customer_login .woocommerce.single .entry-summary .alert_container .stock_alert_button,
+  .woocommerce.single .entry-summary .alert_container .woocommerce-account .u-columns#customer_login .stock_alert_button {
+    font-size: 9px;
+  }
+}
+
+/* line 170, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .u-columns#customer_login .form-or {
+  text-align: center;
+  margin: 12px 0 16px;
+}
+
+/* line 177, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .u-column1.col-1 h2 {
+  font-size: 28px;
+  font-weight: normal;
+  color: #363636;
+  padding-bottom: 3px;
+  margin-bottom: 34px;
+  text-align: center;
+}
+
+/* line 187, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .woocommerce-form {
+  border: 0 !important;
+}
+
+/* line 191, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account footer#footer-container {
+  background-color: #f3f4f1;
+}
+
+@media screen and (max-width: 63.99875em) {
+  /* line 191, assets/styles/layouts/woocommerce/_account.scss */
+
+  .woocommerce-account footer#footer-container {
+    padding-top: 55px;
+  }
+}
+
+/* line 199, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account main#content {
+  background-color: #fff;
+  padding-bottom: 70px;
+}
+
+/* line 204, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .lost_reset_password {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 209, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .lost_reset_password h3 {
+  font-size: 28px;
+  font-weight: normal;
+  color: #363636;
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 34px;
+}
+
+/* line 218, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .lost_reset_password .back-to-acc {
+  text-align: center;
+}
+
+/* line 221, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .lost_reset_password .back-to-acc .simple-link {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  font-weight: normal;
+  line-height: 13px;
+}
+
+/* line 231, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-account .lost_reset_password button {
+  width: 100%;
+}
+
+/* line 237, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js {
+  background-color: #fff;
+}
+
+/* line 240, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js .control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.1rem;
+}
+
+/* line 245, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js .form-row-first {
+  float: left;
+  width: 47%;
+  overflow: visible;
+}
+
+@media screen and (max-width: 48.0625em) {
+  /* line 245, assets/styles/layouts/woocommerce/_account.scss */
+
+  .woocommerce-js .form-row-first {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* line 256, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js .form-row-last {
+  float: right;
+  width: 47%;
+  overflow: visible;
+}
+
+@media screen and (max-width: 48.0625em) {
+  /* line 256, assets/styles/layouts/woocommerce/_account.scss */
+
+  .woocommerce-js .form-row-last {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* line 267, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js .register-form {
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto 172px;
+}
+
+/* line 273, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js em.required {
+  color: red;
+  font-weight: 700;
+  border: 0 !important;
+  text-decoration: none;
+}
+
+/* line 281, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js .register .form-or {
+  text-align: center;
+}
+
+/* line 285, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js .register .cosmedoc-btn,
+.woocommerce-js .register .woocommerce.single .entry-summary .cart .button,
+.woocommerce.single .entry-summary .cart .woocommerce-js .register .button,
+.woocommerce-js .register .woocommerce.single .entry-summary .alert_container .stock_alert_button,
+.woocommerce.single .entry-summary .alert_container .woocommerce-js .register .stock_alert_button {
+  width: 100%;
+}
+
+/* line 289, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js .register label {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  line-height: 16px !important;
+}
+
+/* line 295, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js .register label em {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 301, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js .register input[type="text"],
+.woocommerce-js .register input[type="email"],
+.woocommerce-js .register input[type="password"] {
+  line-height: 36px;
+  padding: 2px 8px 0;
+  border-radius: 3px;
+  border: 1px solid #c7c6c4;
+  font-size: 16px;
+  height: 40px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 100%;
+}
+
+/* line 315, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js h2 {
+  font-size: 28px !important;
+  font-weight: normal;
+  color: #363636;
+  text-align: center;
+}
+
+/* line 322, assets/styles/layouts/woocommerce/_account.scss */
+
+.woocommerce-js .site-footer {
+  background-color: #f3f4f1;
+}
+
+@media screen and (max-width: 63.99875em) {
+  /* line 322, assets/styles/layouts/woocommerce/_account.scss */
+
+  .woocommerce-js .site-footer {
+    padding-top: 55px;
+  }
 }
 
 /**

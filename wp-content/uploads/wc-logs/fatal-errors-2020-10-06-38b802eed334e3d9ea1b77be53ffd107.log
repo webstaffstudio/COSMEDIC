@@ -1,0 +1,32 @@
+2020-10-06T13:53:24+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wss_validate_name_fields(), 3 passed in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php on line 287 and exactly 5 expected in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-account.php:139
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): wss_validate_name_fields(Object(WP_Error), 'asdsa', 'asdsa@ddas.com')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(206): WP_Hook->apply_filters(Object(WP_Error), Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-user-functions.php(80): apply_filters('woocommerce_reg...', Object(WP_Error), 'asdsa', 'asdsa@ddas.com')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-form-handler.php(1059): wc_create_new_customer('asdsa@ddas.com', 'asdsa', '123')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(28 in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-account.php on line 139
+
+2020-10-06T13:55:20+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wss_validate_name_fields(), 3 passed in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php on line 287 and exactly 4 expected in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-account.php:139
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): wss_validate_name_fields(Object(WP_Error), 'tes12', 'tes12@dsad.com')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(206): WP_Hook->apply_filters(Object(WP_Error), Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-user-functions.php(80): apply_filters('woocommerce_reg...', Object(WP_Error), 'tes12', 'tes12@dsad.com')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-form-handler.php(1059): wc_create_new_customer('tes12@dsad.com', 'tes12', '123')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(28 in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-account.php on line 139
+
+2020-10-06T13:56:01+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wss_validate_name_fields(), 3 passed in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php on line 287 and exactly 4 expected in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-account.php:139
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): wss_validate_name_fields(Object(WP_Error), 'tes12', 'tes12@dsad.com')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(206): WP_Hook->apply_filters(Object(WP_Error), Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-user-functions.php(80): apply_filters('woocommerce_reg...', Object(WP_Error), 'tes12', 'tes12@dsad.com')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-form-handler.php(1059): wc_create_new_customer('tes12@dsad.com', 'tes12', '123')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(28 in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-account.php on line 139
+
+2020-10-06T13:56:24+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wss_validate_name_fields(), 3 passed in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php on line 287 and exactly 4 expected in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-account.php:139
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): wss_validate_name_fields(Object(WP_Error), 'test12', 'test12@21.com')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(206): WP_Hook->apply_filters(Object(WP_Error), Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-user-functions.php(80): apply_filters('woocommerce_reg...', Object(WP_Error), 'test12', 'test12@21.com')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-form-handler.php(1059): wc_create_new_customer('test12@21.com', 'test12', '123')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(28 in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-account.php on line 139
+

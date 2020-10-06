@@ -21,6 +21,7 @@
 	<div id="loader"></div>
 </div>
 <body <?php body_class(); ?>>
+
 <header class="header show-for-large">
 	<div class="header__row">
 
@@ -58,6 +59,12 @@
 			<a title="account" href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" class="header__links-link link link-account">
 				<span class="icon"></span>
 			</a>
+			<?php if ( is_user_logged_in() ) :?>
+				<a href="<?php echo home_url('/wishlist');?>" class="header__links-link link link-wishlist">
+					<span class="icon"></span>
+				</a>
+			<?php endif;?>
+
 			<a href="#" class="header__links-link link link-cart  no-count">
 				<span class="icon"><span class="count">0</span></span>
 			</a>
@@ -95,9 +102,11 @@
 			<a title="account" href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" class="header__links-link link link-account">
 				<span class="icon"></span>
 			</a>
-			<a href="#" class="header__links-link link link-wishlist">
-				<span class="icon"></span>
-			</a>
+			<?php if ( is_user_logged_in() ) :?>
+				<a href="<?php echo home_url('/wishlist');?>" class="header__links-link link link-wishlist">
+					<span class="icon"></span>
+				</a>
+			<?php endif;?>
 		</div>
 
 		<?php $locations = get_nav_menu_locations();
