@@ -1,0 +1,39 @@
+.quantity {
+  &__wrapp {
+    position: relative;
+    z-index: 0;
+    max-width: 80px;
+    width: 100%;
+    margin-bottom: 10px;
+
+    input[type="text"].qty {
+      border-radius: 3px;
+      border: 1px solid #d8d8d8;
+      background: #fff;
+      font-size: 16px;
+      height: 40px;
+      width: 100% !important;
+      text-align: center !important;
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      width: 32px;
+      color: #363636;
+      height: 100%;
+      line-height: 38px;
+      text-align: center;
+      font-size: 18px;
+      cursor: pointer;
+
+      &.minus {
+        left: 0;
+      }
+
+      &.plus {
+        right: 0;
+      }
+    }
+  }
+}

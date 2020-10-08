@@ -1,4 +1,5 @@
 //global styles
+/* stylelint-disable */
 body {
   margin-top: 61px;
 
@@ -52,6 +53,12 @@ a:not(.hero-slider__content) {
   }
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .site-content ul:not(.woocommerce-error) {
   list-style: none;
   margin: 0;
@@ -60,4 +67,34 @@ a:not(.hero-slider__content) {
   li {
     font-size: inherit;
   }
+}
+
+/*! Firefox */
+.minicart-wrapper {
+  scrollbar-color: #e0e5de #89937a;
+}
+
+/*! Other Browser */
+.minicart-wrapper {
+  --scrollbarBG: #e0e5de;
+  --thumbBG: #89937a;
+}
+
+.minicart-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.minicart-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.minicart-wrapper::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+.minicart-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 3px;
+  border: 1px solid var(--scrollbarBG);
 }

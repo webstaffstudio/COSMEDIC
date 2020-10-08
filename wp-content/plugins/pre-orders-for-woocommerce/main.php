@@ -3,11 +3,14 @@
  * Plugin Name: Preorders for WooCommerce
  * Plugin URI: https://brightplugins.com/
  * Description: Ultimate Preorders Plugin for WooCommerce.
- * Version: 1.0.8
+ * Version: 1.0.9
+ * Domain Path: /etc/i18n/languages/.
+ * WC tested up to: 4.5.2
+ * Tested up to: 5.5.1
+ * WC requires at least: 3.9
  * Author: Bright Plugins
  * Author URI: https://brightplugins.com
  * Text Domain: preorders
- * Domain Path: /etc/i18n/languages/.
  */
 
 defined('ABSPATH') || exit;

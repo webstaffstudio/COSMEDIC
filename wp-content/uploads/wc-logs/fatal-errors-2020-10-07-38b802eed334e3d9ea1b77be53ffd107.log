@@ -1,0 +1,68 @@
+2020-10-07T15:01:10+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\mini-cart.php on line 74
+
+2020-10-07T15:01:11+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\mini-cart.php on line 74
+
+2020-10-07T15:01:18+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\mini-cart.php on line 74
+
+2020-10-07T15:01:31+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\mini-cart.php on line 74
+
+2020-10-07T15:10:21+00:00 CRITICAL Uncaught Error: Function name must be a string in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\enqueue-scripts.php:36
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): cosmedoc_scripts('')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\script-loader.php(1999): do_action('wp_enqueue_scri...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): wp_enqueue_scripts('')
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#7 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\general-template.php(3006): do_action('wp_head')
+#8 C:\OSPanel\domains\localhost\cosmedoc\ in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\enqueue-scripts.php on line 36
+
+2020-10-07T15:10:22+00:00 CRITICAL Uncaught Error: Function name must be a string in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\enqueue-scripts.php:36
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): cosmedoc_scripts('')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\script-loader.php(1999): do_action('wp_enqueue_scri...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): wp_enqueue_scripts('')
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#7 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\general-template.php(3006): do_action('wp_head')
+#8 C:\OSPanel\domains\localhost\cosmedoc\ in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\enqueue-scripts.php on line 36
+
+2020-10-07T15:10:27+00:00 CRITICAL Uncaught Error: Function name must be a string in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\enqueue-scripts.php:36
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): cosmedoc_scripts('')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\script-loader.php(1999): do_action('wp_enqueue_scri...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): wp_enqueue_scripts('')
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#7 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\general-template.php(3006): do_action('wp_head')
+#8 C:\OSPanel\domains\localhost\cosmedoc\ in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\enqueue-scripts.php on line 36
+
+2020-10-07T15:10:43+00:00 CRITICAL Uncaught Error: Function name must be a string in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\enqueue-scripts.php:36
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): cosmedoc_scripts('')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\script-loader.php(1999): do_action('wp_enqueue_scri...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): wp_enqueue_scripts('')
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#7 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\general-template.php(3006): do_action('wp_head')
+#8 C:\OSPanel\domains\localhost\cosmedoc\ in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\enqueue-scripts.php on line 36
+
+2020-10-07T15:10:48+00:00 CRITICAL Uncaught Error: Function name must be a string in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\enqueue-scripts.php:36
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): cosmedoc_scripts('')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\script-loader.php(1999): do_action('wp_enqueue_scri...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): wp_enqueue_scripts('')
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#7 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\general-template.php(3006): do_action('wp_head')
+#8 C:\OSPanel\domains\localhost\cosmedoc\ in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\enqueue-scripts.php on line 36
+

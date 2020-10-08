@@ -33,6 +33,7 @@ if ( ! function_exists( 'cosmedoc_scripts' ) ) :
 		$theme_vars = array(
 			'home'   => get_home_url(),
 			'isHome' => is_front_page(),
+			'ajaxUrl' => admin_url("admin-ajax.php"),
 		);
 		wp_localize_script( 'main-javascript', 'themeVars', $theme_vars );
 

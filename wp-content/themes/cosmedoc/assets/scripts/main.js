@@ -22,7 +22,86 @@ jQuery(window).load(function() {
     cssEase: "linear",
   });
 });
+
+jQuery(function($) {
+  let timeout;
+
+  $(".woocommerce").on("change", "input.qty", function() {
+    if (timeout !== undefined) {
+      clearTimeout(timeout);
+    }
+
+    timeout = setTimeout(function() {
+      $("[name='update_cart']").trigger("click");
+    }, 1000); // 1 second delay, half a second (500) seems comfortable too
+  });
+
+  $(document).on("change", ".header-mini-cart input.qty", function() {
+    let item_hash = $(this)
+      .attr("name")
+      .replace(/cart\[([\w]+)\]\[qty\]/g, "$1");
+    let item_quantity = $(this).val();
+    let currentVal = parseFloat(item_quantity);
+
+    function qty_cart() {
+      $.ajax({
+        type: "POST",
+        url: themeVars.ajaxUrl,
+        data: {
+          action: "qty_cart",
+          hash: item_hash,
+          quantity: currentVal,
+        },
+        success: function(response) {
+          $(".order-total-sum").html(response);
+          cart_items();
+        },
+      });
+    }
+
+    function cart_items() {
+      $.ajax({
+        type: "POST",
+        url: themeVars.ajaxUrl,
+        data: {
+          action: "cart_items",
+        },
+        success: function(data) {
+          $(".header-cart-count").html(data);
+        },
+      });
+    }
+
+    qty_cart();
+  });
+});
+
 jQuery(document).ready(() => {
+  $(document).on("click", ".plus", function() {
+    let $input = $(this).prev("input.qty");
+    let val = parseInt($input.val());
+    let step = $input.attr("step");
+    let max = $input.attr("max") > 0 ? $input.attr("max") : 100;
+    step = "undefined" !== typeof step ? parseInt(step) : 1;
+    if (val + step <= max) {
+      $input.val(val + step).change();
+    }
+
+    if (val > max) {
+      val = max;
+      $input.val(val).change();
+    }
+  });
+  $(document).on("click", ".minus", function() {
+    let $input = $(this).next("input.qty");
+    let val = parseInt($input.val());
+    let step = $input.attr("step");
+    step = "undefined" !== typeof step ? parseInt(step) : 1;
+    if (val > 1) {
+      $input.val(val - step).change();
+    }
+  });
+
   /* Humburger start */
   const trigger = $("#hamburger"),
     menuContainer = $(".menu-wrap");
@@ -77,6 +156,35 @@ jQuery(document).ready(() => {
     burgerTime();
   });
 
+  let triggerCart = $(".link-cart");
+
+  triggerCart.click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass("cart-opened");
+  });
+
+  /**
+   * Animations for added product to mini-cart
+   */
+  let notShow = false;
+
+  $("body").on("added_to_cart", function() {
+    if (!notShow) {
+      setTimeout(function() {
+        $(".link-cart").addClass("cart-opened");
+      }, 1);
+
+      setTimeout(function() {
+        $(".link-cart").removeClass("cart-opened");
+      }, 3000);
+    }
+    $(".link-cart").addClass("scale");
+    setTimeout(function() {
+      $(".link-cart").removeClass("scale");
+    }, 500);
+    notShow = true;
+  });
+
   $(window).on("resize ", () => {
     // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
     if ($(window).width() != windowWidth) {
@@ -93,6 +201,7 @@ $(document).keydown(function(e) {
   const code = e.keyCode || e.which;
   if (code === 27) {
     $(".header__search").removeClass("is-opened");
+    $(".link-cart").removeClass("cart-opened");
     $("body").css({
       overflow: "",
       position: "",

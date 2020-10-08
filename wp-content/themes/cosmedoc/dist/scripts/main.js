@@ -12815,8 +12815,83 @@ jQuery(window).load(function () {
     cssEase: "linear"
   });
 });
+jQuery(function ($) {
+  var timeout;
+  $(".woocommerce").on("change", "input.qty", function () {
+    if (timeout !== undefined) {
+      clearTimeout(timeout);
+    }
+
+    timeout = setTimeout(function () {
+      $("[name='update_cart']").trigger("click");
+    }, 1000); // 1 second delay, half a second (500) seems comfortable too
+  });
+  $(document).on("change", ".header-mini-cart input.qty", function () {
+    var item_hash = $(this).attr("name").replace(/cart\[([\w]+)\]\[qty\]/g, "$1");
+    var item_quantity = $(this).val();
+    var currentVal = parseFloat(item_quantity);
+
+    function qty_cart() {
+      $.ajax({
+        type: "POST",
+        url: themeVars.ajaxUrl,
+        data: {
+          action: "qty_cart",
+          hash: item_hash,
+          quantity: currentVal
+        },
+        success: function success(response) {
+          $(".order-total-sum").html(response);
+          cart_items();
+        }
+      });
+    }
+
+    function cart_items() {
+      $.ajax({
+        type: "POST",
+        url: themeVars.ajaxUrl,
+        data: {
+          action: "cart_items"
+        },
+        success: function success(data) {
+          $(".header-cart-count").html(data);
+        }
+      });
+    }
+
+    qty_cart();
+  });
+});
 jQuery(document).ready(function () {
+  $(document).on("click", ".plus", function () {
+    var $input = $(this).prev("input.qty");
+    var val = parseInt($input.val());
+    var step = $input.attr("step");
+    var max = $input.attr("max") > 0 ? $input.attr("max") : 100;
+    step = "undefined" !== typeof step ? parseInt(step) : 1;
+
+    if (val + step <= max) {
+      $input.val(val + step).change();
+    }
+
+    if (val > max) {
+      val = max;
+      $input.val(val).change();
+    }
+  });
+  $(document).on("click", ".minus", function () {
+    var $input = $(this).next("input.qty");
+    var val = parseInt($input.val());
+    var step = $input.attr("step");
+    step = "undefined" !== typeof step ? parseInt(step) : 1;
+
+    if (val > 1) {
+      $input.val(val - step).change();
+    }
+  });
   /* Humburger start */
+
   var trigger = $("#hamburger"),
       menuContainer = $(".menu-wrap");
   var isClosed = true;
@@ -12863,6 +12938,32 @@ jQuery(document).ready(function () {
   trigger.click(function () {
     burgerTime();
   });
+  var triggerCart = $(".link-cart");
+  triggerCart.click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass("cart-opened");
+  });
+  /**
+   * Animations for added product to mini-cart
+   */
+
+  var notShow = false;
+  $("body").on("added_to_cart", function () {
+    if (!notShow) {
+      setTimeout(function () {
+        $(".link-cart").addClass("cart-opened");
+      }, 1);
+      setTimeout(function () {
+        $(".link-cart").removeClass("cart-opened");
+      }, 3000);
+    }
+
+    $(".link-cart").addClass("scale");
+    setTimeout(function () {
+      $(".link-cart").removeClass("scale");
+    }, 500);
+    notShow = true;
+  });
   $(window).on("resize ", function () {
     // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
     if ($(window).width() != windowWidth) {
@@ -12878,6 +12979,7 @@ $(document).keydown(function (e) {
 
   if (code === 27) {
     $(".header__search").removeClass("is-opened");
+    $(".link-cart").removeClass("cart-opened");
     $("body").css({
       overflow: "",
       position: "",

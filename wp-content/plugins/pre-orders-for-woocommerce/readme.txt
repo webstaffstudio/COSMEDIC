@@ -2,9 +2,11 @@
 Contributors: brightvesseldev, milardovich, niloybrightvessel
 Requires at least: 5.0
 Tags: preorder,pre order,pre-order,woocommerce preorder,for woocommerce
-Tested up to: 5.5.1
 Requires PHP: 7.0
-Stable tag: 1.0.7
+WC tested up to: 4.5.2
+Tested up to: 5.5.1
+WC requires at least: 3.9
+Stable tag: 1.0.9
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -109,6 +111,11 @@ This plugin works on the backend, so it will not affect your theme in most cases
 We do take feature requests [here](https://share.brightvessel.com/MAb).
 
 == Changelog ==
+
+= 1.0.9 =
+* Fixed Wrong Notification [pending payment] sent on preorder invoice to the customers.
+* Fixed Not Sent email Notification to admin for new Order [pre-order].
+
 = 1.0.8 =
 * Fixed Wrong preorder notice appear on checkout page
 

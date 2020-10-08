@@ -90,9 +90,6 @@ function wss_separate_registration_form()
 				   href="<?php echo get_permalink(wc_get_page_id('myaccount')); ?>"><?php esc_html_e('Уже зарегистрированы? Войти', THEME_TD); ?></a>
 			</p>
 
-
-			<?php error_log(print_r($_POST, true));;?>
-
 			<?php do_action('woocommerce_register_form_end'); ?>
 
 		</form>

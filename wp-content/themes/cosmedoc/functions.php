@@ -30,6 +30,7 @@ $theme_includes = array(
 	'/lib/woo-customizations/woo-brands.php',        // brands
 	'/lib/woo-customizations/woo-product.php',        // product customization
 	'/lib/woo-customizations/woo-account.php',        // Account customization
+	'/lib/woo-customizations/woo-mini-cart.php',        // Ajax mini cart
 );
 
 foreach ($theme_includes as $file) {
