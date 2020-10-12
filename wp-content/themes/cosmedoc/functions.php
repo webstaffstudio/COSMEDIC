@@ -12,7 +12,7 @@
 defined('THEME_TD') ? THEME_TD : define('THEME_TD', 'cosmedoc');
 
 // Load modules
-$theme_includes = [
+$theme_includes = array(
 	'/lib/helpers.php',
 	'/lib/cleanup.php',                        // Clean up default theme includes
 	'/lib/enqueue-scripts.php',                // Enqueue styles and scripts
@@ -22,14 +22,17 @@ $theme_includes = [
 	'/lib/template-tags.php',                  // Custom template tags
 	'/lib/menu-areas.php',                     // Menu areas
 	'/lib/widget-areas.php',                   // Widget areas
-	'/lib/customizer.php',                     // Theme customizer
-	'/lib/vc_shortcodes.php',                  // Visual Composer shortcodes
+	'/lib/vc_shortcodes.php',                  // Visual Composer shortcod
+	'/lib/customizer.php',                     // Theme customizeres
 	'/lib/jetpack.php',                        // Jetpack compatibility file
 	'/lib/acf_field_groups_type.php',          // ACF Field Groups Organizer
 	'/lib/wp_dashboard_customizer.php',        // WP Dashboard customizer
 	'/lib/woo-customizations/woo-brands.php',        // brands
 	'/lib/woo-customizations/woo-product.php',        // product customization
-];
+	'/lib/woo-customizations/woo-account.php',        // Account customization
+	'/lib/woo-customizations/woo-mini-cart.php',        // Ajax mini cart
+	'/lib/woo-customizations/woo-archive.php',        // Ajax mini cart
+);
 
 foreach ($theme_includes as $file) {
 	if (!locate_template($file)) {
@@ -93,3 +96,15 @@ if (function_exists('acf_set_options_page_title')) {
 
 //custom image sizes
 add_image_size('cat_tile', 323, 323, false);
+
+//function mailtrap($phpmailer)
+//{
+//	$phpmailer->isSMTP();
+//	$phpmailer->Host = 'smtp.mailtrap.io';
+//	$phpmailer->SMTPAuth = true;
+//	$phpmailer->Port = 2525;
+//	$phpmailer->Username = 'fd0415609b8d04';
+//	$phpmailer->Password = 'd2cf4436c308f1';
+//}
+//
+//add_action('phpmailer_init', 'mailtrap');

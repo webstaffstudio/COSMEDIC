@@ -1,4 +1,5 @@
 //global styles
+/* stylelint-disable */
 body {
   margin-top: 61px;
 
@@ -22,6 +23,42 @@ a:not(.hero-slider__content) {
     opacity: 0.5;
     transition: opacity 0.3s ease-in-out;
   }
+}
+
+.grid-container {
+  padding: 0 60px;
+}
+
+h2.cosmedoc-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2;
+  text-rendering: optimizeLegibility;
+  margin-bottom: 36px;
+}
+
+.cosmedoc-btn,
+.button {
+  background-color: #89937a !important;
+  display: inline-block !important;
+  color: #fff !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  letter-spacing: 1.5px !important;
+  line-height: 38px !important;
+  border-radius: 3px !important;
+  border: 1px solid transparent !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  transition: 0.3s ease !important;
+  height: 40px !important;
+  min-width: 210px !important;
+  cursor: pointer !important;
+  padding: 0 !important;
 }
 
 h2.cosmedoc-title {
@@ -54,8 +91,73 @@ h2.cosmedoc-title {
   cursor: pointer;
 
   &:hover {
-    background-color: transparent;
-    color: #000;
-    border-color: #000;
+    background-color: transparent !important;
+    color: #000 !important;
+    border-color: #000 !important;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-content ul:not(.woocommerce-error) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-size: inherit;
+  }
+}
+
+/*! Firefox */
+.minicart-wrapper {
+  scrollbar-color: #e0e5de #89937a;
+}
+
+/*! Other Browser */
+.minicart-wrapper {
+  --scrollbarBG: #e0e5de;
+  --thumbBG: #89937a;
+}
+
+.minicart-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.minicart-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.minicart-wrapper::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+.minicart-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 3px;
+  border: 1px solid var(--scrollbarBG);
+}
+
+.labels-list {
+  display: flex;
+  flex-direction: column;
+
+  .product-label {
+    display: inline;
+    margin-bottom: 5px;
+    font-size: 10px;
+    color: #363636;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #fff;
+    border-radius: 2px;
+    padding: 2px 10px 2px;
+    line-height: 17px;
+    text-align: center;
   }
 }

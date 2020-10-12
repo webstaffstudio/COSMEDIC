@@ -32,7 +32,7 @@ global $product;
 			</div>
 		<?php endif; ?>
 		<?= '<span class="sku">' . __('Артикул: ', THEME_TD) . $product->get_sku() . '</span>'; ?>
-		<a href="#about_product" class="cosmedoc-btn" id="about_anchor"><?= __('Подробнее о товаре', THEME_TD); ?></a>
 	</div>
+<?php get_template_part('/woocommerce/single-product/about-accordeon'); ?>
 <?php get_template_part('/woocommerce/cross-sale-slider/cross-sale-slider'); ?>
-<?php get_template_part('/woocommerce/single-product/about-accordeon');
+

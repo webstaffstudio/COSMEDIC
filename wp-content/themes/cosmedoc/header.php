@@ -21,6 +21,7 @@
 	<div id="loader"></div>
 </div>
 <body <?php body_class(); ?>>
+
 <header class="header show-for-large">
 	<div class="header__row">
 
@@ -58,9 +59,17 @@
 			<a title="account" href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" class="header__links-link link link-account">
 				<span class="icon"></span>
 			</a>
-			<a href="#" class="header__links-link link link-cart  no-count">
-				<span class="icon"><span class="count">0</span></span>
+			<?php if ( is_user_logged_in() ) :?>
+				<a href="<?php echo home_url('/wishlist');?>" class="header__links-link link link-wishlist">
+					<span class="icon"></span>
+				</a>
+			<?php endif;?>
+			<a href="#mini-cart" class="header__links-link link link-cart">
+				<span class="icon"><span class="header-cart-count count no-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span></span>
 			</a>
+			<div class="header-mini-cart">
+				<?php woocommerce_mini_cart(); ?>
+			</div>
 		</div>
 	</div><!-- /.header__row -->
 </header><!-- /.header -->
@@ -86,18 +95,23 @@
 		<?php endif; ?>
 	</a><!-- /.brand -->
 	<div class="header__links">
-		<a href="<?php echo wc_get_cart_url(); ?>" class="header__links-link link link-cart  no-count">
-			<span class="icon"><span class="count">0</span></span>
+		<a href="#mini-cart" class="header__links-link link link-cart">
+			<span class="icon"><span class="header-cart-count count no-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span></span>
 		</a>
+		<div class="header-mini-cart">
+			<?php woocommerce_mini_cart(); ?>
+		</div>
 	</div>
 	<div class="menu-wrap is-closed">
 		<div class="menu-wrap__header">
 			<a title="account" href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>" class="header__links-link link link-account">
 				<span class="icon"></span>
 			</a>
-			<a href="#" class="header__links-link link link-wishlist">
-				<span class="icon"></span>
-			</a>
+			<?php if ( is_user_logged_in() ) :?>
+				<a href="<?php echo home_url('/wishlist');?>" class="header__links-link link link-wishlist">
+					<span class="icon"></span>
+				</a>
+			<?php endif;?>
 		</div>
 
 		<?php $locations = get_nav_menu_locations();
