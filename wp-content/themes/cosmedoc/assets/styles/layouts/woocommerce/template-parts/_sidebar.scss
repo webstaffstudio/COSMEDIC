@@ -64,4 +64,49 @@
       }
     }
   }
+
+  .filters-shop {
+    .filters {
+      &__item {
+        user-select: none;
+        font-weight: normal;
+        margin-bottom: 0px;
+        position: relative;
+        display: block;
+        border-bottom: 1px solid #363636;
+
+        &::after {
+          position: absolute;
+          content: " ";
+          width: 20px;
+          height: 50px;
+          background-image: url("assets/images/cosmedoc.svg");
+          background-position: -99px -221px;
+          background-repeat: no-repeat;
+          right: 0;
+          top: 0;
+        }
+
+        &.is-active {
+          &::after {
+            background-position: -121px -221px;
+          }
+        }
+
+        a {
+          display: block;
+          padding: 14px 0;
+          position: relative;
+          z-index: 2;
+
+
+        }
+
+        label {
+          display: inline-block;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

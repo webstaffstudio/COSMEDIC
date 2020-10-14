@@ -24,207 +24,211 @@
 }
 
 .woocommerce {
-  &.post-type-archive-product {
-    .catalog-navigation {
+  .catalog-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .breadcrumb {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #363636;
+
+    .woocommerce-breadcrumb {
+      vertical-align: middle;
+      font-size: 13px;
+      line-height: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      white-space: nowrap;
+      padding: 16px 0;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .breadcrumb {
-      overflow: hidden;
       width: 100%;
-      margin-bottom: 45px;
-      border-bottom: 1px solid #363636;
+      font-weight: bold;
+      margin: 0;
+      color: #363636;
 
-      .woocommerce-breadcrumb {
-        vertical-align: middle;
-        font-size: 13px;
+      a {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .products {
+    .product {
+      margin: 0 20px 30px 0;
+
+      .thumbnail-wrapper {
+        position: relative;
+
+        &::before {
+          content: "";
+          background: rgba(0, 0, 0, 0.04);
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        img.attachment-woocommerce_thumbnail {
+          max-width: 325px;
+          width: 100%;
+          height: 325px;
+        }
+
+        .top-labels {
+          position: absolute;
+          top: 12px;
+          left: 12px;
+        }
+
+        .bottom-labels {
+          position: absolute;
+          bottom: 12px;
+          left: 12px;
+        }
+      }
+
+      .brands {
+        a {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #c7c6c4;
+        }
+      }
+
+      .woocommerce-loop-product__title {
+        margin-bottom: 17px !important;
+        min-height: 40px;
+        max-height: 42px;
+        overflow: hidden;
+        text-align: left;
+        font-size: 14px !important;
         line-height: 20px;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        white-space: nowrap;
-        padding: 16px 0;
+        padding: 0 !important;
+      }
+
+      .price {
         display: flex;
+        margin-bottom: 3px;
+
+        ins {
+          text-decoration: none;
+        }
+
+        .woocommerce-Price-amount {
+          color: #363636;
+          letter-spacing: -0.5px;
+          font-size: 18px;
+          text-decoration: none;
+        }
+
+        .woocommerce-Price-currencySymbol {
+          margin-left: 4px;
+        }
+      }
+
+      a.button {
         width: 100%;
-        font-weight: bold;
-        margin: 0;
-        color: #363636;
+      }
+
+      .tinvwl_add_to_wishlist_button {
+        display: none;
+      }
+
+      &.sale {
+        .price {
+          flex-direction: row-reverse;
+          justify-content: space-between;
+
+          bdi {
+            color: #e88565;
+            font-weight: 400;
+          }
+
+          del {
+            bdi {
+              color: #c7c6c4;
+              text-decoration: line-through;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pagination-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    z-index: 4;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 10px 0;
+    border: 1px solid #cecece;
+    border-width: 1px 0 0 0;
+    box-shadow: 1px 0 20px rgba(0, 0, 0, 0.3);
+
+    &__list {
+      display: flex;
+      align-items: center;
+      padding-left: 0;
+      margin: 0;
+
+      li {
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+        margin: 0 2px;
 
         a {
-          font-weight: 400;
-        }
-      }
-    }
-
-    .products {
-      .product {
-        margin: 0 20px 30px 0;
-
-        .thumbnail-wrapper {
-          position: relative;
-
-          &::before {
-            content: "";
-            background: rgba(0, 0, 0, 0.04);
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-          }
-
-          img.attachment-woocommerce_thumbnail {
-            max-width: 325px;
-            width: 100%;
-            height: 325px;
-          }
-
-          .top-labels {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-          }
-
-          .bottom-labels {
-            position: absolute;
-            bottom: 12px;
-            left: 12px;
-          }
-        }
-
-        .brands {
-          a {
-            font-size: 14px;
-            text-transform: uppercase;
-            color: #c7c6c4;
-          }
-        }
-
-        .woocommerce-loop-product__title {
-          margin-bottom: 17px !important;
-          min-height: 40px;
-          max-height: 42px;
-          overflow: hidden;
-          text-align: left;
-          font-size: 14px !important;
-          line-height: 20px;
-          padding: 0 !important;
-        }
-
-        .price {
-          display: flex;
-          margin-bottom: 3px;
-
-          ins {
-            text-decoration: none;
-          }
-
-          .woocommerce-Price-amount {
-            color: #363636;
-            letter-spacing: -0.5px;
-            font-size: 18px;
-            text-decoration: none;
-          }
-
-          .woocommerce-Price-currencySymbol {
-            margin-left: 4px;
-          }
-        }
-
-        a.button {
-          width: 100%;
-        }
-
-        .tinvwl_add_to_wishlist_button {
-          display: none;
-        }
-
-        &.sale {
-          .price {
-            flex-direction: row-reverse;
-            justify-content: space-between;
-
-            bdi {
-              color: #e88565;
-              font-weight: 400;
-            }
-
-            del {
-              bdi {
-                color: #c7c6c4;
-                text-decoration: line-through;
-                font-size: 14px;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .pagination-product {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fff;
-      position: fixed;
-      z-index: 4;
-      bottom: 0;
-      width: 100%;
-      margin-bottom: 0;
-      padding: 10px 0;
-      border: 1px solid #cecece;
-      border-width: 1px 0 0 0;
-      box-shadow: 1px 0 20px rgba(0, 0, 0, 0.3);
-
-      &__list {
-        display: flex;
-        align-items: center;
-        padding-left: 0;
-        margin: 0;
-
-        li {
-          display: inline-block;
+          text-align: center;
+          text-transform: uppercase;
           vertical-align: top;
+          white-space: nowrap;
+          display: block;
+          margin: 0;
+          line-height: 26px;
           cursor: pointer;
-          margin: 0 2px;
+          color: #c7c6c4;
+          padding: 6px 14px 4px;
+          border: 1px solid transparent;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+          font-size: 18px;
 
-          a {
-            text-align: center;
-            text-transform: uppercase;
+          &.current {
+            display: inline-block;
             vertical-align: top;
-            white-space: nowrap;
-            display: block;
-            margin: 0;
-            line-height: 26px;
             cursor: pointer;
-            color: #c7c6c4;
-            padding: 6px 14px 4px;
-            border: 1px solid transparent;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            font-size: 18px;
-
-            &.current {
-              display: inline-block;
-              vertical-align: top;
-              cursor: pointer;
-              margin: 0 2px;
-              color: #363636;
-              text-decoration: none;
-              border: 1px solid #363636;
-            }
+            margin: 0 2px;
+            color: #363636;
+            text-decoration: none;
+            border: 1px solid #363636;
           }
+        }
 
-          &:hover {
-            a {
-              border: 1px solid #363636;
-              color: #363636 !important;
-              opacity: 1;
-            }
+        &:hover {
+          a {
+            border: 1px solid #363636;
+            color: #363636 !important;
+            opacity: 1;
           }
         }
       }
+    }
+  }
+
+  .filters-shop {
+    a {
+      pointer-events: initial;
     }
   }
 }

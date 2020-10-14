@@ -116,8 +116,13 @@
 }
 
 .cross-sale {
+  display: flex;
+  width: 100%;
   padding: 90px 0px 45px;
+
   &__list {
+    display: flex;
+
     .slick-list {
       margin-right: -20px;
     }
@@ -127,6 +132,7 @@
       height: 44px;
       background-repeat: no-repeat;
       z-index: 3;
+
       &::before {
         display: none;
       }
@@ -147,6 +153,7 @@
     &--product {
       max-width: 340px;
       width: 100%;
+      margin-right: 20px;
 
       .product__thumbnail {
         display: block;

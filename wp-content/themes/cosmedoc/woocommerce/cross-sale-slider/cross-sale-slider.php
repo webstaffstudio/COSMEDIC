@@ -11,7 +11,6 @@ $cross_sale = get_field($product_select);
 <?php if ($cross_sale): ?>
 	<?= (!is_front_page()) ? '<h2 class="cosmedoc-title">' . __('С этим покупают', THEME_TD) . '</h2>' : ''; ?>
 	<section class="cross-sale">
-		<div class="grid-container">
 			<div class="cross-sale__list product-list-slider">
 				<?php foreach ($cross_sale as $cross_product):
 					$id = $cross_product->ID;
@@ -45,6 +44,5 @@ $cross_sale = get_field($product_select);
 					</div>
 				<?php endforeach; ?>
 			</div>
-		</div>
 	</section>
 <?php endif; ?>

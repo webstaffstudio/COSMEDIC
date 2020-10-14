@@ -8,6 +8,7 @@
  * @package cosmedoc
  */
 $fields = get_fields( 'option' );
+
 ?>
 
 </main><!-- #content -->

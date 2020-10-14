@@ -3,6 +3,7 @@
 import "jquery";
 import "slick-carousel";
 import "jquery-match-height";
+import './modules/filters-shop';
 // Import everything from autoload
 import "./autoload/**/*";
 

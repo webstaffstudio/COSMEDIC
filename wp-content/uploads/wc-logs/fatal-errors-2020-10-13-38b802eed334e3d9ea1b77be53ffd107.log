@@ -1,0 +1,142 @@
+2020-10-13T11:39:31+00:00 CRITICAL syntax error, unexpected '/' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 67
+
+2020-10-13T11:40:01+00:00 CRITICAL syntax error, unexpected 'foreach' (T_FOREACH) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 67
+
+2020-10-13T11:40:26+00:00 CRITICAL syntax error, unexpected 'foreach' (T_FOREACH) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 67
+
+2020-10-13T12:30:26+00:00 CRITICAL syntax error, unexpected '=', expecting end of file in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\header.php on line 154
+
+2020-10-13T12:59:38+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:69
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader.p in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 69
+
+2020-10-13T12:59:41+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:69
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader.p in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 69
+
+2020-10-13T12:59:42+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:69
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader.p in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 69
+
+2020-10-13T12:59:50+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 75
+
+2020-10-13T12:59:52+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:69
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader.p in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 69
+
+2020-10-13T12:59:54+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:69
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader.p in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 69
+
+2020-10-13T12:59:55+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:69
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader.p in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 69
+
+2020-10-13T13:01:58+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:71
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader.p in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 71
+
+2020-10-13T13:02:00+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:71
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader.p in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 71
+
+2020-10-13T13:02:02+00:00 CRITICAL Uncaught Error: Call to a member function get_attribute() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:71
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader.p in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 71
+
+2020-10-13T13:02:20+00:00 CRITICAL Uncaught Error: Call to a member function get_attributes() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:71
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader. in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 71
+
+2020-10-13T13:02:21+00:00 CRITICAL Uncaught Error: Call to a member function get_attributes() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:71
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader. in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 71
+
+2020-10-13T13:02:22+00:00 CRITICAL Uncaught Error: Call to a member function get_attributes() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php:71
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\template.php(730): require_once()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\template.php(676): load_template('D:\\OSPanel\\doma...', true, Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\general-template.php(136): locate_template(Array, true, true, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\loop\loop-start.php(24): get_sidebar()
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
+#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(1115): wc_get_template('loop/loop-start...')
+#6 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php(70): woocommerce_product_loop_start()
+#7 D:\OSPanel\domains\cosmedic\wp-includes\template-loader. in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\sidebar.php on line 71
+
