@@ -67,6 +67,22 @@
 
   .filters-shop {
     .filters {
+      li {
+        .clear-btn {
+          display: none !important;
+          margin: 20px 0;
+          background-color: transparent !important;
+          color: #363636 !important;
+          border-color: #363636 !important;
+          width: 100%;
+          line-height: 36px;
+
+          &.visible {
+            display: block !important;
+          }
+        }
+      }
+
       &__item {
         user-select: none;
         font-weight: normal;
@@ -109,4 +125,5 @@
       }
     }
   }
+
 }

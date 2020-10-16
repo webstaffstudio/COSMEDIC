@@ -16,7 +16,9 @@ if (!is_active_sidebar('sidebar-1')) {
 	<form action="" class="filters-shop">
 
 		<ul class="filters" data-accordion="owy3ap-accordion" data-allow-all-closed="true" role="tablist">
-
+			<li class="clearall">
+				<div  class="clear-btn cosmedoc-btn" id="clearFilters"><?=__('Очистить все', THEME_TD);?></div>
+			</li>
 			<li class="filters__item" data-accordion-item="" role="presentation">
 				<a href="#" class="filters__item--title" aria-controls="4v42sh-accordion" role="tab"
 				   id="4v42sh-accordion-label" aria-expanded="false"

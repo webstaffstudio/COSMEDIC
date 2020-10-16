@@ -11,27 +11,40 @@ function filters_ajax()
 //		echo '<pre>';
 //		error_log(print_r($terms_array, true));
 //		echo '</pre>';
+		if (isset($terms_array['brands']) && isset($terms_array['country'])) {
+			$relation = 'AND';
+		} else {
+			$relation = 'OR';
+		}
 		$filter_args = array(
 			'post_type' => 'product',
 			'posts_per_page' => 8, // must be 36
 			'tax_query' => array(
-				'relation' => 'OR',
+				'relation' => $relation,
 				array(
 					'taxonomy' => 'cos_brands',
 					'field' => 'id',
-					'terms' => $terms_array['brands'],
+					'terms' => (isset($terms_array['brands'])) ? $terms_array['brands'] : '',
+					'operator' => 'IN',
 				),
 
 				array(
 					'taxonomy' => 'pa_strana-proizvoditel',
 					'field' => 'id',
-					'terms' => $terms_array['country'],
+					'terms' => (isset($terms_array['country'])) ? $terms_array['country'] : '',
+					'operator' => 'IN',
 				),
 			),
+			'meta_query' => array( array(
+				'key'     => '_stock_status',
+				'value'   => 'outofstock',
+				'compare' => '!=',
+			) ),
 		);
+
 		$query = new WP_Query($filter_args);
 		$in_stock_counter = 0;
-		 ob_start();
+		ob_start();
 		if ($query->have_posts()) {
 			while ($query->have_posts()) {
 				global $product;
