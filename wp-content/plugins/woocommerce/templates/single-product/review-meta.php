@@ -43,4 +43,3 @@ if ( '0' === $comment->comment_approved ) { ?>
 
 	<?php
 }
-

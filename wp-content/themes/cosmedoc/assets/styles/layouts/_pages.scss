@@ -118,7 +118,7 @@
 .cross-sale {
   display: flex;
   width: 100%;
-  padding: 90px 0px 45px;
+  padding: 90px 0 45px;
 
   &__list {
     display: flex;
@@ -127,7 +127,8 @@
       margin-right: -20px;
     }
 
-    .slick-prev, .slick-next {
+    .slick-prev,
+    .slick-next {
       width: 27px;
       height: 44px;
       background-repeat: no-repeat;
@@ -163,7 +164,7 @@
         position: relative;
 
         &::before {
-          content: '';
+          content: "";
           background: rgba(0, 0, 0, 0.04);
           height: 100%;
           width: 100%;
@@ -176,7 +177,7 @@
       .product__brand {
         font-size: 14px;
         text-transform: uppercase;
-        color: #C7C6C4;
+        color: #c7c6c4;
         margin-bottom: 5px;
       }
 
@@ -202,11 +203,11 @@
         align-items: center;
 
         .has-sale {
-          color: #E88565;
+          color: #e88565;
         }
 
         .sale {
-          color: #C7C6C4;
+          color: #c7c6c4;
           text-decoration: line-through;
           font-size: 14px;
         }
@@ -217,5 +218,4 @@
       }
     }
   }
-
 }

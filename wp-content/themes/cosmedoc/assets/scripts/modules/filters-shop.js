@@ -48,34 +48,10 @@ jQuery(document).ready(function () {
 				dataObj.country.splice($.inArray(checked, dataObj.country), 1);
 			}
 		}
-		filtersInit(dataObj);
+		filtersInit(dataObj)
+		console.log(dataObj);
 	});
 
-	if ($('.filter-item').is(':checked')) {
-		$('.clear-btn').addClass('visible');
-	} else {
-		$('.clear-btn').removeClass('visible');
-
-	}
-
-	$(".filter-item").click(function () {
-		let checkboxes = $("input.filter-item");
-		if (checkboxes.is(":checked")) {
-			$('#clearFilters').addClass('visible');
-		} else {
-			$('#clearFilters').removeClass('visible');
-		}
-	});
-	
-	$('#clearFilters').click(function () {
-		filterForm.find('input[type="checkbox"]').prop('checked', false)
-		$(this).removeClass('visible');
-		filtersInit(null);
-	});
-	// function clearFilters() {
-	// $('#clearFilters').removeClass('visible');
-	//
-	// }
 });
 
 

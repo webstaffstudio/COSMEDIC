@@ -225,11 +225,89 @@
     display: flex;
     align-items: center;
 
-    .menu-home-menu-container {
+    .menu-main-menu-container {
+      height: 100%;
+
+      #main-menu {
+        height: 100%;
+
+        .menu-item {
+          height: 100%;
+
+          > a {
+            height: 100%;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .nav-main__menu {
+      .is-dropdown-submenu > li {
+        width: auto;
+        margin-right: 40px;
+      }
+
+      &.dropdown.menu > li > a {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      &.dropdown.menu > li.is-active > a {
+        opacity: 0.5;
+        transition: opacity 0.3s ease-in-out;
+        color: inherit;
+      }
+
+      .first-sub > li:first-of-type > a {
+        opacity: 1;
+      }
+
+      .first-sub > li > a {
+        opacity: 0.5;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+          transition: opacity 0.3s ease-in-out;
+        }
+      }
+
+      &.dropdown.menu > li.opens-right > .is-dropdown-submenu {
+        width: 100%;
+        top: 60px;
+        position: fixed;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-flow: wrap;
+        background-color: #fff;
+        border-top: 1px solid #363636;
+        padding: 0 8px;
+        min-height: 60px;
+        align-items: center;
+
+        a {
+          text-transform: none;
+          font-size: 14px;
+        }
+      }
+
+      &.dropdown.menu > li.opens-right > .is-dropdown-submenu.js-dropdown-active {
+        top: 60px;
+        right: auto;
+        left: 0;
+        display: flex;
+      }
+    }
+
+    .menu-home-menu-container,
+    .menu-main-menu-container {
       width: 100%;
     }
 
-    .nav-primary__menu {
+    .nav-primary__menu,
+    .nav-main__menu {
       width: 100%;
     }
   }
@@ -310,7 +388,8 @@
     }
   }
 
-  .nav-primary__menu {
+  .nav-primary__menu,
+  .nav-main__menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -517,5 +596,13 @@
 .logged-in.admin-bar {
   .header {
     top: 32px;
+  }
+
+  .dropdown.menu > li.opens-right > .is-dropdown-submenu {
+    top: 92px;
+  }
+
+  .dropdown.menu > li.opens-right > .is-dropdown-submenu.js-dropdown-active {
+    top: 92px;
   }
 }

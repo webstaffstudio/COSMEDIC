@@ -36,21 +36,21 @@
 			<?php endif; ?>
 		</a><!-- /.brand -->
 
-		<nav class="nav-primary header__nav">
+		<nav class="nav-main header__nav">
 			<?php
-			if (has_nav_menu('primary')) :
+			if (has_nav_menu('main')) :
 				wp_nav_menu(
 						array(
-								'theme_location' => 'primary',
-								'menu_id' => 'primary-menu',
-								'menu_class' => 'nav-primary__menu menu',
-								'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="drilldown large-dropdown" data-parent-link="true">%3$s</ul>',
+								'theme_location' => 'main',
+								'menu_id' => 'main-menu',
+								'menu_class' => 'nav-main__menu menu',
+								'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="dropdown" data-parent-link="true">%3$s</ul>',
 								'walker' => new cosmedoc_Navwalker(),
 						)
 				);
 			endif;
 			?>
-		</nav><!-- /.nav-primary -->
+		</nav><!-- /.nav-main -->
 
 		<div class="header__links">
 			<a href="#search" class="header__links-link link link-search">
@@ -77,9 +77,9 @@
 
 <header class="header header__mobile hide-for-large">
 	<span id="hamburger" class="toggle-button is-closed">
-     <div class="menu-bar menu-bar-top"></div>
-     <div class="menu-bar menu-bar-middle"></div>
-     <div class="menu-bar menu-bar-bottom"></div>
+     <span class="menu-bar menu-bar-top"></span>
+     <span class="menu-bar menu-bar-middle"></span>
+     <span class="menu-bar menu-bar-bottom"></span>
 	</span>
 	<a href="#search" class="header__links-link link link-search">
 		<span class="icon"></span>
@@ -135,7 +135,7 @@
 						'theme_location' => 'mobile_menu',
 						'container'=> false,
 						'menu_class' => 'mobile_menu menu',
-						'items_wrap' => '<ul id="%1$s" class="%2$s" data-back-button="<li class='.'js-drilldown-back'.'><a tabindex=0>'.__('Назад в меню', THEME_TD).'</a>" data-responsive-menu="vertical menu drilldown large-dropdown" data-drilldown data-parent-link="true">%3$s</ul>',
+						'items_wrap' => '<ul id="%1$s" class="%2$s" data-back-button="<li class='.'js-drilldown-back'.'><a tabindex=0>'.__('Назад в меню', THEME_TD).'</a>" data-responsive-menu="vertical menu drilldown" data-drilldown data-parent-link="true">%3$s</ul>',
 						'walker' => new cosmedoc_Navwalker()
 				));
 			endif;
@@ -150,6 +150,6 @@
 </div>
 
 <main id="content" class="site-content">
-<?php
+
 
 
