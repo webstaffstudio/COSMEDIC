@@ -70,7 +70,7 @@
       &__item {
         user-select: none;
         font-weight: normal;
-        margin-bottom: 0px;
+        margin-bottom: 0;
         position: relative;
         display: block;
         border-bottom: 1px solid #363636;
@@ -98,8 +98,6 @@
           padding: 14px 0;
           position: relative;
           z-index: 2;
-
-
         }
 
         label {

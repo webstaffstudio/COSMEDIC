@@ -129,7 +129,7 @@ do_action('woocommerce_before_mini_cart'); ?>
 			<span class="order-total-sum"><?php wc_cart_totals_order_total_html(); ?></span>
 		</div>
 
-		<a href="<?php echo esc_url(wc_get_checkout_url()); ?>" class="checkout-button button alt wc-forward">
+		<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="checkout-button button alt wc-forward">
 			<?php esc_html_e('Перейти к оформлению', THEME_TD); ?>
 		</a>
 	</div>
@@ -150,7 +150,7 @@ do_action('woocommerce_before_mini_cart'); ?>
 			<span class="order-total-sum"><?php wc_cart_totals_order_total_html(); ?></span>
 		</div>
 
-		<a href="<?php echo esc_url(wc_get_checkout_url()); ?>" class="checkout-button button alt wc-forward">
+		<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="checkout-button button alt wc-forward">
 			<?php esc_html_e('Перейти к оформлению', THEME_TD); ?>
 		</a>
 	</div>

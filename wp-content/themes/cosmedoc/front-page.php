@@ -1,4 +1,4 @@
-<?php get_header();
+<?php get_header('home');
 $fields = get_fields(get_the_ID());
 $slider = ($fields['slider']) ? $fields['slider'] : null;
 ?>

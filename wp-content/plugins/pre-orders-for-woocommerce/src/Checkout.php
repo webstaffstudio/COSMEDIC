@@ -30,8 +30,8 @@ class Checkout
         // Unhook and remove WooCommerce default emails.
         add_action( 'woocommerce_email', [$this, 'unhook_woocommerce_original_emails'] );
 
-        // Sends pre-order emails when managePreOrders() finishes executing. 
-        add_action('preorder_email', [$this, 'sendPreOrderEmails'], 9999, 1);
+        // New order notification only for "Pending" Order status
+        add_action( 'woocommerce_order_status_pre-ordered', [$this, 'newPreOderNotification'] );
         
         /**
          * Sends a normal order email when the user gets to the thankyou page.
@@ -53,29 +53,13 @@ class Checkout
 
     /**
      * Send Pre-Order emails fired by an action - preorder_email at the end of the switch statement in the managePreOrders() method. 
-     */
-    public function sendPreOrderEmails( $emailPreorderIdsArray ) {
+    */
+    public function newPreOderNotification( $order_id ) {
 
-        // Set the email type you would like to fire by adding the woocommerce class template here. 
-        $emailNewPreOrder = WC()->mailer()->get_emails()['WC_New_Pre_Order_Email'];
-        $emailCustomerInvoice = WC()->mailer()->get_emails()['WC_Email_Customer_Invoice'];
+        // Send "New Email" notification (to customer)      
+        WC()->mailer()->get_emails()['WC_Email_Customer_Invoice']->trigger( $order_id );
+        WC()->mailer()->get_emails()['WC_Email_New_Order']->trigger( $order_id );
 
-        /**
-         * Loop through emails order ids provided by a callback argument. 
-         */
-        foreach ( $emailPreorderIdsArray as $emailKeyName => $arrayOfIds ) {
-            switch ($emailKeyName) {
-                case 'preorderIds':
-                    foreach ( $arrayOfIds as $key => $orderIdValue ) {
-                        $emailNewPreOrder->trigger( $orderIdValue );
-                        $emailCustomerInvoice->trigger( $orderIdValue );
-                    }
-                    break;                
-                default:
-                    //nothing to do here.
-                    break;
-            }
-        }
     }
 
     /**

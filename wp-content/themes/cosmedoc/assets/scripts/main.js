@@ -3,7 +3,7 @@
 import "jquery";
 import "slick-carousel";
 import "jquery-match-height";
-import './modules/filters-shop';
+import "./modules/filters-shop";
 // Import everything from autoload
 import "./autoload/**/*";
 
@@ -11,6 +11,16 @@ let windowWidth = $(window).width(),
   scrollPos = 0;
 
 jQuery(window).load(function() {
+  $("#main-menu").on("show.zf.dropdownmenu", function() {
+    let dropdown = $(this).find(".is-dropdown-submenu");
+    dropdown.css("display", "none");
+    dropdown.fadeIn(300);
+  });
+  $("#main-menu").on("hide.zf.dropdownmenu", function() {
+    let dropdown = $(this).find(".is-dropdown-submenu");
+    dropdown.css("display", "flex");
+    dropdown.fadeOut(300);
+  });
   $("#preloader").fadeOut(1000);
   $(".woocommerce-product-gallery__wrapper").slick({
     dots: true,

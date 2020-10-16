@@ -12809,6 +12809,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var windowWidth = $(window).width(),
     scrollPos = 0;
 jQuery(window).load(function () {
+  $("#main-menu").on("show.zf.dropdownmenu", function () {
+    var dropdown = $(this).find(".is-dropdown-submenu");
+    dropdown.css("display", "none");
+    dropdown.fadeIn(300);
+  });
+  $("#main-menu").on("hide.zf.dropdownmenu", function () {
+    var dropdown = $(this).find(".is-dropdown-submenu");
+    dropdown.css("display", "flex");
+    dropdown.fadeOut(300);
+  });
   $("#preloader").fadeOut(1000);
   $(".woocommerce-product-gallery__wrapper").slick({
     dots: true,
@@ -16426,55 +16436,55 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery, $) {jQuery(document).ready(function () {
-  var filterForm = $('.filters-shop');
+  var filterForm = $(".filters-shop");
   var dataObj = {
     brands: [],
     country: []
   };
 
   function filtersInit(termsData) {
-    filterForm.on('change', function () {
+    filterForm.on("change", function () {
       console.log(themeVars.ajaxUrl); // let formData = $(this).serialize();
 
       $.ajax({
         url: themeVars.ajaxUrl,
-        type: 'POST',
+        type: "POST",
         data: {
           form: termsData,
-          action: 'filters_ajax'
+          action: "filters_ajax"
         },
         beforeSend: function beforeSend() {
-          $('#preloader').show();
-          $('#preloader').css({
+          $("#preloader").show();
+          $("#preloader").css({
             opacity: 0.4
           });
         },
         success: function success(data) {
-          $('#preloader').fadeOut();
-          $('.products').html(data.products_html);
-          $('#stock-box').find('.count').html('(' + data.stock_quantity + ')');
+          $("#preloader").fadeOut();
+          $(".products").html(data.products_html);
+          $("#stock-box").find(".count").html("(" + data.stock_quantity + ")");
         },
         error: function error() {
-          console.log('error');
+          console.log("error");
         }
       });
     });
   }
 
-  $('.filter-item').on('change', function () {
+  $(".filter-item").on("change", function () {
     var checked = $(this).val();
-    var termTax = $(this).attr('data-filterbox');
+    var termTax = $(this).attr("data-filterbox");
 
-    if ($(this).is(':checked')) {
-      if (termTax === 'brand') {
+    if ($(this).is(":checked")) {
+      if (termTax === "brand") {
         dataObj.brands.push(checked);
-      } else if (termTax === 'country') {
+      } else if (termTax === "country") {
         dataObj.country.push(checked);
       }
     } else {
-      if (termTax === 'brand') {
+      if (termTax === "brand") {
         dataObj.brands.splice($.inArray(checked, dataObj.brands), 1);
-      } else if (termTax === 'country') {
+      } else if (termTax === "country") {
         dataObj.country.splice($.inArray(checked, dataObj.country), 1);
       }
     }
