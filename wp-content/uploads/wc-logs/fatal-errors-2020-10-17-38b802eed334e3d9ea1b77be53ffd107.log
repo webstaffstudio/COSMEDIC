@@ -1,0 +1,11 @@
+2020-10-17T12:23:05+00:00 CRITICAL Uncaught Error: Call to a member function get_product_id() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php:49
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): filters_ajax('')
+#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 D:\OSPanel\domains\cosmedic\wp-admin\admin-ajax.php(191): do_action('wp_ajax_nopriv_...')
+#4 {main}
+  thrown in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 49
+
+2020-10-17T13:53:50+00:00 CRITICAL syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 139
+

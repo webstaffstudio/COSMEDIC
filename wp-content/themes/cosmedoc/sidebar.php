@@ -11,7 +11,7 @@ if (!is_active_sidebar('sidebar-1')) {
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementary">
+<aside id="secondary" class="widget-area" role="complementary" >
 	<?php dynamic_sidebar('sidebar-1'); ?>
 	<form action="" class="filters-shop">
 
@@ -67,7 +67,8 @@ if (!is_active_sidebar('sidebar-1')) {
 					<?php
 					global $product;
 					$country_terms = get_terms([
-						'taxonomy' => 'pa_strana-proizvoditel',
+						'taxonomy' => 'cos_countries',
+						'hide_empty' => false,
 					]);
 					foreach ($country_terms as $country):
 						$term_id = $country->term_id; ?>

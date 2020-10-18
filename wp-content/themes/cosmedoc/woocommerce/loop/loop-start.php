@@ -18,14 +18,35 @@
 if (!defined('ABSPATH')) {
 	exit;
 }
+global $wp_query;
+$product_pp = get_query_var('product_pp');
+$total_count = $GLOBALS['wp_query']->found_posts;
+if ($total_count < $product_pp) {
+	$product_pp = $total_count;
+}
 ?>
 <div class="grid-x">
-	<div class="sidebar-shop cell large-3 sticky">
-		<?php get_sidebar(); ?>
+	<div class="sidebar-container cell large-3">
+		<div class="sidebar-shop">
+			<?php get_sidebar(); ?>
+		</div>
 	</div>
 	<div class="products-container cell large-9">
 		<div class="catalog-navigation">
-			<?php woocommerce_catalog_ordering(); ?>
-			<?php woocommerce_result_count(); ?>
+			<div class="catalog-navigation__order">
+				<span class="order-title"><?= __('Сортировать по:', THEME_TD); ?></span>
+				<div class="catalog-navigation__order--select">
+					<select name="order_product" id="order_product">
+						<option value="popular"><?= __('Популярности', THEME_TD); ?></option>
+						<option value="popular"><?= __('Новинкам', THEME_TD); ?></option>
+						<option value="popular"><?= __('Возрастанию цены', THEME_TD); ?></option>
+						<option value="popular"><?= __('Убыванию цены', THEME_TD); ?></option>
+					</select>
+				</div>
+			</div>
+			<div class="catalog-navigation__count">
+				<span class="catalog-navigation__count--showing"><?= $product_pp; ?></span> <?= __('из', THEME_TD); ?>
+				<span class="catalog-navigation__count--total"><?= $total_count; ?></span>
+			</div>
 		</div>
 		<ul class="products columns-<?php echo esc_attr(wc_get_loop_prop('columns')); ?>">

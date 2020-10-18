@@ -1,0 +1,14 @@
+2020-10-18T13:49:06+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 13
+
+2020-10-18T13:49:15+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 13
+
+2020-10-18T13:49:21+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 13
+
+2020-10-18T17:39:55+00:00 CRITICAL syntax error, unexpected '?>' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 25
+
+2020-10-18T17:40:55+00:00 CRITICAL syntax error, unexpected ';' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 24
+
+2020-10-18T17:41:04+00:00 CRITICAL syntax error, unexpected ';' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 24
+
+2020-10-18T17:41:05+00:00 CRITICAL syntax error, unexpected ';' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 24
+

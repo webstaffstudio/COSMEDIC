@@ -12781,7 +12781,7 @@ ResponsiveAccordionTabs.defaults = {};
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(36);
-module.exports = __webpack_require__(43);
+module.exports = __webpack_require__(44);
 
 
 /***/ }),
@@ -12798,8 +12798,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery_match_height___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery_match_height__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_filters_shop__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_filters_shop___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__modules_filters_shop__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__autoload_foundation_js__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_sticky_sidebar__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_sticky_sidebar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__modules_sticky_sidebar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__autoload_foundation_js__ = __webpack_require__(41);
 // import external dependencies
+
 
 
 
@@ -16436,72 +16439,150 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery, $) {jQuery(document).ready(function () {
-  var filterForm = $(".filters-shop");
+  var filterForm = $('.filters-shop');
   var dataObj = {
     brands: [],
     country: []
   };
 
   function filtersInit(termsData) {
-    filterForm.on("change", function () {
-      console.log(themeVars.ajaxUrl); // let formData = $(this).serialize();
+    var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : themeVars.current_page;
+    var loadmore = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+    // let formData = $(this).serialize();
+    $.ajax({
+      url: themeVars.ajaxUrl,
+      type: 'POST',
+      data: {
+        form: termsData,
+        page: page,
+        action: 'filters_ajax',
+        loadmore: loadmore
+      },
+      beforeSend: function beforeSend() {
+        $('#preloader').show();
+        $('#preloader').css({
+          opacity: 0.4
+        });
+      },
+      success: function success(data) {
+        console.log(data);
+        var pagination = data.pagination;
+        var cur_page = data.current_page;
+        $('.load-container').data('page', cur_page);
+        $('#preloader').fadeOut();
+        $('.products').html(data.products_html);
+        $('#stock-box').find('.count').html('(' + data.stock_quantity + ')');
 
-      $.ajax({
-        url: themeVars.ajaxUrl,
-        type: "POST",
-        data: {
-          form: termsData,
-          action: "filters_ajax"
-        },
-        beforeSend: function beforeSend() {
-          $("#preloader").show();
-          $("#preloader").css({
-            opacity: 0.4
-          });
-        },
-        success: function success(data) {
-          $("#preloader").fadeOut();
-          $(".products").html(data.products_html);
-          $("#stock-box").find(".count").html("(" + data.stock_quantity + ")");
-        },
-        error: function error() {
-          console.log("error");
+        if (pagination && pagination.length > 0) {
+          //show is pagination exist
+          $('.pagination-product').show();
+          $('.pagination-product .pagination-product__list').html(data.pagination);
+        } else {
+          $('.pagination-product').hide();
         }
-      });
+
+        $('.catalog-navigation__count--showing').text(data.ppp);
+        $('.catalog-navigation__count--total').text(data.total_count);
+        console.log(data.total_count);
+      },
+      error: function error() {
+        console.log('error');
+      }
     });
   }
 
-  $(".filter-item").on("change", function () {
-    var checked = $(this).val();
-    var termTax = $(this).attr("data-filterbox");
+  function loadPage(e) {
+    var page_num = e.data('num');
+    filtersInit(dataObj, page_num);
+  }
 
-    if ($(this).is(":checked")) {
-      if (termTax === "brand") {
+  $('#loadmore').click(function () {
+    filtersInit(dataObj, themeVars.current_page, true);
+  });
+  $('.pagination-product__list').on('click', 'li', function () {
+    loadPage($(this));
+  });
+  $('.filter-item').on('change', function () {
+    var checked = $(this).val();
+    var termTax = $(this).attr('data-filterbox');
+
+    if ($(this).is(':checked')) {
+      if (termTax === 'brand') {
         dataObj.brands.push(checked);
-      } else if (termTax === "country") {
+      } else if (termTax === 'country') {
         dataObj.country.push(checked);
       }
     } else {
-      if (termTax === "brand") {
+      if (termTax === 'brand') {
         dataObj.brands.splice($.inArray(checked, dataObj.brands), 1);
-      } else if (termTax === "country") {
+      } else if (termTax === 'country') {
         dataObj.country.splice($.inArray(checked, dataObj.country), 1);
       }
     }
 
     filtersInit(dataObj);
-    console.log(dataObj);
+  });
+
+  if ($('.filter-item').is(':checked')) {
+    $('.clear-btn').addClass('visible');
+  } else {
+    $('.clear-btn').removeClass('visible');
+  }
+
+  $(".filter-item").click(function () {
+    var checkboxes = $("input.filter-item");
+
+    if (checkboxes.is(":checked")) {
+      $('#clearFilters').addClass('visible');
+    } else {
+      $('#clearFilters').removeClass('visible');
+    }
+  });
+  $('#clearFilters').click(function () {
+    filterForm.find('input[type="checkbox"]').prop('checked', false);
+    $(this).removeClass('visible');
+    filtersInit(null);
   });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))
 
 /***/ }),
 /* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {
+  var $window = $(window);
+  var $sidebar = $(".widget-area");
+  var $sidebarHeight = $sidebar.innerHeight();
+  var $footerOffsetTop = $("#footer-container").offset().top;
+  var $sidebarOffset = $sidebar.offset();
+  $window.scroll(function () {
+    if ($window.scrollTop() > $sidebarOffset.top) {
+      $sidebar.addClass("fixed-top");
+    } else {
+      $sidebar.removeClass("fixed-top");
+    }
+
+    if ($window.scrollTop() + $sidebarHeight > $footerOffsetTop) {
+      $sidebar.css({
+        "top": -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)
+      });
+    } else {
+      $sidebar.css({
+        "top": "0"
+      });
+    }
+  });
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_foundation_sites_js_entries_foundation__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_foundation_sites_js_entries_foundation_plugins__ = __webpack_require__(42);
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_foundation_sites_js_entries_foundation__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_foundation_sites_js_entries_foundation_plugins__ = __webpack_require__(43);
 
 
 jQuery(document).ready(function ($) {
@@ -16510,7 +16591,7 @@ jQuery(document).ready(function ($) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16661,7 +16742,7 @@ __WEBPACK_IMPORTED_MODULE_1__foundation_core__["a" /* Foundation */].plugin(__WE
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_1__foundation_core__["a" /* Foundation */]);
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16766,7 +16847,7 @@ __WEBPACK_IMPORTED_MODULE_1__foundation_core__["a" /* Foundation */].plugin(__WE
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

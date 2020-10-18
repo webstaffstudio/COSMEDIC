@@ -4,6 +4,7 @@ import "jquery";
 import "slick-carousel";
 import "jquery-match-height";
 import "./modules/filters-shop";
+import './modules/sticky-sidebar';
 // Import everything from autoload
 import "./autoload/**/*";
 
