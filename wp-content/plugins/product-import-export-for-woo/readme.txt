@@ -5,7 +5,7 @@ Tags: woocommerce product import, woocommerce import products, woocommerce expor
 Requires at least: 3.0.1
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.8.3
+Stable tag: 1.8.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,7 +21,7 @@ Product import export plugin allows you to import or export WooCommerce simple p
 
 &#128312; Export Simple Products  in to a CSV file.
 &#128312; Import Simple Products in CSV format in to WooCommerce Store.
-&#128312; Tested OK with WooCommerce 4.4.1
+&#128312; Tested OK with WooCommerce 4.6.0
 
 
 Highlights: WooCommerce Product Export, WooCommerce Product CSV Import Suite, WooCommerce bulk product upload, WooCommerce import products with images, import amazon products to WooCommerce, Export Products to xls. Pro Version supports both Simple and Variable products.
@@ -154,6 +154,9 @@ By default, admin and store manager are given access to export orders from your 
 3. Premium Export Settings Screen
 
 == Changelog ==
+
+= 1.8.4 =
+* Tested OK with WC 4.6.0
 
 = 1.8.3 =
 * Tested OK with WC 4.4.1 and WP 5.5.1
@@ -397,6 +400,5 @@ By default, admin and store manager are given access to export orders from your 
 
 == Upgrade Notice ==
 
-= 1.8.3 =
-* Tested OK with WC 4.4.1 and WP 5.5.1
-* Bug Fix:js error when click select all/ unselect all button in export page.
+= 1.8.4 =
+* Tested OK with WC 4.6.0

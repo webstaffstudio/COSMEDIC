@@ -5,8 +5,8 @@
   Description: Import and Export Products From and To your WooCommerce Store.
   Author: WebToffee
   Author URI: https://www.webtoffee.com/product/product-import-export-woocommerce/
-  Version: 1.8.3
-  WC tested up to: 4.4.1
+  Version: 1.8.4
+  WC tested up to: 4.6.0
   License:           GPLv3
   License URI:       https://www.gnu.org/licenses/gpl-3.0.html
   Text Domain: product-import-export-for-woo
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) || !is_admin() ) {
 
 
 if ( !defined( 'WF_PIPE_CURRENT_VERSION' ) ) {
-	define( "WF_PIPE_CURRENT_VERSION", "1.8.3" );
+	define( "WF_PIPE_CURRENT_VERSION", "1.8.4" );
 }
 if ( !defined( 'WF_PROD_IMP_EXP_ID' ) ) {
 	define( "WF_PROD_IMP_EXP_ID", "wf_prod_imp_exp" );
@@ -90,6 +90,9 @@ if ( !class_exists( 'WF_Product_Import_Export_CSV' ) ) :
 			// Welcome screen tutorial video --> Move this function to inside the class
 			add_action( 'admin_init', array( $this, 'impexp_welcome' ) );
 			add_action( 'in_plugin_update_message-product-import-export-for-woo/product-import-export-for-woo.php', array( $this, 'wt_product_import_export_for_woo_update_message' ), 10, 2 );
+                        
+                        // review request
+			include_once 'includes/class-wf-prodimpexp-plugin-review-request.php';
 		}
 
 		public function wf_plugin_action_links( $links ) {

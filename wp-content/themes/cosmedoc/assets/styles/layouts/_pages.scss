@@ -1,4 +1,8 @@
 /* stylelint-disable */
+.woocommerce-cart .site-content .entry-content {
+  max-width: 100% !important;
+}
+
 .page-template-default:not(.home) {
   h1,
   h2,

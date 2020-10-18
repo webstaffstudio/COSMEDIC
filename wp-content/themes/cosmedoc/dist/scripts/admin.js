@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/wp-content/themes/cosmedoc/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 46);
+/******/ 	return __webpack_require__(__webpack_require__.s = 47);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -72,16 +72,16 @@ module.exports = jQuery;
 
 /***/ }),
 
-/***/ 46:
+/***/ 47:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(47);
-module.exports = __webpack_require__(48);
+__webpack_require__(48);
+module.exports = __webpack_require__(49);
 
 
 /***/ }),
 
-/***/ 47:
+/***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {jQuery(document).ready(function () {});
@@ -89,7 +89,7 @@ module.exports = __webpack_require__(48);
 
 /***/ }),
 
-/***/ 48:
+/***/ 49:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

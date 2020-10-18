@@ -6,11 +6,37 @@ import "jquery-match-height";
 import "./modules/filters-shop";
 // Import everything from autoload
 import "./autoload/**/*";
+import "sticky-kit/dist/sticky-kit";
 
 let windowWidth = $(window).width(),
   scrollPos = 0;
 
 jQuery(window).load(function() {
+  /* Sticky SideBar Cart */
+  const makeSticky = () => {
+    $(".cart-sidebar").stick_in_parent({
+      offset_top: 50,
+    });
+  };
+
+  let windowWidth = $(window).width();
+
+  if (windowWidth < 1024) {
+    $(".cart-sidebar").trigger("sticky_kit:detach");
+  } else {
+    makeSticky();
+  }
+
+  $(window).resize(function() {
+    windowWidth = $(window).width();
+
+    if (windowWidth < 1024) {
+      $(".cart-sidebar").trigger("sticky_kit:detach");
+    } else {
+      makeSticky();
+    }
+  });
+
   $("#main-menu").on("show.zf.dropdownmenu", function() {
     let dropdown = $(this).find(".is-dropdown-submenu");
     dropdown.css("display", "none");
@@ -38,6 +64,8 @@ jQuery(window).load(function() {
     arrows: false,
     fade: true,
     cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 3000,
   });
   $(".cross-sale__list--product .product__title").matchHeight();
   $(".products .product .woocommerce-loop-product__title").matchHeight();

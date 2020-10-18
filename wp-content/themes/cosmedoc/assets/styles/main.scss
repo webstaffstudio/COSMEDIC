@@ -9,11 +9,13 @@
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/fron-page";
+@import "layouts/faq-template";
 
 //woocommerce styles
 @import "layouts/woocommerce/single-product";
 @import "layouts/woocommerce/archive-product";
 @import "layouts/woocommerce/account";
+@import "layouts/woocommerce/cart";
 @import "layouts/woocommerce/template-parts/mini-cart";
 @import "layouts/woocommerce/template-parts/quantity-input";
 @import "layouts/woocommerce/template-parts/car-page";
