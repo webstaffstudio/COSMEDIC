@@ -30,10 +30,12 @@ if ( ! function_exists( 'cosmedoc_scripts' ) ) :
 		wp_enqueue_script( 'main-javascript', asset_path( 'scripts/main.js' ), array( 'jquery' ), '1.0.0', true );
 
 		// Throw variables from back to front end.
+		$paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 		$theme_vars = array(
 			'home'   => get_home_url(),
 			'isHome' => is_front_page(),
 			'ajaxUrl' => admin_url("admin-ajax.php"),
+			'current_page' => $paged,
 		);
 		wp_localize_script( 'main-javascript', 'themeVars', $theme_vars );
 

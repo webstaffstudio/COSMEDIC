@@ -1,110 +1,173 @@
 /* stylelint-disable */
-.sidebar-shop {
-  padding-right: 60px;
+.sidebar-container {
+  position: relative;
+  width: 100%;
 
-  &.sticky {
+  .sidebar-shop {
+    padding-right: 60px;
     position: relative;
-    top: 0;
-  }
 
-  .widget_product_categories {
-    border-bottom: 1px solid #363636;
-    padding: 10px 0;
+    .widget-area {
 
-    .cat-item {
-      transition: 0.3s ease-in-out;
-      margin-bottom: 14px;
+      //&.fixed-top {
+      //  position: fixed;
+      //  top: 0;
+      //}
+    }
 
-      a:hover {
-        text-decoration: underline;
-        color: #363636;
-        opacity: 1;
+    .widget_product_categories {
+      border-bottom: 1px solid #363636;
+      padding: 10px 0;
 
-        .count {
-          text-decoration: none;
-          color: #c7c6c4;
-        }
-      }
+      .cat-item {
+        transition: 0.3s ease-in-out;
+        margin-bottom: 14px;
 
-      a,
-      .count {
-        color: #c7c6c4;
-      }
-
-      &.current-cat {
-        padding-bottom: 14px;
-
-        li {
-          margin-bottom: 0;
-        }
-
-        a {
+        a:hover {
           text-decoration: underline;
           color: #363636;
+          opacity: 1;
+
+          .count {
+            text-decoration: none;
+            color: #c7c6c4;
+            font-size: 14px;
+          }
         }
 
-        .children {
-          padding-left: 10px;
-          padding-bottom: 10px;
+        a,
+        .count {
+          color: #c7c6c4;
+        }
+
+        &.current-cat {
+
+          .children {
+            padding: 10px 20px 10px 10px;
+            margin-bottom: -10px;
+
+            li {
+              color: #363636;
+            }
+          }
+
+          li {
+            margin-bottom: 0;
+          }
 
           a {
-            text-decoration: none;
+            text-decoration: underline;
+            color: #363636;
+          }
+
+          .children {
+            padding-left: 10px;
+            padding-bottom: 10px;
+
+            a {
+              text-decoration: none;
+            }
           }
         }
       }
     }
-  }
 
-  ul {
-    li {
-      a {
-        display: inline-block;
-        transition: all 0.3s ease;
-        font-size: 14px;
-      }
-    }
-  }
-
-  .filters-shop {
-    .filters {
-      &__item {
-        user-select: none;
-        font-weight: normal;
-        margin-bottom: 0;
-        position: relative;
-        display: block;
-        border-bottom: 1px solid #363636;
-
-        &::after {
-          position: absolute;
-          content: " ";
-          width: 20px;
-          height: 50px;
-          background-image: url("assets/images/cosmedoc.svg");
-          background-position: -99px -221px;
-          background-repeat: no-repeat;
-          right: 0;
-          top: 0;
-        }
-
-        &.is-active {
-          &::after {
-            background-position: -121px -221px;
-          }
-        }
-
+    ul {
+      li {
         a {
-          display: block;
-          padding: 14px 0;
-          position: relative;
-          z-index: 2;
-        }
-
-        label {
           display: inline-block;
-          cursor: pointer;
+          transition: all 0.3s ease;
+          font-size: 14px;
         }
       }
     }
+
+    .filters-shop {
+      .filters {
+        li {
+          .clear-btn {
+            display: none !important;
+            margin: 20px 0;
+            background-color: transparent !important;
+            color: #363636 !important;
+            border-color: #363636 !important;
+            width: 100%;
+            line-height: 36px;
+
+            &.visible {
+              display: block !important;
+            }
+          }
+        }
+
+        &__item {
+          user-select: none;
+          font-weight: normal;
+          margin-bottom: 0;
+          position: relative;
+          display: block;
+          border-bottom: 1px solid #363636;
+
+          &::after {
+            position: absolute;
+            content: " ";
+            width: 20px;
+            height: 50px;
+            background-image: url("assets/images/cosmedoc.svg");
+            background-position: -99px -221px;
+            background-repeat: no-repeat;
+            right: 0;
+            top: 0;
+          }
+
+          &--content {
+            li {
+              margin-bottom: 9px;
+            }
+          }
+
+          &.is-active {
+            &::after {
+              background-position: -121px -221px;
+            }
+          }
+
+          a {
+            display: block;
+            padding: 14px 0;
+            position: relative;
+            z-index: 2;
+          }
+
+          input[type=checkbox] {
+            width: 15px;
+            height: 17px;
+            cursor: pointer;
+            position: relative;
+            top: 2px;
+            margin: 0;
+            padding-right: 25px;
+            background-repeat: no-repeat;
+            -webkit-appearance: none;
+            background-size: 20px 20px;
+            background: transparent url('assets/images/cosmedoc.svg') no-repeat -5px -370px;
+
+            &:checked {
+              background-position: -35px -370px;
+            }
+          }
+
+          label {
+            display: inline-block;
+            cursor: pointer;
+
+            .count {
+              color: #C7C6C4;
+            }
+          }
+        }
+      }
+    }
+
   }
 }

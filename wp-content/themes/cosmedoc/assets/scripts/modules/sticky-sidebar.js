@@ -1,35 +1,22 @@
-jQuery(document).ready(function() {
-  var stickySidebar = $(".sticky");
+$(document).ready(function() {
+	var $window = $(window);
+	var $sidebar = $(".widget-area");
+	var $sidebarHeight = $sidebar.innerHeight();
+	var $footerOffsetTop = $("#footer-container").offset().top;
+	var $sidebarOffset = $sidebar.offset();
 
-  if (stickySidebar.length > 0) {
-    var stickyHeight = stickySidebar.height(),
-      sidebarTop = stickySidebar.offset().top;
-  }
+	$window.scroll(function() {
+		if($window.scrollTop() > $sidebarOffset.top) {
+			$sidebar.addClass("fixed-top");
+		} else {
+			$sidebar.removeClass("fixed-top");
+		}
+		if($window.scrollTop() + $sidebarHeight > $footerOffsetTop) {
+			$sidebar.css({"top" : -($window.scrollTop() + $sidebarHeight - $footerOffsetTop)});
+		} else {
+			$sidebar.css({"top": "0"});
+		}
+	});
 
-  $(window).scroll(function() {
-    if (stickySidebar.length > 0) {
-      var scrollTop = $(window).scrollTop();
 
-      if (sidebarTop < scrollTop) {
-        stickySidebar.css("top", scrollTop - sidebarTop);
-
-        var sidebarBottom = stickySidebar.offset().top + stickyHeight,
-          stickyStop =
-            $(".products-container").offset().top +
-            $(".products-container").height();
-        if (stickyStop < sidebarBottom) {
-          var stopPosition = $(".products-container").height() - stickyHeight;
-          stickySidebar.css("top", stopPosition);
-        }
-      } else {
-        stickySidebar.css("top", "0");
-      }
-    }
-  });
-
-  $(window).resize(function() {
-    if (stickySidebar.length > 0) {
-      stickyHeight = stickySidebar.height();
-    }
-  });
 });

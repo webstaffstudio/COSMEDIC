@@ -20,19 +20,25 @@
 defined('ABSPATH') || exit;
 
 global $product;
+$countries_terms = get_the_terms(get_the_ID(),'cos_countries');
 ?>
 
-	<div class="product-attr-section">
-		<div class="about-product"><?php the_content(); ?></div>
-		<?php if ($product_attributes): ?>
-			<div class="product-attr">
-				<?php foreach ($product_attributes as $product_attribute_key => $product_attribute) : ?>
-					<?= ($product_attribute['value']) ? wp_kses_post($product_attribute['value']) : ''; ?>
+<div class="product-attr-section">
+	<div class="about-product"><?php the_content(); ?></div>
+	<?php if ($product_attributes): ?>
+		<div class="product-attr">
+			<?php if ($countries_terms): ?>
+				<?php foreach ($countries_terms as $country) : ?>
+					<p><?= $country->name; ?></p>
 				<?php endforeach; ?>
-			</div>
-		<?php endif; ?>
-		<?= '<span class="sku">' . __('Артикул: ', THEME_TD) . $product->get_sku() . '</span>'; ?>
-	</div>
+			<?php endif; ?>
+			<?php foreach ($product_attributes as $product_attribute_key => $product_attribute) : ?>
+				<?= ($product_attribute['value']) ? wp_kses_post($product_attribute['value']) : ''; ?>
+			<?php endforeach; ?>
+		</div>
+	<?php endif; ?>
+	<?= '<span class="sku">' . __('Артикул: ', THEME_TD) . $product->get_sku() . '</span>'; ?>
+</div>
 <?php get_template_part('/woocommerce/single-product/about-accordeon'); ?>
 <?php get_template_part('/woocommerce/cross-sale-slider/cross-sale-slider'); ?>
 

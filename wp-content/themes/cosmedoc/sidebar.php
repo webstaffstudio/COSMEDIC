@@ -11,12 +11,14 @@ if (!is_active_sidebar('sidebar-1')) {
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementary">
+<aside id="secondary" class="widget-area" role="complementary" >
 	<?php dynamic_sidebar('sidebar-1'); ?>
 	<form action="" class="filters-shop">
 
 		<ul class="filters" data-accordion="owy3ap-accordion" data-allow-all-closed="true" role="tablist">
-
+			<li class="clearall">
+				<div  class="clear-btn cosmedoc-btn" id="clearFilters"><?=__('Очистить все', THEME_TD);?></div>
+			</li>
 			<li class="filters__item" data-accordion-item="" role="presentation">
 				<a href="#" class="filters__item--title" aria-controls="4v42sh-accordion" role="tab"
 				   id="4v42sh-accordion-label" aria-expanded="false"
@@ -65,7 +67,8 @@ if (!is_active_sidebar('sidebar-1')) {
 					<?php
 					global $product;
 					$country_terms = get_terms([
-						'taxonomy' => 'pa_strana-proizvoditel',
+						'taxonomy' => 'cos_countries',
+						'hide_empty' => false,
 					]);
 					foreach ($country_terms as $country):
 						$term_id = $country->term_id; ?>

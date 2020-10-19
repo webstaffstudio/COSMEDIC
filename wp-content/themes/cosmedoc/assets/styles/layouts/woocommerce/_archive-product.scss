@@ -28,6 +28,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
+
+    &__order {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+
+      span.order-title {
+        padding-right: 7px;
+      }
+
+      &--select {
+        &::after {
+          background: transparent url('assets/images/cosmedoc.svg') no-repeat;
+          background-position: right center;
+        }
+
+        select {
+          border: none;
+          border-bottom: 1px solid #D8D8D8;
+          padding-right: 14px;
+          font-size: 14px;
+          padding-bottom: 0;
+          height: 28px;
+          margin-bottom: 9px;
+          color: #363636;
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+    &__count {
+      font-size: 14px;
+    }
   }
 
   .breadcrumb {
@@ -176,6 +212,10 @@
     border-width: 1px 0 0 0;
     box-shadow: 1px 0 20px rgba(0, 0, 0, 0.3);
 
+    &.hide-it {
+      display: none;
+    }
+
     &__list {
       display: flex;
       align-items: center;
@@ -203,6 +243,7 @@
           border-radius: 2px;
           transition: all 0.3s ease;
           font-size: 18px;
+          pointer-events: none;
 
           &.current {
             display: inline-block;
@@ -230,5 +271,21 @@
     a {
       pointer-events: initial;
     }
+  }
+}
+
+.load-container {
+  max-width: 313px;
+  width: 100%;
+  margin: 0 auto 20px;
+
+  .cosmedoc-btn {
+    margin: 20px 0;
+    background-color: transparent !important;
+    color: #363636 !important;
+    border-color: #363636 !important;
+    width: 100%;
+    line-height: 36px;
+
   }
 }
