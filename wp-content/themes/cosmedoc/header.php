@@ -64,12 +64,14 @@
 					<span class="icon"></span>
 				</a>
 			<?php endif;?>
+			<?php if(!is_cart()):?>
 			<a href="#mini-cart" class="header__links-link link link-cart">
 				<span class="icon"><span class="header-cart-count count no-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span></span>
 			</a>
 			<div class="header-mini-cart">
 				<?php woocommerce_mini_cart(); ?>
 			</div>
+			<?php endif;?>
 		</div>
 	</div><!-- /.header__row -->
 </header><!-- /.header -->
@@ -95,12 +97,14 @@
 		<?php endif; ?>
 	</a><!-- /.brand -->
 	<div class="header__links">
+		<?php if(!is_cart()):?>
 		<a href="#mini-cart" class="header__links-link link link-cart">
 			<span class="icon"><span class="header-cart-count count no-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span></span>
 		</a>
 		<div class="header-mini-cart">
 			<?php woocommerce_mini_cart(); ?>
 		</div>
+		<?php endif;?>
 	</div>
 	<div class="menu-wrap is-closed">
 		<div class="menu-wrap__header">

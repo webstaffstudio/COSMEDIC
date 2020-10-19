@@ -8,7 +8,6 @@
     position: relative;
 
     .widget-area {
-
       //&.fixed-top {
       //  position: fixed;
       //  top: 0;
@@ -41,7 +40,6 @@
         }
 
         &.current-cat {
-
           .children {
             padding: 10px 20px 10px 10px;
             margin-bottom: -10px;
@@ -139,7 +137,7 @@
             z-index: 2;
           }
 
-          input[type=checkbox] {
+          input[type="checkbox"] {
             width: 15px;
             height: 17px;
             cursor: pointer;
@@ -150,7 +148,7 @@
             background-repeat: no-repeat;
             -webkit-appearance: none;
             background-size: 20px 20px;
-            background: transparent url('assets/images/cosmedoc.svg') no-repeat -5px -370px;
+            background: transparent url("assets/images/cosmedoc.svg") no-repeat -5px -370px;
 
             &:checked {
               background-position: -35px -370px;
@@ -162,12 +160,11 @@
             cursor: pointer;
 
             .count {
-              color: #C7C6C4;
+              color: #c7c6c4;
             }
           }
         }
       }
     }
-
   }
 }

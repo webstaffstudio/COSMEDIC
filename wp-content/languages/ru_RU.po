@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.5.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-09-28 14:46:32+0000\n"
+"PO-Revision-Date: 2020-10-04 09:10:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2070,7 +2070,7 @@ msgstr "Восстановить из корзины"
 #: wp-admin/includes/plugin-install.php:196
 #: wp-admin/includes/plugin-install.php:211
 #: wp-admin/includes/class-wp-automatic-updater.php:788
-#: wp-admin/includes/class-wp-automatic-updater.php:1157
+#: wp-admin/includes/class-wp-automatic-updater.php:1161
 #: wp-admin/theme-install.php:63
 msgid "https://wordpress.org/support/forums/"
 msgstr "https://ru.wordpress.org/support/forums/"
@@ -10707,7 +10707,7 @@ msgstr ""
 "\n"
 "%s\n"
 "\n"
-"После активации вы получите *ещё одно письмо* с вашим логином."
+"После активации вы получите *ещё одно письмо* с вашим именем пользователя."
 
 #. translators: New user notification email. 1: User login, 2: User IP address,
 #. 3: URL to Network Settings screen.

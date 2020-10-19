@@ -12,6 +12,10 @@ body {
   outline: none;
 }
 
+.menu .active > a {
+  color: inherit;
+}
+
 a[href="#"] {
   pointer-events: none;
 }
