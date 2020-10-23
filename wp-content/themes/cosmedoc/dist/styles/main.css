@@ -17965,7 +17965,7 @@ ul {
 
 .other-pages.site-footer .newsletter-form input[type="email"].wpcf7-not-valid {
   border-color: #e88565;
-  background: #fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjJweCIgaGVpZ2h0PSI2cHgiIHZpZXdCb3g9IjAgMCAyMiA2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1Mi42ICg2NzQ5MSkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+SU5QVVQgRVJST1I8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iSU5QVVQtRVJST1IiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIHN0cm9rZT0iI0U4ODU2NSIgc3Ryb2tlLXdpZHRoPSIwLjUiIGZpbGw9IiNFODg1NjUiIGN4PSIzIiBjeT0iMyIgcj0iMiI+PC9jaXJjbGU+CiAgICA8L2c+Cjwvc3ZnPg==) no-repeat;
+  background: #fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjIycHgiIGhlaWdodD0iNnB4IiB2aWV3Qm94PSIwIDAgMjIgNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjYgKDY3NDkxKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4NCiAgICA8dGl0bGU+SU5QVVQgRVJST1I8L3RpdGxlPg0KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPg0KICAgIDxnIGlkPSJJTlBVVC1FUlJPUiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+DQogICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIHN0cm9rZT0iI0U4ODU2NSIgc3Ryb2tlLXdpZHRoPSIwLjUiIGZpbGw9IiNFODg1NjUiIGN4PSIzIiBjeT0iMyIgcj0iMiI+PC9jaXJjbGU+DQogICAgPC9nPg0KPC9zdmc+) no-repeat;
   background-position: 100% 50%;
 }
 
@@ -18373,7 +18373,7 @@ ul {
   border-color: #000;
 }
 
-/* line 122, assets/styles/layouts/_pages.scss */
+/* line 123, assets/styles/layouts/_pages.scss */
 
 .cross-sale {
   display: -webkit-box;
@@ -18383,7 +18383,7 @@ ul {
   padding: 90px 0 45px;
 }
 
-/* line 127, assets/styles/layouts/_pages.scss */
+/* line 129, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list {
   display: -webkit-box;
@@ -18391,13 +18391,19 @@ ul {
   display: flex;
 }
 
-/* line 130, assets/styles/layouts/_pages.scss */
+/* line 132, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list .slick-list {
-  margin-right: -20px;
+  margin-right: -40px;
 }
 
-/* line 134, assets/styles/layouts/_pages.scss */
+/* line 136, assets/styles/layouts/_pages.scss */
+
+.cross-sale__list .slick-slide {
+  margin-right: 20px;
+}
+
+/* line 140, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list .slick-prev,
 .cross-sale__list .slick-next {
@@ -18405,52 +18411,46 @@ ul {
   height: 44px;
   background-repeat: no-repeat;
   z-index: 3;
+  top: 40%;
 }
 
-/* line 141, assets/styles/layouts/_pages.scss */
+/* line 148, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list .slick-prev::before,
 .cross-sale__list .slick-next::before {
   display: none;
 }
 
-/* line 146, assets/styles/layouts/_pages.scss */
+/* line 153, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list .slick-next {
+  right: -97px;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjIzcHgiIGhlaWdodD0iNDRweCIgdmlld0JveD0iMCAwIDIzIDQ0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTIuNiAoNjc0OTEpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPg0KICAgIDx0aXRsZT5zbGlkZXItbmV4dDwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+DQogICAgICAgIDxnIGlkPSJzbGlkZXItbmV4dCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEuMDAwMDAwLCAwLjAwMDAwMCkiIGZpbGw9IiNDN0M2QzQiPg0KICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIHBvaW50cz0iMiA0NCAwLjk4NjQ4NTQzOCA0My4wMzg3MTAzIDIyLjA1MTkwODMgMjIgMC45ODY0ODU0MzggMS4wMTkxOTUyMiAyIDAgMjQgMjIiPjwvcG9seWdvbj4NCiAgICAgICAgPC9nPg0KICAgIDwvZz4NCjwvc3ZnPg==);
-}
-
-/* line 150, assets/styles/layouts/_pages.scss */
-
-.cross-sale__list .slick-prev {
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjIzcHgiIGhlaWdodD0iNDRweCIgdmlld0JveD0iMCAwIDIzIDQ0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTIuNiAoNjc0OTEpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPg0KICAgIDx0aXRsZT5zbGlkZXItbmV4dDwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+DQogICAgICAgIDxnIGlkPSJzbGlkZXItbmV4dCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIuMDAwMDAwLCAyMi4wMDAwMDApIHNjYWxlKC0xLCAxKSB0cmFuc2xhdGUoLTEyLjAwMDAwMCwgLTIyLjAwMDAwMCkgIiBmaWxsPSIjQzdDNkM0Ij4NCiAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJQYXRoIiBwb2ludHM9IjIgNDQgMC45ODY0ODU0MzggNDMuMDM4NzEwMyAyMi4wNTE5MDgzIDIyIDAuOTg2NDg1NDM4IDEuMDE5MTk1MjIgMiAwIDI0IDIyIj48L3BvbHlnb24+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=);
-}
-
-/* line 154, assets/styles/layouts/_pages.scss */
-
-.cross-sale__list .slick-slide {
-  margin-right: 20px;
 }
 
 /* line 158, assets/styles/layouts/_pages.scss */
 
-.cross-sale__list--product {
-  max-width: 340px;
-  width: 100%;
-  margin-right: 20px;
+.cross-sale__list .slick-prev {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjIzcHgiIGhlaWdodD0iNDRweCIgdmlld0JveD0iMCAwIDIzIDQ0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTIuNiAoNjc0OTEpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPg0KICAgIDx0aXRsZT5zbGlkZXItbmV4dDwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+DQogICAgICAgIDxnIGlkPSJzbGlkZXItbmV4dCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIuMDAwMDAwLCAyMi4wMDAwMDApIHNjYWxlKC0xLCAxKSB0cmFuc2xhdGUoLTEyLjAwMDAwMCwgLTIyLjAwMDAwMCkgIiBmaWxsPSIjQzdDNkM0Ij4NCiAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJQYXRoIiBwb2ludHM9IjIgNDQgMC45ODY0ODU0MzggNDMuMDM4NzEwMyAyMi4wNTE5MDgzIDIyIDAuOTg2NDg1NDM4IDEuMDE5MTk1MjIgMiAwIDI0IDIyIj48L3BvbHlnb24+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=);
+  left: -73px;
 }
 
 /* line 163, assets/styles/layouts/_pages.scss */
 
+.cross-sale__list--product {
+  max-width: 340px;
+  width: 100%;
+}
+
+/* line 167, assets/styles/layouts/_pages.scss */
+
 .cross-sale__list--product .product__thumbnail {
   display: block;
-  height: 340px;
-  width: 340px;
   margin-bottom: 18px;
   position: relative;
 }
 
-/* line 170, assets/styles/layouts/_pages.scss */
+/* line 174, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list--product .product__thumbnail::before {
   content: "";
@@ -18462,7 +18462,7 @@ ul {
   top: 0;
 }
 
-/* line 181, assets/styles/layouts/_pages.scss */
+/* line 185, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list--product .product__brand {
   font-size: 14px;
@@ -18471,7 +18471,7 @@ ul {
   margin-bottom: 5px;
 }
 
-/* line 188, assets/styles/layouts/_pages.scss */
+/* line 192, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list--product .product__title {
   color: #363636;
@@ -18481,13 +18481,13 @@ ul {
   width: 100%;
 }
 
-/* line 195, assets/styles/layouts/_pages.scss */
+/* line 199, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list--product .product__title h3 {
   font-size: 14px;
 }
 
-/* line 200, assets/styles/layouts/_pages.scss */
+/* line 204, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list--product .product__price {
   font-size: 18px;
@@ -18505,13 +18505,13 @@ ul {
           align-items: center;
 }
 
-/* line 209, assets/styles/layouts/_pages.scss */
+/* line 213, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list--product .product__price .has-sale {
   color: #e88565;
 }
 
-/* line 213, assets/styles/layouts/_pages.scss */
+/* line 217, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list--product .product__price .sale {
   color: #c7c6c4;
@@ -18519,7 +18519,7 @@ ul {
   font-size: 14px;
 }
 
-/* line 219, assets/styles/layouts/_pages.scss */
+/* line 223, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list--product .product__price .currency {
   margin-left: 3px;

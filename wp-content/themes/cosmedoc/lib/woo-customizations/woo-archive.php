@@ -79,14 +79,3 @@ function cosmedoc_remove_on_sale_badge($badge_html)
 
 
 
-/**
- * Change number of products that are displayed per page (shop page)
- */
-add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
-
-function new_loop_shop_per_page( $cols ) {
-
-	$cols = 6;
-	set_query_var('product_pp', $cols);
-	return $cols;
-}

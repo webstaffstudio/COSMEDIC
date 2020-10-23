@@ -19,17 +19,31 @@ if (!is_active_sidebar('sidebar-1')) {
 			<li class="clearall">
 				<div  class="clear-btn cosmedoc-btn" id="clearFilters"><?=__('Очистить все', THEME_TD);?></div>
 			</li>
+			<?php
+			$product_type = get_terms([
+				'taxonomy' => 'cos_product_types',
+				'hide_empty' => false,
+			]);
+			?>
 			<li class="filters__item" data-accordion-item="" role="presentation">
-				<a href="#" class="filters__item--title" aria-controls="4v42sh-accordion" role="tab"
-				   id="4v42sh-accordion-label" aria-expanded="false"
+				<a href="#" class="filters__item--title" aria-controls="types-accordion" role="tab"
+				   id="types-accordion-label" aria-expanded="false"
 				   aria-selected="false"><?= __('Продукт', THEME_TD); ?></a>
-				<div class="filters__item--content" data-tab-content="" role="tabpanel"
-					 aria-labelledby="4v42sh-accordion-label" aria-hidden="true" id="4v42sh-accordion"
-					 style="display: none;">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos excepturi optio quae
-					quibusdam, quisquam similique sint unde. Aspernatur assumenda, commodi deserunt doloremque, dolores,
-					doloribus harum maiores neque quo similique unde.
-				</div>
+				<ul class="filters__item--content" data-tab-content="" role="tabpanel"
+					aria-labelledby="types-accordion-label" aria-hidden="true" id="types-accordion"
+					style="display: none;">
+					<?php foreach ($product_type as $type):
+						$term_id = $type->term_id; ?>
+						<li id="type-box">
+							<label for="type_<?= $term_id; ?>">
+								<input class="filter-item" data-filterbox="product_type" type="checkbox" name="type_<?= $term_id; ?>" value="<?= $term_id ?>"
+									   id="type_<?= $term_id ?>">
+								<span class="name"><?= $type->name; ?></span>
+								<span class="count">(<?= $type->count; ?>)</span>
+							</label>
+						</li>
+					<?php endforeach; ?>
+				</ul>
 			</li>
 			<?php
 			$brands = get_terms([

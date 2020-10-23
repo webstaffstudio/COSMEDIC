@@ -29,6 +29,7 @@ $theme_includes = array(
 	'/lib/wp_dashboard_customizer.php',        // WP Dashboard customizer
 	'/lib/woo-customizations/woo-brands-tax.php',        // brands
 	'/lib/woo-customizations/woo-countries-tax.php',        // countries
+	'/lib/woo-customizations/woo-type-product-tax.php',        // product types
 	'/lib/woo-customizations/woo-product.php',        // product customization
 	'/lib/woo-customizations/woo-account.php',        // Account customization
 	'/lib/woo-customizations/woo-mini-cart.php',        // Ajax mini cart

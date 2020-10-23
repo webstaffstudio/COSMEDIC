@@ -19,10 +19,10 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 global $wp_query;
-$product_pp = get_query_var('product_pp');
+$product_founded = get_query_var('product_count');
 $total_count = $GLOBALS['wp_query']->found_posts;
-if ($total_count < $product_pp) {
-	$product_pp = $total_count;
+if ($total_count < $product_founded) {
+	$product_founded = $total_count;
 }
 ?>
 <div class="grid-x">
@@ -45,7 +45,7 @@ if ($total_count < $product_pp) {
 				</div>
 			</div>
 			<div class="catalog-navigation__count">
-				<span class="catalog-navigation__count--showing"><?= $product_pp; ?></span> <?= __('из', THEME_TD); ?>
+				<span class="catalog-navigation__count--showing"><?= $product_founded; ?></span> <?= __('из', THEME_TD); ?>
 				<span class="catalog-navigation__count--total"><?= $total_count; ?></span>
 			</div>
 		</div>

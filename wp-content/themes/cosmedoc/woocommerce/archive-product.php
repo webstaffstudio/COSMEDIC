@@ -63,6 +63,16 @@ do_action('woocommerce_before_main_content');
 	<div class="grid-container">
 
 		<?php
+		global $wp_query;
+		$ppp = 6;
+		$product_args =  array(
+			'post_type' => 'product',
+			'posts_per_page' => $ppp, // must be 36
+			'order' => 'DESC');
+			$product_query = new WP_Query($product_args);
+		$count_posts = $product_query->post_count;
+		set_query_var('product_pp', $ppp);
+		set_query_var('product_count', $count_posts);
 		if (woocommerce_product_loop()) {
 
 			/**
@@ -78,9 +88,10 @@ do_action('woocommerce_before_main_content');
 			do_action('woocommerce_before_shop_loop');
 			woocommerce_product_loop_start();
 
-			if (wc_get_loop_prop('total')) {
-				while (have_posts()) {
-					the_post();
+			if ($product_query->have_posts()) {
+				echo '<div class="product-list">';
+				while ($product_query->have_posts()) {
+					$product_query->the_post();
 
 					/**
 					 * Hook: woocommerce_shop_loop.
@@ -89,11 +100,12 @@ do_action('woocommerce_before_main_content');
 
 					wc_get_template_part('content', 'product');
 				}
+				echo '</div>';
 			}
 
 
-			global $wp_query;
-			if ($wp_query->max_num_pages > 1):
+			global $product_query;
+			if ($product_query->max_num_pages > 1):
 				$paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 				?>
 				<div class="load-container" data-page="<?= $paged; ?>">
