@@ -64,13 +64,13 @@ do_action('woocommerce_before_cart'); ?>
 								}
 								?>
 							</div>
-							<?php echo get_the_term_list( $cart_item['product_id'], 'cos_countries', '<span>', '</span>', '' ); ;?>
+							<?php echo get_the_term_list($cart_item['product_id'], 'cos_countries', '<span>', '</span>', '');; ?>
 							<div class="product-remove">
 								<?php
 								echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 										'woocommerce_cart_item_remove_link',
 										sprintf(
-												'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">'.__('Удалить', THEME_TD ).'</a>',
+												'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">' . __('Удалить', THEME_TD) . '</a>',
 												esc_url(wc_get_cart_remove_url($cart_item_key)),
 												esc_html__('Remove this item', 'woocommerce'),
 												esc_attr($product_id),
@@ -88,6 +88,7 @@ do_action('woocommerce_before_cart'); ?>
 						</div>
 
 						<div class="product-quantity" data-title="<?php esc_attr_e('Quantity', 'woocommerce'); ?>">
+							<label class="qty-label" for="cart[%s][qty]"><?php _e('Количество', THEME_TD);?></label>
 							<?php
 							if ($_product->is_sold_individually()) {
 								$product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);

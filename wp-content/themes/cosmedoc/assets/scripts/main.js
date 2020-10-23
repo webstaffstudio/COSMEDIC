@@ -16,7 +16,7 @@ jQuery(window).load(function() {
   /* Sticky SideBar Cart */
   const makeSticky = () => {
     $(".cart-sidebar").stick_in_parent({
-      offset_top: 50,
+      offset_top: 80,
     });
   };
 

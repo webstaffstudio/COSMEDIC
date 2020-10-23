@@ -1,8 +1,7 @@
-<?php get_header('home');
+<?php get_header();
 $fields = get_fields(get_the_ID());
 $slider = ($fields['slider']) ? $fields['slider'] : null;
 ?>
-
 	<div class="front-page">
 		<section class="hero-section">
 			<?php if ($slider && is_array($slider)): ?>
@@ -68,4 +67,4 @@ $slider = ($fields['slider']) ? $fields['slider'] : null;
 			<?php get_template_part('/woocommerce/cross-sale-slider/cross-sale-slider'); ?>
 	</div>
 <?php
-get_footer('home-page');
+get_footer();

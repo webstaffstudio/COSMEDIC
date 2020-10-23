@@ -12818,7 +12818,7 @@ jQuery(window).load(function () {
   /* Sticky SideBar Cart */
   var makeSticky = function makeSticky() {
     $(".cart-sidebar").stick_in_parent({
-      offset_top: 50
+      offset_top: 80
     });
   };
 
@@ -16479,7 +16479,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   function filtersInit(termsData) {
     var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : currentPage;
     var loadmore = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-    console.log(currentPage, 'cure page'); // let formData = $(this).serialize();
+    console.log(currentPage, "cure page"); // let formData = $(this).serialize();
 
     $.ajax({
       url: themeVars.ajaxUrl,
@@ -16511,11 +16511,11 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         }
 
         if (currentPage >= data.max_page) {
-          $('.load-container').hide();
-          console.log('hide');
+          $(".load-container").hide();
+          console.log("hide");
         } else {
-          $('.load-container').show();
-          console.log('show');
+          $(".load-container").show();
+          console.log("show");
         }
 
         $("#stock-box").find(".count").html("(" + data.stock_quantity + ")");
@@ -16558,7 +16558,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         dataObj.brands.push(checked);
       } else if (termTax === "country") {
         dataObj.country.push(checked);
-      } else if (termTax === 'product_type') {
+      } else if (termTax === "product_type") {
         dataObj.product_type.push(checked);
       }
     } else {
