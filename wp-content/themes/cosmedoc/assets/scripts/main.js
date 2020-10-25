@@ -5,6 +5,7 @@ import "slick-carousel";
 import "jquery-match-height";
 import "./modules/filters-shop";
 import "./modules/sticky-sidebar";
+import AOS from "aos/dist/aos";
 // Import everything from autoload
 import "./autoload/**/*";
 import "sticky-kit/dist/sticky-kit";
@@ -13,6 +14,15 @@ let windowWidth = $(window).width(),
   scrollPos = 0;
 
 jQuery(window).load(function() {
+  AOS.init({
+    useClassNames: true,
+    mirror: true,
+    initClassName: false,
+    animatedClassName: "animated",
+  });
+  $(".cart-cross-sells .woocommerce-loop-product__title").matchHeight();
+  $(".cart-cross-sells .brand").matchHeight();
+  $(".cart-cross-sells .price").matchHeight();
   /* Sticky SideBar Cart */
   const makeSticky = () => {
     $(".cart-sidebar").stick_in_parent({
@@ -59,7 +69,6 @@ jQuery(window).load(function() {
     slidesToScroll: 1,
     arrows: true,
   });
-
   $(".hero-slider").slick({
     dots: true,
     arrows: false,
@@ -68,8 +77,89 @@ jQuery(window).load(function() {
     autoplay: true,
     autoplaySpeed: 3000,
   });
+  $(".product-list-slider").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+  });
   $(".cross-sale__list--product .product__title").matchHeight();
   $(".products .product .woocommerce-loop-product__title").matchHeight();
+});
+
+/**
+ * Updated foundation js and Sticky-Kit for sidebar
+ */
+$(document).ajaxSuccess(function(event, xhr, options) {
+  if (options.url === "/?wc-ajax=get_refreshed_fragments") {
+    let stickTarget = $(".cart-sidebar");
+    if (stickTarget.length > 0) {
+      $(".cart-cross-sells .woocommerce-loop-product__title").matchHeight();
+      $(".cart-cross-sells .brand").matchHeight();
+      $(".cart-cross-sells .price").matchHeight();
+      $(".cross-sells .cart-cross-sells").slick({
+        dots: true,
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplaySpeed: 3000,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 771,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+        ],
+      });
+      $(document).foundation();
+      const makeSticky = () => {
+        stickTarget.stick_in_parent({
+          offset_top: 80,
+        });
+      };
+      if (windowWidth < 1024) {
+        $(".cart-sidebar").trigger("sticky_kit:detach");
+      } else {
+        makeSticky();
+      }
+      $(".gift-products-slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: "linear",
+      });
+
+      $("div.cosmedoc-btn-gift").on("click", function() {
+        let $this = $(this);
+        let $product_id = $(this).attr("data-id");
+        $.ajax({
+          url: themeVars.ajaxUrl,
+          type: "POST",
+          data: {
+            action: "add_gift_product",
+            product: $product_id,
+          },
+          success: function() {
+            $("div.cosmedoc-btn-gift").removeClass("checked");
+            $this.addClass("checked");
+            $("[name='update_cart']").prop("disabled", false);
+            setTimeout(function() {
+              $("[name='update_cart']").trigger("click");
+            }, 500);
+          },
+        });
+      });
+    }
+  }
 });
 
 jQuery(function($) {
@@ -82,7 +172,7 @@ jQuery(function($) {
 
     timeout = setTimeout(function() {
       $("[name='update_cart']").trigger("click");
-    }, 1000); // 1 second delay, half a second (500) seems comfortable too
+    }, 500); // 1 second delay, half a second (500) seems comfortable too
   });
 
   $(document).on("change", ".header-mini-cart input.qty", function() {
@@ -126,6 +216,26 @@ jQuery(function($) {
 });
 
 jQuery(document).ready(() => {
+  $("div.cosmedoc-btn-gift").on("click", function() {
+    let $this = $(this);
+    let $product_id = $(this).attr("data-id");
+    $.ajax({
+      url: themeVars.ajaxUrl,
+      type: "POST",
+      data: {
+        action: "add_gift_product",
+        product: $product_id,
+      },
+      success: function() {
+        $("div.cosmedoc-btn-gift").removeClass("checked");
+        $this.addClass("checked");
+        $("[name='update_cart']").prop("disabled", false);
+        setTimeout(function() {
+          $("[name='update_cart']").trigger("click");
+        }, 500);
+      },
+    });
+  });
   $(document).on("click", ".plus", function() {
     let $input = $(this).prev("input.qty");
     let val = parseInt($input.val());
@@ -235,6 +345,9 @@ jQuery(document).ready(() => {
   });
 
   $(window).on("resize ", () => {
+    $(".cart-cross-sells .woocommerce-loop-product__title").matchHeight();
+    $(".cart-cross-sells .brand").matchHeight();
+    $(".cart-cross-sells .price").matchHeight();
     // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
     if ($(window).width() != windowWidth) {
       // Update the window width for next time

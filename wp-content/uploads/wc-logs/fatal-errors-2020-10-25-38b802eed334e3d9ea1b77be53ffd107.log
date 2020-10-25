@@ -1,0 +1,29 @@
+2020-10-25T10:57:03+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php on line 221 and at least 2 expected in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php:583
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php(221): remove_action('woocommerce_cro...')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+ in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php on line 583
+
+2020-10-25T15:45:28+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php:29
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(283): load_template('C:\\OSPanel\\doma...', false)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cross-sells.php(38): wc_get_template_part('content', 'product')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2100): wc_get_template('cart/cross-sell...', Array)
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php(175): woocommerce_cross_sell_display(6, 1)
+#6 C:\OSPanel\dom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php on line 29
+
+2020-10-25T15:45:34+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php:29
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(283): load_template('C:\\OSPanel\\doma...', false)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cross-sells.php(38): wc_get_template_part('content', 'product')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2100): wc_get_template('cart/cross-sell...', Array)
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php(175): woocommerce_cross_sell_display(6, 1)
+#6 C:\OSPanel\dom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php on line 29
+

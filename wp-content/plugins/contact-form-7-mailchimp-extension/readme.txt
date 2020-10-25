@@ -94,7 +94,7 @@ Do you have questions or issues with Contact Form 7 Mailchimp Extension? Use the
 
 For more information, see [Releases](https://chimpmatic.com/help/contact-form-7-mailchimp-extension).
 
-= 0.5.25 =
+= 0.5.26 =
 
 * Bug fixes
 

@@ -16655,7 +16655,8 @@ h2.cosmedoc-title {
 
 .cosmedoc-btn,
 .woocommerce.single .entry-summary .cart .button,
-.woocommerce.single .entry-summary .alert_container .stock_alert_button {
+.woocommerce.single .entry-summary .alert_container .stock_alert_button,
+.checkout-button {
   background-color: #89937a;
   display: inline-block;
   color: #fff;
@@ -16676,17 +16677,18 @@ h2.cosmedoc-title {
   cursor: pointer;
 }
 
-/* line 93, assets/styles/common/_global.scss */
+/* line 94, assets/styles/common/_global.scss */
 
 .cosmedoc-btn:hover,
 .woocommerce.single .entry-summary .cart .button:hover,
-.woocommerce.single .entry-summary .alert_container .stock_alert_button:hover {
+.woocommerce.single .entry-summary .alert_container .stock_alert_button:hover,
+.checkout-button:hover {
   background-color: transparent !important;
   color: #000 !important;
   border-color: #000 !important;
 }
 
-/* line 100, assets/styles/common/_global.scss */
+/* line 101, assets/styles/common/_global.scss */
 
 ul {
   margin: 0;
@@ -16694,7 +16696,7 @@ ul {
   list-style: none;
 }
 
-/* line 106, assets/styles/common/_global.scss */
+/* line 107, assets/styles/common/_global.scss */
 
 .site-content ul:not(.woocommerce-error) {
   list-style: none;
@@ -16702,7 +16704,7 @@ ul {
   padding: 0;
 }
 
-/* line 111, assets/styles/common/_global.scss */
+/* line 112, assets/styles/common/_global.scss */
 
 .site-content ul:not(.woocommerce-error) li {
   font-size: inherit;
@@ -16710,7 +16712,7 @@ ul {
 
 /*! Firefox */
 
-/* line 117, assets/styles/common/_global.scss */
+/* line 118, assets/styles/common/_global.scss */
 
 .minicart-wrapper {
   scrollbar-color: #e0e5de #89937a;
@@ -16718,33 +16720,33 @@ ul {
 
 /*! Other Browser */
 
-/* line 122, assets/styles/common/_global.scss */
+/* line 123, assets/styles/common/_global.scss */
 
 .minicart-wrapper {
   --scrollbarBG: #e0e5de;
   --thumbBG: #89937a;
 }
 
-/* line 127, assets/styles/common/_global.scss */
+/* line 128, assets/styles/common/_global.scss */
 
 .minicart-wrapper::-webkit-scrollbar {
   width: 6px;
 }
 
-/* line 131, assets/styles/common/_global.scss */
+/* line 132, assets/styles/common/_global.scss */
 
 .minicart-wrapper {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
 
-/* line 136, assets/styles/common/_global.scss */
+/* line 137, assets/styles/common/_global.scss */
 
 .minicart-wrapper::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
 
-/* line 140, assets/styles/common/_global.scss */
+/* line 141, assets/styles/common/_global.scss */
 
 .minicart-wrapper::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
@@ -16752,7 +16754,7 @@ ul {
   border: 1px solid var(--scrollbarBG);
 }
 
-/* line 146, assets/styles/common/_global.scss */
+/* line 147, assets/styles/common/_global.scss */
 
 .labels-list {
   display: -webkit-box;
@@ -16764,7 +16766,7 @@ ul {
           flex-direction: column;
 }
 
-/* line 150, assets/styles/common/_global.scss */
+/* line 151, assets/styles/common/_global.scss */
 
 .labels-list .product-label {
   display: inline;
@@ -20109,7 +20111,9 @@ ul {
   }
 }
 
-/* line 2, assets/styles/layouts/woocommerce/_cart.scss */
+/* stylelint-disable */
+
+/* line 3, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .cart-title {
   text-align: center;
@@ -20119,7 +20123,7 @@ ul {
 }
 
 @media screen and (max-width: 48.125em) {
-  /* line 10, assets/styles/layouts/woocommerce/_cart.scss */
+  /* line 11, assets/styles/layouts/woocommerce/_cart.scss */
 
   .woocommerce-cart .cart-title {
     padding: 0;
@@ -20128,7 +20132,7 @@ ul {
   }
 }
 
-/* line 17, assets/styles/layouts/woocommerce/_cart.scss */
+/* line 18, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .cart-sidebar {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
@@ -20139,6 +20143,673 @@ ul {
 
 /* line 23, assets/styles/layouts/woocommerce/_cart.scss */
 
+.woocommerce-cart .cart-sidebar .checkout-button {
+  width: 100%;
+}
+
+/* line 27, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .cart-subtotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  opacity: 0.4;
+  font-size: 14px;
+}
+
+/* line 34, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .order-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+}
+
+/* line 39, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .order-total strong {
+  font-weight: normal;
+}
+
+/* line 44, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion {
+  margin: 0 auto 26px !important;
+  max-width: 970px;
+  width: 100%;
+  background-color: transparent;
+}
+
+/* line 50, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item {
+  font-size: 14px;
+  position: relative;
+  z-index: 0;
+  outline: none;
+}
+
+/* line 56, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item.coupon {
+  border-bottom: 1px solid #363636;
+}
+
+/* line 59, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item.coupon > a {
+  position: relative;
+  padding-left: 30px;
+}
+
+/* line 63, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item.coupon > a::before {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  vertical-align: middle;
+  background-image: url(../images/cosmedoc.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: -158px -238px;
+}
+
+/* line 82, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item.gift-cart .accordion__item--content .input-text {
+  border-color: #89937a;
+  border-radius: 3px;
+  height: 40px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 40px;
+  margin-right: 10px;
+}
+
+/* line 94, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item.gift-cart .cosmedoc-btn,
+.woocommerce-cart .cart-sidebar .accordion__item.gift-cart .woocommerce.single .entry-summary .cart .button,
+.woocommerce.single .entry-summary .cart .woocommerce-cart .cart-sidebar .accordion__item.gift-cart .button,
+.woocommerce-cart .cart-sidebar .accordion__item.gift-cart .woocommerce.single .entry-summary .alert_container .stock_alert_button,
+.woocommerce.single .entry-summary .alert_container .woocommerce-cart .cart-sidebar .accordion__item.gift-cart .stock_alert_button {
+  width: 100%;
+}
+
+/* line 98, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item.gift-cart > a {
+  position: relative;
+  padding-left: 30px;
+}
+
+/* line 102, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item.gift-cart > a::before {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  vertical-align: middle;
+  background-image: url(../images/cosmedoc.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: -125px -183px;
+}
+
+/* line 121, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item.is-active a::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/* line 126, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item--title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: initial;
+  font-size: 14px;
+  padding: 14px 3px;
+}
+
+/* line 134, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item--title::after {
+  content: "";
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjE0cHgiIGhlaWdodD0iN3B4IiB2aWV3Qm94PSIwIDAgMTQgNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjYgKDY3NDkxKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4NCiAgICA8dGl0bGU+UklHSFQ8L3RpdGxlPg0KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPg0KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+DQogICAgICAgIDxnIGlkPSJEUk9QX0RPV04iIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zLjAwMDAwMCwgLTcuMDAwMDAwKSIgc3Ryb2tlPSIjMzYzNjM2Ij4NCiAgICAgICAgICAgIDxwb2x5bGluZSBpZD0iUGF0aC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4wMDAwMDAsIDEwLjI1MDAwMCkgcm90YXRlKC0xODAuMDAwMDAwKSB0cmFuc2xhdGUoLTEwLjAwMDAwMCwgLTEwLjI1MDAwMCkgIiBwb2ludHM9IjMuNSAxMy41IDEwIDcgMTYuNSAxMy41Ij48L3BvbHlsaW5lPg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+);
+  width: 14px;
+  height: 14px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+/* line 147, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item--content {
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 780px;
+  padding: 0 0 36px;
+  margin: 0 auto;
+}
+
+/* line 154, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item--content > label {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+  text-transform: none;
+}
+
+/* line 163, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item--content .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 166, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item--content .wrapper > input {
+  border-color: #89937a;
+  border-radius: 3px;
+  height: 40px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 40px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+/* line 179, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item--content .wrapper .cosmedoc-button {
+  background-color: #89937a;
+  display: inline-block;
+  color: #fff;
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  line-height: 38px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+}
+
+/* line 198, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item--content .wrapper .cosmedoc-button:hover {
+  background-color: transparent !important;
+  color: #000 !important;
+  border-color: #000 !important;
+}
+
+/* line 206, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cart-sidebar .accordion__item--content a {
+  color: #c26b6a;
+  font-size: 14px;
+}
+
+/* line 215, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form {
+  margin-bottom: 30px;
+}
+
+/* line 219, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .product-attr a,
+.woocommerce-cart .woocommerce-cart-form .product-attr span {
+  pointer-events: none;
+  color: #c7c6c4 !important;
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 218, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form .product-attr {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 230, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form.grid-container {
+    padding: 0 !important;
+  }
+}
+
+/* line 237, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .cross-sells-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px !important;
+  font-weight: normal;
+  margin-bottom: 0;
+  padding: 10px 0 50px;
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 237, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form .cross-sells-title {
+    font-size: 14px !important;
+    line-height: 1;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+}
+
+/* line 253, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .cross-sells .cart-cross-sells {
+  margin: 0 auto 50px;
+  padding: 0 0 40px;
+  border-bottom: 1px solid #000;
+  /* the slides */
+  /* the parent */
+}
+
+/* line 258, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .cross-sells .cart-cross-sells .brand,
+.woocommerce-cart .woocommerce-cart-form .cross-sells .cart-cross-sells .price {
+  display: inline-block;
+}
+
+/* line 263, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .cross-sells .cart-cross-sells .bottom-labels {
+  left: 12px;
+  right: 4px;
+}
+
+/* line 268, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .cross-sells .cart-cross-sells .product-label {
+  font-size: 8px;
+  line-height: 1.3;
+}
+
+/* line 273, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .cross-sells .cart-cross-sells a.button {
+  min-width: 0 !important;
+}
+
+/* line 277, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .cross-sells .cart-cross-sells .slick-dots {
+  bottom: 35px;
+}
+
+/* line 280, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .cross-sells .cart-cross-sells .slick-dots > li {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+}
+
+/* line 288, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .cross-sells .cart-cross-sells .slick-slide {
+  margin: 0 5px;
+}
+
+/* line 293, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .cross-sells .cart-cross-sells .slick-list {
+  margin: 0 -5px;
+}
+
+/* line 299, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-note {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 40px 0;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin: 0 auto 40px;
+  background: #e88565;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 299, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form .gift-note {
+    margin: 0 auto 20px;
+  }
+}
+
+/* line 314, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-note > p {
+  margin: 0 auto 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 314, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form .gift-note > p {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}
+
+/* line 328, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-note .cosmedoc-white {
+  background: #fff;
+  color: #363636;
+  border-color: #fff;
+  min-width: 210px;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  line-height: 38px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  height: 40px;
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 328, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form .gift-note .cosmedoc-white {
+    font-size: 9px;
+  }
+}
+
+/* line 352, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  text-align: center;
+}
+
+/* line 359, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products .gift-heading {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 30px;
+  padding: 35px 0;
+  margin-bottom: 0;
+}
+
+/* line 368, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products-wrapper {
+  max-width: 210px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 375, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products-slider {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 379, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products-slider .slick-arrow {
+  top: 244px;
+  background-image: url(../images/cosmedoc.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  z-index: 89;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 392, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products-slider .slick-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 397, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products-slider .slick-arrow::before {
+  content: none;
+}
+
+/* line 402, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products-slider .slick-prev {
+  left: 0;
+  background-position: -27px -230px;
+}
+
+/* line 407, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products-slider .slick-next {
+  background-position: 9px -230px;
+  right: 0;
+}
+
+/* line 414, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products__item .img-box {
+  position: relative;
+  z-index: 0;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 14px;
+  height: 210px;
+}
+
+/* line 423, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products__item .img-box .mask {
+  content: " ";
+  background: rgba(0, 0, 0, 0.04);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  border: 5px solid #fff;
+}
+
+/* line 437, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products__item .info .brand {
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #c7c6c4;
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 437, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form .gift-products__item .info .brand {
+    font-size: 12px;
+  }
+}
+
+/* line 448, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products__item .info .item-name {
+  font-size: 14px !important;
+  line-height: 20px;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 448, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form .gift-products__item .info .item-name {
+    font-size: 12px !important;
+    line-height: 1.3;
+  }
+}
+
+/* line 460, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products__item .cosmedoc-btn-gift {
+  border: 1px solid #000;
+  background-color: transparent;
+  color: #000;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 38px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+/* line 479, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products__item .cosmedoc-btn-gift.checked {
+  background-color: #89937a;
+  border-color: #89937a;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/* line 485, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products__item .cosmedoc-btn-gift.checked:hover {
+  opacity: 1;
+}
+
+/* line 490, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form .gift-products__item .cosmedoc-btn-gift:hover {
+  opacity: 0.5;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+/* line 499, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .cross-sells {
+  padding-right: 20px !important;
+}
+
+@media screen and (max-width: 63.99875em) {
+  /* line 499, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .cross-sells {
+    padding-right: 0 !important;
+  }
+}
+
+/* line 507, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents,
+.woocommerce-cart .gift-products,
+.woocommerce-cart .gift-note {
+  margin-right: 20px !important;
+}
+
+@media screen and (max-width: 63.99875em) {
+  /* line 507, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents,
+  .woocommerce-cart .gift-products,
+  .woocommerce-cart .gift-note {
+    margin-right: 0 !important;
+  }
+}
+
+/* line 517, assets/styles/layouts/woocommerce/_cart.scss */
+
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20148,33 +20819,88 @@ ul {
   padding: 38px 0;
   font-size: 14px;
   line-height: 20px;
-  margin-right: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-/* line 33, assets/styles/layouts/woocommerce/_cart.scss */
+@media screen and (max-width: 48.125em) {
+  /* line 517, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item {
+    padding-left: 120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  /* line 533, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-thumbnail {
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 35.625em) {
+  /* line 517, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item {
+    padding-right: 20px;
+  }
+}
+
+/* line 544, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-thumbnail {
   padding-right: 15px;
 }
 
-/* line 36, assets/styles/layouts/woocommerce/_cart.scss */
+/* line 547, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-thumbnail img {
   max-width: 104px;
   width: 100%;
 }
 
-/* line 42, assets/styles/layouts/woocommerce/_cart.scss */
+/* line 553, assets/styles/layouts/woocommerce/_cart.scss */
+
+.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-price,
+.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-subtotal,
+.woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-thumbnail {
+  min-width: 120px;
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 560, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-price {
+    display: none;
+  }
+}
+
+/* line 565, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-price,
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-subtotal {
   padding: 0 15px;
 }
 
-/* line 48, assets/styles/layouts/woocommerce/_cart.scss */
+@media screen and (max-width: 48.125em) {
+  /* line 565, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-price,
+  .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-subtotal {
+    padding: 0;
+  }
+}
+
+/* line 575, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-quantity .qty-label {
   display: inline-block;
@@ -20188,13 +20914,13 @@ ul {
   user-select: none;
 }
 
-/* line 61, assets/styles/layouts/woocommerce/_cart.scss */
+/* line 588, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .quantity__wrapp {
   margin: 0;
 }
 
-/* line 65, assets/styles/layouts/woocommerce/_cart.scss */
+/* line 592, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-info {
   display: -webkit-box;
@@ -20209,20 +20935,61 @@ ul {
   width: 100%;
 }
 
-/* line 72, assets/styles/layouts/woocommerce/_cart.scss */
+@media screen and (max-width: 48.125em) {
+  /* line 592, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-info {
+    max-width: 400px;
+    padding: 0;
+  }
+
+  /* line 603, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-info .product-name {
+    margin-bottom: 9px;
+  }
+
+  /* line 607, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-info .product-remove {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    background-image: url(../images/cosmedoc.svg);
+    background-position: -1px -182px;
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* line 617, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-info .product-remove > a {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    text-indent: -9999999px;
+    top: 0;
+    left: 0;
+    border: 0;
+  }
+}
+
+/* line 630, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-info a {
   color: #363636;
   font-size: 14px;
 }
 
-/* line 78, assets/styles/layouts/woocommerce/_cart.scss */
+/* line 636, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-remove {
   padding-top: 20px;
 }
 
-/* line 81, assets/styles/layouts/woocommerce/_cart.scss */
+/* line 639, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-remove > a {
   border-bottom: 1px solid #363636;
@@ -20234,7 +21001,7 @@ ul {
   font-weight: normal;
 }
 
-/* line 90, assets/styles/layouts/woocommerce/_cart.scss */
+/* line 648, assets/styles/layouts/woocommerce/_cart.scss */
 
 .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item .product-remove > a:hover {
   color: #363636 !important;
@@ -20242,10 +21009,80 @@ ul {
 }
 
 @media screen and (max-width: 63.99875em) {
-  /* line 23, assets/styles/layouts/woocommerce/_cart.scss */
+  /* line 517, assets/styles/layouts/woocommerce/_cart.scss */
 
   .woocommerce-cart .woocommerce-cart-form__cart-item.cart_item {
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 661, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce .products .product .brands a,
+  .woocommerce-cart .woocommerce .products .product .woocommerce-loop-product__title {
+    font-size: 12px !important;
+    line-height: 1.3;
+  }
+
+  /* line 667, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce ul.products li.product .price {
+    font-size: 14px !important;
+    line-height: 1.3;
+  }
+
+  /* line 672, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .cart-sidebar {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 0;
+  }
+
+  /* line 677, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .woocommerce-cart .woocommerce-cart-form {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 48.125em) {
+  /* line 684, assets/styles/layouts/woocommerce/_cart.scss */
+
+  [data-aos="un-sticky"] {
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+  }
+
+  /* line 688, assets/styles/layouts/woocommerce/_cart.scss */
+
+  [data-aos="un-sticky"].aos-animate {
+    opacity: 0;
+  }
+
+  /* line 693, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .mobile-proceed-to-checkout {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 96;
+    -webkit-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  /* line 705, assets/styles/layouts/woocommerce/_cart.scss */
+
+  .mobile-proceed-to-checkout > a {
+    max-width: 100% !important;
+    width: 100% !important;
   }
 }
 
@@ -21154,6 +21991,1901 @@ ul {
 .slick-dots li.slick-active button:before {
   color: black;
   opacity: 0.75;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='50'] [data-aos],
+[data-aos][data-aos][data-aos-duration='50'] {
+  -webkit-transition-duration: 50ms;
+          transition-duration: 50ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='50'] [data-aos],
+[data-aos][data-aos][data-aos-delay='50'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='50'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='50'].aos-animate {
+  -webkit-transition-delay: 50ms;
+          transition-delay: 50ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='100'] [data-aos],
+[data-aos][data-aos][data-aos-duration='100'] {
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='100'] [data-aos],
+[data-aos][data-aos][data-aos-delay='100'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='100'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='100'].aos-animate {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='150'] [data-aos],
+[data-aos][data-aos][data-aos-duration='150'] {
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='150'] [data-aos],
+[data-aos][data-aos][data-aos-delay='150'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='150'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='150'].aos-animate {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='200'] [data-aos],
+[data-aos][data-aos][data-aos-duration='200'] {
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='200'] [data-aos],
+[data-aos][data-aos][data-aos-delay='200'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='200'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='200'].aos-animate {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='250'] [data-aos],
+[data-aos][data-aos][data-aos-duration='250'] {
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='250'] [data-aos],
+[data-aos][data-aos][data-aos-delay='250'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='250'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='250'].aos-animate {
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='300'] [data-aos],
+[data-aos][data-aos][data-aos-duration='300'] {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='300'] [data-aos],
+[data-aos][data-aos][data-aos-delay='300'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='300'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='300'].aos-animate {
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='350'] [data-aos],
+[data-aos][data-aos][data-aos-duration='350'] {
+  -webkit-transition-duration: 350ms;
+          transition-duration: 350ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='350'] [data-aos],
+[data-aos][data-aos][data-aos-delay='350'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='350'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='350'].aos-animate {
+  -webkit-transition-delay: 350ms;
+          transition-delay: 350ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='400'] [data-aos],
+[data-aos][data-aos][data-aos-duration='400'] {
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='400'] [data-aos],
+[data-aos][data-aos][data-aos-delay='400'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='400'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='400'].aos-animate {
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='450'] [data-aos],
+[data-aos][data-aos][data-aos-duration='450'] {
+  -webkit-transition-duration: 450ms;
+          transition-duration: 450ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='450'] [data-aos],
+[data-aos][data-aos][data-aos-delay='450'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='450'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='450'].aos-animate {
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='500'] [data-aos],
+[data-aos][data-aos][data-aos-duration='500'] {
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='500'] [data-aos],
+[data-aos][data-aos][data-aos-delay='500'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='500'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='500'].aos-animate {
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='550'] [data-aos],
+[data-aos][data-aos][data-aos-duration='550'] {
+  -webkit-transition-duration: 550ms;
+          transition-duration: 550ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='550'] [data-aos],
+[data-aos][data-aos][data-aos-delay='550'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='550'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='550'].aos-animate {
+  -webkit-transition-delay: 550ms;
+          transition-delay: 550ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='600'] [data-aos],
+[data-aos][data-aos][data-aos-duration='600'] {
+  -webkit-transition-duration: 600ms;
+          transition-duration: 600ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='600'] [data-aos],
+[data-aos][data-aos][data-aos-delay='600'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='600'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='600'].aos-animate {
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='650'] [data-aos],
+[data-aos][data-aos][data-aos-duration='650'] {
+  -webkit-transition-duration: 650ms;
+          transition-duration: 650ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='650'] [data-aos],
+[data-aos][data-aos][data-aos-delay='650'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='650'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='650'].aos-animate {
+  -webkit-transition-delay: 650ms;
+          transition-delay: 650ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='700'] [data-aos],
+[data-aos][data-aos][data-aos-duration='700'] {
+  -webkit-transition-duration: 700ms;
+          transition-duration: 700ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='700'] [data-aos],
+[data-aos][data-aos][data-aos-delay='700'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='700'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='700'].aos-animate {
+  -webkit-transition-delay: 700ms;
+          transition-delay: 700ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='750'] [data-aos],
+[data-aos][data-aos][data-aos-duration='750'] {
+  -webkit-transition-duration: 750ms;
+          transition-duration: 750ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='750'] [data-aos],
+[data-aos][data-aos][data-aos-delay='750'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='750'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='750'].aos-animate {
+  -webkit-transition-delay: 750ms;
+          transition-delay: 750ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='800'] [data-aos],
+[data-aos][data-aos][data-aos-duration='800'] {
+  -webkit-transition-duration: 800ms;
+          transition-duration: 800ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='800'] [data-aos],
+[data-aos][data-aos][data-aos-delay='800'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='800'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='800'].aos-animate {
+  -webkit-transition-delay: 800ms;
+          transition-delay: 800ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='850'] [data-aos],
+[data-aos][data-aos][data-aos-duration='850'] {
+  -webkit-transition-duration: 850ms;
+          transition-duration: 850ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='850'] [data-aos],
+[data-aos][data-aos][data-aos-delay='850'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='850'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='850'].aos-animate {
+  -webkit-transition-delay: 850ms;
+          transition-delay: 850ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='900'] [data-aos],
+[data-aos][data-aos][data-aos-duration='900'] {
+  -webkit-transition-duration: 900ms;
+          transition-duration: 900ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='900'] [data-aos],
+[data-aos][data-aos][data-aos-delay='900'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='900'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='900'].aos-animate {
+  -webkit-transition-delay: 900ms;
+          transition-delay: 900ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='950'] [data-aos],
+[data-aos][data-aos][data-aos-duration='950'] {
+  -webkit-transition-duration: 950ms;
+          transition-duration: 950ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='950'] [data-aos],
+[data-aos][data-aos][data-aos-delay='950'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='950'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='950'].aos-animate {
+  -webkit-transition-delay: 950ms;
+          transition-delay: 950ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1000'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1000'] {
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1000'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1000'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1000'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1000'].aos-animate {
+  -webkit-transition-delay: 1000ms;
+          transition-delay: 1000ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1050'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1050'] {
+  -webkit-transition-duration: 1050ms;
+          transition-duration: 1050ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1050'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1050'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1050'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1050'].aos-animate {
+  -webkit-transition-delay: 1050ms;
+          transition-delay: 1050ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1100'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1100'] {
+  -webkit-transition-duration: 1100ms;
+          transition-duration: 1100ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1100'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1100'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1100'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1100'].aos-animate {
+  -webkit-transition-delay: 1100ms;
+          transition-delay: 1100ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1150'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1150'] {
+  -webkit-transition-duration: 1150ms;
+          transition-duration: 1150ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1150'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1150'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1150'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1150'].aos-animate {
+  -webkit-transition-delay: 1150ms;
+          transition-delay: 1150ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1200'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1200'] {
+  -webkit-transition-duration: 1200ms;
+          transition-duration: 1200ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1200'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1200'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1200'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1200'].aos-animate {
+  -webkit-transition-delay: 1200ms;
+          transition-delay: 1200ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1250'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1250'] {
+  -webkit-transition-duration: 1250ms;
+          transition-duration: 1250ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1250'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1250'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1250'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1250'].aos-animate {
+  -webkit-transition-delay: 1250ms;
+          transition-delay: 1250ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1300'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1300'] {
+  -webkit-transition-duration: 1300ms;
+          transition-duration: 1300ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1300'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1300'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1300'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1300'].aos-animate {
+  -webkit-transition-delay: 1300ms;
+          transition-delay: 1300ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1350'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1350'] {
+  -webkit-transition-duration: 1350ms;
+          transition-duration: 1350ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1350'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1350'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1350'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1350'].aos-animate {
+  -webkit-transition-delay: 1350ms;
+          transition-delay: 1350ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1400'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1400'] {
+  -webkit-transition-duration: 1400ms;
+          transition-duration: 1400ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1400'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1400'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1400'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1400'].aos-animate {
+  -webkit-transition-delay: 1400ms;
+          transition-delay: 1400ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1450'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1450'] {
+  -webkit-transition-duration: 1450ms;
+          transition-duration: 1450ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1450'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1450'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1450'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1450'].aos-animate {
+  -webkit-transition-delay: 1450ms;
+          transition-delay: 1450ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1500'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1500'] {
+  -webkit-transition-duration: 1500ms;
+          transition-duration: 1500ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1500'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1500'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1500'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1500'].aos-animate {
+  -webkit-transition-delay: 1500ms;
+          transition-delay: 1500ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1550'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1550'] {
+  -webkit-transition-duration: 1550ms;
+          transition-duration: 1550ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1550'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1550'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1550'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1550'].aos-animate {
+  -webkit-transition-delay: 1550ms;
+          transition-delay: 1550ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1600'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1600'] {
+  -webkit-transition-duration: 1600ms;
+          transition-duration: 1600ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1600'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1600'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1600'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1600'].aos-animate {
+  -webkit-transition-delay: 1600ms;
+          transition-delay: 1600ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1650'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1650'] {
+  -webkit-transition-duration: 1650ms;
+          transition-duration: 1650ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1650'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1650'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1650'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1650'].aos-animate {
+  -webkit-transition-delay: 1650ms;
+          transition-delay: 1650ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1700'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1700'] {
+  -webkit-transition-duration: 1700ms;
+          transition-duration: 1700ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1700'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1700'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1700'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1700'].aos-animate {
+  -webkit-transition-delay: 1700ms;
+          transition-delay: 1700ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1750'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1750'] {
+  -webkit-transition-duration: 1750ms;
+          transition-duration: 1750ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1750'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1750'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1750'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1750'].aos-animate {
+  -webkit-transition-delay: 1750ms;
+          transition-delay: 1750ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1800'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1800'] {
+  -webkit-transition-duration: 1800ms;
+          transition-duration: 1800ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1800'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1800'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1800'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1800'].aos-animate {
+  -webkit-transition-delay: 1800ms;
+          transition-delay: 1800ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1850'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1850'] {
+  -webkit-transition-duration: 1850ms;
+          transition-duration: 1850ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1850'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1850'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1850'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1850'].aos-animate {
+  -webkit-transition-delay: 1850ms;
+          transition-delay: 1850ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1900'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1900'] {
+  -webkit-transition-duration: 1900ms;
+          transition-duration: 1900ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1900'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1900'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1900'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1900'].aos-animate {
+  -webkit-transition-delay: 1900ms;
+          transition-delay: 1900ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='1950'] [data-aos],
+[data-aos][data-aos][data-aos-duration='1950'] {
+  -webkit-transition-duration: 1950ms;
+          transition-duration: 1950ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1950'] [data-aos],
+[data-aos][data-aos][data-aos-delay='1950'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='1950'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='1950'].aos-animate {
+  -webkit-transition-delay: 1950ms;
+          transition-delay: 1950ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2000'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2000'] {
+  -webkit-transition-duration: 2000ms;
+          transition-duration: 2000ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2000'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2000'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2000'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2000'].aos-animate {
+  -webkit-transition-delay: 2000ms;
+          transition-delay: 2000ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2050'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2050'] {
+  -webkit-transition-duration: 2050ms;
+          transition-duration: 2050ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2050'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2050'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2050'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2050'].aos-animate {
+  -webkit-transition-delay: 2050ms;
+          transition-delay: 2050ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2100'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2100'] {
+  -webkit-transition-duration: 2100ms;
+          transition-duration: 2100ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2100'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2100'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2100'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2100'].aos-animate {
+  -webkit-transition-delay: 2100ms;
+          transition-delay: 2100ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2150'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2150'] {
+  -webkit-transition-duration: 2150ms;
+          transition-duration: 2150ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2150'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2150'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2150'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2150'].aos-animate {
+  -webkit-transition-delay: 2150ms;
+          transition-delay: 2150ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2200'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2200'] {
+  -webkit-transition-duration: 2200ms;
+          transition-duration: 2200ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2200'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2200'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2200'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2200'].aos-animate {
+  -webkit-transition-delay: 2200ms;
+          transition-delay: 2200ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2250'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2250'] {
+  -webkit-transition-duration: 2250ms;
+          transition-duration: 2250ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2250'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2250'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2250'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2250'].aos-animate {
+  -webkit-transition-delay: 2250ms;
+          transition-delay: 2250ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2300'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2300'] {
+  -webkit-transition-duration: 2300ms;
+          transition-duration: 2300ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2300'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2300'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2300'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2300'].aos-animate {
+  -webkit-transition-delay: 2300ms;
+          transition-delay: 2300ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2350'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2350'] {
+  -webkit-transition-duration: 2350ms;
+          transition-duration: 2350ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2350'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2350'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2350'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2350'].aos-animate {
+  -webkit-transition-delay: 2350ms;
+          transition-delay: 2350ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2400'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2400'] {
+  -webkit-transition-duration: 2400ms;
+          transition-duration: 2400ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2400'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2400'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2400'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2400'].aos-animate {
+  -webkit-transition-delay: 2400ms;
+          transition-delay: 2400ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2450'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2450'] {
+  -webkit-transition-duration: 2450ms;
+          transition-duration: 2450ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2450'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2450'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2450'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2450'].aos-animate {
+  -webkit-transition-delay: 2450ms;
+          transition-delay: 2450ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2500'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2500'] {
+  -webkit-transition-duration: 2500ms;
+          transition-duration: 2500ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2500'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2500'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2500'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2500'].aos-animate {
+  -webkit-transition-delay: 2500ms;
+          transition-delay: 2500ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2550'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2550'] {
+  -webkit-transition-duration: 2550ms;
+          transition-duration: 2550ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2550'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2550'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2550'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2550'].aos-animate {
+  -webkit-transition-delay: 2550ms;
+          transition-delay: 2550ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2600'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2600'] {
+  -webkit-transition-duration: 2600ms;
+          transition-duration: 2600ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2600'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2600'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2600'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2600'].aos-animate {
+  -webkit-transition-delay: 2600ms;
+          transition-delay: 2600ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2650'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2650'] {
+  -webkit-transition-duration: 2650ms;
+          transition-duration: 2650ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2650'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2650'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2650'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2650'].aos-animate {
+  -webkit-transition-delay: 2650ms;
+          transition-delay: 2650ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2700'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2700'] {
+  -webkit-transition-duration: 2700ms;
+          transition-duration: 2700ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2700'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2700'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2700'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2700'].aos-animate {
+  -webkit-transition-delay: 2700ms;
+          transition-delay: 2700ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2750'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2750'] {
+  -webkit-transition-duration: 2750ms;
+          transition-duration: 2750ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2750'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2750'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2750'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2750'].aos-animate {
+  -webkit-transition-delay: 2750ms;
+          transition-delay: 2750ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2800'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2800'] {
+  -webkit-transition-duration: 2800ms;
+          transition-duration: 2800ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2800'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2800'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2800'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2800'].aos-animate {
+  -webkit-transition-delay: 2800ms;
+          transition-delay: 2800ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2850'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2850'] {
+  -webkit-transition-duration: 2850ms;
+          transition-duration: 2850ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2850'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2850'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2850'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2850'].aos-animate {
+  -webkit-transition-delay: 2850ms;
+          transition-delay: 2850ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2900'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2900'] {
+  -webkit-transition-duration: 2900ms;
+          transition-duration: 2900ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2900'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2900'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2900'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2900'].aos-animate {
+  -webkit-transition-delay: 2900ms;
+          transition-delay: 2900ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='2950'] [data-aos],
+[data-aos][data-aos][data-aos-duration='2950'] {
+  -webkit-transition-duration: 2950ms;
+          transition-duration: 2950ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2950'] [data-aos],
+[data-aos][data-aos][data-aos-delay='2950'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='2950'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='2950'].aos-animate {
+  -webkit-transition-delay: 2950ms;
+          transition-delay: 2950ms;
+}
+
+/* line 4, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-duration='3000'] [data-aos],
+[data-aos][data-aos][data-aos-duration='3000'] {
+  -webkit-transition-duration: 3000ms;
+          transition-duration: 3000ms;
+}
+
+/* line 9, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='3000'] [data-aos],
+[data-aos][data-aos][data-aos-delay='3000'] {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+
+/* line 13, node_modules/aos/src/sass/_core.scss */
+
+body[data-aos-delay='3000'] [data-aos].aos-animate,
+[data-aos][data-aos][data-aos-delay='3000'].aos-animate {
+  -webkit-transition-delay: 3000ms;
+          transition-delay: 3000ms;
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="linear"] [data-aos],
+[data-aos][data-aos][data-aos-easing="linear"] {
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+          transition-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease"] {
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+          transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in"] {
+  -webkit-transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+          transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-out"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-out"] {
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+          transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-out"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-out"] {
+  -webkit-transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+          transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-back"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-back"] {
+  -webkit-transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+          transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-out-back"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-out-back"] {
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-out-back"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-out-back"] {
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-sine"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-sine"] {
+  -webkit-transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+          transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-out-sine"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-out-sine"] {
+  -webkit-transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-out-sine"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-out-sine"] {
+  -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-quad"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-quad"] {
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-out-quad"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-out-quad"] {
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-out-quad"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-out-quad"] {
+  -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-cubic"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-out-cubic"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-out-cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-out-cubic"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-out-cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-quart"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-quart"] {
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+          transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-out-quart"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-out-quart"] {
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* line 35, node_modules/aos/src/sass/_easing.scss */
+
+body[data-aos-easing="ease-in-out-quart"] [data-aos],
+[data-aos][data-aos][data-aos-easing="ease-in-out-quart"] {
+  -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+/**
+ * Fade animations:
+ * fade
+ * fade-up, fade-down, fade-left, fade-right
+ * fade-up-right, fade-up-left, fade-down-right, fade-down-left
+ */
+
+/* line 14, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos^='fade'][data-aos^='fade'] {
+  opacity: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+
+/* line 18, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos^='fade'][data-aos^='fade'].aos-animate {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+/* line 24, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='fade-up'] {
+  -webkit-transform: translate3d(0, 100px, 0);
+          transform: translate3d(0, 100px, 0);
+}
+
+/* line 28, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='fade-down'] {
+  -webkit-transform: translate3d(0, -100px, 0);
+          transform: translate3d(0, -100px, 0);
+}
+
+/* line 32, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='fade-right'] {
+  -webkit-transform: translate3d(-100px, 0, 0);
+          transform: translate3d(-100px, 0, 0);
+}
+
+/* line 36, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='fade-left'] {
+  -webkit-transform: translate3d(100px, 0, 0);
+          transform: translate3d(100px, 0, 0);
+}
+
+/* line 40, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='fade-up-right'] {
+  -webkit-transform: translate3d(-100px, 100px, 0);
+          transform: translate3d(-100px, 100px, 0);
+}
+
+/* line 44, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='fade-up-left'] {
+  -webkit-transform: translate3d(100px, 100px, 0);
+          transform: translate3d(100px, 100px, 0);
+}
+
+/* line 48, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='fade-down-right'] {
+  -webkit-transform: translate3d(-100px, -100px, 0);
+          transform: translate3d(-100px, -100px, 0);
+}
+
+/* line 52, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='fade-down-left'] {
+  -webkit-transform: translate3d(100px, -100px, 0);
+          transform: translate3d(100px, -100px, 0);
+}
+
+/**
+ * Zoom animations:
+ * zoom-in, zoom-in-up, zoom-in-down, zoom-in-left, zoom-in-right
+ * zoom-out, zoom-out-up, zoom-out-down, zoom-out-left, zoom-out-right
+ */
+
+/* line 65, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos^='zoom'][data-aos^='zoom'] {
+  opacity: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+
+/* line 69, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos^='zoom'][data-aos^='zoom'].aos-animate {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+          transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* line 75, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='zoom-in'] {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+/* line 79, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='zoom-in-up'] {
+  -webkit-transform: translate3d(0, 100px, 0) scale(0.6);
+          transform: translate3d(0, 100px, 0) scale(0.6);
+}
+
+/* line 83, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='zoom-in-down'] {
+  -webkit-transform: translate3d(0, -100px, 0) scale(0.6);
+          transform: translate3d(0, -100px, 0) scale(0.6);
+}
+
+/* line 87, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='zoom-in-right'] {
+  -webkit-transform: translate3d(-100px, 0, 0) scale(0.6);
+          transform: translate3d(-100px, 0, 0) scale(0.6);
+}
+
+/* line 91, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='zoom-in-left'] {
+  -webkit-transform: translate3d(100px, 0, 0) scale(0.6);
+          transform: translate3d(100px, 0, 0) scale(0.6);
+}
+
+/* line 95, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='zoom-out'] {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* line 99, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='zoom-out-up'] {
+  -webkit-transform: translate3d(0, 100px, 0) scale(1.2);
+          transform: translate3d(0, 100px, 0) scale(1.2);
+}
+
+/* line 103, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='zoom-out-down'] {
+  -webkit-transform: translate3d(0, -100px, 0) scale(1.2);
+          transform: translate3d(0, -100px, 0) scale(1.2);
+}
+
+/* line 107, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='zoom-out-right'] {
+  -webkit-transform: translate3d(-100px, 0, 0) scale(1.2);
+          transform: translate3d(-100px, 0, 0) scale(1.2);
+}
+
+/* line 111, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='zoom-out-left'] {
+  -webkit-transform: translate3d(100px, 0, 0) scale(1.2);
+          transform: translate3d(100px, 0, 0) scale(1.2);
+}
+
+/**
+ * Slide animations
+ */
+
+/* line 122, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos^='slide'][data-aos^='slide'] {
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+/* line 125, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos^='slide'][data-aos^='slide'].aos-animate {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+/* line 130, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='slide-up'] {
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+
+/* line 134, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='slide-down'] {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+
+/* line 138, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='slide-right'] {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+}
+
+/* line 142, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='slide-left'] {
+  -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+/**
+ * Flip animations:
+ * flip-left, flip-right, flip-up, flip-down
+ */
+
+/* line 154, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos^='flip'][data-aos^='flip'] {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+/* line 159, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='flip-left'] {
+  -webkit-transform: perspective(2500px) rotateY(-100deg);
+          transform: perspective(2500px) rotateY(-100deg);
+}
+
+/* line 161, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='flip-left'].aos-animate {
+  -webkit-transform: perspective(2500px) rotateY(0);
+          transform: perspective(2500px) rotateY(0);
+}
+
+/* line 164, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='flip-right'] {
+  -webkit-transform: perspective(2500px) rotateY(100deg);
+          transform: perspective(2500px) rotateY(100deg);
+}
+
+/* line 166, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='flip-right'].aos-animate {
+  -webkit-transform: perspective(2500px) rotateY(0);
+          transform: perspective(2500px) rotateY(0);
+}
+
+/* line 169, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='flip-up'] {
+  -webkit-transform: perspective(2500px) rotateX(-100deg);
+          transform: perspective(2500px) rotateX(-100deg);
+}
+
+/* line 171, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='flip-up'].aos-animate {
+  -webkit-transform: perspective(2500px) rotateX(0);
+          transform: perspective(2500px) rotateX(0);
+}
+
+/* line 174, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='flip-down'] {
+  -webkit-transform: perspective(2500px) rotateX(100deg);
+          transform: perspective(2500px) rotateX(100deg);
+}
+
+/* line 176, node_modules/aos/src/sass/_animations.scss */
+
+[data-aos='flip-down'].aos-animate {
+  -webkit-transform: perspective(2500px) rotateX(0);
+          transform: perspective(2500px) rotateX(0);
 }
 
 
