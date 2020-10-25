@@ -34,15 +34,12 @@ if (!function_exists('woocommerce_get_product_thumbnail')) {
 	function woocommerce_get_product_thumbnail($size = 'shop_catalog')
 	{
 		global $post, $woocommerce, $product;
-		$specific_labels = get_field('specific_product_label');
+		$new_label = get_field('new');
+		$lead_label = get_field('lead_sale');
 		$output = '<div class="thumbnail-wrapper">';
 		$output .= '<div class="top-labels labels-list">';
-		if ($specific_labels):
-			foreach ($specific_labels as $label):
-				if ($label == 'new'):
-					$output .= '<span class="product-label">' . __('New', THEME_TD) . '</span>';
-				endif;
-			endforeach;
+		if ($new_label):
+			$output .= '<span class="product-label">' . __('New', THEME_TD) . '</span>';
 		endif;
 		if ($product->is_on_sale()):
 			$regular_price = $product->get_regular_price();
@@ -58,12 +55,8 @@ if (!function_exists('woocommerce_get_product_thumbnail')) {
 			$output .= wc_placeholder_img($size);
 		}
 		$output .= '<div class="bottom-labels labels-list">';
-		if ($specific_labels):
-			foreach ($specific_labels as $label):
-				if ($label == 'lead_sale'):
-					$output .= '<span class="product-label">' . __('Лидер повторных покупок', THEME_TD) . '</span>';
-				endif;
-			endforeach;
+		if ($lead_label):
+			$output .= '<span class="product-label">' . __('Лидер повторных покупок', THEME_TD) . '</span>';
 		endif;
 		$output .= '</div>';
 		$output .= '</div>';

@@ -4,7 +4,49 @@ add_action('wp_ajax_nopriv_filters_ajax', 'filters_ajax');
 
 function filters_ajax()
 {
-	$ppp = 4;
+	$ppp = 24;
+
+	if ($_POST['order'] !== 'false'):
+		$orderby = $_POST['order'];
+		switch ($orderby):
+			case 'popular' :
+				$orderby =  array(
+					'meta_key' => 'total_sales',
+					'orderby' => 'meta_value_num',
+					'order' => 'DESC',
+				);
+				break;
+			case 'news' :
+				$orderby = array(
+					'meta_key' => 'new',
+					'orderby' => 'meta_value_num',
+					'order' => 'DESC',
+				);
+				break;
+			case 'price_desc' :
+				$orderby = array(
+					'orderby' => 'meta_value_num',
+					'meta_key' => '_price',
+					'order' => 'DESC',
+				);
+				break;
+			case  'price_asc' :
+				$orderby =  array(
+					'orderby' => 'meta_value_num',
+					'meta_key' => '_price',
+					'order' => 'ASC',
+				);
+				break;
+			default :
+				$orderby =  array(
+					'meta_key' => 'total_sales',
+					'orderby' => 'meta_value_num',
+					'order' => 'DESC',
+				);
+				break;
+		endswitch;
+
+	endif;
 
 	if ($_POST['loadmore'] === 'true'):
 		$paged = $_POST['page'] + 1;
@@ -50,6 +92,8 @@ function filters_ajax()
 			'post_type' => 'product',
 			'posts_per_page' => $ppp, // must be 36
 			'paged' => $paged,
+			'post_status' => 'publish',
+			'ignore_sticky_posts' => 1,
 			'tax_query' => array(
 				'relation' => $relation,
 				(!empty($terms_array['product_type'])) ? $product_type_tax : '',
@@ -63,9 +107,15 @@ function filters_ajax()
 		$filter_args = array(
 			'post_type' => 'product',
 			'posts_per_page' => $ppp, // must be 36
-			'order' => 'DESC',
-			'paged' => $paged);
+			'paged' => $paged,
+			'post_status' => 'publish',
+			'ignore_sticky_posts' => 1,
+		);
 	endif;
+	if ($orderby !== '' && $orderby !== 'false') {
+//		$filter_args['meta_query'] = $orderby;
+		$filter_args = array_merge($filter_args, $orderby);
+	}
 
 	$query = new WP_Query($filter_args);
 	$in_stock_counter = 0;
@@ -105,13 +155,11 @@ function filters_ajax()
 	));
 	?>
 	<?php if (is_array($pages)):
-	echo '<ul class="pagination-product__list">';
 	$i = 1;
 	foreach ($pages as $page) {
 		echo "<li data-num=" . $i . ">$page</li>";
 		$i++;
-	}
-	echo '</ul>'; ?>
+	} ?>
 <?php endif; ?>
 	<?php
 	$pagination = ob_get_clean();
@@ -128,6 +176,43 @@ function filters_ajax()
 //		echo '</pre>';
 	$products_html = ob_get_clean();
 
+
+//	//get sidebar results
+//	if (!empty($_POST['form'])) {
+//		$results = [];
+//		$brands_products_ids = [];
+//		$products_brand = get_posts($filter_args);
+//		foreach ($products_brand as $post) {
+//			$brands_products_ids[] = $post->ID;
+//		}
+//		$counted_taxes = ['cos_brands', 'cos_countries', 'cos_product_types'];
+//		foreach ($counted_taxes as $tax) {
+//			$termCounts = array_map(function ($i) use ($tax) {
+//				return wp_get_post_terms($i, $tax);
+//			}, $brands_products_ids);
+//
+//			$flat = array_merge(...$termCounts);
+//			$t_ids = array_map(function ($term) {
+//				return $term->term_id;
+//			}, $flat);
+//			$counted = array_reduce($t_ids, function (&$acc, $i) {
+//
+//
+//				if (!isset($acc[$i])) {
+//					$acc[$i] = 1;
+//				} else {
+//					$acc[$i] = ++$acc[$i];
+//				}
+//				return $acc;
+//			}, []);
+//			array_push($results, $counted);
+//		}
+//
+//	}
+//	echo '<pre>';
+//	error_log(print_r($results, true));
+//	echo '</pre>';
+
 	wp_send_json(array(
 		'products_html' => $products_html,
 		'stock_quantity' => $in_stock_counter,
@@ -136,7 +221,7 @@ function filters_ajax()
 		'total_count' => $total_count,
 		'current_page' => $paged,
 		'found_posts' => $founded_posts,
-		'max_page' => $query->max_num_pages
+		'max_page' => $query->max_num_pages,
 	));
 
 

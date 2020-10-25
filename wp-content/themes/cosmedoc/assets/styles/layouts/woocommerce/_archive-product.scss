@@ -40,20 +40,28 @@
       }
 
       &--select {
+        position: relative;
         &::after {
-          background: transparent url("assets/images/cosmedoc.svg") no-repeat;
+          content: '';
+          background: transparent url("assets/images/select-arrow.svg") no-repeat;
           background-position: right center;
+          width: 29px;
+          height: 10px;
+          position: absolute;
+          bottom: 15px;
+          right: 0;
         }
 
         select {
           border: none;
           border-bottom: 1px solid #d8d8d8;
-          padding-right: 14px;
+          padding-right: 18px;
           font-size: 14px;
           padding-bottom: 0;
           height: 28px;
           margin-bottom: 9px;
           color: #363636;
+          background-image: none;
 
           &:focus {
             outline: none;
@@ -277,9 +285,10 @@
 }
 
 .load-container {
-  max-width: 313px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto 20px;
+
 
   .cosmedoc-btn {
     margin: 20px 0;
@@ -287,6 +296,7 @@
     color: #363636 !important;
     border-color: #363636 !important;
     width: 100%;
+    max-width: 313px;
     line-height: 36px;
   }
 }

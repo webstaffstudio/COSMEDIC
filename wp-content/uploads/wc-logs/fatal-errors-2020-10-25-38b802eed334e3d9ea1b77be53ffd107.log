@@ -1,0 +1,66 @@
+2020-10-25T09:21:59+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
+
+2020-10-25T09:22:13+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
+
+2020-10-25T09:22:14+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
+
+2020-10-25T09:22:16+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
+
+2020-10-25T09:22:34+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
+
+2020-10-25T09:22:37+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
+
+2020-10-25T11:14:53+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 83
+
+2020-10-25T11:14:53+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 83
+
+2020-10-25T13:36:12+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:36:12+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:36:20+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:36:22+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:36:41+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:36:43+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:37:01+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:37:04+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:37:12+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:37:21+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:37:25+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:37:42+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:37:46+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:38:02+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:38:07+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:38:22+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:38:28+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T13:38:43+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
+
+2020-10-25T15:50:13+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 91
+
+2020-10-25T15:50:16+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 91
+
+2020-10-25T15:56:58+00:00 CRITICAL syntax error, unexpected ''order'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 73
+
+2020-10-25T16:07:10+00:00 CRITICAL syntax error, unexpected '=', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 74
+
+2020-10-25T16:07:23+00:00 CRITICAL syntax error, unexpected '=', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 74
+
+2020-10-25T16:07:24+00:00 CRITICAL syntax error, unexpected '=', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 74
+
+2020-10-25T16:07:43+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 84
+

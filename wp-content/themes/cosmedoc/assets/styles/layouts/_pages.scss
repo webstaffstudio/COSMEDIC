@@ -124,12 +124,22 @@
   width: 100%;
   padding: 90px 0 45px;
 
+  .grid-container {
+    overflow: hidden;
+  }
+
   &__list {
     display: flex;
+    padding: 0 40px;
+
+    @include mq(0, 767) {
+      padding: 0;
+    }
 
     .slick-list {
-      margin-right: -40px;
+      margin-right: -20px;
     }
+
 
     .slick-slide {
       margin-right: 20px;
@@ -139,28 +149,41 @@
     .slick-next {
       width: 27px;
       height: 44px;
-      background-repeat: no-repeat;
+      background-repeat: no-repeat !important;
       z-index: 3;
       top: 40%;
 
       &::before {
         display: none;
       }
+
     }
 
     .slick-next {
-      right: -97px;
+      right: 0px;
       background-image: url("assets/images/slider-next-light.svg");
+
+      &:hover, &:focus {
+        background-image: url("assets/images/slider-next-light.svg");
+      }
     }
 
     .slick-prev {
       background-image: url("assets/images/slider-prev-light.svg");
-      left: -73px;
+      left: 0px;
+
+      &:hover, &:focus {
+        background-image: url("assets/images/slider-prev-light.svg");
+      }
     }
 
     &--product {
       max-width: 340px;
       width: 100%;
+
+      @include mq(0, 1023) {
+        max-width: 100%;
+      }
 
       .product__thumbnail {
         display: block;
@@ -199,6 +222,12 @@
         }
       }
 
+      .product-descr {
+        .cosmedoc-btn {
+          width: 100%;
+        }
+      }
+
       .product__price {
         font-size: 18px;
         color: #363636;
@@ -223,5 +252,9 @@
         }
       }
     }
+  }
+
+  .slick-dots {
+    margin-top: 30px;
   }
 }

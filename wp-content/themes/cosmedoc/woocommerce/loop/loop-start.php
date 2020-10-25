@@ -38,9 +38,9 @@ if ($total_count < $product_founded) {
 				<div class="catalog-navigation__order--select">
 					<select name="order_product" id="order_product">
 						<option value="popular"><?= __('Популярности', THEME_TD); ?></option>
-						<option value="popular"><?= __('Новинкам', THEME_TD); ?></option>
-						<option value="popular"><?= __('Возрастанию цены', THEME_TD); ?></option>
-						<option value="popular"><?= __('Убыванию цены', THEME_TD); ?></option>
+						<option value="news"><?= __('Новинкам', THEME_TD); ?></option>
+						<option value="price_asc"><?= __('Возрастанию цены', THEME_TD); ?></option>
+						<option value="price_desc"><?= __('Убыванию цены', THEME_TD); ?></option>
 					</select>
 				</div>
 			</div>

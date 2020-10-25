@@ -5,10 +5,33 @@
       display: none;
     }
 
+    .product {
+      @include mq(0, 991) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
     .woocommerce-product-gallery {
       max-width: 720px;
       width: 100% !important;
       height: 720px;
+
+      @include mq(0, 1210) {
+        max-width: 600px;
+      }
+      @include mq(0, 1100) {
+        max-width: 575px;
+        height: 526px;
+      }
+      @include mq(0, 1070) {
+        max-width: 500px;
+      }
+      @include mq(0, 991) {
+        height: 100%;
+        max-width: 100%;
+        overflow: hidden;
+      }
 
       .woocommerce-product-gallery__image {
         position: relative;
@@ -26,9 +49,20 @@
 
       figure {
         position: relative;
+
+        img {
+          @include mq(0, 991) {
+            height: 560px !important;
+            object-fit: contain;
+          }
+        }
       }
 
       .slick-slider {
+        @include mq(0, 991) {
+          padding: 0;
+        }
+
         a {
           pointer-events: none;
         }
@@ -85,6 +119,14 @@
       display: flex;
       flex-direction: column;
       padding: 140px 0;
+      @include mq(0, 1100) {
+        padding-bottom: 20px;
+      }
+      @include mq(0, 991) {
+        padding: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
 
       h1,
       h2.product-subtitle {
@@ -180,6 +222,9 @@
       max-width: 670px;
       width: 100%;
       margin: 0 auto;
+      @include mq(0, 991) {
+        max-width: 100%;
+      }
 
       p {
         font-size: 14px;
@@ -190,9 +235,15 @@
         color: #c7c6c4;
         display: flex;
 
+        a[rel="tag"] {
+          pointer-events: none;
+          cursor: default;
+        }
+
         p {
           margin-bottom: 4px;
           margin-right: 5px;
+          color: #363636;
         }
       }
 
@@ -222,6 +273,9 @@
       max-width: 670px;
       width: 100%;
       margin: 30px auto 0;
+      @include mq(0, 991) {
+        max-width: 100%;
+      }
 
       &__item {
         font-size: 14px;
@@ -270,6 +324,31 @@
         }
       }
     }
+
+    .cross-sale {
+      @include mq(0, 991) {
+        padding: 20px 0 45px;
+      }
+    }
+    form.cart {
+      @include mq (0, 991) {
+        display: flex;
+      }
+      .tinv-wraper {
+        display: none;
+      }
+    }
+
+    .woocommerce-product-gallery__wrapper {
+      @include mq(0, 991) {
+        height: 575px;
+      }
+    }
+
+    .woocommerce-message, .woocommerce-error {
+      margin-top: 80px;
+    }
+
   }
 
   .footer-container {

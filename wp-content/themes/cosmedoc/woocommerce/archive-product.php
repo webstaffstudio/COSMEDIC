@@ -65,11 +65,16 @@ do_action('woocommerce_before_main_content');
 		<?php
 		global $wp_query;
 		$ppp = 6;
-		$product_args =  array(
+		$product_args = array(
 			'post_type' => 'product',
 			'posts_per_page' => $ppp, // must be 36
-			'order' => 'DESC');
-			$product_query = new WP_Query($product_args);
+			'post_status' => 'publish',
+			'ignore_sticky_posts' => 1,
+			'meta_key' => 'total_sales',
+			'orderby' => 'meta_value_num',
+			);
+
+		$product_query = new WP_Query($product_args);
 		$count_posts = $product_query->post_count;
 		set_query_var('product_pp', $ppp);
 		set_query_var('product_count', $count_posts);
@@ -152,12 +157,11 @@ do_action('woocommerce_before_main_content');
 	</div>
 <?php
 $big = 999999999; // need an unlikely integer
-global $wp_query;
 $pages = paginate_links(array(
 	'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
 	'format' => '?paged=%#%',
 	'current' => max(1, get_query_var('paged')),
-	'total' => $wp_query->max_num_pages,
+	'total' => $product_query->max_num_pages,
 	'type' => 'array',
 ));
 ?>

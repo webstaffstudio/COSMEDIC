@@ -57,3 +57,5 @@ function discount_percent($regular_price, $sale_price) {
 	$result = 100 * ($regular_price - $sale_price) / $sale_price;
 	return intval ($result);
 }
+
+

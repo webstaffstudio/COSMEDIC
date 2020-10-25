@@ -60,7 +60,7 @@ if (!is_active_sidebar('sidebar-1')) {
 					style="display: none;">
 					<?php foreach ($brands as $brand):
 						$term_id = $brand->term_id; ?>
-						<li id="brand-box">
+						<li class="brand-box" data-action="brand" data-term="<?= $term_id; ?>">
 							<label for="brand_<?= $term_id; ?>">
 								<input class="filter-item" data-filterbox="brand" type="checkbox" name="brand_<?= $term_id; ?>" value="<?= $term_id ?>"
 									   id="brand_<?= $term_id ?>">
