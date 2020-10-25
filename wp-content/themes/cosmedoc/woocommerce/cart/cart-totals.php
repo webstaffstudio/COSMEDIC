@@ -22,13 +22,12 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h2>
 
 	<div class="shop_table shop_table_responsive">
 
 		<div class="cart-subtotal">
-			<span><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></span>
-			<span data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></span>
+			<span><?php esc_html_e( 'Итого', THEME_TD ); ?></span>
+			<span data-title="<?php esc_attr_e( 'Итого', THEME_TD ); ?>"><?php wc_cart_totals_subtotal_html(); ?></span>
 		</div>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -95,8 +94,8 @@ defined( 'ABSPATH' ) || exit;
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
 		<div class="order-total">
-			<span><?php esc_html_e( 'Total', 'woocommerce' ); ?></span>
-			<span data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></span>
+			<span><?php esc_html_e( 'Всего к оплате', THEME_TD ); ?></span>
+			<span data-title="<?php esc_attr_e( 'Всего к оплате', THEME_TD ); ?>"><?php wc_cart_totals_order_total_html(); ?></span>
 		</div>
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>

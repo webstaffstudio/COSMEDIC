@@ -1,66 +1,29 @@
-2020-10-25T09:21:59+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
+2020-10-25T10:57:03+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php on line 221 and at least 2 expected in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php:583
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php(221): remove_action('woocommerce_cro...')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+ in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php on line 583
 
-2020-10-25T09:22:13+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
+2020-10-25T15:45:28+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php:29
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(283): load_template('C:\\OSPanel\\doma...', false)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cross-sells.php(38): wc_get_template_part('content', 'product')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2100): wc_get_template('cart/cross-sell...', Array)
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php(175): woocommerce_cross_sell_display(6, 1)
+#6 C:\OSPanel\dom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php on line 29
 
-2020-10-25T09:22:14+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
-
-2020-10-25T09:22:16+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
-
-2020-10-25T09:22:34+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
-
-2020-10-25T09:22:37+00:00 CRITICAL Cannot redeclare wpse_139269_term_radio_checklist() (previously declared in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-brands-tax.php:36) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-countries-tax.php on line 64
-
-2020-10-25T11:14:53+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 83
-
-2020-10-25T11:14:53+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 83
-
-2020-10-25T13:36:12+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:36:12+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:36:20+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:36:22+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:36:41+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:36:43+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:37:01+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:37:04+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:37:12+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:37:21+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:37:25+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:37:42+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:37:46+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:38:02+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:38:07+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:38:22+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:38:28+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T13:38:43+00:00 CRITICAL syntax error, unexpected '$brands_products_ids' (T_VARIABLE) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 175
-
-2020-10-25T15:50:13+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 91
-
-2020-10-25T15:50:16+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 91
-
-2020-10-25T15:56:58+00:00 CRITICAL syntax error, unexpected ''order'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 73
-
-2020-10-25T16:07:10+00:00 CRITICAL syntax error, unexpected '=', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 74
-
-2020-10-25T16:07:23+00:00 CRITICAL syntax error, unexpected '=', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 74
-
-2020-10-25T16:07:24+00:00 CRITICAL syntax error, unexpected '=', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 74
-
-2020-10-25T16:07:43+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 84
+2020-10-25T15:45:34+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php:29
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(283): load_template('C:\\OSPanel\\doma...', false)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cross-sells.php(38): wc_get_template_part('content', 'product')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2100): wc_get_template('cart/cross-sell...', Array)
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php(175): woocommerce_cross_sell_display(6, 1)
+#6 C:\OSPanel\dom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php on line 29
 

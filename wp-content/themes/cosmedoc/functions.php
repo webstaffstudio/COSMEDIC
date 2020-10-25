@@ -35,6 +35,7 @@ $theme_includes = array(
 	'/lib/woo-customizations/woo-mini-cart.php',        // Ajax mini cart
 	'/lib/woo-customizations/woo-archive.php',        // archive page
 	'/lib/woo-customizations/woo-filters.php',        // ajax filters handler
+	'/lib/woo-customizations/woo-cart.php',        // Cart gift customizer
 );
 
 foreach ($theme_includes as $file) {

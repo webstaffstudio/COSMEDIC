@@ -1,29 +1,161 @@
-2020-10-24T11:56:10+00:00 CRITICAL syntax error, unexpected '}' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 110
-
-2020-10-24T11:56:11+00:00 CRITICAL syntax error, unexpected '}' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 110
-
-2020-10-24T11:56:11+00:00 CRITICAL syntax error, unexpected '}' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 110
-
-2020-10-24T11:56:11+00:00 CRITICAL syntax error, unexpected '}' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 110
-
-2020-10-24T11:56:12+00:00 CRITICAL syntax error, unexpected '}' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 110
-
-2020-10-24T11:56:12+00:00 CRITICAL syntax error, unexpected '}' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 110
-
-2020-10-24T11:56:13+00:00 CRITICAL syntax error, unexpected '}' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 110
-
-2020-10-24T11:56:14+00:00 CRITICAL syntax error, unexpected '}' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 110
-
-2020-10-24T12:14:29+00:00 CRITICAL Uncaught Error: Cannot unpack array with string keys in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php:109
+2020-10-24T15:24:55+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php:129
 Stack trace:
-#0 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): filters_ajax('')
-#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
-#2 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
-#3 D:\OSPanel\domains\cosmedic\wp-admin\admin-ajax.php(191): do_action('wp_ajax_nopriv_...')
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(343): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(wooc in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php on line 129
+
+2020-10-24T15:59:20+00:00 CRITICAL Uncaught Error: Call to undefined function woo_in_cart() in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php:138
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(343): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(woocom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php on line 138
+
+2020-10-24T16:00:30+00:00 CRITICAL Uncaught Error: Call to undefined function woo_in_cart() in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php:138
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(343): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(woocom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php on line 138
+
+2020-10-24T16:01:13+00:00 CRITICAL Uncaught Error: Call to undefined function woo_in_cart() in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php:138
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(343): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(woocom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php on line 138
+
+2020-10-24T16:01:23+00:00 CRITICAL Uncaught Error: Call to undefined function woo_in_cart() in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php:138
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(343): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(woocom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php on line 138
+
+2020-10-24T16:01:33+00:00 CRITICAL Uncaught Error: Call to undefined function woo_in_cart() in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php:138
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(343): WC_Shortcodes::cart('', '', 'woocommerce_car...')
+#5 [internal function]: do_shortcode_tag(Array)
+#6 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\shortcodes.php(218): preg_replace_callback('/\\[(\\[?)(woocom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php on line 138
+
+2020-10-24T18:09:54+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:02+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:02+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:03+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:06+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:23+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:23+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:24+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:28+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:32+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:44+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:44+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:45+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:49+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:53+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:54+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:10:55+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:05+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:05+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:06+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:10+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:26+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:26+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:27+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:31+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:47+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:47+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:49+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:11:52+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:08+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:08+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:10+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:13+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:29+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:29+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:31+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:33+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:34+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:50+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:50+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:52+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:12:55+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:13:11+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:13:11+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:13:13+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T18:13:16+00:00 CRITICAL syntax error, unexpected ',' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 19
+
+2020-10-24T19:07:05+00:00 CRITICAL Uncaught Error: Call to a member function set_price() on string in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php:37
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): add_gift_product('')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-admin\admin-ajax.php(191): do_action('wp_ajax_nopriv_...')
 #4 {main}
-  thrown in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 109
-
-2020-10-24T12:47:24+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 78
-
-2020-10-24T12:47:28+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 78
+  thrown in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 37
 
