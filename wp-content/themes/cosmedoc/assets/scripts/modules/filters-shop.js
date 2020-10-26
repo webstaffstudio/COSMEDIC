@@ -21,6 +21,7 @@ jQuery(document).ready(function () {
 				order: order_params,
 				action: "filters_ajax",
 				loadmore: loadmore,
+				is_category: themeVars.is_category,
 			},
 			beforeSend: function () {
 				$("#preloader").show();
@@ -28,7 +29,7 @@ jQuery(document).ready(function () {
 			},
 			success: function (data) {
 				let pagination = data.pagination,
-					found_posts = data.found_posts,
+					// found_posts = data.found_posts,
 					products = data.products_html;
 				$(".load-container").data("page", currentPage);
 				$("#preloader").fadeOut();
@@ -41,11 +42,9 @@ jQuery(document).ready(function () {
 					// $(products).appendTo('.products');
 				}
 				if (currentPage >= data.max_page) {
-					$(".load-container").hide();
-					console.log("hide");
+					$(".load-container").addClass('hide-it');
 				} else {
-					$(".load-container").show();
-					console.log("show");
+					$(".load-container").removeClass('hide-it');
 				}
 				$("#stock-box")
 					.find(".count")
@@ -60,15 +59,12 @@ jQuery(document).ready(function () {
 				} else {
 					$(".pagination-product").hide();
 				}
-				let showing = $(".catalog-navigation__count--showing").text();
-				$(".catalog-navigation__count--showing").text(
-					parseInt(showing) + parseInt(found_posts)
-				);
+				//show current showing products
+				let count_products = $('.product-list .product').length;
+				$(".catalog-navigation__count--showing").text(count_products);
+				//show total showing products counter
 				$(".catalog-navigation__count--total").text(data.total_count);
 
-				//sidebar results
-				// $('#dsnq49-accordion').html(data.sidebar_brands);
-// console.log(data.sidebar_brands);
 			},
 			error: function () {
 				console.log("error");

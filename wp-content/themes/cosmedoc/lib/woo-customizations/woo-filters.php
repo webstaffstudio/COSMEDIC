@@ -4,7 +4,7 @@ add_action('wp_ajax_nopriv_filters_ajax', 'filters_ajax');
 
 function filters_ajax()
 {
-	$ppp = 24;
+	$ppp = 4;
 
 	if ($_POST['order'] !== 'false'):
 		$orderby = $_POST['order'];
@@ -87,13 +87,17 @@ function filters_ajax()
 			'terms' => $terms_array['country'],
 			'operator' => 'IN',
 		);
+		$category_tax = array(
+			'taxonomy' => 'product_cat',
+			'field' => 'id',
+			'terms' => 2,
+			'operator' => 'IN',
+		);
 
 		$filter_args = array(
 			'post_type' => 'product',
 			'posts_per_page' => $ppp, // must be 36
 			'paged' => $paged,
-			'post_status' => 'publish',
-			'ignore_sticky_posts' => 1,
 			'tax_query' => array(
 				'relation' => $relation,
 				(!empty($terms_array['product_type'])) ? $product_type_tax : '',
@@ -108,12 +112,9 @@ function filters_ajax()
 			'post_type' => 'product',
 			'posts_per_page' => $ppp, // must be 36
 			'paged' => $paged,
-			'post_status' => 'publish',
-			'ignore_sticky_posts' => 1,
 		);
 	endif;
 	if ($orderby !== '' && $orderby !== 'false') {
-//		$filter_args['meta_query'] = $orderby;
 		$filter_args = array_merge($filter_args, $orderby);
 	}
 
@@ -127,7 +128,6 @@ function filters_ajax()
 
 
 	ob_start();
-	$founded_posts = $query->post_count;
 	if ($query->have_posts()) {
 		while ($query->have_posts()) {
 			$query->the_post();
@@ -152,6 +152,10 @@ function filters_ajax()
 		'current' => max(1, get_query_var('paged')),
 		'total' => $query->max_num_pages,
 		'type' => 'array',
+		'end_size' => $big, //will show 2 numbers on either the start and the end list edges.
+		'prev_text' => '<span class="prev-page"><</span>',
+		'next_text' => '<span class="next-page">></span>',
+		'mid_size' => 3 //so that you won't have 1,2...,3,...,7,8
 	));
 	?>
 	<?php if (is_array($pages)):
@@ -220,7 +224,6 @@ function filters_ajax()
 		'ppp' => $ppp,
 		'total_count' => $total_count,
 		'current_page' => $paged,
-		'found_posts' => $founded_posts,
 		'max_page' => $query->max_num_pages,
 	));
 

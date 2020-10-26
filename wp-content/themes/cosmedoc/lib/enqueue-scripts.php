@@ -36,6 +36,7 @@ if ( ! function_exists( 'cosmedoc_scripts' ) ) :
 			'isHome' => is_front_page(),
 			'ajaxUrl' => admin_url("admin-ajax.php"),
 			'current_page' => $paged,
+			'is_category' => is_product_category(),
 		);
 		wp_localize_script( 'main-javascript', 'themeVars', $theme_vars );
 

@@ -27,3 +27,28 @@ Stack trace:
 #5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php(175): woocommerce_cross_sell_display(6, 1)
 #6 C:\OSPanel\dom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php on line 29
 
+2020-10-25T19:24:10+00:00 CRITICAL Uncaught Error: Class 'DgoraWcas\Admin\Troubleshooting' not found in D:\OSPanel\domains\cosmedic\wp-content\plugins\ajax-search-for-woocommerce\ajax-search-for-woocommerce.php:86
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-content\plugins\ajax-search-for-woocommerce\ajax-search-for-woocommerce.php(358): DGWT_WC_Ajax_Search::getInstance()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): DGWT_WCAS('')
+#2 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 D:\OSPanel\domains\cosmedic\wp-settings.php(409): do_action('plugins_loaded')
+#5 D:\OSPanel\domains\cosmedic\wp-config.php(29): require_once('D:\\OSPanel\\doma...')
+#6 D:\OSPanel\domains\cosmedic\wp-load.php(37): require_once('D:\\OSPanel\\doma...')
+#7 D:\OSPanel\domains\cosmedic\wp-admin\admin-ajax.php(22): require_once('D:\\OSPanel\\doma...')
+#8 {main}
+  thrown in D:\OSPanel\domains\cosmedic\wp-content\plugins\ajax-search-for-woocommerce\ajax-search-for-woocommerce.php on line 86
+
+2020-10-25T21:04:29+00:00 CRITICAL syntax error, unexpected ';', expecting ',' or ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 153
+
+2020-10-25T22:11:19+00:00 CRITICAL syntax error, unexpected ''prev_text'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 154
+
+2020-10-25T22:19:38+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 9
+
+2020-10-25T22:19:38+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 9
+
+2020-10-25T22:19:57+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 9
+
+2020-10-25T22:19:59+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 9
+

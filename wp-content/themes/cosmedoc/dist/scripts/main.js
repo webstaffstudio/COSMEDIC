@@ -12870,6 +12870,44 @@ jQuery(window).load(function () {
   $(".product-list-slider").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
+    arrows: true,
+    appendArrows: ".cross-sale__list",
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }, {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false
+      }
+    }, {
+      breakpoint: 550,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+      }
+    }]
+  });
+  $(".hero-slider").slick({
+    dots: true,
+    arrows: false,
+    fade: true,
+    cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 3000
+  });
+  $(".cross-sale__list--product .product__title").matchHeight();
+  $(".products .product .woocommerce-loop-product__title").matchHeight();
+  $(".product-list-slider").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
     arrows: true
   });
   $(".hero-slider").slick({
@@ -16596,7 +16634,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   function filtersInit(termsData) {
     var page = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : currentPage;
     var loadmore = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-    console.log(currentPage, "cure page"); // let formData = $(this).serialize();
+    var order_params = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+
+    // let formData = $(this).serialize();
+    if (!order_params) {
+      order_params = $('#order_product').val();
+    }
 
     $.ajax({
       url: themeVars.ajaxUrl,
@@ -16604,8 +16647,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       data: {
         form: termsData,
         page: page,
+        order: order_params,
         action: "filters_ajax",
-        loadmore: loadmore
+        loadmore: loadmore,
+        is_category: themeVars.is_category
       },
       beforeSend: function beforeSend() {
         $("#preloader").show();
@@ -16615,8 +16660,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       },
       success: function success(data) {
         var pagination = data.pagination,
-            found_posts = data.found_posts,
-            products = data.products_html;
+            // found_posts = data.found_posts,
+        products = data.products_html;
         $(".load-container").data("page", currentPage);
         $("#preloader").fadeOut();
 
@@ -16628,11 +16673,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         }
 
         if (currentPage >= data.max_page) {
-          $(".load-container").hide();
-          console.log("hide");
+          $(".load-container").addClass('hide-it');
         } else {
-          $(".load-container").show();
-          console.log("show");
+          $(".load-container").removeClass('hide-it');
         }
 
         $("#stock-box").find(".count").html("(" + data.stock_quantity + ")");
@@ -16641,12 +16684,15 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           //show is pagination exist
           $(".pagination-product").show();
           $(".pagination-product .pagination-product__list").html(data.pagination);
+          $('.pagination-product .pagination-product__list li[data-num="' + page + '"] a').addClass('current');
         } else {
           $(".pagination-product").hide();
-        }
+        } //show current showing products
 
-        var showing = $(".catalog-navigation__count--showing").text();
-        $(".catalog-navigation__count--showing").text(parseInt(showing) + parseInt(found_posts));
+
+        var count_products = $('.product-list .product').length;
+        $(".catalog-navigation__count--showing").text(count_products); //show total showing products counter
+
         $(".catalog-navigation__count--total").text(data.total_count);
       },
       error: function error() {
@@ -16666,7 +16712,11 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   $(".pagination-product__list").on("click", "li", function () {
     loadPage($(this));
   });
-  $(".filter-item").on("change", function () {
+  $('#order_product').on("change", function () {
+    var dataOrder = $(this).val();
+    filtersInit(dataObj, currentPage, false, dataOrder);
+  });
+  $(".filters__item--content").on("change", '.filter-item', function () {
     var checked = $(this).val();
     var termTax = $(this).attr("data-filterbox");
 
@@ -16691,6 +16741,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     currentPage = 1; // always reset this number if checkbox is changed
 
     filtersInit(dataObj, currentPage);
+    console.log(dataObj);
   });
 
   if ($(".filter-item").is(":checked")) {

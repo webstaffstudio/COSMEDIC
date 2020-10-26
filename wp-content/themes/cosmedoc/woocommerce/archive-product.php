@@ -64,7 +64,7 @@ do_action('woocommerce_before_main_content');
 
 		<?php
 		global $wp_query;
-		$ppp = 6;
+		$ppp = 4;
 		$product_args = array(
 			'post_type' => 'product',
 			'posts_per_page' => $ppp, // must be 36
@@ -163,6 +163,11 @@ $pages = paginate_links(array(
 	'current' => max(1, get_query_var('paged')),
 	'total' => $product_query->max_num_pages,
 	'type' => 'array',
+	'prev_text' => '<span class="prev-page"><</span>',
+	'next_text' => '<span class="next-page">></span>',
+	'end_size' => $big, //will show 2 numbers on either the start and the end list edges.
+	'mid_size' => 3 //so that you won't have 1,2...,3,...,7,8
+
 ));
 ?>
 	<div class="pagination-product<?= !is_array($pages) ? ' hide-it' : ''; ?>">

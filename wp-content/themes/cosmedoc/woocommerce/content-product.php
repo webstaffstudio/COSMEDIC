@@ -29,6 +29,7 @@ if(!has_term( 75, 'cos_product_types', $product->get_id())):?>
 <li <?php wc_product_class( '', $product ); ?>>
 
 	<?php
+
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
 	 *
@@ -65,6 +66,7 @@ if(!has_term( 75, 'cos_product_types', $product->get_id())):?>
 	 * @hooked woocommerce_template_loop_product_link_close - 5
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
+
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
 </li>
