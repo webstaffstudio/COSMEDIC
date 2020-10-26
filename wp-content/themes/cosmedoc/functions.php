@@ -36,6 +36,7 @@ $theme_includes = array(
 	'/lib/woo-customizations/woo-archive.php',        // archive page
 	'/lib/woo-customizations/woo-filters.php',        // ajax filters handler
 	'/lib/woo-customizations/woo-cart.php',        // Cart gift customizer
+	'/lib/woo-customizations/woo-checkout.php',        // Checkout customizer
 );
 
 foreach ($theme_includes as $file) {
@@ -114,35 +115,30 @@ add_image_size('cat_tile', 323, 323, false);
 //add_action('phpmailer_init', 'mailtrap');
 function kriesi_pagination($pages = '', $range = 2)
 {
-	$showitems = ($range * 2)+1;
+	$showitems = ($range * 2) + 1;
 
 	global $paged;
-	if(empty($paged)) $paged = 1;
+	if (empty($paged)) $paged = 1;
 
-	if($pages == '')
-	{
+	if ($pages == '') {
 		global $wp_query;
 		$pages = $wp_query->max_num_pages;
-		if(!$pages)
-		{
+		if (!$pages) {
 			$pages = 1;
 		}
 	}
 
-	if(1 != $pages)
-	{
+	if (1 != $pages) {
 		echo "<ul class='pagination-product__list'>";
-		if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo;</a>";
+		if ($paged > 1 && $showitems < $pages) echo "<a href='" . get_pagenum_link($paged - 1) . "'>&lsaquo;</a>";
 
-		for ($i=1; $i <= $pages; $i++)
-		{
-			if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
-			{
-				echo ($paged == $i)? "<li data-num=".$i."><span class='current'>".$i."</span></li>":"<li data-num='".$i."'><a href='".get_pagenum_link($i)."' class='page-numbers inactive' >".$i."</a></li>";
+		for ($i = 1; $i <= $pages; $i++) {
+			if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
+				echo ($paged == $i) ? "<li data-num=" . $i . "><span class='current'>" . $i . "</span></li>" : "<li data-num='" . $i . "'><a href='" . get_pagenum_link($i) . "' class='page-numbers inactive' >" . $i . "</a></li>";
 			}
 		}
 
-		if ($paged < $pages && $showitems < $pages) echo "<li data-num='".$i."'><a class='page-numbers' href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a></li>";
+		if ($paged < $pages && $showitems < $pages) echo "<li data-num='" . $i . "'><a class='page-numbers' href='" . get_pagenum_link($paged + 1) . "'>&rsaquo;</a></li>";
 		echo "</ul>\n";
 	}
 }

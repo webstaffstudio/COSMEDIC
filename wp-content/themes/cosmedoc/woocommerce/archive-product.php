@@ -109,7 +109,7 @@ do_action('woocommerce_before_main_content');
 			}
 
 
-			global $product_query;
+
 			if ($product_query->max_num_pages > 1):
 				$paged = (get_query_var('paged')) ? absint(get_query_var('paged')) : 1;
 				?>

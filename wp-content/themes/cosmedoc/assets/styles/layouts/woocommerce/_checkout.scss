@@ -1,0 +1,55 @@
+/* stylelint-disable */
+.woocommerce-checkout {
+  background-color: #F3F4F1;
+
+  .checkout-title {
+    font-size: 28px !important;
+    font-weight: normal;
+    color: #363636;
+    padding-bottom: 3px;
+    margin-bottom: 18px !important;
+  }
+
+  .woocommerce-form-coupon-toggle {
+    display: none;
+  }
+
+  .site-content {
+    .site-main {
+      .entry-content {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+
+        .account-entry {
+          padding: 20px 0;
+          border-top: 1px solid #363636;
+          border-bottom: 1px solid #363636;
+          margin-bottom: 18px;
+          font-size: 13px;
+          a {
+            color: #363636;
+            text-decoration: none;
+            border-bottom: 1px solid #363636;
+            transition: opacity 0.3s ease;
+          }
+        }
+
+        form {
+          input {
+            max-width: 300px;
+            width: 100%;
+            line-height: 36px;
+            padding: 2px 8px 0;
+            padding-left: 10px;
+            border-radius: 3px;
+            box-shadow: none;
+            border: 1px solid #C7C6C4;
+            background: #FFFFFF;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -211,6 +211,9 @@
         margin: 0 20px 30px 0;
       }
     }
+    .added_to_cart {
+      display: none;
+    }
   }
 
   .pagination-product {
@@ -313,6 +316,7 @@
   }
   .product-list {
     margin-right: -35px;
+    overflow: hidden;
   }
   .filters-shop {
     a {
