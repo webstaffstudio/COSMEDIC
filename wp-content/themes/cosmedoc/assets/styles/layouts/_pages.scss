@@ -3,6 +3,12 @@
   max-width: 100% !important;
 }
 
+.page-template-default.logged-in.woocommerce-account.woocommerce-page.woocommerce-js {
+  .entry-content {
+    max-width: 100%;
+  }
+}
+
 .page-template-default:not(.home) {
   h1,
   h2,
@@ -140,7 +146,6 @@
       margin-right: -20px;
     }
 
-
     .slick-slide {
       margin-right: 20px;
     }
@@ -156,23 +161,24 @@
       &::before {
         display: none;
       }
-
     }
 
     .slick-next {
-      right: 0px;
+      right: 0;
       background-image: url("assets/images/slider-next-light.svg");
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-image: url("assets/images/slider-next-light.svg");
       }
     }
 
     .slick-prev {
       background-image: url("assets/images/slider-prev-light.svg");
-      left: 0px;
+      left: 0;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-image: url("assets/images/slider-prev-light.svg");
       }
     }

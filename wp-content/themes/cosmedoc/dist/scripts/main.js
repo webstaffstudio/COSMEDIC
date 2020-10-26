@@ -16638,7 +16638,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
     // let formData = $(this).serialize();
     if (!order_params) {
-      order_params = $('#order_product').val();
+      order_params = $("#order_product").val();
     }
 
     $.ajax({
@@ -16673,9 +16673,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         }
 
         if (currentPage >= data.max_page) {
-          $(".load-container").addClass('hide-it');
+          $(".load-container").addClass("hide-it");
         } else {
-          $(".load-container").removeClass('hide-it');
+          $(".load-container").removeClass("hide-it");
         }
 
         $("#stock-box").find(".count").html("(" + data.stock_quantity + ")");
@@ -16684,13 +16684,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           //show is pagination exist
           $(".pagination-product").show();
           $(".pagination-product .pagination-product__list").html(data.pagination);
-          $('.pagination-product .pagination-product__list li[data-num="' + page + '"] a').addClass('current');
+          $('.pagination-product .pagination-product__list li[data-num="' + page + '"] a').addClass("current");
         } else {
           $(".pagination-product").hide();
         } //show current showing products
 
 
-        var count_products = $('.product-list .product').length;
+        var count_products = $(".product-list .product").length;
         $(".catalog-navigation__count--showing").text(count_products); //show total showing products counter
 
         $(".catalog-navigation__count--total").text(data.total_count);
@@ -16712,11 +16712,11 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   $(".pagination-product__list").on("click", "li", function () {
     loadPage($(this));
   });
-  $('#order_product').on("change", function () {
+  $("#order_product").on("change", function () {
     var dataOrder = $(this).val();
     filtersInit(dataObj, currentPage, false, dataOrder);
   });
-  $(".filters__item--content").on("change", '.filter-item', function () {
+  $(".filters__item--content").on("change", ".filter-item", function () {
     var checked = $(this).val();
     var termTax = $(this).attr("data-filterbox");
 

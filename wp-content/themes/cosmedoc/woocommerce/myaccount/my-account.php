@@ -23,6 +23,7 @@ defined( 'ABSPATH' ) || exit;
  * @since 2.6.0
  */
 ?>
+<div class="grid-container">
 <div class="page-title account-title">
 	<h1><?php _e('Ваш кабинет', THEME_TD);?></h1>
 	<p class="top-right"><a href="<?php echo wp_logout_url( get_permalink( wc_get_page_id( 'myaccount' ) ) );?>" class="button-link">
@@ -41,4 +42,5 @@ defined( 'ABSPATH' ) || exit;
 		 */
 		do_action( 'woocommerce_account_content' );
 	?>
+</div>
 </div>

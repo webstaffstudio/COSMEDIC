@@ -41,8 +41,9 @@
 
       &--select {
         position: relative;
+
         &::after {
-          content: '';
+          content: "";
           background: transparent url("assets/images/select-arrow.svg") no-repeat;
           background-position: right center;
           width: 29px;
@@ -204,9 +205,11 @@
           }
         }
       }
+
       &.first {
         clear: none;
       }
+
       &.last {
         margin: 0 20px 30px 0;
       }
@@ -273,6 +276,7 @@
             border: 1px solid #363636;
           }
         }
+
         span.current {
           display: inline-block;
           vertical-align: top;
@@ -292,6 +296,7 @@
             opacity: 1;
           }
         }
+
         .next-page {
           display: inline-block;
           vertical-align: top;
@@ -300,6 +305,7 @@
           background: transparent url(assets/images/cosmedoc.svg) no-repeat;
           background-position: -6px -238px;
         }
+
         .prev-page {
           display: inline-block;
           vertical-align: top;
@@ -311,9 +317,11 @@
       }
     }
   }
+
   .product-list {
     margin-right: -35px;
   }
+
   .filters-shop {
     a {
       pointer-events: initial;

@@ -7,7 +7,10 @@ function header_add_to_cart_fragment() {
 	?>
 
 	<div class="header-mini-cart">
-		<?php woocommerce_mini_cart(); ?>
+
+		<?php
+		clean_mini_cart();
+		woocommerce_mini_cart(); ?>
 	</div>
 
 	<?php $fragments['div.header-mini-cart'] = ob_get_clean();?>

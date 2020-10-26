@@ -60,10 +60,24 @@ do_action('woocommerce_before_mini_cart'); ?>
 										</a>
 									<?php endif; ?>
 								</p>
+
 								<div class="price-box">
-									<?php echo $product_price;?>
+									<?php
+									if (woo_gift_product($product_id)):?>
+										<span class="gift-label"><?php _e('Подарок', THEME_TD); ?></span>
+									<?php else:?>
+										<?php echo $product_price;?>
+										<?php endif?>
+
 								</div>
+						<?php
+						if (woo_gift_product($product_id)):
+							$product_quantity = sprintf(' <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
+							echo apply_filters('woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item); // PHPCS: XSS ok.
+
+						else:?>
 							<?php
+
 							if ($_product->is_sold_individually()) {
 								$product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
 							} else {
@@ -80,7 +94,8 @@ do_action('woocommerce_before_mini_cart'); ?>
 								);
 							}
 							echo apply_filters('woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item); // PHPCS: XSS ok.
-							?>
+						endif;	?>
+
 							<?php echo wc_get_formatted_cart_item_data($cart_item); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 								<span class="links">
 									<?php
