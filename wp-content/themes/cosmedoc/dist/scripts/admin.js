@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8095d6237d0f75b32719"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9eb75c8392038cbab9ca"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,7 +722,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(89)(__webpack_require__.s = 89);
+/******/ 	return hotCreateRequire(90)(__webpack_require__.s = 90);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2912,21 +2912,6 @@ if (module) {
 
 /***/ }),
 
-/***/ 89:
-/*!********************************************************************************************************************!*\
-  !*** multi ./build/util/../helpers/hmr-client.js ./scripts/wp-dashboard/admin.js ./styles/wp-dashboard/admin.scss ***!
-  \********************************************************************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\assets\build\util/../helpers/hmr-client.js */7);
-__webpack_require__(/*! ./scripts/wp-dashboard/admin.js */90);
-module.exports = __webpack_require__(/*! ./styles/wp-dashboard/admin.scss */91);
-
-
-/***/ }),
-
 /***/ 9:
 /*!*************************************************!*\
   !*** ../node_modules/webpack/buildin/module.js ***!
@@ -2962,6 +2947,21 @@ module.exports = function(module) {
 /***/ }),
 
 /***/ 90:
+/*!********************************************************************************************************************!*\
+  !*** multi ./build/util/../helpers/hmr-client.js ./scripts/wp-dashboard/admin.js ./styles/wp-dashboard/admin.scss ***!
+  \********************************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\assets\build\util/../helpers/hmr-client.js */7);
+__webpack_require__(/*! ./scripts/wp-dashboard/admin.js */91);
+module.exports = __webpack_require__(/*! ./styles/wp-dashboard/admin.scss */92);
+
+
+/***/ }),
+
+/***/ 91:
 /*!***************************************!*\
   !*** ./scripts/wp-dashboard/admin.js ***!
   \***************************************/
@@ -2974,7 +2974,7 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 91:
+/***/ 92:
 /*!****************************************!*\
   !*** ./styles/wp-dashboard/admin.scss ***!
   \****************************************/

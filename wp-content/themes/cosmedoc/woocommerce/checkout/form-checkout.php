@@ -41,6 +41,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<div class="col2-set" id="customer_details">
 			<div class="col-1">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
+				<div class="cosmedoc-btn next-step"><?=__('Продолжить', THEME_TD); ?></div>
+
 			</div>
 
 			<div class="col-2">
@@ -57,6 +59,28 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
 
 	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+
+	<div class="woocommerce-additional-fields">
+		<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
+
+		<?php if ( apply_filters( 'woocommerce_enable_order_notes_field', 'yes' === get_option( 'woocommerce_enable_order_comments', 'yes' ) ) ) : ?>
+
+			<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
+
+				<h3><?php esc_html_e( 'Additional information', 'woocommerce' ); ?></h3>
+
+			<?php endif; ?>
+
+			<div class="woocommerce-additional-fields__field-wrapper">
+				<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
+					<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
+				<?php endforeach; ?>
+			</div>
+
+		<?php endif; ?>
+
+		<?php do_action( 'woocommerce_after_order_notes', $checkout ); ?>
+	</div>
 
 	<div id="order_review" class="woocommerce-checkout-review-order">
 		<?php do_action( 'woocommerce_checkout_order_review' ); ?>

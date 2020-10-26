@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8095d6237d0f75b32719"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9eb75c8392038cbab9ca"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,7 +722,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(94)(__webpack_require__.s = 94);
+/******/ 	return hotCreateRequire(95)(__webpack_require__.s = 95);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2934,7 +2934,7 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 94:
+/***/ 95:
 /*!*************************************************************************************!*\
   !*** multi ./build/util/../helpers/hmr-client.js ./styles/wp-dashboard/editor.scss ***!
   \*************************************************************************************/
@@ -2943,12 +2943,12 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\assets\build\util/../helpers/hmr-client.js */7);
-module.exports = __webpack_require__(/*! ./styles/wp-dashboard/editor.scss */95);
+module.exports = __webpack_require__(/*! ./styles/wp-dashboard/editor.scss */96);
 
 
 /***/ }),
 
-/***/ 95:
+/***/ 96:
 /*!*****************************************!*\
   !*** ./styles/wp-dashboard/editor.scss ***!
   \*****************************************/
