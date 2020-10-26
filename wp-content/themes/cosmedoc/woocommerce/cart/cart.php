@@ -67,8 +67,8 @@ do_action('woocommerce_before_cart'); ?>
 							<div class="product-attr">
 								<?php echo get_the_term_list($cart_item['product_id'], 'cos_countries', '<span>', '</span>', ''); ?>
 								<span> ,</span>
-								<?php $weight = $_product->get_attribute( 'weight' );
-								echo ($weight)?:__('1шт.', THEME_TD);
+								<?php $weight = $_product->get_attribute('weight');
+								echo ($weight) ?: __('1шт.', THEME_TD);
 								?>
 							</div>
 
@@ -90,16 +90,26 @@ do_action('woocommerce_before_cart'); ?>
 						</div>
 						<div class="product-price" data-title="<?php esc_attr_e('Price', 'woocommerce'); ?>">
 							<?php
-							echo apply_filters('woocommerce_cart_item_price', WC()->cart->get_product_price($_product), $cart_item, $cart_item_key); // PHPCS: XSS ok.
+							if (woo_gift_product($product_id)):?>
+								<span class="gift-label"><?php _e('Подарок', THEME_TD); ?></span>
+							<?php else:
+								echo apply_filters('woocommerce_cart_item_price', WC()->cart->get_product_price($_product), $cart_item, $cart_item_key); // PHPCS: XSS ok.
+							endif;
 							?>
 						</div>
 
 						<div class="product-quantity" data-title="<?php esc_attr_e('Quantity', 'woocommerce'); ?>">
 							<label class="qty-label"
 								   for="cart[%s][qty]"><?php _e('Количество', THEME_TD); ?></label>
+							<?php if (woo_gift_product($product_id)):
+							$product_quantity = sprintf(' <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
+							echo apply_filters('woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item); // PHPCS: XSS ok.
+								echo '<br><span class="gift-count">'.__('1шт.', THEME_TD).'</span>';
+							else:?>
 							<?php
 							if ($_product->is_sold_individually()) {
 								$product_quantity = sprintf('1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key);
+
 							} else {
 								$product_quantity = woocommerce_quantity_input(
 										array(
@@ -113,14 +123,18 @@ do_action('woocommerce_before_cart'); ?>
 										false
 								);
 							}
-
 							echo apply_filters('woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item); // PHPCS: XSS ok.
-							?>
+							endif;?>
+
 						</div>
 
 						<div class="product-subtotal" data-title="<?php esc_attr_e('Subtotal', 'woocommerce'); ?>">
 							<?php
-							echo apply_filters('woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal($_product, $cart_item['quantity']), $cart_item, $cart_item_key); // PHPCS: XSS ok.
+							if (woo_gift_product($product_id)):?>
+								<span class="gift-label"><?php _e('Бесплатно', THEME_TD); ?></span>
+							<?php else:
+								echo apply_filters('woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal($_product, $cart_item['quantity']), $cart_item, $cart_item_key); // PHPCS: XSS ok.
+							endif;
 							?>
 						</div>
 					</div>
@@ -174,12 +188,12 @@ do_action('woocommerce_before_cart'); ?>
 		<?php endif; ?>
 		<?php if (isset($fields_cart['gift_products']) && $fields_cart['show_gifts'] && $needed_sum && $needed_sum > intval($total)): ?>
 			<div class="gift-note">
-				<p><?php _e('Вам доступен подарок, при покупке еще на', THEME_TD); ?> <?php echo $needed_sum - intval($total); ?> <?php echo get_woocommerce_currency_symbol(); ?></p>
+				<p><?php _e('Вам доступен подарок, при покупке еще на', THEME_TD); ?><?php echo $needed_sum - intval($total); ?><?php echo get_woocommerce_currency_symbol(); ?></p>
 				<a href="<?php echo get_permalink(wc_get_page_id('shop')); ?>"
 				   class="cosmedoc-white"><?php _e('В каталог', THEME_TD); ?></a>
 			</div>
 		<?php endif; ?>
-		<?php  echo woocommerce_cross_sell_display(6, 1);?>
+		<?php echo woocommerce_cross_sell_display(6, 1); ?>
 		<div style="display: none;">
 			<button type="submit" class="button" name="update_cart"
 					value="<?php esc_attr_e('Update cart', 'woocommerce'); ?>"><?php esc_html_e('Update cart', 'woocommerce'); ?></button>
@@ -230,8 +244,9 @@ do_action('woocommerce_before_cart'); ?>
 	</div>
 </form>
 
-<div style="display: none" data-aos="un-sticky" data-aos-anchor=".wc-proceed-to-checkout" class="mobile-proceed-to-checkout">
-	<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
+<div style="display: none" data-aos="un-sticky" data-aos-anchor=".wc-proceed-to-checkout"
+	 class="mobile-proceed-to-checkout">
+	<?php do_action('woocommerce_proceed_to_checkout'); ?>
 </div>
 
 

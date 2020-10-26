@@ -27,7 +27,9 @@ if ($max_value && $min_value === $max_value) {
 	?>
 	<div class="quantity">
 		<div class="quantity__wrapp">
+
 			<button class="minus" type="button" value="">-</button>
+
 			<input
 					type="text"
 					id="<?php echo esc_attr($input_id); ?>"
@@ -41,7 +43,9 @@ if ($max_value && $min_value === $max_value) {
 					size="4"
 					placeholder="<?php echo esc_attr($placeholder); ?>"
 					inputmode="<?php echo esc_attr($inputmode); ?>" readonly/>
+
 			<button class="plus" type="button" value="">+</button>
+
 			<!-- /.text-qty -->
 		</div>
 	</div>
