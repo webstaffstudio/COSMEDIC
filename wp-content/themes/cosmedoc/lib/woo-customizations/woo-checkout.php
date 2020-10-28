@@ -91,5 +91,14 @@ function get_shipping_packages($value) {
 }
 
 //diasble order review table
-remove_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
+//remove_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
 
+//add_action( 'woocommerce_after_shipping_rate', 'checkout_shipping_additional_field', 20, 2 );
+//function checkout_shipping_additional_field( $method, $index )
+//{
+//	if( $method->get_id() == 'flat_rate:12' ){
+//		echo '<br>
+//        <input type="checkbox" name="shipping_custom_1" id="shipping_custom_1" value="1" class="shipping_method shipping_custom_1">
+//        <label for="shipping_custom_1">Custom label</label>';
+//	}
+//}

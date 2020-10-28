@@ -1,0 +1,44 @@
+2020-10-27T20:44:48+00:00 CRITICAL Uncaught Error: Class 'WC' not found in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-checkout.php:46
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include()
+#1 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(293): wc_get_template('checkout/form-c...', Array)
+#2 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#3 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Checkout::output('')
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(95): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 D:\OSPanel\domains\cosmedic\wp-includes\shortcodes.php(343): WC_Shortcodes::checkout('', '', 'woocommerce_che...')
+#6 [internal function]: do_shortcode_tag(Array)
+#7  in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-checkout.php on line 46
+
+2020-10-27T20:45:03+00:00 CRITICAL Uncaught Error: Class 'WC' not found in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-checkout.php:46
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include()
+#1 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(293): wc_get_template('checkout/form-c...', Array)
+#2 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#3 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Checkout::output('')
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(95): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 D:\OSPanel\domains\cosmedic\wp-includes\shortcodes.php(343): WC_Shortcodes::checkout('', '', 'woocommerce_che...')
+#6 [internal function]: do_shortcode_tag(Array)
+#7  in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-checkout.php on line 46
+
+2020-10-27T20:45:20+00:00 CRITICAL Uncaught Error: Class 'WC' not found in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-checkout.php:46
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include()
+#1 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(293): wc_get_template('checkout/form-c...', Array)
+#2 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#3 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Checkout::output('')
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(95): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 D:\OSPanel\domains\cosmedic\wp-includes\shortcodes.php(343): WC_Shortcodes::checkout('', '', 'woocommerce_che...')
+#6 [internal function]: do_shortcode_tag(Array)
+#7  in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-checkout.php on line 46
+
+2020-10-27T20:46:27+00:00 CRITICAL Uncaught Error: Class 'WC' not found in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-checkout.php:46
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include()
+#1 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(293): wc_get_template('checkout/form-c...', Array)
+#2 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(67): WC_Shortcode_Checkout::checkout()
+#3 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Checkout::output('')
+#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(95): WC_Shortcodes::shortcode_wrapper(Array, '')
+#5 D:\OSPanel\domains\cosmedic\wp-includes\shortcodes.php(343): WC_Shortcodes::checkout('', '', 'woocommerce_che...')
+#6 [internal function]: do_shortcode_tag(Array)
+#7  in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-checkout.php on line 46
+
