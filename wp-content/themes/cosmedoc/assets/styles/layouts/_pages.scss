@@ -3,9 +3,10 @@
   max-width: 100% !important;
 }
 
-.page-template-default.logged-in.woocommerce-account.woocommerce-page.woocommerce-js {
+.page-template-default.logged-in.woocommerce-account.woocommerce-page.woocommerce-js,
+.page-template-default.tinvwl-theme-style {
   .entry-content {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 }
 

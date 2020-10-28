@@ -38,6 +38,8 @@ final class PW_Gift_Cards_Purchasing {
         add_filter( 'woocommerce_checkout_create_order_line_item', array( $this, 'woocommerce_checkout_create_order_line_item' ), 10, 4 );
 
         if ( 'yes' == get_option( 'pwgc_send_when_processing', 'no' ) ) {
+            add_filter( 'woocommerce_order_status_processing', array( $this, 'woocommerce_order_status_processing' ), 11, 2 );
+            add_action( 'woocommerce_payment_complete', array( $this, 'woocommerce_payment_complete' ) );
             add_action( 'woocommerce_checkout_update_order_meta', array( $this, 'woocommerce_checkout_update_order_meta' ), 11, 2 );
         }
 
@@ -213,9 +215,24 @@ final class PW_Gift_Cards_Purchasing {
         }
     }
 
+    function woocommerce_order_status_processing( $order_id, $order ) {
+        if ( $order->is_paid() ) {
+            $this->add_gift_cards_to_order( $order_id, $order, "order_id: $order_id completed" );
+        }
+    }
+
+    function woocommerce_payment_complete( $order_id ) {
+        $order = wc_get_order( $order_id );
+        if ( $order->is_paid() ) {
+            $this->add_gift_cards_to_order( $order_id, $order, "order_id: $order_id completed" );
+        }
+    }
+
     function woocommerce_checkout_update_order_meta( $order_id, $data ) {
         $order = wc_get_order( $order_id );
-        $this->add_gift_cards_to_order( $order_id, $order, "order_id: $order_id created" );
+        if ( $order->is_paid() ) {
+            $this->add_gift_cards_to_order( $order_id, $order, "order_id: $order_id created" );
+        }
     }
 
     function woocommerce_order_status_completed( $order_id, $order ) {

@@ -126,10 +126,10 @@ class Checkout
         $this->cart->checkPreOrderProducts($cart);
         if (\count($this->cart->getPreOrderProducts()) > 0) {
             $fields['preorder_date'] = [
-                'label' => __('Pre order Date', 'preorder'),
+                'label' => __('Pre order Date', 'preorders'),
                 'type' => 'text',
                 'class' => $class,
-                'description' => __('Please enter the date when you want to receive your order', 'preorder'),
+                'description' => __('Please enter the date when you want to receive your order', 'preorders'),
                 // 'input_class'   => 'datepicker',
                 'priority' => 35,
                 'required' => true,

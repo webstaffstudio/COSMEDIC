@@ -5,7 +5,7 @@ Tags: woocommerce, gift cards, gift certificates, pimwick
 Requires at least: 4.5
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.148
+Stable tag: 1.150
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -86,6 +86,12 @@ The following currency switcher plugins are supported:
 
 == Changelog ==
 
+= 1.150 =
+* When the Send When Order Received option is enabled, do not create the gift card until payment has been received. Fixed a compatibility issue with v3 of the Order Minimum/Maximum Amount for WooCommerce by Algoritmika Ltd. Improvements to the Dutch, French, and Finnish translations.
+
+= 1.149 =
+* Fixed WPML Multi-Currency compatibility issue where the gift card email has incorrect currency symbol. Fixed an issue with WPML where the gift card email is sent in the store default language rather than the order language.
+
 = 1.148 =
 * Fixes a compatibility issue with the WooCommerce Availability Scheduler plugin by vanquish
 
@@ -110,18 +116,12 @@ The following currency switcher plugins are supported:
 = 1.141 =
 * Improved French translation. Fixed an issue viewing details of a gift card number that contains a backslash.
 
-= 1.140 =
-* A few more fixes for compatibility with WOOCS - WooCommerce Currency Switcher plugin by realmag777. Removed the need for the PWGC_WOOCS_PATCH flag. Fixed an issue with PayPal payments where Tax might be calculated again at PayPal.
-
-= 1.139 =
-* Added a wp-config flag (PWGC_WOOCS_PATCH) that can be enabled to fix an issue with the amount displayed in the gift card email on certain systems when used in conjunction with the WOOCS - WooCommerce Currency Switcher plugin by realmag777.
-
 = Previous versions =
 * See changelog.txt
 
 == Upgrade Notice ==
 
-= 1.148 =
-* Fixes a compatibility issue with the WooCommerce Availability Scheduler plugin by vanquish
+= 1.150 =
+* When the Send When Order Received option is enabled, do not create the gift card until payment has been received. Fixed a compatibility issue with v3 of the Order Minimum/Maximum Amount for WooCommerce by Algoritmika Ltd. Improvements to the Dutch, French, and Finnish translations.
 
 

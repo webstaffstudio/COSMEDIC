@@ -1,6 +1,6 @@
 /* stylelint-disable */
 .woocommerce-checkout {
-  background-color: #F3F4F1;
+  background-color: #f3f4f1;
 
   .checkout-title {
     font-size: 28px !important;
@@ -60,7 +60,6 @@
             display: flex;
             flex-direction: column;
 
-
             .optional {
               display: none;
             }
@@ -74,8 +73,8 @@
             padding-left: 10px;
             border-radius: 3px;
             box-shadow: none;
-            border: 1px solid #C7C6C4;
-            background: #FFFFFF;
+            border: 1px solid #c7c6c4;
+            background: #fff;
             font-size: 16px;
 
             &[type="radio"] {
@@ -118,7 +117,8 @@
               margin-left: auto;
             }
 
-            th, .woocommerce-Price-amount {
+            th,
+            .woocommerce-Price-amount {
               border: none;
               font-weight: 400;
               color: #363636;
@@ -128,16 +128,15 @@
             }
 
             .order-total {
-              th, .woocommerce-Price-amount {
+              th,
+              .woocommerce-Price-amount {
                 font-weight: 700;
                 opacity: 1 !important;
               }
             }
-
           }
         }
       }
-
     }
   }
 }

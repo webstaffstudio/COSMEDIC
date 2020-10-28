@@ -110,6 +110,27 @@ class WC_Email_PW_Gift_Card extends WC_Email {
     function trigger( $order_item_id, $gift_card_number = '', $recipient = '', $from = '', $recipient_name = '', $message = '', $amount = '' ) {
         global $woocommerce_wpml;
 
+        $order_item = false;
+        if ( !empty( $order_item_id ) ) {
+            $order_item = WC_Order_Factory::get_order_item( $order_item_id );
+        }
+
+        if ( is_a( $order_item, 'WC_Order_Item' ) && isset( $woocommerce_wpml ) && is_object( $woocommerce_wpml ) ) {
+            $order_id = apply_filters( 'wcml_send_email_order_id', $order_item->get_order_id() );
+
+            if ( $order_id && property_exists( $woocommerce_wpml, 'emails' ) && is_object( $woocommerce_wpml->emails ) && method_exists( $woocommerce_wpml->emails, 'refresh_email_lang' ) ) {
+                $woocommerce_wpml->emails->refresh_email_lang( $order_id );
+
+                if ( $this->settings['subject'] == $this->default_subject ) {
+                    $this->settings['subject'] = translate( $this->default_subject, 'pw-woocommerce-gift-cards' );
+                }
+
+                if ( $this->settings['heading'] == $this->default_heading ) {
+                    $this->settings['heading'] = translate( $this->default_heading, 'pw-woocommerce-gift-cards' );
+                }
+            }
+        }
+
         if ( !empty( $recipient ) ) {
             $this->recipient = $recipient;
         }
@@ -157,18 +178,6 @@ class WC_Email_PW_Gift_Card extends WC_Email {
         $attachments = $this->get_attachments();
         if ( empty( $attachments ) ) {
             $attachments = array();
-        }
-
-        if ( !empty( $order_item_id ) ) {
-            $order_item = WC_Order_Factory::get_order_item( $order_item_id );
-
-            if ( is_a( $order_item, 'WC_Order_Item' ) && isset( $woocommerce_wpml ) && is_object( $woocommerce_wpml ) && property_exists( $woocommerce_wpml, 'emails' ) && is_object( $woocommerce_wpml->emails ) && method_exists( $woocommerce_wpml->emails, 'refresh_email_lang' ) ) {
-                $order_id = apply_filters( 'wcml_send_email_order_id', $order_item->get_order_id() );
-
-                if ( $order_id ) {
-                    $woocommerce_wpml->emails->refresh_email_lang( $order_id );
-                }
-            }
         }
 
         if ( $this->is_enabled() ) {
@@ -238,6 +247,19 @@ class WC_Email_PW_Gift_Card extends WC_Email {
                 $cs->track_order_notification( $order_item->get_order_id() );
                 if ( !has_filter( 'woocommerce_currency', array( $cs, 'woocommerce_currency' ), 5 ) ) {
                     add_filter( 'woocommerce_currency', array( $cs, 'woocommerce_currency' ), 5 );
+                }
+            }
+
+            // WPML (WooCommerce Multilingual plugin) - display gift card in the ordered currency.
+            if ( isset( $GLOBALS['woocommerce_wpml'] ) && method_exists( $item_data->order, 'get_currency' ) && property_exists( $GLOBALS['woocommerce_wpml'], 'multi_currency' ) ) {
+                if ( property_exists( $GLOBALS['woocommerce_wpml']->multi_currency, 'orders' ) ) {
+                    $wpml_orders = $GLOBALS['woocommerce_wpml']->multi_currency->orders;
+                    $order_currency = $item_data->order->get_currency();
+
+                    if ( $order_currency ) {
+                        $wpml_orders->order_currency = $order_currency;
+                        add_filter( 'woocommerce_currency', array( $wpml_orders, '_override_woocommerce_order_currency_temporarily' ) );
+                    }
                 }
             }
         }

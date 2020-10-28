@@ -6,7 +6,7 @@ Requires PHP: 7.0
 WC tested up to: 4.5.2
 Tested up to: 5.5.1
 WC requires at least: 3.9
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -111,6 +111,11 @@ This plugin works on the backend, so it will not affect your theme in most cases
 We do take feature requests [here](https://share.brightvessel.com/MAb).
 
 == Changelog ==
+
+= 1.0.10 =
+* Updated .pot file
+* Added 'set_free_shipping_min_amount' filter for minium free shipping ammount
+* Added 'shop_have_free_shipping_based_on_amount' filter for enable free shipping based on ammount  
 
 = 1.0.9 =
 * Fixed Wrong Notification [pending payment] sent on preorder invoice to the customers.

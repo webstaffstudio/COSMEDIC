@@ -3,7 +3,7 @@
  * Plugin Name: Preorders for WooCommerce
  * Plugin URI: https://brightplugins.com/
  * Description: Ultimate Preorders Plugin for WooCommerce.
- * Version: 1.0.9
+ * Version: 1.0.10
  * Domain Path: /etc/i18n/languages/.
  * WC tested up to: 4.5.2
  * Tested up to: 5.5.1

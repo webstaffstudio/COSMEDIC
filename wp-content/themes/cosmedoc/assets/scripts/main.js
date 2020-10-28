@@ -25,6 +25,7 @@ jQuery(window).load(function() {
   $(".cart-cross-sells .woocommerce-loop-product__title").matchHeight();
   $(".cart-cross-sells .brand").matchHeight();
   $(".cart-cross-sells .price").matchHeight();
+  $(".wishlist_item .product-name").matchHeight();
   /* Sticky SideBar Cart */
   const makeSticky = () => {
     $(".cart-sidebar").stick_in_parent({

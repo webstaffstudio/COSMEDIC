@@ -7,7 +7,7 @@
     padding-right: 60px;
     position: relative;
 
-    @include mq (0, 1023) {
+    @include mq(0, 1023) {
       padding-right: 0;
     }
 

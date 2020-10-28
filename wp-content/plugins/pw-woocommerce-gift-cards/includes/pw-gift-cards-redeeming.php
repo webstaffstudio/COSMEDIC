@@ -70,6 +70,7 @@ final class PW_Gift_Cards_Redeeming {
         add_filter( 'woocommerce_get_shop_coupon_data', array( $this, 'woocommerce_get_shop_coupon_data' ), 10, 2 );
         add_action( 'woocommerce_applied_coupon', array( $this, 'woocommerce_applied_coupon' ) );
         add_filter( 'woocommerce_apply_with_individual_use_coupon', array( $this, 'woocommerce_apply_with_individual_use_coupon' ), 10, 4 );
+        add_filter( 'alg_wc_oma_amount_cart_total', array( $this, 'alg_wc_oma_amount_cart_total' ), 10, 2 );
         add_filter( 'alg_wc_order_minimum_amount_message', array( $this, 'alg_wc_order_minimum_amount_message' ), 10, 3 );
     }
 
@@ -149,6 +150,7 @@ final class PW_Gift_Cards_Redeeming {
 
         // Keep the original total before the gift card was applied.
         $cart->pwgc_total_before_gift_cards = $cart->total;
+        $cart->pwgc_total_gift_cards_redeemed = $gift_card_total;
 
         // Make sure we don't set the cart to a negative amount.
         $new_cart_total = ( $cart->total - $gift_card_total );
@@ -562,6 +564,18 @@ final class PW_Gift_Cards_Redeeming {
         return false;
     }
 
+    // Order Minimum/Maximum Amount for WooCommerce by Algoritmika Ltd
+    // Version 3
+    function alg_wc_oma_amount_cart_total( $result, $type ) {
+        if ( isset( WC()->cart ) && isset( WC()->cart->pwgc_total_gift_cards_redeemed ) ) {
+            $result += WC()->cart->pwgc_total_gift_cards_redeemed;
+        }
+
+        return $result;
+    }
+
+    // Order Minimum/Maximum Amount for WooCommerce by Algoritmika Ltd
+    // Version 2
     function alg_wc_order_minimum_amount_message( $message, $title, $cart_or_checkout ) {
         if ( function_exists( 'alg_wc_order_minimum_amount' ) ) {
             if ( !empty( $message ) && $title == 'message_min_sum' && isset( WC()->cart ) && isset( WC()->cart->pwgc_total_before_gift_cards ) ) {

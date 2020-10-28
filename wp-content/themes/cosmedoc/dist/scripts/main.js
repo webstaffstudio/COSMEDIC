@@ -12831,6 +12831,7 @@ jQuery(window).load(function () {
   $(".cart-cross-sells .woocommerce-loop-product__title").matchHeight();
   $(".cart-cross-sells .brand").matchHeight();
   $(".cart-cross-sells .price").matchHeight();
+  $(".wishlist_item .product-name").matchHeight();
   /* Sticky SideBar Cart */
 
   var makeSticky = function makeSticky() {
@@ -16809,7 +16810,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery, $) {jQuery(document).ready(function () {
-  $('#billing-step').on('click', function () {// 	$('.woocommerce-billing-fields__field-wrapper input').each(function () {
+  $("#billing-step").on("click", function () {// 	$('.woocommerce-billing-fields__field-wrapper input').each(function () {
     // 	let billingData = $(this).val();
     // console.log(billingData);
     // 		$(billingData).appendTo($('#pr-payer-address'));

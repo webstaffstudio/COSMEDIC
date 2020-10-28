@@ -79,12 +79,12 @@ class Cart
                 $havePreOrders = true;
             }
         }
-        $newProduct = new Product($productId);
-        if (empty($products) || ($newProduct->isPreOrder() && $havePreOrders) || (false === $newProduct->isPreOrder() && false === $havePreOrders)) {
+        $newProduct = new Product( $productId );
+        if (empty($products) || ( $newProduct->isPreOrder() && $havePreOrders) || (false === $newProduct->isPreOrder() && false === $havePreOrders)) {
             $passed = true;
         } else {
             $passed = false;
-            if ($newProduct->isPreOrder()) {
+            if ( $newProduct->isPreOrder() ) {
                 wc_add_notice(__('We detected that you are trying to add a pre-order product in your cart. Please remove the rest of the products before proceeding.', 'preorders'), 'error');
             } else {
                 wc_add_notice(__('We detected that your cart has pre-order products. Please remove them before being able to add this product.', 'preorders'), 'error');

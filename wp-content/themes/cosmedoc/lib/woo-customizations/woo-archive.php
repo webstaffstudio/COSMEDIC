@@ -23,7 +23,7 @@ if (!function_exists('woocommerce_template_loop_product_thumbnail')) {
 			<div class="brands">
 				<?php foreach ($term_brand as $brand): ?>
 					<a class="brand"
-					   href="<?= get_term_link($brand->term_id, 'cos_brands'); ?>"><span># <?= $brand->name; ?></span></a>
+					   href="<?= get_term_link($brand->term_id, 'cos_brands'); ?>"><span><?= $brand->name; ?></span></a>
 				<?php endforeach; ?>
 			</div>
 		<?php endif;
