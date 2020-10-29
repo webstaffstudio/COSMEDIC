@@ -45,6 +45,10 @@ if(!has_term( 75, 'cos_product_types', $product->get_id())):?>
 	 */
 	do_action( 'woocommerce_before_shop_loop_item_title' );
 
+	if(is_user_logged_in()):
+	echo do_shortcode("[ti_wishlists_addtowishlist loop=yes]");
+	endif;
+
 	/**
 	 * Hook: woocommerce_shop_loop_item_title.
 	 *

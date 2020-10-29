@@ -19717,13 +19717,7 @@ ul {
   width: 100%;
 }
 
-/* line 185, assets/styles/layouts/woocommerce/_archive-product.scss */
-
-.woocommerce .products .product .tinvwl_add_to_wishlist_button {
-  display: none;
-}
-
-/* line 190, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 186, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .products .product.sale .price {
   -webkit-box-orient: horizontal;
@@ -19735,14 +19729,14 @@ ul {
           justify-content: space-between;
 }
 
-/* line 194, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 190, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .products .product.sale .price bdi {
   color: #e88565;
   font-weight: 400;
 }
 
-/* line 200, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 196, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .products .product.sale .price del bdi {
   color: #c7c6c4;
@@ -19750,25 +19744,25 @@ ul {
   font-size: 14px;
 }
 
-/* line 209, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 205, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .products .product.first {
   clear: none;
 }
 
-/* line 213, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 209, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .products .product.last {
   margin: 0 20px 30px 0;
 }
 
-/* line 218, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 214, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .products .added_to_cart {
   display: none;
 }
 
-/* line 223, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 219, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .pagination-product {
   display: -webkit-box;
@@ -19793,13 +19787,13 @@ ul {
           box-shadow: 1px 0 20px rgba(0, 0, 0, 0.3);
 }
 
-/* line 238, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 234, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .pagination-product.hide-it {
   display: none;
 }
 
-/* line 242, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 238, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .pagination-product__list {
   display: -webkit-box;
@@ -19812,7 +19806,7 @@ ul {
   margin: 0;
 }
 
-/* line 248, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 244, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .pagination-product__list li {
   display: inline-block;
@@ -19821,7 +19815,7 @@ ul {
   margin: 0 2px;
 }
 
-/* line 254, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 250, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .pagination-product__list li a {
   text-align: center;
@@ -19842,7 +19836,7 @@ ul {
   pointer-events: none;
 }
 
-/* line 271, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 267, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .pagination-product__list li a.current {
   display: inline-block;
@@ -19856,7 +19850,7 @@ ul {
   border: 1px solid #363636;
 }
 
-/* line 284, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 280, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .pagination-product__list li span.current {
   display: inline-block;
@@ -19870,7 +19864,7 @@ ul {
   border: 1px solid #363636;
 }
 
-/* line 297, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 293, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .pagination-product__list li:hover a {
   border: 1px solid #363636;
@@ -19878,7 +19872,7 @@ ul {
   opacity: 1;
 }
 
-/* line 304, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 300, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .pagination-product__list li .next-page {
   display: inline-block;
@@ -19889,7 +19883,7 @@ ul {
   background-position: -6px -238px;
 }
 
-/* line 313, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 309, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .pagination-product__list li .prev-page {
   display: inline-block;
@@ -19900,20 +19894,20 @@ ul {
   background-position: -40px -238px;
 }
 
-/* line 325, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 321, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .product-list {
   margin-right: -35px;
   overflow: hidden;
 }
 
-/* line 331, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 327, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .woocommerce .filters-shop a {
   pointer-events: initial;
 }
 
-/* line 337, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 333, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .load-container {
   max-width: 100%;
@@ -19927,13 +19921,13 @@ ul {
           justify-content: center;
 }
 
-/* line 344, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 340, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .load-container.hide-it {
   display: none;
 }
 
-/* line 348, assets/styles/layouts/woocommerce/_archive-product.scss */
+/* line 344, assets/styles/layouts/woocommerce/_archive-product.scss */
 
 .load-container .cosmedoc-btn,
 .load-container .woocommerce.single .entry-summary .cart .button,
@@ -22175,19 +22169,73 @@ ul {
 
 /* stylelint-disable */
 
-/* line 3, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 2, assets/styles/layouts/woocommerce/_wishlist.scss */
+
+.tinv-wraper.tinv-wishlist {
+  padding-bottom: 0 !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 91;
+}
+
+/* line 9, assets/styles/layouts/woocommerce/_wishlist.scss */
+
+.tinv-wraper.tinv-wishlist > .tinvwl_add_to_wishlist_button {
+  margin-top: 0 !important;
+}
+
+/* line 12, assets/styles/layouts/woocommerce/_wishlist.scss */
+
+.tinv-wraper.tinv-wishlist > .tinvwl_add_to_wishlist_button::before {
+  content: "" !important;
+  background-position: -153px -149px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url(../images/cosmedoc.svg);
+}
+
+/* line 22, assets/styles/layouts/woocommerce/_wishlist.scss */
+
+.tinv-wraper.tinv-wishlist > .tinvwl_add_to_wishlist_button.tinvwl-product-make-remove::before {
+  content: "" !important;
+  background-position: -179px -149px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url(../images/cosmedoc.svg);
+}
+
+/* line 35, assets/styles/layouts/woocommerce/_wishlist.scss */
+
+.tinvwl-theme-style p.cart-empty {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* line 41, assets/styles/layouts/woocommerce/_wishlist.scss */
+
+.tinvwl-theme-style .return-to-shop {
+  text-align: center;
+}
+
+/* line 45, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .tinv-wishlist {
   padding-bottom: 50px;
 }
 
-/* line 7, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 49, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .product-info {
   margin: 0 20px 30px 0 !important;
 }
 
-/* line 11, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 53, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .tinv-wishlist .product-thumbnail {
   width: 100% !important;
@@ -22195,14 +22243,14 @@ ul {
   margin: 0 0 1em;
 }
 
-/* line 16, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 58, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .tinv-wishlist .product-thumbnail img {
   width: 100%;
   max-width: 100% !important;
 }
 
-/* line 21, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 63, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .tinv-wishlist .product-thumbnail > a {
   position: relative;
@@ -22210,7 +22258,7 @@ ul {
   width: 100%;
 }
 
-/* line 26, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 68, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .tinv-wishlist .product-thumbnail > a::before {
   content: "";
@@ -22222,7 +22270,7 @@ ul {
   top: 0;
 }
 
-/* line 38, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 80, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .product-brand a.brand {
   font-size: 14px;
@@ -22231,7 +22279,7 @@ ul {
   pointer-events: none;
 }
 
-/* line 45, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 87, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .product-name a {
   margin-bottom: 17px !important;
@@ -22244,7 +22292,7 @@ ul {
   padding: 0 !important;
 }
 
-/* line 56, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 98, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .woocommerce-Price-amount {
   color: #363636;
@@ -22253,7 +22301,7 @@ ul {
   text-decoration: none;
 }
 
-/* line 63, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 105, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .button {
   background-color: #89937a;
@@ -22275,7 +22323,7 @@ ul {
   cursor: pointer;
 }
 
-/* line 81, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 123, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .button:hover {
   background-color: transparent !important;
@@ -22283,7 +22331,7 @@ ul {
   border-color: #000 !important;
 }
 
-/* line 88, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 130, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .product-remove {
   width: 100% !important;
@@ -22291,7 +22339,7 @@ ul {
   text-align: left !important;
 }
 
-/* line 93, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 135, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .product-remove button {
   display: inline-block;
@@ -22307,21 +22355,21 @@ ul {
   margin-bottom: 20px !important;
 }
 
-/* line 108, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 150, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .tinvwl-to-right.look_in {
   margin: 30px auto;
   text-align: center;
 }
 
-/* line 112, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 154, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .tinvwl-to-right.look_in button {
   background-color: #e88565 !important;
   color: #fff !important;
 }
 
-/* line 116, assets/styles/layouts/woocommerce/_wishlist.scss */
+/* line 158, assets/styles/layouts/woocommerce/_wishlist.scss */
 
 .tinvwl-theme-style .tinvwl-to-right.look_in button:hover {
   border-color: #e88565 !important;

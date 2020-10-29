@@ -203,3 +203,15 @@ add_action('woocommerce_registration_redirect', 'custom_registration_redirect', 
 
 
 
+add_action( 'template_redirect', function() {
+
+	if ( is_user_logged_in() || ! is_page() ) return;
+
+	$restricted = array( 198); // all your restricted pages
+
+	if ( in_array( get_queried_object_id(), $restricted ) ) {
+		wp_redirect( site_url('/') );
+		exit();
+	}
+
+});

@@ -1,5 +1,47 @@
 /* stylelint-disable */
+.tinv-wraper.tinv-wishlist {
+  padding-bottom: 0 !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 91;
+
+  > .tinvwl_add_to_wishlist_button {
+    margin-top: 0 !important;
+
+    &::before {
+      content: "" !important;
+      background-position: -153px -149px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-image: url("assets/images/cosmedoc.svg");
+    }
+
+    &.tinvwl-product-make-remove::before {
+      content: "" !important;
+      background-position: -179px -149px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-image: url("assets/images/cosmedoc.svg");
+    }
+  }
+}
+
 .tinvwl-theme-style {
+  p.cart-empty {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .return-to-shop {
+    text-align: center;
+  }
+
   .tinv-wishlist {
     padding-bottom: 50px;
   }

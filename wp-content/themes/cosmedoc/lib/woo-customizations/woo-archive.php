@@ -30,6 +30,7 @@ if (!function_exists('woocommerce_template_loop_product_thumbnail')) {
 	}
 }
 
+
 if (!function_exists('woocommerce_get_product_thumbnail')) {
 	function woocommerce_get_product_thumbnail($size = 'shop_catalog')
 	{
