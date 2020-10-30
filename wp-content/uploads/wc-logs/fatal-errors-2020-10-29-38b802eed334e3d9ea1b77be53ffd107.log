@@ -1,0 +1,4 @@
+2020-10-29T20:13:09+00:00 CRITICAL syntax error, unexpected ',' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-shipping.php on line 22
+
+2020-10-29T23:15:49+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF), expecting end of file in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-checkout.php on line 89
+
