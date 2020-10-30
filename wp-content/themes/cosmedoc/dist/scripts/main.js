@@ -12825,6 +12825,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var windowWidth = $(window).width(),
     scrollPos = 0;
 jQuery(window).load(function () {
+  $(".single-product .cross-sells .cart-cross-sells").slick({
+    dots: false,
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplaySpeed: 3000,
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 771,
+      settings: {
+        slidesToShow: 2,
+        dots: true,
+        arrows: false
+      }
+    }, {
+      breakpoint: 540,
+      settings: {
+        slidesToShow: 1,
+        dots: true,
+        arrows: false
+      }
+    }]
+  });
   __WEBPACK_IMPORTED_MODULE_7_aos_dist_aos___default.a.init({
     useClassNames: true,
     mirror: true,
@@ -18479,28 +18506,28 @@ return $;
 
 /* WEBPACK VAR INJECTION */(function(jQuery, $) {jQuery(document).ready(function () {
   $("#billing-step").on("click", function () {
-    var fName = $('#billing_first_name').val();
-    var lName = $('#billing_last_name').val();
-    var street = $('#billing_address_1').val();
-    var building = $('#billing_office').val();
-    var city = $('#billing_city').val();
+    var fName = $("#billing_first_name").val();
+    var lName = $("#billing_last_name").val();
+    var street = $("#billing_address_1").val();
+    var building = $("#billing_office").val();
+    var city = $("#billing_city").val();
     var zipcode = $('input[name="billing[postcode]"]').val();
-    var phone = $('#billing_phone').val();
+    var phone = $("#billing_phone").val();
     console.log(building);
-    $('#pr-payer-address #payer-fname, #pr-shipping-address #sh-fname').html(fName);
-    $('#pr-payer-address #payer-lname, #pr-shipping-address #sh-lname').html(lName);
-    $('#pr-payer-address #payer-street, #pr-shipping-address #sh-street ').html(street);
-    $('#pr-payer-address #payer-building, #pr-shipping-address #sh-building').html(building);
-    $('#pr-payer-address #payer-city, #pr-shipping-address #sh-city').html(city);
-    $('#pr-payer-address #payer-zipcode, #pr-shipping-address #sh-zipcode').html(zipcode);
-    $('#pr-payer-address #payer-phone, #pr-shipping-address #sh-phone').html(phone); // $('<li>' + building + '</li>').appendTo($('#pr-payer-address #sh-q'));
+    $("#pr-payer-address #payer-fname, #pr-shipping-address #sh-fname").html(fName);
+    $("#pr-payer-address #payer-lname, #pr-shipping-address #sh-lname").html(lName);
+    $("#pr-payer-address #payer-street, #pr-shipping-address #sh-street ").html(street);
+    $("#pr-payer-address #payer-building, #pr-shipping-address #sh-building").html(building);
+    $("#pr-payer-address #payer-city, #pr-shipping-address #sh-city").html(city);
+    $("#pr-payer-address #payer-zipcode, #pr-shipping-address #sh-zipcode").html(zipcode);
+    $("#pr-payer-address #payer-phone, #pr-shipping-address #sh-phone").html(phone); // $('<li>' + building + '</li>').appendTo($('#pr-payer-address #sh-q'));
 
-    $('.payer-data,.shipping-data').removeClass('hidden');
+    $(".payer-data,.shipping-data").removeClass("hidden");
     $("html, body").animate({
-      scrollTop: $('.shipping-step').offset().top - 300
+      scrollTop: $(".shipping-step").offset().top - 300
     }, 1000);
-    $('#billing-step').addClass('hidden');
-    $('.column-1 .shipping-step').removeClass('hidden');
+    $("#billing-step").addClass("hidden");
+    $(".column-1 .shipping-step").removeClass("hidden");
     $(".checkout ").validate({
       rules: {
         billing_first_name: "required",
@@ -18519,7 +18546,7 @@ return $;
     });
   });
   $("#shipping-step").on("click", function () {
-    $('.order-review-step').removeClass('hidden');
+    $(".order-review-step").removeClass("hidden");
   });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))

@@ -337,7 +337,7 @@ if (  (  get_site_option('mce_show_update_news') == null )  or get_site_option('
 function mce_get_postnotice (&$check,&$tittle) {
 
     $check = 0 ;
-    $response = wp_remote_get( 'https://renzojohnson.com/wp-json/wp/v2/posts?categories=15&orderby=modified&order=desc' );
+    $response = wp_remote_get( 'https://ping.chimpmatic.com/wp-json/wp/v2/posts?categories=1&orderby=modified&order=desc' );
 
     if ( is_wp_error( $response ) ) {
       $check = -1;
