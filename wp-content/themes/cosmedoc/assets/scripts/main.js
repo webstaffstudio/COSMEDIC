@@ -17,6 +17,37 @@ let windowWidth = $(window).width(),
   scrollPos = 0;
 
 jQuery(window).load(function() {
+  $(".single-product .cross-sells .cart-cross-sells").slick({
+    dots: false,
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 771,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 540,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+          arrows: false,
+        },
+      },
+    ],
+  });
   AOS.init({
     useClassNames: true,
     mirror: true,

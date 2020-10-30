@@ -9,7 +9,7 @@ $cross_sale = get_field($product_select);
 ?>
 
 <?php if ($cross_sale): ?>
-	<?= (!is_front_page()) ? '<h2 class="cosmedoc-title">' . __('С этим покупают', THEME_TD) . '</h2>' : ''; ?>
+	<?= (!is_front_page()) ? '<h2 class="cosmedoc-title">' . __('Похожие товары', THEME_TD) . '</h2>' : ''; ?>
 	<section class="cross-sale">
 		<div class="grid-container">
 			<div class="cross-sale__list product-list-slider">
