@@ -46,7 +46,7 @@ if (!function_exists('woocommerce_get_product_thumbnail')) {
 			$regular_price = $product->get_regular_price();
 			$sale_price = $product->get_sale_price();
 			$output .= '<span class="product-label">' . __('Sale', THEME_TD) . '</span>';
-			$output .= '<span class="product-label">-' . discount_percent($regular_price, $sale_price) . '%</span>';
+			$output .= (discount_percent($regular_price, $sale_price))?'<span class="product-label">-' . discount_percent($regular_price, $sale_price) . '%</span>':'';
 		endif;
 		$output .= '</div>';
 

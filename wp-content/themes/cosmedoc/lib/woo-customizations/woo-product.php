@@ -54,7 +54,10 @@ function custom_woocommerce_gallery_thumbnail_size() {
 
 
 function discount_percent($regular_price, $sale_price) {
+	$result = false;
+	if($regular_price and $sale_price){
 	$result = 100 * ($regular_price - $sale_price) / $sale_price;
+	}
 	return intval ($result);
 }
 
