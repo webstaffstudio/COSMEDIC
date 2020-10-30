@@ -132,6 +132,7 @@
     "foundation-sites": "^6.5.3",
     "jquery": "^3.3.1",
     "jquery-match-height": "^0.7.2",
+    "jquery-validation": "^1.19.2",
     "motion-ui": "~2.0.3",
     "popper.js": "^1.15.0",
     "slick-carousel": "^1.8.1",

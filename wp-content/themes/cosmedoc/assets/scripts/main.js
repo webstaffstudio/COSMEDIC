@@ -6,6 +6,7 @@ import "jquery-match-height";
 import "./modules/filters-shop";
 // import "./modules/autocomplete-address";
 import "./modules/sticky-sidebar";
+import "jquery-validation";
 import "./modules/checkout";
 import AOS from "aos/dist/aos";
 // Import everything from autoload

@@ -15,75 +15,89 @@
  * @version 3.8.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 $agree_text = get_field('chk_agree_text', 'options');
 $text_before_process = get_field('chk_text_before_proccess_pay', 'options');
 ?>
-<table class="shop_table woocommerce-checkout-review-order-table">
+<div class="order-review-step hidden">
+	<table class="shop_table woocommerce-checkout-review-order-table">
 
-	<tbody>
+		<tbody>
 		<?php
-		do_action( 'woocommerce_review_order_before_cart_contents' );
+		do_action('woocommerce_review_order_before_cart_contents');
 
-		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-			$_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+		foreach (WC()->cart->get_cart() as $cart_item_key => $cart_item) {
+			$_product = apply_filters('woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key);
 
 		}
 
-		do_action( 'woocommerce_review_order_after_cart_contents' );
+		do_action('woocommerce_review_order_after_cart_contents');
 		?>
-	</tbody>
-	<tfoot>
+		</tbody>
+		<tfoot>
 
 		<tr class="cart-subtotal">
-			<th><?php esc_html_e( 'Итого', 'woocommerce' ); ?></th>
+			<th><?php esc_html_e('Итого', 'woocommerce'); ?></th>
 			<td><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
-		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
-				<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
+		<?php foreach (WC()->cart->get_coupons() as $code => $coupon) : ?>
+			<tr class="cart-discount coupon-<?php echo esc_attr(sanitize_title($code)); ?>">
+				<th><?php wc_cart_totals_coupon_label($coupon); ?></th>
+				<td><?php wc_cart_totals_coupon_html($coupon); ?></td>
 			</tr>
 		<?php endforeach; ?>
-<?php //shipping methods field ?>
+		<?php //shipping methods field ?>
 
-		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
+		<?php foreach (WC()->cart->get_fees() as $fee) : ?>
 			<tr class="fee">
-				<th><?php echo esc_html( $fee->name ); ?></th>
-				<td><?php wc_cart_totals_fee_html( $fee ); ?></td>
+				<th><?php echo esc_html($fee->name); ?></th>
+				<td><?php wc_cart_totals_fee_html($fee); ?></td>
 			</tr>
 		<?php endforeach; ?>
 
-		<?php if ( wc_tax_enabled() && ! WC()->cart->display_prices_including_tax() ) : ?>
-			<?php if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) : ?>
-				<?php foreach ( WC()->cart->get_tax_totals() as $code => $tax ) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
-					<tr class="tax-rate tax-rate-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-						<th><?php echo esc_html( $tax->label ); ?></th>
-						<td><?php echo wp_kses_post( $tax->formatted_amount ); ?></td>
+		<?php if (wc_tax_enabled() && !WC()->cart->display_prices_including_tax()) : ?>
+			<?php if ('itemized' === get_option('woocommerce_tax_total_display')) : ?>
+				<?php foreach (WC()->cart->get_tax_totals() as $code => $tax) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
+					<tr class="tax-rate tax-rate-<?php echo esc_attr(sanitize_title($code)); ?>">
+						<th><?php echo esc_html($tax->label); ?></th>
+						<td><?php echo wp_kses_post($tax->formatted_amount); ?></td>
 					</tr>
 				<?php endforeach; ?>
-			<?php else : ?>
-				<tr class="tax-total">
-					<th><?php echo esc_html( WC()->countries->tax_or_vat() ); ?></th>
-					<td><?php wc_cart_totals_taxes_total_html(); ?></td>
-				</tr>
+
 			<?php endif; ?>
 		<?php endif; ?>
 
-		<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
+		<?php do_action('woocommerce_review_order_before_order_total'); ?>
 
 		<tr class="order-total">
-			<th><?php esc_html_e( 'Всего к оплате', 'woocommerce' ); ?></th>
+			<th><?php esc_html_e('Всего к оплате', 'woocommerce'); ?></th>
 			<td><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
-		<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>
+		<?php do_action('woocommerce_review_order_after_order_total'); ?>
 
-	</tfoot>
-</table>
+		</tfoot>
+	</table>
+	<!-- Order comments !-->
+	<div class="woocommerce-additional-fields">
+		<?php do_action('woocommerce_before_order_notes', $checkout); ?>
 
-<div class="order-notices">
-<?= ($agree_text) ? '<div>'.$agree_text.'</div>' : '';?>
-<?= ($text_before_process) ? '<div>'.$text_before_process.'</div>' : '';?>
+		<?php if (apply_filters('woocommerce_enable_order_notes_field', 'yes' === get_option('woocommerce_enable_order_comments', 'yes'))) : ?>
+
+			<div class="woocommerce-additional-fields__field-wrapper">
+				<?php foreach ($checkout->get_checkout_fields('order') as $key => $field) : ?>
+					<?php woocommerce_form_field($key, $field, $checkout->get_value($key)); ?>
+				<?php endforeach; ?>
+			</div>
+
+		<?php endif; ?>
+
+		<?php do_action('woocommerce_after_order_notes', $checkout); ?>
+	</div>
+
+	<div class="order-notices">
+		<?= ($agree_text) ? '<div>' . $agree_text . '</div>' : ''; ?>
+		<?= ($text_before_process) ? '<div>' . $text_before_process . '</div>' : ''; ?>
+	</div>
 </div>

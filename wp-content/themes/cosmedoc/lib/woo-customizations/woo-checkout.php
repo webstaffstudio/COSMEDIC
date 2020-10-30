@@ -37,14 +37,17 @@ function wc_remove_checkout_fields($fields)
 	$fields['billing']['billing_city']['label'] =  __('Город',THEME_TD);
 	$fields['billing']['billing_postcode']['label'] =  __('Почтовый индекс',THEME_TD);
 	$fields['billing']['billing_phone']['label'] = __('Телефон',THEME_TD);
-
+	$fields['order']['order_comments']['label'] = 'Комментарий к заказу';
 	unset( $fields['billing']['billing_company'] );
 	unset( $fields['billing']['billing_address_2'] );
-	unset( $fields['billing']['billing_country'] );
+//	unset( $fields['billing']['billing_country'] );
+	unset($fields['order']['order_comments']['placeholder']);
 	return $fields;
 }
 
 add_filter('woocommerce_checkout_fields', 'wc_remove_checkout_fields');
+
+
 
 function shipping() {
 
@@ -90,6 +93,7 @@ function get_shipping_packages($value) {
 	return apply_filters('woocommerce_cart_shipping_packages', $packages);
 }
 
+
 //diasble order review table
 //remove_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
 
@@ -102,3 +106,4 @@ function get_shipping_packages($value) {
 //        <label for="shipping_custom_1">Custom label</label>';
 //	}
 //}
+
