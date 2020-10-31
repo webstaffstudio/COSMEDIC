@@ -21,7 +21,7 @@ defined('ABSPATH') || exit;
 <div class="progress-bar">
 	<h3 class="result-title-sh"><?= __('Ваш заказ', THEME_TD);?></h3>
 	<ul class="progress-bar__steps">
-		<li class="progress-bar__steps--step" id="pr-payer-address" data-step="1">
+		<li class="progress-bar__steps--step inactive" id="pr-payer-address" data-step="1">
 			<h5><?= __('Адрес плательщика', THEME_TD); ?></h5>
 			<ul class="payer-data hidden">
 				<li>
@@ -41,7 +41,7 @@ defined('ABSPATH') || exit;
 				<li><span id="payer-phone"></span></li>
 			</ul>
 		</li>
-		<li class="progress-bar__steps--step" id="pr-shipping-address">
+		<li class="progress-bar__steps--step inactive" id="pr-shipping-address">
 			<h5><?= __('Адрес доставки', THEME_TD); ?></h5>
 			<ul class="shipping-data hidden" data-step="1">
 				<li>
@@ -61,11 +61,11 @@ defined('ABSPATH') || exit;
 				<li><span id="sh-phone"></span></li>
 			</ul>
 		</li>
-		<li class="progress-bar__steps--step" id="pr-shipping-method">
+		<li class="progress-bar__steps--step inactive" id="pr-shipping-method">
 			<h5><?= __('Способ доставки', THEME_TD); ?></h5>
-			<div class="shipphing-method" data-step="2"></div>
+			<div class="shipping-method" data-step="2"></div>
 		</li>
-		<li class="progress-bar__steps--step" id="pr-payment-method">
+		<li class="progress-bar__steps--step inactive" id="pr-payment-method">
 			<h5><?= __('Метод оплаты', THEME_TD); ?></h5>
 			<div class="payment-method" data-step="3"></div>
 		</li>

@@ -16,10 +16,9 @@
  */
 
 defined('ABSPATH') || exit;
-$agree_text = get_field('chk_agree_text', 'options');
-$text_before_process = get_field('chk_text_before_proccess_pay', 'options');
+
 ?>
-<div class="order-review-step hidden">
+
 	<table class="shop_table woocommerce-checkout-review-order-table">
 
 		<tbody>
@@ -79,25 +78,5 @@ $text_before_process = get_field('chk_text_before_proccess_pay', 'options');
 
 		</tfoot>
 	</table>
-	<!-- Order comments !-->
-	<div class="woocommerce-additional-fields">
-		<?php do_action('woocommerce_before_order_notes', $checkout); ?>
 
-		<?php if (apply_filters('woocommerce_enable_order_notes_field', 'yes' === get_option('woocommerce_enable_order_comments', 'yes'))) : ?>
 
-			<div class="woocommerce-additional-fields__field-wrapper">
-				<?php foreach ($checkout->get_checkout_fields('order') as $key => $field) : ?>
-					<?php woocommerce_form_field($key, $field, $checkout->get_value($key)); ?>
-				<?php endforeach; ?>
-			</div>
-
-		<?php endif; ?>
-
-		<?php do_action('woocommerce_after_order_notes', $checkout); ?>
-	</div>
-
-	<div class="order-notices">
-		<?= ($agree_text) ? '<div>' . $agree_text . '</div>' : ''; ?>
-		<?= ($text_before_process) ? '<div>' . $text_before_process . '</div>' : ''; ?>
-	</div>
-</div>

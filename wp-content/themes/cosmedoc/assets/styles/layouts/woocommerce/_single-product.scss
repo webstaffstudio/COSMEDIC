@@ -415,6 +415,17 @@
       align-items: center;
       flex-direction: row-reverse;
       justify-content: space-between;
+
+      li {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+        @include breakpoint(small down) {
+          flex-direction: column-reverse;
+        }
+      }
+
       @include breakpoint(small down) {
         flex-direction: column-reverse;
       }

@@ -6,7 +6,8 @@ import "jquery-match-height";
 import "./modules/filters-shop";
 // import "./modules/autocomplete-address";
 import "./modules/sticky-sidebar";
-import "jquery-validation";
+import "jquery-validation/dist/jquery.validate.min";
+import "jquery-validation/dist/additional-methods.min";
 import "./modules/checkout";
 import AOS from "aos/dist/aos";
 // Import everything from autoload
@@ -17,6 +18,7 @@ let windowWidth = $(window).width(),
 	scrollPos = 0;
 
 jQuery(window).load(function () {
+
 	$(".single-product .cross-sells .cart-cross-sells").slick({
 		dots: false,
 		arrows: true,
@@ -303,6 +305,7 @@ jQuery(function ($) {
 });
 
 jQuery(document).ready(() => {
+
 	$("div.cosmedoc-btn-gift").on("click", function () {
 		let $this = $(this);
 		let $product_id = $(this).attr("data-id");
