@@ -5,7 +5,7 @@
 
   .sidebar-shop {
     position: relative;
-    padding: 20px 60px 20px 0px;
+    padding: 20px 60px 20px 0;
 
     @include mq(0, 1023) {
       padding-right: 0;

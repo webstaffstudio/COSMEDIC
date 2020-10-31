@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 }
 
 if ( $related_products ) : ?>
-	<div class="cross-sells upsells">
+	<div class="cross-sells related">
 		<?php
 		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Похожие товары', THEME_TD ) );
 

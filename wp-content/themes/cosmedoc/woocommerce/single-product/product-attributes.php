@@ -29,7 +29,7 @@ $countries_terms = get_the_terms(get_the_ID(),'cos_countries');
 		<div class="product-attr">
 			<?php if ($countries_terms): ?>
 				<?php foreach ($countries_terms as $country) : ?>
-					<p><?= $country->name; ?></p>
+					<p><?= $country->name; ?>, </p>
 				<?php endforeach; ?>
 			<?php endif; ?>
 			<?php foreach ($product_attributes as $product_attribute_key => $product_attribute) : ?>

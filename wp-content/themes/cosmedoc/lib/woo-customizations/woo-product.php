@@ -62,3 +62,25 @@ function discount_percent($regular_price, $sale_price) {
 }
 
 
+add_filter('woocommerce_variable_price_html', 'custom_variation_price', 10, 2);
+function custom_variation_price( $price, $product ) {
+	$available_variations = $product->get_available_variations();
+
+	foreach ( $available_variations as $variation )
+	{
+		$isDefVariation=false;
+		foreach($product->get_default_attributes() as $key=>$val){
+			if($variation['attributes']['attribute_'.$key]==$val){
+				$isDefVariation=true;
+			}
+		}
+		if($isDefVariation){
+			$price = wc_price($variation['display_price']);
+		}
+	}
+	return $price;
+
+
+}
+
+

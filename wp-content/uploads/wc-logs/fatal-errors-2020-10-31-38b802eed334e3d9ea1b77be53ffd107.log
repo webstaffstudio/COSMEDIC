@@ -2,3 +2,14 @@
 
 2020-10-31T10:52:09+00:00 CRITICAL syntax error, unexpected ';' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 31
 
+2020-10-31T11:45:46+00:00 CRITICAL syntax error, unexpected ':' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-product.php on line 67
+
+2020-10-31T15:25:19+00:00 CRITICAL Uncaught Error: Call to undefined function int() in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-product.php:84
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): custom_variation_price('<span class="wo...', Object(WC_Product_Variable))
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(206): WP_Hook->apply_filters('<span class="wo...', Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-product-variable.php(167): apply_filters('woocommerce_var...', '<span class="wo...', Object(WC_Product_Variable))
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\templates\loop\price.php(25): WC_Product_Variable->get_price_html()
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-template-f in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-product.php on line 84
+
