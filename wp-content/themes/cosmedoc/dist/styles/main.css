@@ -18230,7 +18230,7 @@ ul {
 /* line 8, assets/styles/layouts/_pages.scss */
 
 .page-template-default.logged-in.woocommerce-account.woocommerce-page.woocommerce-js .entry-content,
-.page-template-default.tinvwl-theme-style .entry-content {
+.page-template-default.woocommerce-page.tinvwl-theme-style .entry-content {
   max-width: 100% !important;
 }
 
@@ -19024,7 +19024,7 @@ ul {
 /* line 40, assets/styles/layouts/woocommerce/_single-product.scss */
 
 .woocommerce.single .product-single-content .summary.entry-summary {
-  padding: 0 11px;
+  padding: 11px;
   width: 100%;
   max-width: 440px;
   margin: 0 auto;

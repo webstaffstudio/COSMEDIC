@@ -1,7 +1,8 @@
 <?php
-add_filter( 'woocommerce_add_to_cart_fragments', 'header_add_to_cart_fragment', 30 ,1 );
+add_filter('woocommerce_add_to_cart_fragments', 'header_add_to_cart_fragment', 30, 1);
 
-function header_add_to_cart_fragment() {
+function header_add_to_cart_fragment()
+{
 	global $woocommerce;
 	ob_start();
 	?>
@@ -9,14 +10,32 @@ function header_add_to_cart_fragment() {
 	<div class="header-mini-cart">
 
 		<?php
-		clean_mini_cart();
+
+		function clean_mini_cart()
+		{
+			foreach (WC()->cart->get_cart() as $cart_item) {
+				if (has_term(75, 'cos_product_types', $cart_item['product_id'])) {
+					$product_cart_id = WC()->cart->generate_cart_id($cart_item['product_id']);
+					WC()->cart->remove_cart_item($product_cart_id);
+					error_log(print_r('fire', true));
+				}
+			}
+		}
+
+		$fields_cart = get_fields('options');
+		$total = WC()->cart->get_cart_contents_total();
+		$needed_sum = isset($fields_cart['gift_products']['gift_sum']) ? $fields_cart['gift_products']['gift_sum'] : '';
+		if ($needed_sum && $needed_sum > intval($total)) {
+			clean_mini_cart();
+		}
+
 		woocommerce_mini_cart(); ?>
 	</div>
 
-	<?php $fragments['div.header-mini-cart'] = ob_get_clean();?>
-<?php
-	$count = $woocommerce->cart->get_cart_contents_count() === 0 ?'no-count':'';
-	$fragments['span.header-cart-count'] = '<span class="header-cart-count count '.$count.'">'.$woocommerce->cart->get_cart_contents_count().'</span>';
+	<?php $fragments['div.header-mini-cart'] = ob_get_clean(); ?>
+	<?php
+	$count = $woocommerce->cart->get_cart_contents_count() === 0 ? 'no-count' : '';
+	$fragments['span.header-cart-count'] = '<span class="header-cart-count count ' . $count . '">' . $woocommerce->cart->get_cart_contents_count() . '</span>';
 	return $fragments;
 
 }
@@ -40,7 +59,7 @@ function ajax_qty_cart()
 		WC()->cart->set_quantity($cart_item_key, $wss_product_quantity, true);
 	}
 
-	 wc_cart_totals_order_total_html();
+	wc_cart_totals_order_total_html();
 
 	die();
 }

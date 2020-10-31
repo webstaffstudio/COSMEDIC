@@ -64,7 +64,7 @@
 					<span class="icon"></span>
 				</a>
 			<?php endif;?>
-			<?php if(!is_cart()):?>
+			<?php if(!is_cart() && !is_checkout()):?>
 			<a href="#mini-cart" class="header__links-link link link-cart">
 				<span class="icon"><span class="header-cart-count count no-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span></span>
 			</a>
@@ -97,7 +97,7 @@
 		<?php endif; ?>
 	</a><!-- /.brand -->
 	<div class="header__links">
-		<?php if(!is_cart()):?>
+		<?php if(!is_cart() && !is_checkout()):?>
 		<a href="#mini-cart" class="header__links-link link link-cart">
 			<span class="icon"><span class="header-cart-count count no-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span></span>
 		</a>
