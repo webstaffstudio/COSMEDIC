@@ -13,3 +13,15 @@ Stack trace:
 #4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
 #5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-template-f in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-product.php on line 84
 
+2020-10-31T20:47:20+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_total() on array in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php:35
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): custom_woocommerce_before_calculate_totals(Object(WC_Cart))
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-cart.php(1365): do_action('woocommerce_bef...', Object(WC_Cart))
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(94): WC_Cart->calculate_totals()
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#6 C:\OSPanel\domains\localhost\ in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 35
+
+2020-10-31T21:08:27+00:00 CRITICAL Allowed memory size of 1610612736 bytes exhausted (tried to allocate 20480 bytes) in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\functions.php on line 624
+
