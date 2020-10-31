@@ -19,14 +19,20 @@ function woo_gift_product($product_id)
 	return false;
 }
 
-
-function clean_mini_cart(){
-	foreach ( WC()->cart->get_cart() as $cart_item ) {
-		if( has_term( 75, 'cos_product_types', $cart_item['product_id'])) {
-			$product_cart_id = WC()->cart->generate_cart_id( $cart_item['product_id'] );
-			WC()->cart->remove_cart_item( $product_cart_id);
+add_action( 'woocommerce_after_calculate_totals', 'woocommerce_calculate_totals');
+function woocommerce_calculate_totals( $cart ) {
+	$fields_cart = get_fields('options');
+	$total = $cart->get_cart_contents_total();
+	$needed_sum = isset($fields_cart['gift_products']['gift_sum'])?$fields_cart['gift_products']['gift_sum']:'';
+	if ($needed_sum && $needed_sum > intval($total)) {
+		foreach ($cart->get_cart() as $cart_item) {
+			if (has_term(75, 'cos_product_types', $cart_item['product_id'])) {
+				$product_cart_id = WC()->cart->generate_cart_id($cart_item['product_id']);
+				WC()->cart->remove_cart_item($product_cart_id);
+			}
 		}
 	}
+
 }
 
 add_action( 'woocommerce_before_calculate_totals', 'custom_woocommerce_before_calculate_totals', 20 );
@@ -60,13 +66,6 @@ function add_gift_product()
 		$product_cart_id = WC()->cart->generate_cart_id( $product_id );
 		if( ! WC()->cart->find_product_in_cart( $product_cart_id ) ){
 			WC()->cart->add_to_cart( $product_id , 1 );
-		}
-	} else {
-		foreach ( WC()->cart->get_cart() as $cart_item ) {
-			if( has_term( 75, 'cos_product_types', $cart_item['product_id']) ) {
-				$product_cart_id = WC()->cart->generate_cart_id( $cart_item['product_id'] );
-				WC()->cart->remove_cart_item( $product_cart_id);
-			}
 		}
 	}
 	wp_die();

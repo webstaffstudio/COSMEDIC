@@ -12886,7 +12886,7 @@ jQuery(window).load(function () {
   };
 
   var stickySidebar = function stickySidebar() {
-    $('.sidebar-shop').stick_in_parent({
+    $(".sidebar-shop").stick_in_parent({
       offset_top: 80
     });
   };

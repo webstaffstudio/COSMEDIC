@@ -125,17 +125,6 @@ do_action('woocommerce_before_mini_cart'); ?>
 			</ul>
 
 		</div>
-<!--		<p class="woocommerce-mini-cart__total total">-->
-<!--			--><?php
-//			/**
-//			 * Hook: woocommerce_widget_shopping_cart_total.
-//			 *
-//			 * @hooked woocommerce_widget_shopping_cart_subtotal - 10
-//			 */
-//			do_action('woocommerce_widget_shopping_cart_total');
-//			?>
-<!--		</p>-->
-
 		<?php do_action('woocommerce_widget_shopping_cart_before_buttons'); ?>
 	</div>
 	<div class="minicart-actions">
@@ -172,3 +161,4 @@ do_action('woocommerce_before_mini_cart'); ?>
 <?php endif; ?>
 
 <?php do_action('woocommerce_after_mini_cart'); ?>
+

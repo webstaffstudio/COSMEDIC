@@ -1,22 +1,22 @@
 <?php
-add_filter( 'woocommerce_add_to_cart_fragments', 'header_add_to_cart_fragment', 30 ,1 );
+add_filter('woocommerce_add_to_cart_fragments', 'header_add_to_cart_fragment', 30, 1);
 
-function header_add_to_cart_fragment() {
-	global $woocommerce;
+function header_add_to_cart_fragment()
+{
 	ob_start();
 	?>
 
 	<div class="header-mini-cart">
-
-		<?php
-		clean_mini_cart();
-		woocommerce_mini_cart(); ?>
+		<?php woocommerce_mini_cart(); ?>
 	</div>
 
-	<?php $fragments['div.header-mini-cart'] = ob_get_clean();?>
-<?php
-	$count = $woocommerce->cart->get_cart_contents_count() === 0 ?'no-count':'';
-	$fragments['span.header-cart-count'] = '<span class="header-cart-count count '.$count.'">'.$woocommerce->cart->get_cart_contents_count().'</span>';
+	<?php
+	$count = WC()->cart->get_cart_contents_count() === 0 ? 'no-count' : '';
+	$fragments['div.header-mini-cart'] = ob_get_clean();
+
+	?>
+	<?php
+	$fragments['span.header-cart-count'] = '<span class="header-cart-count count ' . $count . '">' . WC()->cart->get_cart_contents_count() . '</span>';
 	return $fragments;
 
 }
@@ -40,9 +40,9 @@ function ajax_qty_cart()
 		WC()->cart->set_quantity($cart_item_key, $wss_product_quantity, true);
 	}
 
-	 wc_cart_totals_order_total_html();
+	wc_cart_totals_order_total_html();
 
-	die();
+	wp_die();
 }
 
 //Ajax count cart product
@@ -51,6 +51,6 @@ add_action('wp_ajax_nopriv_cart_items', 'cart_items');
 function cart_items()
 {
 	echo WC()->cart->get_cart_contents_count();
-	die();
+	wp_die();
 }
 

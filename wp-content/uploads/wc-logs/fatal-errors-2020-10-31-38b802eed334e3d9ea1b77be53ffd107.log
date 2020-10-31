@@ -2,79 +2,26 @@
 
 2020-10-31T10:52:09+00:00 CRITICAL syntax error, unexpected ';' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\archive-product.php on line 31
 
-2020-10-31T16:08:46+00:00 CRITICAL Uncaught Error: Call to a member function get_checkout_fields() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php:64
-Stack trace:
-#0 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): cos_additional_order_fields('')
-#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
-#2 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
-#3 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\templates\checkout\payment.php(21): do_action('woocommerce_rev...')
-#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
-#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2283): wc_get_template('checkout/paymen...', Array)
-#6 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): woocommerce_checkout_payment('')
-#7 D:\OSPanel\domains\cosmedic\wp-includes in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php on line 64
+2020-10-31T11:45:46+00:00 CRITICAL syntax error, unexpected ':' in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-product.php on line 67
 
-2020-10-31T16:09:58+00:00 CRITICAL Uncaught Error: Call to a member function get_checkout_fields() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php:64
+2020-10-31T15:25:19+00:00 CRITICAL Uncaught Error: Call to undefined function int() in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-product.php:84
 Stack trace:
-#0 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): cos_additional_order_fields('')
-#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
-#2 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
-#3 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\templates\checkout\payment.php(21): do_action('woocommerce_rev...')
-#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
-#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2283): wc_get_template('checkout/paymen...', Array)
-#6 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): woocommerce_checkout_payment('')
-#7 D:\OSPanel\domains\cosmedic\wp-includes in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php on line 64
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): custom_variation_price('<span class="wo...', Object(WC_Product_Variable))
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(206): WP_Hook->apply_filters('<span class="wo...', Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-product-variable.php(167): apply_filters('woocommerce_var...', '<span class="wo...', Object(WC_Product_Variable))
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\templates\loop\price.php(25): WC_Product_Variable->get_price_html()
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-template-f in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-product.php on line 84
 
-2020-10-31T16:10:09+00:00 CRITICAL Uncaught Error: Call to a member function get_checkout_fields() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php:64
+2020-10-31T20:47:20+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_total() on array in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php:35
 Stack trace:
-#0 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): cos_additional_order_fields('')
-#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
-#2 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
-#3 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\templates\checkout\payment.php(21): do_action('woocommerce_rev...')
-#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
-#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2283): wc_get_template('checkout/paymen...', Array)
-#6 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): woocommerce_checkout_payment('')
-#7 D:\OSPanel\domains\cosmedic\wp-includes in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php on line 64
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(287): custom_woocommerce_before_calculate_totals(Object(WC_Cart))
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-cart.php(1365): do_action('woocommerce_bef...', Object(WC_Cart))
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(94): WC_Cart->calculate_totals()
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#6 C:\OSPanel\domains\localhost\ in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-cart.php on line 35
 
-2020-10-31T16:10:30+00:00 CRITICAL Uncaught Error: Call to a member function get_checkout_fields() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php:65
-Stack trace:
-#0 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): cos_additional_order_fields('')
-#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
-#2 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
-#3 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\templates\checkout\payment.php(21): do_action('woocommerce_rev...')
-#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
-#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2283): wc_get_template('checkout/paymen...', Array)
-#6 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): woocommerce_checkout_payment('')
-#7 D:\OSPanel\domains\cosmedic\wp-includes in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php on line 65
-
-2020-10-31T16:11:04+00:00 CRITICAL Uncaught Error: Call to a member function get_checkout_fields() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php:65
-Stack trace:
-#0 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): cos_additional_order_fields(NULL)
-#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
-#2 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
-#3 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\templates\checkout\payment.php(21): do_action('woocommerce_rev...')
-#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
-#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2283): wc_get_template('checkout/paymen...', Array)
-#6 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): woocommerce_checkout_payment('')
-#7 D:\OSPanel\domains\cosmedic\wp-includ in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php on line 65
-
-2020-10-31T16:12:26+00:00 CRITICAL Uncaught Error: Call to a member function get_checkout_fields() on null in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php:65
-Stack trace:
-#0 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): cos_additional_order_fields(Object(WC_Checkout))
-#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
-#2 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
-#3 D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\woocommerce\checkout\form-checkout.php(23): do_action('woocommerce_bef...', Object(WC_Checkout))
-#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
-#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-checkout.php(293): wc_get_template('checkout/form-c...', Array)
-#6 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\shortcodes\ in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php on line 65
-
-2020-10-31T16:12:39+00:00 CRITICAL Uncaught Error: Call to a member function get_checkout_fields() on string in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php:65
-Stack trace:
-#0 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): cos_additional_order_fields('')
-#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
-#2 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
-#3 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\templates\checkout\payment.php(21): do_action('woocommerce_rev...')
-#4 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('D:\\OSPanel\\doma...')
-#5 D:\OSPanel\domains\cosmedic\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2283): wc_get_template('checkout/paymen...', Array)
-#6 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): woocommerce_checkout_payment('')
-#7 D:\OSPanel\domains\cosmedic\wp-includ in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php on line 65
+2020-10-31T21:08:27+00:00 CRITICAL Allowed memory size of 1610612736 bytes exhausted (tried to allocate 20480 bytes) in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\functions.php on line 624
 
