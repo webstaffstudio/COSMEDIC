@@ -21,6 +21,7 @@ get_header('shop');
 
 $post_id = is_shop() ? wc_get_page_id('shop') : get_the_ID();
 $fields = get_fields(wc_get_page_id('shop'));
+$options_fields = get_fields('options');
 $title = is_shop() ? $fields['hero_title'] : single_cat_title('', false);
 $category = get_queried_object();
 if (!is_shop()):
@@ -28,7 +29,7 @@ if (!is_shop()):
 	$thumb_id = get_term_meta($t_id, 'thumbnail_id', true);
 	$term_img = wp_get_attachment_image_src($thumb_id, 'full');
 endif;
-$hero_image = is_shop() ? wp_get_attachment_image_src($fields['hero_image'], 'full')[0] : $term_img[0];
+$hero_image = is_shop() ? wp_get_attachment_image_src($fields['hero_image'], 'full')[0] : $options_fields['default_placeholder'];
 ?>
 <section class="hero__section"
 		 style="background-image: url(<?php echo $hero_image; ?>)">
@@ -72,7 +73,7 @@ do_action('woocommerce_before_main_content');
 			'ignore_sticky_posts' => 1,
 			'meta_key' => 'total_sales',
 			'orderby' => 'meta_value_num',
-			);
+		);
 
 		$product_query = new WP_Query($product_args);
 		$count_posts = $product_query->post_count;
@@ -107,7 +108,6 @@ do_action('woocommerce_before_main_content');
 				}
 				echo '</div>';
 			}
-
 
 
 			if ($product_query->max_num_pages > 1):

@@ -17967,7 +17967,7 @@ ul {
 
 .other-pages.site-footer .newsletter-form input[type="email"].wpcf7-not-valid {
   border-color: #e88565;
-  background: #fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjJweCIgaGVpZ2h0PSI2cHgiIHZpZXdCb3g9IjAgMCAyMiA2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1Mi42ICg2NzQ5MSkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+SU5QVVQgRVJST1I8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iSU5QVVQtRVJST1IiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIHN0cm9rZT0iI0U4ODU2NSIgc3Ryb2tlLXdpZHRoPSIwLjUiIGZpbGw9IiNFODg1NjUiIGN4PSIzIiBjeT0iMyIgcj0iMiI+PC9jaXJjbGU+CiAgICA8L2c+Cjwvc3ZnPg==) no-repeat;
+  background: #fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjIycHgiIGhlaWdodD0iNnB4IiB2aWV3Qm94PSIwIDAgMjIgNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjYgKDY3NDkxKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4NCiAgICA8dGl0bGU+SU5QVVQgRVJST1I8L3RpdGxlPg0KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPg0KICAgIDxnIGlkPSJJTlBVVC1FUlJPUiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+DQogICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwiIHN0cm9rZT0iI0U4ODU2NSIgc3Ryb2tlLXdpZHRoPSIwLjUiIGZpbGw9IiNFODg1NjUiIGN4PSIzIiBjeT0iMyIgcj0iMiI+PC9jaXJjbGU+DQogICAgPC9nPg0KPC9zdmc+) no-repeat;
   background-position: 100% 50%;
 }
 
@@ -18418,13 +18418,13 @@ ul {
 /* line 146, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list .slick-list {
-  margin-right: -20px;
+  margin: 0 -10px;
 }
 
 /* line 150, assets/styles/layouts/_pages.scss */
 
 .cross-sale__list .slick-slide {
-  margin-right: 20px;
+  margin: 0 10px;
 }
 
 /* line 154, assets/styles/layouts/_pages.scss */
@@ -19534,7 +19534,57 @@ ul {
   margin-top: 80px;
 }
 
-/* line 414, assets/styles/layouts/woocommerce/_single-product.scss */
+/* line 413, assets/styles/layouts/woocommerce/_single-product.scss */
+
+.woocommerce.single .woocommerce-message,
+.woocommerce.single .woocommerce-error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 39.99875em) {
+  /* line 413, assets/styles/layouts/woocommerce/_single-product.scss */
+
+  .woocommerce.single .woocommerce-message,
+  .woocommerce.single .woocommerce-error {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+/* line 422, assets/styles/layouts/woocommerce/_single-product.scss */
+
+.woocommerce.single .woocommerce-message a.button,
+.woocommerce.single .woocommerce-error a.button {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 39.99875em) {
+  /* line 422, assets/styles/layouts/woocommerce/_single-product.scss */
+
+  .woocommerce.single .woocommerce-message a.button,
+  .woocommerce.single .woocommerce-error a.button {
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: auto;
+  }
+}
+
+/* line 434, assets/styles/layouts/woocommerce/_single-product.scss */
 
 .woocommerce .footer-container {
   background: #f3f4f1;
@@ -21488,7 +21538,7 @@ ul {
 /* line 7, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout {
-  background-color: #f3f4f1;
+  background-color: #f3f4f1 !important;
 }
 
 /* line 10, assets/styles/layouts/woocommerce/_checkout.scss */
@@ -21501,13 +21551,13 @@ ul {
   margin-bottom: 18px !important;
 }
 
-/* line 18, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 19, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .woocommerce-form-coupon-toggle {
   display: none;
 }
 
-/* line 24, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 25, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content {
   max-width: 1440px;
@@ -21515,7 +21565,7 @@ ul {
   margin: 0 auto;
 }
 
-/* line 29, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 30, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .column-content {
   display: -webkit-box;
@@ -21523,20 +21573,20 @@ ul {
   display: flex;
 }
 
-/* line 32, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 33, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .column-content .column-1 {
   width: 70%;
   padding-right: 100px;
 }
 
-/* line 37, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 38, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .column-content .column-2 {
   width: 30%;
 }
 
-/* line 42, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 43, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .account-entry {
   padding: 25px 0;
@@ -21546,7 +21596,7 @@ ul {
   font-size: 13px;
 }
 
-/* line 49, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 50, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .account-entry a {
   color: #363636;
@@ -21556,7 +21606,7 @@ ul {
   transition: opacity 0.3s ease;
 }
 
-/* line 57, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 58, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .step-container {
   border-bottom: 1px solid #363636;
@@ -21564,19 +21614,19 @@ ul {
   margin-bottom: 20px;
 }
 
-/* line 63, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 64, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-billing-fields h3 {
   display: none;
 }
 
-/* line 67, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 68, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-account-fields {
   display: none;
 }
 
-/* line 72, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 73, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content form .woocommerce-billing-fields__field-wrapper {
   display: -webkit-box;
@@ -21588,13 +21638,13 @@ ul {
           flex-direction: column;
 }
 
-/* line 77, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 78, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content form .optional {
   display: none;
 }
 
-/* line 81, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 82, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content form input {
   max-width: 300px;
@@ -21610,14 +21660,14 @@ ul {
   font-size: 16px;
 }
 
-/* line 93, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 94, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content form input[type="radio"] {
   max-width: 15px;
   margin-top: 0 !important;
 }
 
-/* line 101, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 102, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-shipping-methods li {
   display: -webkit-box;
@@ -21628,14 +21678,14 @@ ul {
           align-items: center;
 }
 
-/* line 105, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 106, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-shipping-methods li .woocommerce-Price-amount {
   font-size: 14px;
   font-weight: 400 !important;
 }
 
-/* line 113, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 114, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table {
   border: none;
@@ -21645,20 +21695,20 @@ ul {
   padding: 2px 0;
 }
 
-/* line 120, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 121, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table tfoot {
   background-color: transparent;
 }
 
-/* line 123, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 124, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table tfoot td {
   border: none;
   padding-right: 0;
 }
 
-/* line 129, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 130, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table tr {
   padding: 2px 0;
@@ -21673,7 +21723,7 @@ ul {
   margin-left: auto;
 }
 
-/* line 138, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 139, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table th,
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table .woocommerce-Price-amount {
@@ -21685,7 +21735,7 @@ ul {
   opacity: 0.6;
 }
 
-/* line 149, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 150, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table .order-total th,
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-checkout-review-order .woocommerce-checkout-review-order-table .order-total .woocommerce-Price-amount {
@@ -21693,7 +21743,7 @@ ul {
   opacity: 1 !important;
 }
 
-/* line 158, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 159, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .result-title-sh {
   font-size: 28px;
@@ -21703,7 +21753,7 @@ ul {
   padding-bottom: 8px;
 }
 
-/* line 166, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 167, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .progress-bar__steps {
   display: -webkit-box;
@@ -21715,7 +21765,7 @@ ul {
           flex-direction: column;
 }
 
-/* line 170, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 171, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .progress-bar__steps h5 {
   margin-bottom: 6px;
@@ -21723,7 +21773,7 @@ ul {
   text-transform: initial;
 }
 
-/* line 176, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 177, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .progress-bar__steps .payer-data,
 .woocommerce-checkout .site-content .site-main .entry-content .progress-bar__steps .shipping-data {
@@ -21739,7 +21789,7 @@ ul {
   margin-bottom: 20px;
 }
 
-/* line 184, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 185, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .progress-bar__steps .payer-data li,
 .woocommerce-checkout .site-content .site-main .entry-content .progress-bar__steps .shipping-data li {
@@ -21754,14 +21804,14 @@ ul {
   text-rendering: optimizeSpeed;
 }
 
-/* line 194, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 195, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .progress-bar__steps .payer-data.hidden,
 .woocommerce-checkout .site-content .site-main .entry-content .progress-bar__steps .shipping-data.hidden {
   display: none;
 }
 
-/* line 203, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 204, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .column-1 .shipping-step.hidden,
 .woocommerce-checkout .site-content .site-main .entry-content .column-1 .order-review-step.hidden,
@@ -21769,26 +21819,26 @@ ul {
   display: none;
 }
 
-/* line 208, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 209, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .next-step {
   width: 100%;
   margin-top: 10px;
 }
 
-/* line 212, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 213, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .next-step.hidden {
   display: none !important;
 }
 
-/* line 217, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 218, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content #order_review_heading {
   display: none;
 }
 
-/* line 222, assets/styles/layouts/woocommerce/_checkout.scss */
+/* line 223, assets/styles/layouts/woocommerce/_checkout.scss */
 
 .woocommerce-checkout .site-content .site-main .entry-content .woocommerce-additional-fields h3 {
   display: none;
@@ -22142,8 +22192,8 @@ ul {
 /* line 6, assets/styles/layouts/woocommerce/template-parts/_sidebar.scss */
 
 .sidebar-container .sidebar-shop {
-  padding-right: 60px;
   position: relative;
+  padding: 20px 60px 20px 0px;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 1023px) {

@@ -409,6 +409,26 @@
     .woocommerce-error {
       margin-top: 80px;
     }
+
+    .woocommerce-message, .woocommerce-error {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      @include breakpoint(small down) {
+        flex-direction: column-reverse;
+      }
+
+      a.button {
+        margin-left: auto;
+        @include breakpoint(small down) {
+          margin-left: 0;
+          margin-top: 15px;
+          margin-bottom: 15px;
+          margin-right: auto;
+        }
+      }
+    }
   }
 
   .footer-container {

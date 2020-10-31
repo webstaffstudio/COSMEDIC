@@ -12870,12 +12870,20 @@ jQuery(window).load(function () {
     });
   };
 
+  var stickySidebar = function stickySidebar() {
+    $('.sidebar-shop').stick_in_parent({
+      offset_top: 80
+    });
+  };
+
   var windowWidth = $(window).width();
 
   if (windowWidth < 1024) {
     $(".cart-sidebar").trigger("sticky_kit:detach");
+    $(".sidebar-shop").trigger("sticky_kit:detach");
   } else {
     makeSticky();
+    stickySidebar();
   }
 
   $(window).resize(function () {
@@ -12883,8 +12891,10 @@ jQuery(window).load(function () {
 
     if (windowWidth < 1024) {
       $(".cart-sidebar").trigger("sticky_kit:detach");
+      $(".sidebar-shop").trigger("sticky_kit:detach");
     } else {
       makeSticky();
+      stickySidebar();
     }
   });
   $("#main-menu").on("show.zf.dropdownmenu", function () {

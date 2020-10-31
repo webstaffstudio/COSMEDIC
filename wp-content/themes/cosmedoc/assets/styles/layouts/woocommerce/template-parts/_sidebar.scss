@@ -4,8 +4,8 @@
   width: 100%;
 
   .sidebar-shop {
-    padding-right: 60px;
     position: relative;
+    padding: 20px 60px 20px 0px;
 
     @include mq(0, 1023) {
       padding-right: 0;
