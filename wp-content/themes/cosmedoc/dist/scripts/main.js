@@ -16733,8 +16733,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
           $('.pagination-product .pagination-product__list li[data-num="' + page + '"] a').addClass("current");
         } else {
           $(".pagination-product").hide();
-        } //show current showing products
+        }
 
+        console.log(data.cur); //show current showing products
 
         var count_products = $(".product-list .product").length;
         $(".catalog-navigation__count--showing").text(count_products); //show total showing products counter
@@ -16787,7 +16788,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     currentPage = 1; // always reset this number if checkbox is changed
 
     filtersInit(dataObj, currentPage);
-    console.log(dataObj);
   });
 
   if ($(".filter-item").is(":checked")) {

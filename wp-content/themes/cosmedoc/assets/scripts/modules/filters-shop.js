@@ -68,6 +68,7 @@ jQuery(document).ready(function() {
         } else {
           $(".pagination-product").hide();
         }
+        console.log(data.cur);
         //show current showing products
         let count_products = $(".product-list .product").length;
         $(".catalog-navigation__count--showing").text(count_products);
@@ -120,7 +121,6 @@ jQuery(document).ready(function() {
     }
     currentPage = 1; // always reset this number if checkbox is changed
     filtersInit(dataObj, currentPage);
-    console.log(dataObj);
   });
 
   if ($(".filter-item").is(":checked")) {

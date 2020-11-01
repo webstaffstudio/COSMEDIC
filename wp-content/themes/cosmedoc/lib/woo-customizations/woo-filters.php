@@ -54,6 +54,7 @@ function filters_ajax()
 	else:
 		$paged = $_POST['page'];
 	endif;
+
 	if (isset($_POST['form'])):
 
 		$terms_array = $_POST['form'];
@@ -150,7 +151,7 @@ function filters_ajax()
 	$pages = paginate_links(array(
 		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
 		'format' => '?paged=%#%',
-		'current' => max(1, get_query_var('paged')),
+		'current' => $paged,
 		'total' => $query->max_num_pages,
 		'type' => 'array',
 		'end_size' => $big, //will show 2 numbers on either the start and the end list edges.
@@ -176,9 +177,7 @@ function filters_ajax()
 		endforeach;
 	endforeach;
 	$term_names_u = array_unique($term_names);
-//		echo '<pre>';
-//		error_log(print_r($_POST['cur_term'], true));
-//		echo '</pre>';
+
 	$products_html = ob_get_clean();
 
 
