@@ -34,6 +34,7 @@ if (!is_active_sidebar('sidebar-1')) {
 					style="display: none;">
 					<?php foreach ($product_type as $type):
 						$term_id = $type->term_id; ?>
+					<?php if ($term_id !== 75): //exclude gifts ?>
 						<li id="type-box">
 							<label for="type_<?= $term_id; ?>">
 								<input class="filter-item" data-filterbox="product_type" type="checkbox" name="type_<?= $term_id; ?>" value="<?= $term_id ?>"
@@ -42,6 +43,7 @@ if (!is_active_sidebar('sidebar-1')) {
 								<span class="count">(<?= $type->count; ?>)</span>
 							</label>
 						</li>
+					<?php endif; ?>
 					<?php endforeach; ?>
 				</ul>
 			</li>

@@ -33,10 +33,12 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
 <div class="column-content">
 	<div class="column-1">
 		<h1 class="checkout-title"><?php the_title(); ?></h1>
-		<div class="account-entry">
-			<div
-				class="accountr-entry__content"><?= __('<a href="' . get_permalink(wc_get_page_id('myaccount')) . '">Войти</a> в личный кабинет', THEME_TD); ?></div>
-		</div>
+		<?php if (!is_user_logged_in()): ?>
+			<div class="account-entry">
+				<div
+					class="accountr-entry__content"><?= __('<a href="' . get_permalink(wc_get_page_id('myaccount')) . '">Войти</a> в личный кабинет', THEME_TD); ?></div>
+			</div>
+		<?php endif; ?>
 		<form name="checkout" method="post" class="checkout woocommerce-checkout"
 			  action="<?php echo esc_url(wc_get_checkout_url()); ?>" enctype="multipart/form-data">
 

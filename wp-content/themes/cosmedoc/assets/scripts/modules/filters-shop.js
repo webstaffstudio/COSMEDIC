@@ -51,9 +51,9 @@ jQuery(document).ready(function() {
         } else {
           $(".load-container").removeClass("hide-it");
         }
-        $("#stock-box")
-          .find(".count")
-          .html("(" + data.stock_quantity + ")");
+        // $("#stock-box")
+        //   .find(".count")
+        //   .html("(" + data.stock_quantity + ")");
         if (pagination && pagination.length > 0) {
           //show is pagination exist
           $(".pagination-product").show();

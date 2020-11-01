@@ -88,3 +88,11 @@ function cos_additional_order_fields()
 	echo $additional_html;
 }
 
+add_action('woocommerce_review_order_after_submit', 'cos_notice_after_payment', 10);
+function cos_notice_after_payment(){
+	$cart_link = esc_url(wc_get_cart_url());
+	echo '<div class="notice_after_payment">';
+	echo __('Забыли добавить товар? <a href="'.$cart_link.'">Измените данные в корзине покупок </a>', THEME_TD);
+	echo '</div>';
+}
+

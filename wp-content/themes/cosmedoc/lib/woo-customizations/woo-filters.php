@@ -10,7 +10,7 @@ function filters_ajax()
 		$orderby = $_POST['order'];
 		switch ($orderby):
 			case 'popular' :
-				$orderby =  array(
+				$orderby = array(
 					'meta_key' => 'total_sales',
 					'orderby' => 'meta_value_num',
 					'order' => 'DESC',
@@ -31,14 +31,14 @@ function filters_ajax()
 				);
 				break;
 			case  'price_asc' :
-				$orderby =  array(
+				$orderby = array(
 					'orderby' => 'meta_value_num',
 					'meta_key' => '_price',
 					'order' => 'ASC',
 				);
 				break;
 			default :
-				$orderby =  array(
+				$orderby = array(
 					'meta_key' => 'total_sales',
 					'orderby' => 'meta_value_num',
 					'order' => 'DESC',
@@ -72,19 +72,19 @@ function filters_ajax()
 		$product_type_tax = array(
 			'taxonomy' => 'cos_product_types',
 			'field' => 'id',
-			'terms' => $terms_array['product_type'],
+			'terms' => (isset($terms_array['product_type'])) ? $terms_array['product_type'] : '',
 			'operator' => 'IN',
 		);
 		$brands_tax = array(
 			'taxonomy' => 'cos_brands',
 			'field' => 'id',
-			'terms' => $terms_array['brands'],
+			'terms' => (isset($terms_array['brands'])) ? $terms_array['brands'] : '',
 			'operator' => 'IN',
 		);
 		$country_tax = array(
 			'taxonomy' => 'cos_countries',
 			'field' => 'id',
-			'terms' => $terms_array['country'],
+			'terms' => (isset($terms_array['country'])) ? $terms_array['country'] : '',
 			'operator' => 'IN',
 		);
 		$category_tax = array(
@@ -135,9 +135,9 @@ function filters_ajax()
 			$id = get_the_ID();
 			array_push($product_ids, $id);
 
-			if ($product->stock && $product->get_manage_stock()) {
-				$in_stock_counter += $product->stock;
-			}
+//			if ($product->stock && $product->get_manage_stock()) {
+//				$in_stock_counter += $product->stock;
+//			}
 
 			wc_get_template_part('content', 'product');
 
@@ -145,6 +145,7 @@ function filters_ajax()
 		wp_reset_query();
 	}
 	ob_start();
+
 	$big = 999999999; // need an unlikely integer
 	$pages = paginate_links(array(
 		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
@@ -219,7 +220,7 @@ function filters_ajax()
 
 	wp_send_json(array(
 		'products_html' => $products_html,
-		'stock_quantity' => $in_stock_counter,
+//		'stock_quantity' => $in_stock_counter,
 		'pagination' => $pagination,
 		'ppp' => $ppp,
 		'total_count' => $total_count,
