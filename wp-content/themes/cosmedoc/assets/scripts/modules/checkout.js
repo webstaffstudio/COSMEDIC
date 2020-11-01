@@ -78,17 +78,33 @@ jQuery(document).ready(function () {
 			return false
 		}
 	});
-
+	$("#shipping_method input").on("change", function () {
+		let selectedShipping = $('#shipping_method input:checked').attr('id');
+		let labelText = $('label[for="' + selectedShipping + '"]').text();
+		$('#pr-shipping-method').removeClass('inactive');
+		$('.shipping-method').html(labelText);
+	});
 
 	$("#shipping-step").on("click", function () {
 		let selectedShipping = $('#shipping_method input:checked').attr('id');
 		let labelText = $('label[for="' + selectedShipping + '"]').text();
-		console.log(selectedShipping);
+		$('#pr-shipping-method').removeClass('inactive');
 		$('.shipping-method').html(labelText);
+		$('#shipping-step').addClass('hidden');
+		$('.shipping-step').addClass('selected-shipping');
 		$(".order-review-step").removeClass("hidden");
 	});
 
-	$("form.woocommerce-checkout").keypress(function(e) {
+	// $("#payment").on("change", 'input',function () {
+	// 	let selectedPayment = $('.wc_payment_methods input:checked').attr('id');
+	// 	console.log(selectedPayment);
+	// 	console.log(1231);
+	// 	let labelText = $('label[for="' + selectedPayment + '"]').text();
+	// 	$('#pr-payment-method').removeClass('inactive');
+	// 	$('.pr-payment-method .payment-method').html(labelText);
+	// });
+
+	$("form.woocommerce-checkout").keypress(function (e) {
 		if (e.which == 13) {
 			return false;
 		}

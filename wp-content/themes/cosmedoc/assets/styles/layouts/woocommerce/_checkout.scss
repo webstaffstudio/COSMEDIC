@@ -209,10 +209,12 @@
           display: flex;
           flex-direction: column;
 
+
           li.inactive {
             h5 {
               opacity: 0.4;
             }
+
           }
 
           h5 {
@@ -243,6 +245,16 @@
               display: none;
             }
           }
+
+          .shipping-method {
+            display: inline-flex;
+            margin: 0;
+            color: #363636;
+            font-size: 11px;
+            font-style: normal;
+            margin-bottom: 4px;
+            text-rendering: optimizeSpeed;
+          }
         }
 
         .column-1 .shipping-step,
@@ -251,6 +263,11 @@
           &.hidden {
             display: none;
           }
+        }
+
+        .shipping-step.selected-shipping .step-container {
+          border-bottom: none;
+          padding-bottom: 0;
         }
 
         .next-step {
@@ -298,8 +315,7 @@
 
             a {
               text-decoration: underline;
-
-
+              cursor: pointer;
             }
           }
 

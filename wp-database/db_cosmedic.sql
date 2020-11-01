@@ -2,10 +2,10 @@
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Окт 31 2020 г., 21:40
--- Версия сервера: 5.7.25
--- Версия PHP: 7.2.22
+-- Host: 127.0.0.1:3306
+-- Generation Time: Nov 01, 2020 at 05:11 AM
+-- Server version: 5.7.25
+-- PHP Version: 7.0.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `db_cosmedoc`
+-- Database: `db_cosmedic`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_actionscheduler_actions`
+-- Table structure for table `wss_actionscheduler_actions`
 --
 
 CREATE TABLE `wss_actionscheduler_actions` (
@@ -45,7 +45,7 @@ CREATE TABLE `wss_actionscheduler_actions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_actionscheduler_actions`
+-- Dumping data for table `wss_actionscheduler_actions`
 --
 
 INSERT INTO `wss_actionscheduler_actions` (`action_id`, `hook`, `status`, `scheduled_date_gmt`, `scheduled_date_local`, `args`, `schedule`, `group_id`, `attempts`, `last_attempt_gmt`, `last_attempt_local`, `claim_id`, `extended_args`) VALUES
@@ -83,12 +83,14 @@ INSERT INTO `wss_actionscheduler_actions` (`action_id`, `hook`, `status`, `sched
 (46, 'action_scheduler/migration_hook', 'complete', '2020-10-31 16:57:50', '2020-10-31 16:57:50', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1604163470;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1604163470;}', 1, 1, '2020-10-31 16:57:52', '2020-10-31 16:57:52', 0, NULL),
 (47, 'action_scheduler/migration_hook', 'complete', '2020-10-31 16:58:52', '2020-10-31 16:58:52', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1604163532;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1604163532;}', 1, 1, '2020-10-31 16:58:52', '2020-10-31 16:58:52', 0, NULL),
 (48, 'action_scheduler/migration_hook', 'complete', '2020-10-31 17:00:40', '2020-10-31 17:00:40', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1604163640;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1604163640;}', 1, 1, '2020-10-31 17:00:52', '2020-10-31 17:00:52', 0, NULL),
-(49, 'action_scheduler/migration_hook', 'complete', '2020-10-31 17:01:52', '2020-10-31 17:01:52', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1604163712;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1604163712;}', 1, 1, '2020-10-31 17:02:39', '2020-10-31 17:02:39', 0, NULL);
+(49, 'action_scheduler/migration_hook', 'complete', '2020-10-31 17:01:52', '2020-10-31 17:01:52', '[]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1604163712;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1604163712;}', 1, 1, '2020-10-31 17:02:39', '2020-10-31 17:02:39', 0, NULL),
+(50, 'wc-admin_import_orders', 'complete', '2020-10-31 22:25:18', '2020-10-31 22:25:18', '[313]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1604183118;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1604183118;}', 3, 1, '2020-10-31 22:26:06', '2020-10-31 22:26:06', 0, NULL),
+(51, 'wc-admin_import_orders', 'complete', '2020-11-01 00:18:14', '2020-11-01 00:18:14', '[313]', 'O:30:\"ActionScheduler_SimpleSchedule\":2:{s:22:\"\0*\0scheduled_timestamp\";i:1604189894;s:41:\"\0ActionScheduler_SimpleSchedule\0timestamp\";i:1604189894;}', 3, 1, '2020-11-01 00:18:51', '2020-11-01 00:18:51', 0, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_actionscheduler_claims`
+-- Table structure for table `wss_actionscheduler_claims`
 --
 
 CREATE TABLE `wss_actionscheduler_claims` (
@@ -99,7 +101,7 @@ CREATE TABLE `wss_actionscheduler_claims` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_actionscheduler_groups`
+-- Table structure for table `wss_actionscheduler_groups`
 --
 
 CREATE TABLE `wss_actionscheduler_groups` (
@@ -108,7 +110,7 @@ CREATE TABLE `wss_actionscheduler_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_actionscheduler_groups`
+-- Dumping data for table `wss_actionscheduler_groups`
 --
 
 INSERT INTO `wss_actionscheduler_groups` (`group_id`, `slug`) VALUES
@@ -119,7 +121,7 @@ INSERT INTO `wss_actionscheduler_groups` (`group_id`, `slug`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_actionscheduler_logs`
+-- Table structure for table `wss_actionscheduler_logs`
 --
 
 CREATE TABLE `wss_actionscheduler_logs` (
@@ -131,7 +133,7 @@ CREATE TABLE `wss_actionscheduler_logs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_actionscheduler_logs`
+-- Dumping data for table `wss_actionscheduler_logs`
 --
 
 INSERT INTO `wss_actionscheduler_logs` (`log_id`, `action_id`, `message`, `log_date_gmt`, `log_date_local`) VALUES
@@ -239,12 +241,18 @@ INSERT INTO `wss_actionscheduler_logs` (`log_id`, `action_id`, `message`, `log_d
 (129, 48, 'action complete via WP Cron', '2020-10-31 17:00:52', '2020-10-31 17:00:52'),
 (130, 49, 'action created', '2020-10-31 17:00:52', '2020-10-31 17:00:52'),
 (131, 49, 'action started via Async Request', '2020-10-31 17:02:39', '2020-10-31 17:02:39'),
-(132, 49, 'action complete via Async Request', '2020-10-31 17:02:39', '2020-10-31 17:02:39');
+(132, 49, 'action complete via Async Request', '2020-10-31 17:02:39', '2020-10-31 17:02:39'),
+(133, 50, 'action created', '2020-10-31 22:25:13', '2020-10-31 22:25:13'),
+(134, 50, 'action started via WP Cron', '2020-10-31 22:26:06', '2020-10-31 22:26:06'),
+(135, 50, 'action complete via WP Cron', '2020-10-31 22:26:06', '2020-10-31 22:26:06'),
+(136, 51, 'action created', '2020-11-01 00:18:09', '2020-11-01 00:18:09'),
+(137, 51, 'action started via WP Cron', '2020-11-01 00:18:51', '2020-11-01 00:18:51'),
+(138, 51, 'action complete via WP Cron', '2020-11-01 00:18:51', '2020-11-01 00:18:51');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_commentmeta`
+-- Table structure for table `wss_commentmeta`
 --
 
 CREATE TABLE `wss_commentmeta` (
@@ -257,7 +265,7 @@ CREATE TABLE `wss_commentmeta` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_comments`
+-- Table structure for table `wss_comments`
 --
 
 CREATE TABLE `wss_comments` (
@@ -279,7 +287,7 @@ CREATE TABLE `wss_comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_comments`
+-- Dumping data for table `wss_comments`
 --
 
 INSERT INTO `wss_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `comment_author_email`, `comment_author_url`, `comment_author_IP`, `comment_date`, `comment_date_gmt`, `comment_content`, `comment_karma`, `comment_approved`, `comment_agent`, `comment_type`, `comment_parent`, `user_id`) VALUES
@@ -288,12 +296,13 @@ INSERT INTO `wss_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `
 (3, 299, 'WooCommerce', 'woocommerce@cosmedoc.local', '', '', '2020-10-27 23:48:51', '2020-10-27 23:48:51', 'Unpaid order cancelled - time limit reached. Order status changed from Pending payment to Cancelled.', 0, '1', 'WooCommerce', 'order_note', 0, 0),
 (4, 300, 'WooCommerce', 'woocommerce@cosmedoc.local', '', '', '2020-10-27 23:48:51', '2020-10-27 23:48:51', 'Unpaid order cancelled - time limit reached. Order status changed from Pending payment to Cancelled.', 0, '1', 'WooCommerce', 'order_note', 0, 0),
 (5, 301, 'WooCommerce', 'woocommerce@cosmedoc.local', '', '', '2020-10-27 23:48:51', '2020-10-27 23:48:51', 'Unpaid order cancelled - time limit reached. Order status changed from Pending payment to Cancelled.', 0, '1', 'WooCommerce', 'order_note', 0, 0),
-(6, 302, 'WooCommerce', 'woocommerce@cosmedoc.local', '', '', '2020-10-28 18:15:12', '2020-10-28 18:15:12', 'Unpaid order cancelled - time limit reached. Order status changed from Pending payment to Cancelled.', 0, '1', 'WooCommerce', 'order_note', 0, 0);
+(6, 302, 'WooCommerce', 'woocommerce@cosmedoc.local', '', '', '2020-10-28 18:15:12', '2020-10-28 18:15:12', 'Unpaid order cancelled - time limit reached. Order status changed from Pending payment to Cancelled.', 0, '1', 'WooCommerce', 'order_note', 0, 0),
+(7, 313, 'WooCommerce', 'woocommerce@cosmedoc.local', '', '', '2020-11-01 00:18:09', '2020-11-01 00:18:09', 'Unpaid order cancelled - time limit reached. Order status changed from Pending payment to Cancelled.', 0, '1', 'WooCommerce', 'order_note', 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_duplicator_packages`
+-- Table structure for table `wss_duplicator_packages`
 --
 
 CREATE TABLE `wss_duplicator_packages` (
@@ -307,7 +316,7 @@ CREATE TABLE `wss_duplicator_packages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `wss_duplicator_packages`
+-- Dumping data for table `wss_duplicator_packages`
 --
 
 INSERT INTO `wss_duplicator_packages` (`id`, `name`, `hash`, `status`, `created`, `owner`, `package`) VALUES
@@ -317,7 +326,7 @@ INSERT INTO `wss_duplicator_packages` (`id`, `name`, `hash`, `status`, `created`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_links`
+-- Table structure for table `wss_links`
 --
 
 CREATE TABLE `wss_links` (
@@ -339,7 +348,7 @@ CREATE TABLE `wss_links` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_options`
+-- Table structure for table `wss_options`
 --
 
 CREATE TABLE `wss_options` (
@@ -350,7 +359,7 @@ CREATE TABLE `wss_options` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_options`
+-- Dumping data for table `wss_options`
 --
 
 INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
@@ -454,7 +463,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (100, 'widget_archives', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (101, 'widget_meta', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (102, 'sidebars_widgets', 'a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:1:{i:0;s:32:\"woocommerce_product_categories-2\";}s:13:\"array_version\";i:3;}', 'yes'),
-(103, 'cron', 'a:22:{i:1604169651;a:1:{s:26:\"action_scheduler_run_queue\";a:1:{s:32:\"0d04ed39571b55704c122d726248bbac\";a:3:{s:8:\"schedule\";s:12:\"every_minute\";s:4:\"args\";a:1:{i:0;s:7:\"WP Cron\";}s:8:\"interval\";i:60;}}}i:1604169668;a:1:{s:28:\"check_for_released_preorders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604169739;a:1:{s:24:\"woocommerce_cleanup_logs\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604170749;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604171084;a:1:{s:32:\"woocommerce_cancel_unpaid_orders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:0:{}}}}i:1604171534;a:1:{s:29:\"wc_admin_unsnooze_admin_notes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604172364;a:1:{s:33:\"wc_admin_process_orders_milestone\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604180539;a:1:{s:28:\"woocommerce_cleanup_sessions\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1604185149;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1604187317;a:1:{s:20:\"mce_12hours_cron_job\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:7:\"12hours\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1604188800;a:1:{s:27:\"woocommerce_scheduled_sales\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604192400;a:1:{s:37:\"tinvwl_remove_without_author_wishlist\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604228348;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604228360;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604228361;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604229128;a:1:{s:14:\"wc_admin_daily\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604230517;a:1:{s:18:\"mce_4days_cron_job\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"4days\";s:4:\"args\";a:0:{}s:8:\"interval\";i:345600;}}}i:1604242697;a:1:{s:34:\"yith_wcwl_delete_expired_wishlists\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604245349;a:2:{s:33:\"woocommerce_cleanup_personal_data\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:30:\"woocommerce_tracker_send_event\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604487947;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1604763799;a:1:{s:25:\"woocommerce_geoip_updater\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:11:\"fifteendays\";s:4:\"args\";a:0:{}s:8:\"interval\";i:1296000;}}}s:7:\"version\";i:2;}', 'yes'),
+(103, 'cron', 'a:21:{i:1604196711;a:1:{s:26:\"action_scheduler_run_queue\";a:1:{s:32:\"0d04ed39571b55704c122d726248bbac\";a:3:{s:8:\"schedule\";s:12:\"every_minute\";s:4:\"args\";a:1:{i:0;s:7:\"WP Cron\";}s:8:\"interval\";i:60;}}}i:1604196734;a:1:{s:29:\"wc_admin_unsnooze_admin_notes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604197091;a:1:{s:32:\"woocommerce_cancel_unpaid_orders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:0:{}}}}i:1604197564;a:1:{s:33:\"wc_admin_process_orders_milestone\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604198468;a:1:{s:28:\"check_for_released_preorders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604199549;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1604223739;a:1:{s:28:\"woocommerce_cleanup_sessions\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1604228348;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604228349;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1604228360;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604228361;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604229128;a:1:{s:14:\"wc_admin_daily\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604230517;a:2:{s:18:\"mce_4days_cron_job\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"4days\";s:4:\"args\";a:0:{}s:8:\"interval\";i:345600;}}s:20:\"mce_12hours_cron_job\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:7:\"12hours\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1604242697;a:1:{s:34:\"yith_wcwl_delete_expired_wishlists\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604245349;a:2:{s:33:\"woocommerce_cleanup_personal_data\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:30:\"woocommerce_tracker_send_event\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604256139;a:1:{s:24:\"woocommerce_cleanup_logs\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604275200;a:1:{s:27:\"woocommerce_scheduled_sales\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604278800;a:1:{s:37:\"tinvwl_remove_without_author_wishlist\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1604487947;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1604763799;a:1:{s:25:\"woocommerce_geoip_updater\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:11:\"fifteendays\";s:4:\"args\";a:0:{}s:8:\"interval\";i:1296000;}}}s:7:\"version\";i:2;}', 'yes'),
 (104, 'widget_pages', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (105, 'widget_calendar', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (106, 'widget_media_audio', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
@@ -535,7 +544,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (236, 'woocommerce_price_display_suffix', '', 'yes'),
 (237, 'woocommerce_tax_total_display', 'itemized', 'no'),
 (238, 'woocommerce_enable_shipping_calc', 'no', 'no'),
-(239, 'woocommerce_shipping_cost_requires_address', 'yes', 'yes'),
+(239, 'woocommerce_shipping_cost_requires_address', 'no', 'yes'),
 (240, 'woocommerce_ship_to_destination', 'billing_only', 'no'),
 (241, 'woocommerce_shipping_debug_mode', 'no', 'yes'),
 (242, 'woocommerce_enable_guest_checkout', 'yes', 'no'),
@@ -594,7 +603,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (297, 'default_product_cat', '23', 'yes'),
 (298, 'woocommerce_admin_notices', 'a:0:{}', 'yes'),
 (303, 'woocommerce_homescreen_enabled', 'yes', 'yes'),
-(306, 'action_scheduler_lock_async-request-runner', '1604169655', 'yes'),
+(306, 'action_scheduler_lock_async-request-runner', '1604196663', 'yes'),
 (307, 'woocommerce_maxmind_geolocation_settings', 'a:1:{s:15:\"database_prefix\";s:32:\"gJQ44YYu5wv4lVzzciE6zVAGUhMZBvVN\";}', 'yes'),
 (308, '_transient_woocommerce_webhook_ids_status_active', 'a:0:{}', 'yes'),
 (309, 'widget_woocommerce_widget_cart', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
@@ -614,7 +623,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (331, 'wc_blocks_db_schema_version', '260', 'yes'),
 (347, '_transient_product_query-transient-version', '1604168344', 'yes'),
 (348, 'category_children', 'a:0:{}', 'yes'),
-(353, '_transient_woocommerce_reports-transient-version', '1604138419', 'yes'),
+(353, '_transient_woocommerce_reports-transient-version', '1604192353', 'yes'),
 (413, 'woocommerce_task_list_welcome_modal_dismissed', 'yes', 'yes');
 INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
 (417, 'woocommerce_marketplace_suggestions', 'a:2:{s:11:\"suggestions\";a:26:{i:0;a:4:{s:4:\"slug\";s:28:\"product-edit-meta-tab-header\";s:7:\"context\";s:28:\"product-edit-meta-tab-header\";s:5:\"title\";s:22:\"Recommended extensions\";s:13:\"allow-dismiss\";b:0;}i:1;a:6:{s:4:\"slug\";s:39:\"product-edit-meta-tab-footer-browse-all\";s:7:\"context\";s:28:\"product-edit-meta-tab-footer\";s:9:\"link-text\";s:21:\"Browse all extensions\";s:3:\"url\";s:64:\"https://woocommerce.com/product-category/woocommerce-extensions/\";s:8:\"promoted\";s:31:\"category-woocommerce-extensions\";s:13:\"allow-dismiss\";b:0;}i:2;a:9:{s:4:\"slug\";s:46:\"product-edit-mailchimp-woocommerce-memberships\";s:7:\"product\";s:33:\"woocommerce-memberships-mailchimp\";s:14:\"show-if-active\";a:1:{i:0;s:23:\"woocommerce-memberships\";}s:7:\"context\";a:1:{i:0;s:26:\"product-edit-meta-tab-body\";}s:4:\"icon\";s:116:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/mailchimp-for-memberships.svg\";s:5:\"title\";s:25:\"Mailchimp for Memberships\";s:4:\"copy\";s:79:\"Completely automate your email lists by syncing membership changes to Mailchimp\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:67:\"https://woocommerce.com/products/mailchimp-woocommerce-memberships/\";}i:3;a:9:{s:4:\"slug\";s:19:\"product-edit-addons\";s:7:\"product\";s:26:\"woocommerce-product-addons\";s:14:\"show-if-active\";a:2:{i:0;s:25:\"woocommerce-subscriptions\";i:1;s:20:\"woocommerce-bookings\";}s:7:\"context\";a:1:{i:0;s:26:\"product-edit-meta-tab-body\";}s:4:\"icon\";s:106:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/product-add-ons.svg\";s:5:\"title\";s:15:\"Product Add-Ons\";s:4:\"copy\";s:93:\"Offer add-ons like gift wrapping, special messages or other special options for your products\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:49:\"https://woocommerce.com/products/product-add-ons/\";}i:4;a:9:{s:4:\"slug\";s:46:\"product-edit-woocommerce-subscriptions-gifting\";s:7:\"product\";s:33:\"woocommerce-subscriptions-gifting\";s:14:\"show-if-active\";a:1:{i:0;s:25:\"woocommerce-subscriptions\";}s:7:\"context\";a:1:{i:0;s:26:\"product-edit-meta-tab-body\";}s:4:\"icon\";s:116:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/gifting-for-subscriptions.svg\";s:5:\"title\";s:25:\"Gifting for Subscriptions\";s:4:\"copy\";s:70:\"Let customers buy subscriptions for others - they\'re the ultimate gift\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:67:\"https://woocommerce.com/products/woocommerce-subscriptions-gifting/\";}i:5;a:9:{s:4:\"slug\";s:42:\"product-edit-teams-woocommerce-memberships\";s:7:\"product\";s:33:\"woocommerce-memberships-for-teams\";s:14:\"show-if-active\";a:1:{i:0;s:23:\"woocommerce-memberships\";}s:7:\"context\";a:1:{i:0;s:26:\"product-edit-meta-tab-body\";}s:4:\"icon\";s:112:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/teams-for-memberships.svg\";s:5:\"title\";s:21:\"Teams for Memberships\";s:4:\"copy\";s:123:\"Adds B2B functionality to WooCommerce Memberships, allowing sites to sell team, group, corporate, or family member accounts\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:63:\"https://woocommerce.com/products/teams-woocommerce-memberships/\";}i:6;a:8:{s:4:\"slug\";s:29:\"product-edit-variation-images\";s:7:\"product\";s:39:\"woocommerce-additional-variation-images\";s:7:\"context\";a:1:{i:0;s:26:\"product-edit-meta-tab-body\";}s:4:\"icon\";s:118:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/additional-variation-images.svg\";s:5:\"title\";s:27:\"Additional Variation Images\";s:4:\"copy\";s:72:\"Showcase your products in the best light with a image for each variation\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:73:\"https://woocommerce.com/products/woocommerce-additional-variation-images/\";}i:7;a:9:{s:4:\"slug\";s:47:\"product-edit-woocommerce-subscription-downloads\";s:7:\"product\";s:34:\"woocommerce-subscription-downloads\";s:14:\"show-if-active\";a:1:{i:0;s:25:\"woocommerce-subscriptions\";}s:7:\"context\";a:1:{i:0;s:26:\"product-edit-meta-tab-body\";}s:4:\"icon\";s:113:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/subscription-downloads.svg\";s:5:\"title\";s:22:\"Subscription Downloads\";s:4:\"copy\";s:57:\"Give customers special downloads with their subscriptions\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:68:\"https://woocommerce.com/products/woocommerce-subscription-downloads/\";}i:8;a:8:{s:4:\"slug\";s:31:\"product-edit-min-max-quantities\";s:7:\"product\";s:30:\"woocommerce-min-max-quantities\";s:7:\"context\";a:1:{i:0;s:26:\"product-edit-meta-tab-body\";}s:4:\"icon\";s:109:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/min-max-quantities.svg\";s:5:\"title\";s:18:\"Min/Max Quantities\";s:4:\"copy\";s:81:\"Specify minimum and maximum allowed product quantities for orders to be completed\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:52:\"https://woocommerce.com/products/min-max-quantities/\";}i:9;a:8:{s:4:\"slug\";s:28:\"product-edit-name-your-price\";s:7:\"product\";s:27:\"woocommerce-name-your-price\";s:7:\"context\";a:1:{i:0;s:26:\"product-edit-meta-tab-body\";}s:4:\"icon\";s:106:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/name-your-price.svg\";s:5:\"title\";s:15:\"Name Your Price\";s:4:\"copy\";s:70:\"Let customers pay what they want - useful for donations, tips and more\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:49:\"https://woocommerce.com/products/name-your-price/\";}i:10;a:8:{s:4:\"slug\";s:42:\"product-edit-woocommerce-one-page-checkout\";s:7:\"product\";s:29:\"woocommerce-one-page-checkout\";s:7:\"context\";a:1:{i:0;s:26:\"product-edit-meta-tab-body\";}s:4:\"icon\";s:108:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/one-page-checkout.svg\";s:5:\"title\";s:17:\"One Page Checkout\";s:4:\"copy\";s:92:\"Don\'t make customers click around - let them choose products, checkout & pay all on one page\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:63:\"https://woocommerce.com/products/woocommerce-one-page-checkout/\";}i:11;a:4:{s:4:\"slug\";s:19:\"orders-empty-header\";s:7:\"context\";s:24:\"orders-list-empty-header\";s:5:\"title\";s:20:\"Tools for your store\";s:13:\"allow-dismiss\";b:0;}i:12;a:6:{s:4:\"slug\";s:30:\"orders-empty-footer-browse-all\";s:7:\"context\";s:24:\"orders-list-empty-footer\";s:9:\"link-text\";s:21:\"Browse all extensions\";s:3:\"url\";s:64:\"https://woocommerce.com/product-category/woocommerce-extensions/\";s:8:\"promoted\";s:31:\"category-woocommerce-extensions\";s:13:\"allow-dismiss\";b:0;}i:13;a:8:{s:4:\"slug\";s:19:\"orders-empty-zapier\";s:7:\"context\";s:22:\"orders-list-empty-body\";s:7:\"product\";s:18:\"woocommerce-zapier\";s:4:\"icon\";s:97:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/zapier.svg\";s:5:\"title\";s:6:\"Zapier\";s:4:\"copy\";s:88:\"Save time and increase productivity by connecting your store to more than 1000+ services\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:52:\"https://woocommerce.com/products/woocommerce-zapier/\";}i:14;a:8:{s:4:\"slug\";s:30:\"orders-empty-shipment-tracking\";s:7:\"context\";s:22:\"orders-list-empty-body\";s:7:\"product\";s:29:\"woocommerce-shipment-tracking\";s:4:\"icon\";s:108:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/shipment-tracking.svg\";s:5:\"title\";s:17:\"Shipment Tracking\";s:4:\"copy\";s:86:\"Let customers know when their orders will arrive by adding shipment tracking to emails\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:51:\"https://woocommerce.com/products/shipment-tracking/\";}i:15;a:8:{s:4:\"slug\";s:32:\"orders-empty-table-rate-shipping\";s:7:\"context\";s:22:\"orders-list-empty-body\";s:7:\"product\";s:31:\"woocommerce-table-rate-shipping\";s:4:\"icon\";s:110:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/table-rate-shipping.svg\";s:5:\"title\";s:19:\"Table Rate Shipping\";s:4:\"copy\";s:122:\"Advanced, flexible shipping. Define multiple shipping rates based on location, price, weight, shipping class or item count\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:53:\"https://woocommerce.com/products/table-rate-shipping/\";}i:16;a:8:{s:4:\"slug\";s:40:\"orders-empty-shipping-carrier-extensions\";s:7:\"context\";s:22:\"orders-list-empty-body\";s:4:\"icon\";s:118:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/shipping-carrier-extensions.svg\";s:5:\"title\";s:27:\"Shipping Carrier Extensions\";s:4:\"copy\";s:116:\"Show live rates from FedEx, UPS, USPS and more directly on your store - never under or overcharge for shipping again\";s:11:\"button-text\";s:13:\"Find Carriers\";s:8:\"promoted\";s:26:\"category-shipping-carriers\";s:3:\"url\";s:99:\"https://woocommerce.com/product-category/woocommerce-extensions/shipping-methods/shipping-carriers/\";}i:17;a:8:{s:4:\"slug\";s:32:\"orders-empty-google-product-feed\";s:7:\"context\";s:22:\"orders-list-empty-body\";s:7:\"product\";s:25:\"woocommerce-product-feeds\";s:4:\"icon\";s:110:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/google-product-feed.svg\";s:5:\"title\";s:19:\"Google Product Feed\";s:4:\"copy\";s:76:\"Increase sales by letting customers find you when they\'re shopping on Google\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:53:\"https://woocommerce.com/products/google-product-feed/\";}i:18;a:4:{s:4:\"slug\";s:35:\"products-empty-header-product-types\";s:7:\"context\";s:26:\"products-list-empty-header\";s:5:\"title\";s:23:\"Other types of products\";s:13:\"allow-dismiss\";b:0;}i:19;a:6:{s:4:\"slug\";s:32:\"products-empty-footer-browse-all\";s:7:\"context\";s:26:\"products-list-empty-footer\";s:9:\"link-text\";s:21:\"Browse all extensions\";s:3:\"url\";s:64:\"https://woocommerce.com/product-category/woocommerce-extensions/\";s:8:\"promoted\";s:31:\"category-woocommerce-extensions\";s:13:\"allow-dismiss\";b:0;}i:20;a:8:{s:4:\"slug\";s:30:\"products-empty-product-vendors\";s:7:\"context\";s:24:\"products-list-empty-body\";s:7:\"product\";s:27:\"woocommerce-product-vendors\";s:4:\"icon\";s:106:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/product-vendors.svg\";s:5:\"title\";s:15:\"Product Vendors\";s:4:\"copy\";s:47:\"Turn your store into a multi-vendor marketplace\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:49:\"https://woocommerce.com/products/product-vendors/\";}i:21;a:8:{s:4:\"slug\";s:26:\"products-empty-memberships\";s:7:\"context\";s:24:\"products-list-empty-body\";s:7:\"product\";s:23:\"woocommerce-memberships\";s:4:\"icon\";s:102:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/memberships.svg\";s:5:\"title\";s:11:\"Memberships\";s:4:\"copy\";s:76:\"Give members access to restricted content or products, for a fee or for free\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:57:\"https://woocommerce.com/products/woocommerce-memberships/\";}i:22;a:9:{s:4:\"slug\";s:35:\"products-empty-woocommerce-deposits\";s:7:\"context\";s:24:\"products-list-empty-body\";s:7:\"product\";s:20:\"woocommerce-deposits\";s:14:\"show-if-active\";a:1:{i:0;s:20:\"woocommerce-bookings\";}s:4:\"icon\";s:99:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/deposits.svg\";s:5:\"title\";s:8:\"Deposits\";s:4:\"copy\";s:75:\"Make it easier for customers to pay by offering a deposit or a payment plan\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:54:\"https://woocommerce.com/products/woocommerce-deposits/\";}i:23;a:8:{s:4:\"slug\";s:40:\"products-empty-woocommerce-subscriptions\";s:7:\"context\";s:24:\"products-list-empty-body\";s:7:\"product\";s:25:\"woocommerce-subscriptions\";s:4:\"icon\";s:104:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/subscriptions.svg\";s:5:\"title\";s:13:\"Subscriptions\";s:4:\"copy\";s:97:\"Let customers subscribe to your products or services and pay on a weekly, monthly or annual basis\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:59:\"https://woocommerce.com/products/woocommerce-subscriptions/\";}i:24;a:8:{s:4:\"slug\";s:35:\"products-empty-woocommerce-bookings\";s:7:\"context\";s:24:\"products-list-empty-body\";s:7:\"product\";s:20:\"woocommerce-bookings\";s:4:\"icon\";s:99:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/bookings.svg\";s:5:\"title\";s:8:\"Bookings\";s:4:\"copy\";s:99:\"Allow customers to book appointments, make reservations or rent equipment without leaving your site\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:54:\"https://woocommerce.com/products/woocommerce-bookings/\";}i:25;a:8:{s:4:\"slug\";s:30:\"products-empty-product-bundles\";s:7:\"context\";s:24:\"products-list-empty-body\";s:7:\"product\";s:27:\"woocommerce-product-bundles\";s:4:\"icon\";s:106:\"https://woocommerce.com/wp-content/plugins/wccom-plugins/marketplace-suggestions/icons/product-bundles.svg\";s:5:\"title\";s:15:\"Product Bundles\";s:4:\"copy\";s:49:\"Offer customizable bundles and assembled products\";s:11:\"button-text\";s:10:\"Learn More\";s:3:\"url\";s:49:\"https://woocommerce.com/products/product-bundles/\";}}s:7:\"updated\";i:1603280405;}', 'no'),
@@ -622,7 +631,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (542, 'recovery_mode_email_last_sent', '1603653849', 'yes'),
 (543, 'item_children', 'a:0:{}', 'yes'),
 (583, 'brands_children', 'a:0:{}', 'yes'),
-(1123, '_transient_shipping-transient-version', '1603842754', 'yes'),
+(1123, '_transient_shipping-transient-version', '1604195208', 'yes'),
 (1141, 'wc_preorders_mode', 'either', 'yes'),
 (1142, 'wc_preorders_change_button', 'yes', 'yes'),
 (1143, 'wc_preorders_button_text', 'Предзаказ', 'yes'),
@@ -663,7 +672,7 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (1827, 'xa_pipe_plugin_installed_date', '2020-09-23 19:51:11', 'yes'),
 (2212, 'dc_product_stock_alert_installed', '1', 'yes'),
 (2213, 'dc_product_stock_alert_cron_start', '1', 'yes'),
-(2983, 'fs_active_plugins', 'O:8:\"stdClass\":3:{s:7:\"plugins\";a:1:{s:34:\"ajax-search-for-woocommerce/fs/lib\";O:8:\"stdClass\":4:{s:7:\"version\";s:5:\"2.4.1\";s:4:\"type\";s:6:\"plugin\";s:9:\"timestamp\";i:1604143002;s:11:\"plugin_path\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";}}s:7:\"abspath\";s:38:\"C:\\OSPanel\\domains\\localhost\\cosmedoc/\";s:6:\"newest\";O:8:\"stdClass\":5:{s:11:\"plugin_path\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";s:8:\"sdk_path\";s:34:\"ajax-search-for-woocommerce/fs/lib\";s:7:\"version\";s:5:\"2.4.1\";s:13:\"in_activation\";b:0;s:9:\"timestamp\";i:1604143002;}}', 'yes'),
+(2983, 'fs_active_plugins', 'O:8:\"stdClass\":3:{s:7:\"plugins\";a:1:{s:34:\"ajax-search-for-woocommerce/fs/lib\";O:8:\"stdClass\":4:{s:7:\"version\";s:5:\"2.4.1\";s:4:\"type\";s:6:\"plugin\";s:9:\"timestamp\";i:1604182660;s:11:\"plugin_path\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";}}s:7:\"abspath\";s:28:\"D:\\OSPanel\\domains\\cosmedic/\";s:6:\"newest\";O:8:\"stdClass\":5:{s:11:\"plugin_path\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";s:8:\"sdk_path\";s:34:\"ajax-search-for-woocommerce/fs/lib\";s:7:\"version\";s:5:\"2.4.1\";s:13:\"in_activation\";b:0;s:9:\"timestamp\";i:1604182660;}}', 'yes'),
 (2984, 'fs_debug_mode', '', 'yes'),
 (2985, 'fs_accounts', 'a:5:{s:21:\"id_slug_type_path_map\";a:1:{i:700;a:3:{s:4:\"slug\";s:27:\"ajax-search-for-woocommerce\";s:4:\"type\";s:6:\"plugin\";s:4:\"path\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";}}s:11:\"plugin_data\";a:1:{s:27:\"ajax-search-for-woocommerce\";a:16:{s:16:\"plugin_main_file\";O:8:\"stdClass\":1:{s:4:\"path\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";}s:20:\"is_network_activated\";b:0;s:17:\"install_timestamp\";i:1601219558;s:17:\"was_plugin_loaded\";b:1;s:21:\"is_plugin_new_install\";b:0;s:16:\"sdk_last_version\";s:5:\"2.3.2\";s:11:\"sdk_version\";s:5:\"2.4.1\";s:16:\"sdk_upgrade_mode\";b:1;s:18:\"sdk_downgrade_mode\";b:0;s:19:\"plugin_last_version\";s:5:\"1.7.2\";s:14:\"plugin_version\";s:5:\"1.8.0\";s:19:\"plugin_upgrade_mode\";b:1;s:21:\"plugin_downgrade_mode\";b:0;s:17:\"connectivity_test\";a:6:{s:12:\"is_connected\";b:1;s:4:\"host\";s:14:\"cosmedoc.local\";s:9:\"server_ip\";s:9:\"127.0.0.1\";s:9:\"is_active\";b:1;s:9:\"timestamp\";i:1601219558;s:7:\"version\";s:5:\"1.7.2\";}s:15:\"prev_is_premium\";b:0;s:12:\"is_anonymous\";a:3:{s:2:\"is\";b:1;s:9:\"timestamp\";i:1601219568;s:7:\"version\";s:5:\"1.7.2\";}}}s:13:\"file_slug_map\";a:1:{s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";s:27:\"ajax-search-for-woocommerce\";}s:7:\"plugins\";a:1:{s:27:\"ajax-search-for-woocommerce\";O:9:\"FS_Plugin\":23:{s:16:\"parent_plugin_id\";N;s:5:\"title\";s:27:\"AJAX Search for WooCommerce\";s:4:\"slug\";s:27:\"ajax-search-for-woocommerce\";s:12:\"premium_slug\";s:35:\"ajax-search-for-woocommerce-premium\";s:4:\"type\";s:6:\"plugin\";s:20:\"affiliate_moderation\";b:0;s:19:\"is_wp_org_compliant\";b:1;s:22:\"premium_releases_count\";N;s:4:\"file\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";s:7:\"version\";s:5:\"1.8.0\";s:11:\"auto_update\";N;s:4:\"info\";N;s:10:\"is_premium\";b:0;s:14:\"premium_suffix\";s:3:\"Pro\";s:7:\"is_live\";b:1;s:9:\"bundle_id\";N;s:17:\"bundle_public_key\";N;s:10:\"public_key\";s:32:\"pk_f4f2a51dbe0aee43de0692db77a3e\";s:10:\"secret_key\";N;s:2:\"id\";s:3:\"700\";s:7:\"updated\";N;s:7:\"created\";N;s:22:\"\0FS_Entity\0_is_updated\";b:1;}}s:9:\"unique_id\";s:32:\"04232ee9066c388ee57e9f3e51945b2f\";}', 'yes'),
 (2986, 'fs_gdpr', 'a:1:{s:2:\"u1\";a:1:{s:8:\"required\";b:0;}}', 'yes'),
@@ -792,8 +801,8 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (8106, '_transient_timeout_wc_var_prices_225', '1606761177', 'no'),
 (8107, '_transient_wc_var_prices_225', '{\"version\":\"1604168344\",\"f9e544f77b7eac7add281ef28ca5559f\":{\"price\":{\"226\":\"10.00\",\"227\":\"25.00\",\"228\":\"50.00\",\"229\":\"100.00\"},\"regular_price\":{\"226\":\"10.00\",\"227\":\"25.00\",\"228\":\"50.00\",\"229\":\"100.00\"},\"sale_price\":{\"226\":\"10.00\",\"227\":\"25.00\",\"228\":\"50.00\",\"229\":\"100.00\"}}}', 'no'),
 (8497, 'wfpipe_start_date', '1603179369', 'yes'),
-(8703, '_transient_timeout_wc_shipping_method_count_legacy', '1606434759', 'no'),
-(8704, '_transient_wc_shipping_method_count_legacy', 'a:2:{s:7:\"version\";s:10:\"1603842754\";s:5:\"value\";i:3;}', 'no'),
+(8703, '_transient_timeout_wc_shipping_method_count_legacy', '1606787212', 'no'),
+(8704, '_transient_wc_shipping_method_count_legacy', 'a:2:{s:7:\"version\";s:10:\"1604195208\";s:5:\"value\";i:3;}', 'no'),
 (9022, 'woocommerce_version', '4.6.1', 'yes'),
 (9023, 'woocommerce_db_version', '4.6.1', 'yes'),
 (9028, 'woocommerce_admin_version', '1.6.2', 'yes'),
@@ -812,15 +821,15 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (9234, '_options_gift_products_gift_sum', 'field_5f940a6ccadb8', 'no'),
 (9235, 'options_gift_products', '', 'no'),
 (9236, '_options_gift_products', 'field_5f940980cadb6', 'no'),
-(9433, '_transient_timeout_orders-all-statuses', '1604743231', 'no'),
-(9434, '_transient_orders-all-statuses', 'a:2:{s:7:\"version\";s:10:\"1604138419\";s:5:\"value\";a:1:{i:0;s:12:\"wc-cancelled\";}}', 'no'),
+(9433, '_transient_timeout_orders-all-statuses', '1604797154', 'no'),
+(9434, '_transient_orders-all-statuses', 'a:2:{s:7:\"version\";s:10:\"1604192353\";s:5:\"value\";a:1:{i:0;s:12:\"wc-cancelled\";}}', 'no'),
 (9463, 'cos_product_types_children', 'a:0:{}', 'yes'),
 (9488, 'options_show_gifts', '1', 'no'),
 (9489, '_options_show_gifts', 'field_5f945a2da190c', 'no'),
 (10294, '_site_transient_timeout_php_check_8706d9e16ec2aa6542c624d1e3c9facd', '1604244323', 'no'),
 (10295, '_site_transient_php_check_8706d9e16ec2aa6542c624d1e3c9facd', 'a:5:{s:19:\"recommended_version\";s:3:\"7.4\";s:15:\"minimum_version\";s:6:\"5.6.20\";s:12:\"is_supported\";b:0;s:9:\"is_secure\";b:0;s:13:\"is_acceptable\";b:0;}', 'no'),
 (11014, 'woocommerce_paypal_settings', 'a:23:{s:7:\"enabled\";s:2:\"no\";s:5:\"title\";s:6:\"PayPal\";s:11:\"description\";s:85:\"Pay via PayPal; you can pay with your credit card if you don\'t have a PayPal account.\";s:5:\"email\";s:19:\"irwintram@gmail.com\";s:8:\"advanced\";s:0:\"\";s:8:\"testmode\";s:3:\"yes\";s:5:\"debug\";s:2:\"no\";s:16:\"ipn_notification\";s:3:\"yes\";s:14:\"receiver_email\";s:19:\"irwintram@gmail.com\";s:14:\"identity_token\";s:0:\"\";s:14:\"invoice_prefix\";s:3:\"WC-\";s:13:\"send_shipping\";s:3:\"yes\";s:16:\"address_override\";s:2:\"no\";s:13:\"paymentaction\";s:4:\"sale\";s:10:\"page_style\";s:0:\"\";s:9:\"image_url\";s:0:\"\";s:11:\"api_details\";s:0:\"\";s:12:\"api_username\";s:0:\"\";s:12:\"api_password\";s:0:\"\";s:13:\"api_signature\";s:0:\"\";s:20:\"sandbox_api_username\";s:36:\"sb-flpnl3585278@personal.example.com\";s:20:\"sandbox_api_password\";s:80:\"AQ4mQmXlcTqLHPSoSUPQy-2jVqYcQNDKCskTt6C-WXnY7hwLDXvVaL6tOUKFGizpBHf31w7pSJhX7mn2\";s:21:\"sandbox_api_signature\";s:80:\"EKbZfi11CL3CyYtLnZ8omAohEa1tnOzyQrFZ_LXypQhMoyW5LOiqgPzFRhHEBMbiKAsNV5mCmjeyRmMt\";}', 'yes'),
-(11016, '_transient_orders-transient-version', '1603908912', 'yes'),
+(11016, '_transient_orders-transient-version', '1604189889', 'yes'),
 (11056, 'woocommerce_admin_last_orders_milestone', '1', 'yes'),
 (11140, '_transient_timeout_wc_shipping_method_count', '1606731754', 'no'),
 (11141, '_transient_wc_shipping_method_count', 'a:2:{s:7:\"version\";s:10:\"1603842754\";s:5:\"value\";i:3;}', 'no'),
@@ -836,11 +845,6 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (11820, '_options_chk_agree_text', 'field_5f98b418d204f', 'no'),
 (11821, 'options_chk_text_before_proccess_pay', 'Уважаемый клиент, для успешного оформления заказа, Вам необходимо произвести предоплату. После нажатия на кнопку \"оформить заказ\" Вы будете направлены к форме оплаты.\r\n\r\nЕсли у вас возникли трудности с оформлением заказа, позвоните нам по номеру <a href=\"tel:+74993508050\">+7 99 999 999 </a>доб. 3', 'no'),
 (11822, '_options_chk_text_before_proccess_pay', 'field_5f98b44ad2050', 'no'),
-(11846, '_transient_wc_count_comments', 'O:8:\"stdClass\":7:{s:14:\"total_comments\";i:0;s:3:\"all\";i:0;s:9:\"moderated\";i:0;s:8:\"approved\";i:0;s:4:\"spam\";i:0;s:5:\"trash\";i:0;s:12:\"post-trashed\";i:0;}', 'yes'),
-(11847, '_transient_timeout_wc_report_sales_by_date', '1604230579', 'no'),
-(11848, '_transient_wc_report_sales_by_date', 'a:48:{s:32:\"3ca8398fa79e5ce561b018a862fbf8c1\";a:0:{}s:32:\"2eabb3c7c02538c189273a3f1cd095a0\";a:0:{}s:32:\"d83537a56c26db94903519f30d849908\";a:0:{}s:32:\"b270ae2266ba727d2ce81ee48254364e\";N;s:32:\"dd47cde249d76987258217002c0f94db\";a:0:{}s:32:\"a0b3e705f31ddede78aae8722bece5c4\";a:0:{}s:32:\"2e16decd1130a6c43b181a4271d0fc53\";a:0:{}s:32:\"993c3915621a0e252c2d7499936744fc\";a:0:{}s:32:\"fffd6facc2f80e5b4c0d6287ec2b33a4\";a:0:{}s:32:\"c63ec1f63a9bb0c6715c67d65890d0cf\";a:0:{}s:32:\"30b22d3150467be9d285ec1c1fe3a222\";a:0:{}s:32:\"6b46780363562550035e0b779c9e2e7b\";N;s:32:\"49f015c557d8d7bd69239de32a581589\";a:0:{}s:32:\"3cf88d32b2dc3c2427d41168b8ef5a0b\";a:0:{}s:32:\"6c962e2f00a34d48c59f6573812f303a\";a:0:{}s:32:\"fba9fb2384590cb20a17f3cd14f5dd20\";a:0:{}s:32:\"4d984d511f78f80cd5b47689b1650c86\";a:0:{}s:32:\"317880901d2093d2a1cd022ecd24f629\";a:0:{}s:32:\"ed728fc24505f8015d7f245c8a433432\";a:0:{}s:32:\"906b813d47fd312f4efad642f91b16e1\";N;s:32:\"5b386fc5847dea78339bf863bf002ad0\";a:0:{}s:32:\"b829471d8980587223e30d6e99d33268\";a:0:{}s:32:\"2479b51bb58dca854b6099cb1045c0eb\";a:0:{}s:32:\"007543bbdcf6ff5129e629b6716ba615\";a:0:{}s:32:\"931593aed137c5888a25ea3ca5f9d1ce\";a:0:{}s:32:\"10f83a45e825d35f1906b24e79d661d8\";a:0:{}s:32:\"de7290e9ac7406fe78bd01d7ee62df36\";a:0:{}s:32:\"c5b8c10b5bce59d3d8a0f6db398fcebc\";N;s:32:\"492a856829e493505a5af5a3c4a45add\";a:0:{}s:32:\"bb02e005c3bccf24639e0f7c6e688656\";a:0:{}s:32:\"b50c363a46833d8f189d9169012b61d9\";a:0:{}s:32:\"5bd361696409ba8b719201d8730a12cd\";a:0:{}s:32:\"9f832704766b73464b5d32cc8f41015c\";a:0:{}s:32:\"4253c42196309c7c2c5e8fe9e011aff6\";a:0:{}s:32:\"7338f2282ffd1a7e0910c9dd22e8bbb5\";a:0:{}s:32:\"a906fff22690be2acda759571438891c\";N;s:32:\"82337bc57fafafbd6be5a968f1bc9355\";a:0:{}s:32:\"940439eaf8d7a1a5109bca6bda783506\";a:0:{}s:32:\"59c370a480a1ab3cf5330bc4c8fb43c9\";a:0:{}s:32:\"2faecee307e99efaa2001ab47bdfe0df\";a:0:{}s:32:\"5fd7a3e46843fc77684a0b71a3ffd24a\";a:0:{}s:32:\"58e0e86203e7fee5b38979d39b923d2a\";a:0:{}s:32:\"bec42669da841ddb1bef9fe2b9b9070a\";a:0:{}s:32:\"978f8bd5072a50290c865d696a6cd291\";N;s:32:\"86d35af0d4ff2aee7cbc0f2fff835d05\";a:0:{}s:32:\"7248f92fa9f609bc6b3572a3bede62ac\";a:0:{}s:32:\"9be20a4c90aaa437bb5653f598cc6f73\";a:0:{}s:32:\"86d194ef2d6459cb88ae48d0d50ea6a4\";a:0:{}}', 'no'),
-(11849, '_transient_timeout_wc_admin_report', '1604230579', 'no'),
-(11850, '_transient_wc_admin_report', 'a:2:{s:32:\"11369ecf4adc78fd729e4f2306a734ee\";a:0:{}s:32:\"bfca0b4238011753c46815018021b468\";a:0:{}}', 'no'),
 (11911, '_transient_timeout_geoip_127.0.0.1', '1604516572', 'no'),
 (11912, '_transient_geoip_127.0.0.1', '', 'no'),
 (12076, '_site_transient_timeout_php_check_db560599daec4dc914fe3cee88686df3', '1604657616', 'no'),
@@ -863,8 +867,6 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (13096, 'duplicator_settings', 'a:17:{s:7:\"version\";s:6:\"1.3.38\";s:18:\"uninstall_settings\";b:1;s:15:\"uninstall_files\";b:1;s:16:\"uninstall_tables\";b:1;s:13:\"package_debug\";b:0;s:17:\"package_mysqldump\";b:1;s:22:\"package_mysqldump_path\";s:0:\"\";s:24:\"package_phpdump_qrylimit\";s:3:\"100\";s:17:\"package_zip_flush\";b:0;s:19:\"installer_name_mode\";s:6:\"simple\";s:16:\"storage_position\";s:6:\"wpcont\";s:20:\"storage_htaccess_off\";b:0;s:18:\"archive_build_mode\";i:2;s:17:\"skip_archive_scan\";b:0;s:21:\"unhook_third_party_js\";b:0;s:22:\"unhook_third_party_css\";b:0;s:17:\"active_package_id\";i:2;}', 'yes'),
 (13097, 'duplicator_version_plugin', '1.3.38', 'yes'),
 (13101, 'duplicator_package_active', 'O:11:\"DUP_Package\":23:{s:7:\"Created\";s:19:\"2020-10-30 21:27:41\";s:7:\"Version\";s:6:\"1.3.38\";s:9:\"VersionWP\";s:5:\"5.5.2\";s:9:\"VersionDB\";s:6:\"5.7.25\";s:10:\"VersionPHP\";s:6:\"7.0.33\";s:9:\"VersionOS\";s:5:\"WINNT\";s:2:\"ID\";N;s:4:\"Name\";s:17:\"20201030_cosmedoc\";s:4:\"Hash\";s:35:\"f9d0893ce51b34965997_20201030212741\";s:8:\"NameHash\";s:53:\"20201030_cosmedoc_f9d0893ce51b34965997_20201030212741\";s:4:\"Type\";i:0;s:5:\"Notes\";s:0:\"\";s:8:\"ScanFile\";s:63:\"20201030_cosmedoc_f9d0893ce51b34965997_20201030212741_scan.json\";s:10:\"TimerStart\";i:-1;s:7:\"Runtime\";N;s:7:\"ExeSize\";N;s:7:\"ZipSize\";N;s:6:\"Status\";i:0;s:6:\"WPUser\";N;s:7:\"Archive\";O:11:\"DUP_Archive\":21:{s:10:\"FilterDirs\";s:0:\"\";s:11:\"FilterFiles\";s:0:\"\";s:10:\"FilterExts\";s:0:\"\";s:13:\"FilterDirsAll\";a:0:{}s:14:\"FilterFilesAll\";a:0:{}s:13:\"FilterExtsAll\";a:0:{}s:8:\"FilterOn\";i:0;s:12:\"ExportOnlyDB\";i:0;s:4:\"File\";N;s:6:\"Format\";s:3:\"ZIP\";s:7:\"PackDir\";s:27:\"D:/OSPanel/domains/cosmedic\";s:4:\"Size\";i:0;s:4:\"Dirs\";a:0:{}s:5:\"Files\";a:0:{}s:10:\"FilterInfo\";O:23:\"DUP_Archive_Filter_Info\":8:{s:4:\"Dirs\";O:34:\"DUP_Archive_Filter_Scope_Directory\":5:{s:7:\"Warning\";a:0:{}s:10:\"Unreadable\";a:0:{}s:4:\"Core\";a:0:{}s:6:\"Global\";a:0:{}s:8:\"Instance\";a:0:{}}s:5:\"Files\";O:29:\"DUP_Archive_Filter_Scope_File\":6:{s:4:\"Size\";a:0:{}s:7:\"Warning\";a:0:{}s:10:\"Unreadable\";a:0:{}s:4:\"Core\";a:0:{}s:6:\"Global\";a:0:{}s:8:\"Instance\";a:0:{}}s:4:\"Exts\";O:29:\"DUP_Archive_Filter_Scope_Base\":3:{s:4:\"Core\";a:0:{}s:6:\"Global\";a:0:{}s:8:\"Instance\";a:0:{}}s:9:\"UDirCount\";i:0;s:10:\"UFileCount\";i:0;s:9:\"UExtCount\";i:0;s:8:\"TreeSize\";a:0:{}s:11:\"TreeWarning\";a:0:{}}s:14:\"RecursiveLinks\";a:0:{}s:10:\"file_count\";i:-1;s:10:\"\0*\0Package\";O:11:\"DUP_Package\":23:{s:7:\"Created\";s:19:\"2020-10-30 21:27:41\";s:7:\"Version\";s:6:\"1.3.38\";s:9:\"VersionWP\";s:5:\"5.5.2\";s:9:\"VersionDB\";s:6:\"5.7.25\";s:10:\"VersionPHP\";s:6:\"7.0.33\";s:9:\"VersionOS\";s:5:\"WINNT\";s:2:\"ID\";N;s:4:\"Name\";s:17:\"20201030_cosmedoc\";s:4:\"Hash\";s:35:\"f9d0893ce51b34965997_20201030212741\";s:8:\"NameHash\";s:53:\"20201030_cosmedoc_f9d0893ce51b34965997_20201030212741\";s:4:\"Type\";i:0;s:5:\"Notes\";s:0:\"\";s:8:\"ScanFile\";N;s:10:\"TimerStart\";i:-1;s:7:\"Runtime\";N;s:7:\"ExeSize\";N;s:7:\"ZipSize\";N;s:6:\"Status\";i:0;s:6:\"WPUser\";N;s:7:\"Archive\";r:21;s:9:\"Installer\";O:13:\"DUP_Installer\":11:{s:4:\"File\";N;s:4:\"Size\";i:0;s:10:\"OptsDBHost\";s:0:\"\";s:10:\"OptsDBPort\";s:0:\"\";s:10:\"OptsDBName\";s:0:\"\";s:10:\"OptsDBUser\";s:0:\"\";s:12:\"OptsSecureOn\";i:0;s:14:\"OptsSecurePass\";s:0:\"\";s:13:\"numFilesAdded\";i:0;s:12:\"numDirsAdded\";i:0;s:10:\"\0*\0Package\";r:61;}s:8:\"Database\";O:12:\"DUP_Database\":14:{s:4:\"Type\";s:5:\"MySQL\";s:4:\"Size\";N;s:4:\"File\";N;s:4:\"Path\";N;s:12:\"FilterTables\";s:0:\"\";s:8:\"FilterOn\";i:0;s:4:\"Name\";N;s:10:\"Compatible\";s:0:\"\";s:8:\"Comments\";s:28:\"MySQL Community Server (GPL)\";s:4:\"info\";O:16:\"DUP_DatabaseInfo\":15:{s:9:\"buildMode\";N;s:13:\"collationList\";a:0:{}s:17:\"isTablesUpperCase\";N;s:15:\"isNameUpperCase\";N;s:4:\"name\";N;s:15:\"tablesBaseCount\";N;s:16:\"tablesFinalCount\";N;s:14:\"tablesRowCount\";N;s:16:\"tablesSizeOnDisk\";N;s:18:\"varLowerCaseTables\";i:1;s:7:\"version\";N;s:14:\"versionComment\";N;s:18:\"tableWiseRowCounts\";a:0:{}s:33:\"\0DUP_DatabaseInfo\0intFieldsStruct\";a:0:{}s:42:\"\0DUP_DatabaseInfo\0indexProcessedSchemaSize\";a:0:{}}s:10:\"\0*\0Package\";r:61;s:24:\"\0DUP_Database\0tempDbPath\";N;s:23:\"\0DUP_Database\0EOFMarker\";s:0:\"\";s:26:\"\0DUP_Database\0networkFlush\";b:0;}s:13:\"BuildProgress\";O:18:\"DUP_Build_Progress\":12:{s:17:\"thread_start_time\";N;s:11:\"initialized\";b:0;s:15:\"installer_built\";b:0;s:15:\"archive_started\";b:0;s:20:\"archive_has_database\";b:0;s:13:\"archive_built\";b:0;s:21:\"database_script_built\";b:0;s:6:\"failed\";b:0;s:7:\"retries\";i:0;s:14:\"build_failures\";a:0:{}s:19:\"validation_failures\";a:0:{}s:27:\"\0DUP_Build_Progress\0package\";r:61;}}s:29:\"\0DUP_Archive\0tmpFilterDirsAll\";a:0:{}s:24:\"\0DUP_Archive\0wpCorePaths\";a:5:{i:0;s:36:\"D:/OSPanel/domains/cosmedic/wp-admin\";i:1;s:46:\"D:/OSPanel/domains/cosmedic/wp-content/uploads\";i:2;s:48:\"D:/OSPanel/domains/cosmedic/wp-content/languages\";i:3;s:45:\"D:/OSPanel/domains/cosmedic/wp-content/themes\";i:4;s:39:\"D:/OSPanel/domains/cosmedic/wp-includes\";}s:29:\"\0DUP_Archive\0wpCoreExactPaths\";a:2:{i:0;s:27:\"D:/OSPanel/domains/cosmedic\";i:1;s:38:\"D:/OSPanel/domains/cosmedic/wp-content\";}}s:9:\"Installer\";r:82;s:8:\"Database\";r:94;s:13:\"BuildProgress\";r:124;}', 'yes'),
-(13108, '_transient_timeout__woocommerce_helper_updates', '1604178580', 'no'),
-(13109, '_transient__woocommerce_helper_updates', 'a:4:{s:4:\"hash\";s:32:\"d751713988987e9331980363e24189ce\";s:7:\"updated\";i:1604135380;s:8:\"products\";a:0:{}s:6:\"errors\";a:1:{i:0;s:10:\"http-error\";}}', 'no'),
 (13126, '_site_transient_timeout_community-events-1aecf33ab8525ff212ebdffbb438372e', '1604181623', 'no'),
 (13127, '_site_transient_community-events-1aecf33ab8525ff212ebdffbb438372e', 'a:4:{s:9:\"sandboxed\";b:0;s:5:\"error\";N;s:8:\"location\";a:1:{s:2:\"ip\";s:9:\"127.0.0.0\";}s:6:\"events\";a:2:{i:0;a:10:{s:4:\"type\";s:6:\"meetup\";s:5:\"title\";s:64:\"Discussion group: Organizing WordPress Meetups - Getting Started\";s:3:\"url\";s:68:\"https://www.meetup.com/learn-wordpress-discussions/events/274203124/\";s:6:\"meetup\";s:27:\"Learn WordPress Discussions\";s:10:\"meetup_url\";s:51:\"https://www.meetup.com/learn-wordpress-discussions/\";s:4:\"date\";s:19:\"2020-11-02 05:00:00\";s:8:\"end_date\";s:19:\"2020-11-02 06:00:00\";s:20:\"start_unix_timestamp\";i:1604322000;s:18:\"end_unix_timestamp\";i:1604325600;s:8:\"location\";a:4:{s:8:\"location\";s:6:\"Online\";s:7:\"country\";s:2:\"US\";s:8:\"latitude\";d:37.779998779297003;s:9:\"longitude\";d:-122.41999816895;}}i:1;a:10:{s:4:\"type\";s:8:\"wordcamp\";s:5:\"title\";s:23:\"WordCamp Finland Online\";s:3:\"url\";s:34:\"https://finland.wordcamp.org/2020/\";s:6:\"meetup\";N;s:10:\"meetup_url\";N;s:4:\"date\";s:19:\"2020-11-12 00:00:00\";s:8:\"end_date\";s:19:\"2020-11-12 00:00:00\";s:20:\"start_unix_timestamp\";i:1605132000;s:18:\"end_unix_timestamp\";i:1605132000;s:8:\"location\";a:4:{s:8:\"location\";s:6:\"Online\";s:7:\"country\";s:2:\"FI\";s:8:\"latitude\";d:61.924109999999999;s:9:\"longitude\";d:25.748151100000001;}}}}', 'no'),
 (13128, '_transient_timeout_feed_9bbd59226dc36b9b26cd43f15694c5c3', '1604181624', 'no');
@@ -912,19 +914,16 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (13216, 'paypalplus_shared_options', 'a:14:{s:8:\"testmode\";s:3:\"yes\";s:22:\"rest_client_id_sandbox\";s:80:\"AUteDkruFM7W9p6pwqjQMo1l8QNm282MI9u5eIhzHBE1UGEp3fzsPkQzEIZwBOKDY0rHWWDzRZdDvZpx\";s:22:\"rest_secret_id_sandbox\";s:80:\"EJ77F2R4YIhqcUrvWsFhdZm9ceTP45uYD35CX6G_sd_8FkJa9p6ZMVzPZT_ccJjyOUVL-ciGq3abAlRT\";s:14:\"rest_client_id\";s:0:\"\";s:14:\"rest_secret_id\";s:0:\"\";s:29:\"sandbox_experience_profile_id\";s:22:\"XP-SHRT-2SZ8-QQP6-WNZB\";s:26:\"live_experience_profile_id\";s:0:\"\";s:10:\"brand_name\";s:8:\"Cosmedoc\";s:13:\"checkout_logo\";s:69:\"https://cosmedoc.local/wp-content/uploads/woocommerce-placeholder.png\";s:14:\"invoice_prefix\";s:16:\"WC-PPP-COSMEDOC-\";s:21:\"cache_paypal_js_files\";s:2:\"no\";s:10:\"cancel_url\";s:4:\"cart\";s:17:\"cancel_custom_url\";s:0:\"\";s:12:\"download_log\";s:0:\"\";}', 'yes'),
 (13260, 'options_default_placeholder', '134', 'no'),
 (13261, '_options_default_placeholder', 'field_5f9d421b3f030', 'no'),
-(13274, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1604163625;s:7:\"checked\";a:2:{s:8:\"cosmedoc\";s:5:\"2.0.0\";s:23:\"empty-theme/empty-theme\";s:5:\"1.0.0\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:0:{}s:12:\"translations\";a:0:{}}', 'no'),
 (13307, '_transient_timeout_as-post-store-dependencies-met', '1604230831', 'no'),
 (13308, '_transient_as-post-store-dependencies-met', 'yes', 'no'),
 (13319, '_transient_timeout_wc_child_has_weight_225', '1606736923', 'no'),
 (13320, '_transient_wc_child_has_weight_225', '0', 'no'),
 (13321, '_transient_timeout_wc_child_has_dimensions_225', '1606736923', 'no'),
 (13322, '_transient_wc_child_has_dimensions_225', '0', 'no'),
-(13323, '_transient_timeout_wc_related_225', '1604255588', 'no'),
+(13323, '_transient_timeout_wc_related_225', '1604269371', 'no'),
 (13324, '_transient_wc_related_225', 'a:1:{s:51:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=225\";a:3:{i:0;s:2:\"30\";i:1;s:3:\"251\";i:2;s:3:\"266\";}}', 'no'),
 (13959, '_transient_timeout_wc_related_275', '1604248678', 'no'),
 (13960, '_transient_wc_related_275', 'a:1:{s:51:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=275\";a:6:{i:0;s:2:\"58\";i:1;s:2:\"64\";i:2;s:2:\"68\";i:3;s:3:\"273\";i:4;s:3:\"277\";i:5;s:3:\"279\";}}', 'no'),
-(14003, '_site_transient_timeout_theme_roots', '1604164618', 'no'),
-(14004, '_site_transient_theme_roots', 'a:2:{s:8:\"cosmedoc\";s:7:\"/themes\";s:23:\"empty-theme/empty-theme\";s:7:\"/themes\";}', 'no'),
 (14007, '_site_transient_timeout_poptags_40cd750bba9870f18aada2478b24840a', '1604173777', 'no'),
 (14008, '_site_transient_poptags_40cd750bba9870f18aada2478b24840a', 'O:8:\"stdClass\":100:{s:6:\"widget\";a:3:{s:4:\"name\";s:6:\"widget\";s:4:\"slug\";s:6:\"widget\";s:5:\"count\";i:4726;}s:11:\"woocommerce\";a:3:{s:4:\"name\";s:11:\"woocommerce\";s:4:\"slug\";s:11:\"woocommerce\";s:5:\"count\";i:4454;}s:4:\"post\";a:3:{s:4:\"name\";s:4:\"post\";s:4:\"slug\";s:4:\"post\";s:5:\"count\";i:2689;}s:5:\"admin\";a:3:{s:4:\"name\";s:5:\"admin\";s:4:\"slug\";s:5:\"admin\";s:5:\"count\";i:2565;}s:5:\"posts\";a:3:{s:4:\"name\";s:5:\"posts\";s:4:\"slug\";s:5:\"posts\";s:5:\"count\";i:1979;}s:9:\"shortcode\";a:3:{s:4:\"name\";s:9:\"shortcode\";s:4:\"slug\";s:9:\"shortcode\";s:5:\"count\";i:1832;}s:8:\"comments\";a:3:{s:4:\"name\";s:8:\"comments\";s:4:\"slug\";s:8:\"comments\";s:5:\"count\";i:1812;}s:7:\"twitter\";a:3:{s:4:\"name\";s:7:\"twitter\";s:4:\"slug\";s:7:\"twitter\";s:5:\"count\";i:1492;}s:6:\"images\";a:3:{s:4:\"name\";s:6:\"images\";s:4:\"slug\";s:6:\"images\";s:5:\"count\";i:1492;}s:6:\"google\";a:3:{s:4:\"name\";s:6:\"google\";s:4:\"slug\";s:6:\"google\";s:5:\"count\";i:1490;}s:3:\"seo\";a:3:{s:4:\"name\";s:3:\"seo\";s:4:\"slug\";s:3:\"seo\";s:5:\"count\";i:1462;}s:8:\"facebook\";a:3:{s:4:\"name\";s:8:\"facebook\";s:4:\"slug\";s:8:\"facebook\";s:5:\"count\";i:1461;}s:5:\"image\";a:3:{s:4:\"name\";s:5:\"image\";s:4:\"slug\";s:5:\"image\";s:5:\"count\";i:1448;}s:7:\"sidebar\";a:3:{s:4:\"name\";s:7:\"sidebar\";s:4:\"slug\";s:7:\"sidebar\";s:5:\"count\";i:1306;}s:5:\"email\";a:3:{s:4:\"name\";s:5:\"email\";s:4:\"slug\";s:5:\"email\";s:5:\"count\";i:1226;}s:7:\"gallery\";a:3:{s:4:\"name\";s:7:\"gallery\";s:4:\"slug\";s:7:\"gallery\";s:5:\"count\";i:1209;}s:9:\"ecommerce\";a:3:{s:4:\"name\";s:9:\"ecommerce\";s:4:\"slug\";s:9:\"ecommerce\";s:5:\"count\";i:1170;}s:4:\"page\";a:3:{s:4:\"name\";s:4:\"page\";s:4:\"slug\";s:4:\"page\";s:5:\"count\";i:1136;}s:6:\"social\";a:3:{s:4:\"name\";s:6:\"social\";s:4:\"slug\";s:6:\"social\";s:5:\"count\";i:1109;}s:5:\"login\";a:3:{s:4:\"name\";s:5:\"login\";s:4:\"slug\";s:5:\"login\";s:5:\"count\";i:1020;}s:8:\"security\";a:3:{s:4:\"name\";s:8:\"security\";s:4:\"slug\";s:8:\"security\";s:5:\"count\";i:907;}s:5:\"video\";a:3:{s:4:\"name\";s:5:\"video\";s:4:\"slug\";s:5:\"video\";s:5:\"count\";i:906;}s:7:\"widgets\";a:3:{s:4:\"name\";s:7:\"widgets\";s:4:\"slug\";s:7:\"widgets\";s:5:\"count\";i:883;}s:5:\"links\";a:3:{s:4:\"name\";s:5:\"links\";s:4:\"slug\";s:5:\"links\";s:5:\"count\";i:882;}s:10:\"e-commerce\";a:3:{s:4:\"name\";s:10:\"e-commerce\";s:4:\"slug\";s:10:\"e-commerce\";s:5:\"count\";i:826;}s:4:\"spam\";a:3:{s:4:\"name\";s:4:\"spam\";s:4:\"slug\";s:4:\"spam\";s:5:\"count\";i:804;}s:6:\"slider\";a:3:{s:4:\"name\";s:6:\"slider\";s:4:\"slug\";s:6:\"slider\";s:5:\"count\";i:796;}s:7:\"content\";a:3:{s:4:\"name\";s:7:\"content\";s:4:\"slug\";s:7:\"content\";s:5:\"count\";i:783;}s:9:\"analytics\";a:3:{s:4:\"name\";s:9:\"analytics\";s:4:\"slug\";s:9:\"analytics\";s:5:\"count\";i:781;}s:10:\"buddypress\";a:3:{s:4:\"name\";s:10:\"buddypress\";s:4:\"slug\";s:10:\"buddypress\";s:5:\"count\";i:756;}s:4:\"form\";a:3:{s:4:\"name\";s:4:\"form\";s:4:\"slug\";s:4:\"form\";s:5:\"count\";i:753;}s:5:\"media\";a:3:{s:4:\"name\";s:5:\"media\";s:4:\"slug\";s:5:\"media\";s:5:\"count\";i:726;}s:3:\"rss\";a:3:{s:4:\"name\";s:3:\"rss\";s:4:\"slug\";s:3:\"rss\";s:5:\"count\";i:721;}s:6:\"search\";a:3:{s:4:\"name\";s:6:\"search\";s:4:\"slug\";s:6:\"search\";s:5:\"count\";i:707;}s:5:\"pages\";a:3:{s:4:\"name\";s:5:\"pages\";s:4:\"slug\";s:5:\"pages\";s:5:\"count\";i:703;}s:6:\"editor\";a:3:{s:4:\"name\";s:6:\"editor\";s:4:\"slug\";s:6:\"editor\";s:5:\"count\";i:689;}s:4:\"menu\";a:3:{s:4:\"name\";s:4:\"menu\";s:4:\"slug\";s:4:\"menu\";s:5:\"count\";i:666;}s:6:\"jquery\";a:3:{s:4:\"name\";s:6:\"jquery\";s:4:\"slug\";s:6:\"jquery\";s:5:\"count\";i:663;}s:4:\"feed\";a:3:{s:4:\"name\";s:4:\"feed\";s:4:\"slug\";s:4:\"feed\";s:5:\"count\";i:658;}s:8:\"category\";a:3:{s:4:\"name\";s:8:\"category\";s:4:\"slug\";s:8:\"category\";s:5:\"count\";i:653;}s:5:\"embed\";a:3:{s:4:\"name\";s:5:\"embed\";s:4:\"slug\";s:5:\"embed\";s:5:\"count\";i:637;}s:4:\"ajax\";a:3:{s:4:\"name\";s:4:\"ajax\";s:4:\"slug\";s:4:\"ajax\";s:5:\"count\";i:636;}s:12:\"contact-form\";a:3:{s:4:\"name\";s:12:\"contact form\";s:4:\"slug\";s:12:\"contact-form\";s:5:\"count\";i:617;}s:7:\"payment\";a:3:{s:4:\"name\";s:7:\"payment\";s:4:\"slug\";s:7:\"payment\";s:5:\"count\";i:616;}s:3:\"css\";a:3:{s:4:\"name\";s:3:\"css\";s:4:\"slug\";s:3:\"css\";s:5:\"count\";i:593;}s:7:\"youtube\";a:3:{s:4:\"name\";s:7:\"youtube\";s:4:\"slug\";s:7:\"youtube\";s:5:\"count\";i:586;}s:10:\"javascript\";a:3:{s:4:\"name\";s:10:\"javascript\";s:4:\"slug\";s:10:\"javascript\";s:5:\"count\";i:583;}s:4:\"link\";a:3:{s:4:\"name\";s:4:\"link\";s:4:\"slug\";s:4:\"link\";s:5:\"count\";i:579;}s:9:\"gutenberg\";a:3:{s:4:\"name\";s:9:\"gutenberg\";s:4:\"slug\";s:9:\"gutenberg\";s:5:\"count\";i:576;}s:5:\"share\";a:3:{s:4:\"name\";s:5:\"share\";s:4:\"slug\";s:5:\"share\";s:5:\"count\";i:562;}s:9:\"affiliate\";a:3:{s:4:\"name\";s:9:\"affiliate\";s:4:\"slug\";s:9:\"affiliate\";s:5:\"count\";i:560;}s:5:\"theme\";a:3:{s:4:\"name\";s:5:\"theme\";s:4:\"slug\";s:5:\"theme\";s:5:\"count\";i:557;}s:7:\"comment\";a:3:{s:4:\"name\";s:7:\"comment\";s:4:\"slug\";s:7:\"comment\";s:5:\"count\";i:553;}s:10:\"responsive\";a:3:{s:4:\"name\";s:10:\"responsive\";s:4:\"slug\";s:10:\"responsive\";s:5:\"count\";i:552;}s:9:\"dashboard\";a:3:{s:4:\"name\";s:9:\"dashboard\";s:4:\"slug\";s:9:\"dashboard\";s:5:\"count\";i:542;}s:15:\"payment-gateway\";a:3:{s:4:\"name\";s:15:\"payment gateway\";s:4:\"slug\";s:15:\"payment-gateway\";s:5:\"count\";i:541;}s:6:\"custom\";a:3:{s:4:\"name\";s:6:\"custom\";s:4:\"slug\";s:6:\"custom\";s:5:\"count\";i:533;}s:3:\"ads\";a:3:{s:4:\"name\";s:3:\"ads\";s:4:\"slug\";s:3:\"ads\";s:5:\"count\";i:533;}s:10:\"categories\";a:3:{s:4:\"name\";s:10:\"categories\";s:4:\"slug\";s:10:\"categories\";s:5:\"count\";i:524;}s:3:\"api\";a:3:{s:4:\"name\";s:3:\"api\";s:4:\"slug\";s:3:\"api\";s:5:\"count\";i:522;}s:7:\"contact\";a:3:{s:4:\"name\";s:7:\"contact\";s:4:\"slug\";s:7:\"contact\";s:5:\"count\";i:522;}s:4:\"user\";a:3:{s:4:\"name\";s:4:\"user\";s:4:\"slug\";s:4:\"user\";s:5:\"count\";i:507;}s:4:\"tags\";a:3:{s:4:\"name\";s:4:\"tags\";s:4:\"slug\";s:4:\"tags\";s:5:\"count\";i:496;}s:6:\"button\";a:3:{s:4:\"name\";s:6:\"button\";s:4:\"slug\";s:6:\"button\";s:5:\"count\";i:493;}s:6:\"mobile\";a:3:{s:4:\"name\";s:6:\"mobile\";s:4:\"slug\";s:6:\"mobile\";s:5:\"count\";i:486;}s:6:\"events\";a:3:{s:4:\"name\";s:6:\"events\";s:4:\"slug\";s:6:\"events\";s:5:\"count\";i:483;}s:5:\"users\";a:3:{s:4:\"name\";s:5:\"users\";s:4:\"slug\";s:5:\"users\";s:5:\"count\";i:479;}s:9:\"marketing\";a:3:{s:4:\"name\";s:9:\"marketing\";s:4:\"slug\";s:9:\"marketing\";s:5:\"count\";i:466;}s:4:\"chat\";a:3:{s:4:\"name\";s:4:\"chat\";s:4:\"slug\";s:4:\"chat\";s:5:\"count\";i:459;}s:8:\"calendar\";a:3:{s:4:\"name\";s:8:\"calendar\";s:4:\"slug\";s:8:\"calendar\";s:5:\"count\";i:443;}s:5:\"block\";a:3:{s:4:\"name\";s:5:\"block\";s:4:\"slug\";s:5:\"block\";s:5:\"count\";i:443;}s:10:\"navigation\";a:3:{s:4:\"name\";s:10:\"navigation\";s:4:\"slug\";s:10:\"navigation\";s:5:\"count\";i:441;}s:5:\"popup\";a:3:{s:4:\"name\";s:5:\"popup\";s:4:\"slug\";s:5:\"popup\";s:5:\"count\";i:441;}s:5:\"photo\";a:3:{s:4:\"name\";s:5:\"photo\";s:4:\"slug\";s:5:\"photo\";s:5:\"count\";i:439;}s:9:\"elementor\";a:3:{s:4:\"name\";s:9:\"elementor\";s:4:\"slug\";s:9:\"elementor\";s:5:\"count\";i:435;}s:9:\"slideshow\";a:3:{s:4:\"name\";s:9:\"slideshow\";s:4:\"slug\";s:9:\"slideshow\";s:5:\"count\";i:433;}s:5:\"forms\";a:3:{s:4:\"name\";s:5:\"forms\";s:4:\"slug\";s:5:\"forms\";s:5:\"count\";i:428;}s:5:\"stats\";a:3:{s:4:\"name\";s:5:\"stats\";s:4:\"slug\";s:5:\"stats\";s:5:\"count\";i:427;}s:6:\"photos\";a:3:{s:4:\"name\";s:6:\"photos\";s:4:\"slug\";s:6:\"photos\";s:5:\"count\";i:424;}s:10:\"newsletter\";a:3:{s:4:\"name\";s:10:\"newsletter\";s:4:\"slug\";s:10:\"newsletter\";s:5:\"count\";i:422;}s:14:\"contact-form-7\";a:3:{s:4:\"name\";s:14:\"contact form 7\";s:4:\"slug\";s:14:\"contact-form-7\";s:5:\"count\";i:419;}s:10:\"statistics\";a:3:{s:4:\"name\";s:10:\"statistics\";s:4:\"slug\";s:10:\"statistics\";s:5:\"count\";i:413;}s:4:\"news\";a:3:{s:4:\"name\";s:4:\"news\";s:4:\"slug\";s:4:\"news\";s:5:\"count\";i:405;}s:12:\"social-media\";a:3:{s:4:\"name\";s:12:\"social media\";s:4:\"slug\";s:12:\"social-media\";s:5:\"count\";i:399;}s:10:\"shortcodes\";a:3:{s:4:\"name\";s:10:\"shortcodes\";s:4:\"slug\";s:10:\"shortcodes\";s:5:\"count\";i:397;}s:8:\"redirect\";a:3:{s:4:\"name\";s:8:\"redirect\";s:4:\"slug\";s:8:\"redirect\";s:5:\"count\";i:394;}s:11:\"performance\";a:3:{s:4:\"name\";s:11:\"performance\";s:4:\"slug\";s:11:\"performance\";s:5:\"count\";i:390;}s:8:\"shipping\";a:3:{s:4:\"name\";s:8:\"shipping\";s:4:\"slug\";s:8:\"shipping\";s:5:\"count\";i:387;}s:4:\"code\";a:3:{s:4:\"name\";s:4:\"code\";s:4:\"slug\";s:4:\"code\";s:5:\"count\";i:385;}s:7:\"plugins\";a:3:{s:4:\"name\";s:7:\"plugins\";s:4:\"slug\";s:7:\"plugins\";s:5:\"count\";i:379;}s:12:\"notification\";a:3:{s:4:\"name\";s:12:\"notification\";s:4:\"slug\";s:12:\"notification\";s:5:\"count\";i:379;}s:9:\"multisite\";a:3:{s:4:\"name\";s:9:\"multisite\";s:4:\"slug\";s:9:\"multisite\";s:5:\"count\";i:379;}s:3:\"url\";a:3:{s:4:\"name\";s:3:\"url\";s:4:\"slug\";s:3:\"url\";s:5:\"count\";i:373;}s:4:\"meta\";a:3:{s:4:\"name\";s:4:\"meta\";s:4:\"slug\";s:4:\"meta\";s:5:\"count\";i:365;}s:4:\"list\";a:3:{s:4:\"name\";s:4:\"list\";s:4:\"slug\";s:4:\"list\";s:5:\"count\";i:361;}s:8:\"tracking\";a:3:{s:4:\"name\";s:8:\"tracking\";s:4:\"slug\";s:8:\"tracking\";s:5:\"count\";i:359;}s:16:\"google-analytics\";a:3:{s:4:\"name\";s:16:\"google analytics\";s:4:\"slug\";s:16:\"google-analytics\";s:5:\"count\";i:350;}s:5:\"cache\";a:3:{s:4:\"name\";s:5:\"cache\";s:4:\"slug\";s:5:\"cache\";s:5:\"count\";i:346;}s:6:\"import\";a:3:{s:4:\"name\";s:6:\"import\";s:4:\"slug\";s:6:\"import\";s:5:\"count\";i:344;}s:16:\"custom-post-type\";a:3:{s:4:\"name\";s:16:\"custom post type\";s:4:\"slug\";s:16:\"custom-post-type\";s:5:\"count\";i:339;}}', 'no'),
 (14012, 'vi_woo_product_variation_swatches_params', 'a:47:{s:3:\"ids\";a:3:{i:0;s:21:\"vi_wpvs_button_design\";i:1;s:20:\"vi_wpvs_color_design\";i:2;s:20:\"vi_wpvs_image_design\";}s:5:\"names\";a:3:{i:0;s:13:\"Button Design\";i:1;s:12:\"Color Design\";i:2;s:12:\"Image Design\";}s:28:\"attribute_reduce_size_mobile\";a:3:{i:0;s:2:\"85\";i:1;s:2:\"85\";i:2;s:2:\"85\";}s:15:\"attribute_width\";a:3:{i:0;b:0;i:1;s:2:\"32\";i:2;s:2:\"50\";}s:16:\"attribute_height\";a:3:{i:0;b:0;i:1;s:2:\"32\";i:2;s:2:\"50\";}s:18:\"attribute_fontsize\";a:3:{i:0;s:2:\"13\";i:1;s:2:\"13\";i:2;s:2:\"13\";}s:17:\"attribute_padding\";a:3:{i:0;s:9:\"10px 20px\";i:1;s:4:\"10px\";i:2;s:3:\"3px\";}s:20:\"attribute_transition\";a:3:{i:0;s:2:\"30\";i:1;s:2:\"30\";i:2;s:2:\"30\";}s:34:\"attribute_default_box_shadow_color\";a:3:{i:0;b:0;i:1;s:22:\"rgba(238, 238, 238, 1)\";i:2;b:0;}s:23:\"attribute_default_color\";a:3:{i:0;s:19:\"rgba(33, 33, 33, 1)\";i:1;b:0;i:2;b:0;}s:26:\"attribute_default_bg_color\";a:3:{i:0;s:7:\"#ffffff\";i:1;s:16:\"rgba(0, 0, 0, 0)\";i:2;s:22:\"rgba(255, 255, 255, 1)\";}s:30:\"attribute_default_border_color\";a:3:{i:0;s:7:\"#cccccc\";i:1;b:0;i:2;s:22:\"rgba(238, 238, 238, 1)\";}s:31:\"attribute_default_border_radius\";a:3:{i:0;b:0;i:1;s:2:\"20\";i:2;b:0;}s:30:\"attribute_default_border_width\";a:3:{i:0;s:1:\"1\";i:1;s:1:\"0\";i:2;s:1:\"1\";}s:21:\"attribute_hover_scale\";a:3:{i:0;s:1:\"1\";i:1;s:1:\"1\";i:2;s:1:\"1\";}s:32:\"attribute_hover_box_shadow_color\";a:3:{i:0;b:0;i:1;b:0;i:2;b:0;}s:21:\"attribute_hover_color\";a:3:{i:0;s:22:\"rgba(255, 255, 255, 1)\";i:1;b:0;i:2;b:0;}s:24:\"attribute_hover_bg_color\";a:3:{i:0;s:19:\"rgba(33, 33, 33, 1)\";i:1;s:19:\"rgba(0, 0, 0, 0.06)\";i:2;b:0;}s:28:\"attribute_hover_border_color\";a:3:{i:0;s:19:\"rgba(33, 33, 33, 1)\";i:1;b:0;i:2;s:19:\"rgba(33, 33, 33, 1)\";}s:29:\"attribute_hover_border_radius\";a:3:{i:0;b:0;i:1;s:2:\"20\";i:2;b:0;}s:28:\"attribute_hover_border_width\";a:3:{i:0;s:1:\"1\";i:1;s:1:\"0\";i:2;s:1:\"1\";}s:24:\"attribute_selected_scale\";a:3:{i:0;s:1:\"1\";i:1;s:1:\"1\";i:2;s:1:\"1\";}s:30:\"attribute_selected_icon_enable\";a:0:{}s:28:\"attribute_selected_icon_type\";a:0:{}s:29:\"attribute_selected_icon_color\";a:0:{}s:35:\"attribute_selected_box_shadow_color\";a:3:{i:0;b:0;i:1;b:0;i:2;b:0;}s:24:\"attribute_selected_color\";a:3:{i:0;s:22:\"rgba(255, 255, 255, 1)\";i:1;b:0;i:2;b:0;}s:27:\"attribute_selected_bg_color\";a:3:{i:0;s:19:\"rgba(33, 33, 33, 1)\";i:1;s:19:\"rgba(0, 0, 0, 0.06)\";i:2;b:0;}s:31:\"attribute_selected_border_color\";a:3:{i:0;s:19:\"rgba(33, 33, 33, 1)\";i:1;b:0;i:2;s:19:\"rgba(33, 33, 33, 1)\";}s:32:\"attribute_selected_border_radius\";a:3:{i:0;b:0;i:1;s:2:\"20\";i:2;b:0;}s:31:\"attribute_selected_border_width\";a:3:{i:0;s:1:\"1\";i:1;s:1:\"0\";i:2;s:1:\"1\";}s:22:\"attribute_out_of_stock\";a:3:{i:0;s:4:\"blur\";i:1;s:4:\"blur\";i:2;s:4:\"blur\";}s:24:\"attribute_tooltip_enable\";a:3:{i:0;b:0;i:1;b:0;i:2;b:0;}s:22:\"attribute_tooltip_type\";a:0:{}s:26:\"attribute_tooltip_position\";a:3:{i:0;s:3:\"top\";i:1;s:3:\"top\";i:2;s:3:\"top\";}s:23:\"attribute_tooltip_width\";a:0:{}s:24:\"attribute_tooltip_height\";a:0:{}s:26:\"attribute_tooltip_fontsize\";a:3:{i:0;s:2:\"14\";i:1;s:2:\"14\";i:2;s:2:\"14\";}s:31:\"attribute_tooltip_border_radius\";a:3:{i:0;s:1:\"3\";i:1;s:1:\"3\";i:2;s:1:\"3\";}s:26:\"attribute_tooltip_bg_color\";a:3:{i:0;s:7:\"#ffffff\";i:1;s:7:\"#ffffff\";i:2;s:7:\"#ffffff\";}s:23:\"attribute_tooltip_color\";a:3:{i:0;s:7:\"#222222\";i:1;s:7:\"#222222\";i:2;s:7:\"#222222\";}s:30:\"attribute_tooltip_border_color\";a:3:{i:0;s:7:\"#cccccc\";i:1;s:7:\"#cccccc\";i:2;s:7:\"#cccccc\";}s:25:\"attribute_display_default\";s:6:\"button\";s:22:\"attribute_double_click\";s:0:\"\";s:17:\"taxonomy_profiles\";a:0:{}s:21:\"taxonomy_display_type\";a:0:{}s:23:\"check_swatches_settings\";i:1;}', 'yes'),
@@ -936,11 +935,8 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (14018, '_transient_timeout_villatheme_notices', '1604249802', 'no'),
 (14019, '_transient_villatheme_notices', 'a:0:{}', 'no'),
 (14022, '_transient_timeout_villatheme_ads', '1604249482', 'no'),
-(14023, '_transient_villatheme_ads', '[{\"title\":\"WooCommerce Product Variations Swatches\",\"link\":\"https:\\/\\/1.envato.market\\/bd0ek\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/285353733\\/logo-pre.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/285166362\\/01_preview.jpg\",\"description\":\"\",\"free_url\":\"http:\\/\\/bit.ly\\/product-variations-swatches-for-woocommerce\",\"slug\":\"woocommerce-product-variations-swatches\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woo-product-variations-swatches\"},{\"title\":\"WooCommerce Email Template Customizer\",\"link\":\"https:\\/\\/1.envato.market\\/BZZv1\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/305875470\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/305875471\\/01_preview.jpg\",\"description\":\"<strong>WooCommerce Email Template Customizer<\\/strong> is a helpful tool that helps you build and customize the Email templates for WooCommerce. The plugin provides sufficient base elements and WooCommerce elements as well as developmental tools for users to build a completed email.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-email-template-customizer\",\"slug\":\"woocommerce-email-template-customizer\",\"demo_url\":\"https:\\/\\/new2new.com\\/?item=woocommerce-email-template-customizer\"},{\"title\":\"WooCommerce Abandoned Cart Recovery - Send Cart Recovery Email Plugin - SMS - Facebook Messenger\",\"link\":\"https:\\/\\/1.envato.market\\/roBbv\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/280988198\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/280988199\\/01_preview.jpg\",\"description\":\"\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-abandoned-cart-recovery\",\"slug\":\"woocommerce-abandoned-cart-recovery\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-abandoned-cart-recovery\"},{\"title\":\"WooCommerce Orders Tracking - SMS - PayPal Tracking Autopilot\",\"link\":\"https:\\/\\/1.envato.market\\/6ZPBE\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/304147128\\/logo-pre.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/304147130\\/01_preview.jpg\",\"description\":\"Order Tracking for WooCommerce allows you to add tracking code to your order. And sends emails with tracking code and tracking URL to your customers.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-orders-tracking\",\"slug\":\"woocommerce-orders-tracking\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woo-orders-tracking\"},{\"title\":\"S2W - Import Shopify to WooCommerce - Migrate from Shopify to WooCommerce\",\"link\":\"https:\\/\\/1.envato.market\\/9arQ5\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/280988792\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/280988793\\/01_preview.jpg\",\"description\":\"\",\"free_url\":\"http:\\/\\/bit.ly\\/import-shopify-to-woocommerce\",\"slug\":\"s2w-import-shopify-to-woocommerce\",\"demo_url\":\"\"},{\"title\":\"WooCommerce Thank You Page Customizer - Increase Customer Retention Rate - Boost Sales\",\"link\":\"https:\\/\\/1.envato.market\\/Q3Weo\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/281444301\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/281444302\\/01_preview.jpg\",\"description\":\"WooCommerce Thank You Page Customizer allows you to customize your \\\"Thank You\\\" page and give coupons to customers after a successful order.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-thank-you-page-customizer\",\"slug\":\"woocommerce-thank-you-page-customizer\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woo-thank-you-page-customizer\"},{\"title\":\"Sales Countdown Timer for WooCommerce and WordPress\",\"link\":\"https:\\/\\/1.envato.market\\/962d3\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/302694138\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/302694139\\/01_preview.jpg\",\"description\":\"Sales Countdown Timer helps you to maximize the revenue of\\u00a0your sale campaigns. The plugin\\u00a0display sales countdown timer in single product pages and shop page. Encourage customers to purchase by creating urgency\\u00a0psychology\",\"free_url\":\"http:\\/\\/bit.ly\\/sales-countdown-timer\",\"slug\":\"sales-countdown-timer\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=sales-countdown-timer\"},{\"title\":\"WordPress Lucky Wheel - WordPress subscription plugin\",\"link\":\"https:\\/\\/1.envato.market\\/xDRb1\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/281013744\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/281013745\\/01_preview.jpg\",\"description\":\"WordPress Lucky Wheel gives you the best solution to get emails address from visitors of your WordPress website. Offering visitors to fill in their email addresses to spins for prizes. This is the best way to collect email from visitors on your site, they will be pleased to fill in their email address.\",\"free_url\":\"http:\\/\\/bit.ly\\/wp-lucky-wheel\",\"slug\":\"wordpress-lucky-wheel\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=wordpress-lucky-wheel\"},{\"title\":\"WooCommerce Lucky Wheel - Spin to win\",\"link\":\"https:\\/\\/1.envato.market\\/qXBNY\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/280996372\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/280996374\\/01_preview.jpg\",\"description\":\"WooCommerce Lucky Wheel gives you the best way to collect emails from persons who visit your WooCommerce store. The plugin offers chances to winning coupon by spinning the Lucky Wheel to get customers emails. Customers will give you their email address happily.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-lucky-wheel\",\"slug\":\"woocommerce-lucky-wheel\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-lucky-wheel\"},{\"title\":\"WooCommerce Lookbook - Shop by Instagram - Shoppable with Product Tags\",\"link\":\"https:\\/\\/1.envato.market\\/mV0bM\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/280871714\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/280871715\\/01_preview.jpg\",\"description\":\"Make Instagram Shop, sync pictures from Instagram to your WooCommerce store. Create beautiful lookbooks of your products then display it as slides. Help customers\\u00a0imagine how will your products look like in reality.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-lookbook\",\"slug\":\"woocommerce-lookbook\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-lookbook\"},{\"title\":\"WooCommerce Photo Reviews - Review Reminders - Review for Discounts\",\"link\":\"https:\\/\\/1.envato.market\\/L3WrM\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/279611951\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/279611952\\/01_preview.jpg\",\"description\":\"Your product reviews now can include product pictures. Helping you to create social proof about your site and your products. With WooCommerce Photo Review you can import reviews with product pictures from AliExpress, send review reminder emails to customers and give coupons to customers who posted reviews.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-photo-reviews\",\"slug\":\"woocommerce-photo-reviews\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-photo-reviews\"},{\"title\":\"eCommerce Notification - Live feed recents sales\",\"link\":\"https:\\/\\/1.envato.market\\/K3W9N\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/237415399\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/239111681\\/01_preview.png\",\"description\":\"eCommerce Notification plugin boosts your sales by display virtual orders on your storefront. It\\u2019s the online equivalent of a busy store and shows prospective customers that other people are buying your products.\",\"free_url\":\"\",\"slug\":\"ecommerce-notification\",\"demo_url\":\"http:\\/new2new.com\\/?item=wordpress-ecommerce-notification\"},{\"title\":\"WooCommerce Product Builder - Let\'s build PC\",\"link\":\"https:\\/\\/1.envato.market\\/M3Wjq\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/248469691\\/logo.jpg\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/248469692\\/01_preview.jpg\",\"description\":\"<strong>WooCommerce Product Builder<\\/strong> is a plugin that allows your customers to build a full product set from small parts step by step. The plugin works base on WooCommerce with many useful features like compatible, email completed product, attributes filters ...\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-product-builder\",\"slug\":\"woocommerce-product-builder\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-product-builder\"},{\"title\":\"WooCommerce Boost Sales - WooCommerce Upsell and Cross-sell\",\"link\":\"https:\\/\\/1.envato.market\\/yQBL3\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/306758086\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/306758087\\/01_preview.jpg\",\"description\":\"WooCommerce Boost Sales\\u00a0- Apply Up-sell, Cross-sell technique to your online store.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-boost-sales\",\"slug\":\"woocommerce-boost-sales\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-boost-sales\"},{\"title\":\"WooCommerce Free Shipping Bar - WooCommerce Free Shipping Plugin\",\"link\":\"https:\\/\\/1.envato.market\\/N3mPV\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/307432058\\/icon-pro.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/307432059\\/01_preview.jpg\",\"description\":\"WooCommerce Free Shipping Bar display to your\\u00a0customers the information about the minimum spend to get free shipping, how much they spent and how much they need to spend more to claim the free shipping.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-free-shipping-bar\",\"slug\":\"woocommerce-free-shipping-bar\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-free-shipping-bar\"},{\"title\":\"WooCommerce Notification - Boost Your Sales\",\"link\":\"https:\\/\\/1.envato.market\\/djEZj\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/254345297\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/254345298\\/01_preview.jpg\",\"description\":\"WooCommerce Notification displays recent orders on your storefront. It\\u2019s the online equivalent of a busy store and shows prospective customers that other people are buying your products.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-notification\",\"slug\":\"woocommerce-notification\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-notification\"},{\"title\":\"WooCommerce Multi Currency - Currency Switcher\",\"link\":\"https:\\/\\/1.envato.market\\/jABDP\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/253444721\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/253444722\\/01_preview.jpg\",\"description\":\"WooCommerce Multi Currency allows display prices and accepts payments in multiple currencies. WooCommerce Multi Currency is the best currency converter plugin for WooCommerce.\\r\\n\\r\\n<span style=\\\"color: #ff0000;\\\">**IMPORTANT**<\\/span>\\r\\n<ul>\\r\\n \\t<li>We have tested WooCommerce Multi Currency with many WordPress themes, plugins and 3rd party WooCommerce extensions, but it\\u2019s impossible to test them all, so some may still have compatibility issues. Please read <a href=\\\"https:\\/\\/docs.villatheme.com\\/woocommerce-multi-currency\\/#page_section_menu_3939\\\"><strong>the Compatibility documentation section.<\\/strong><\\/a> Should you notice any problem, please <a href=\\\"https:\\/\\/villatheme.com\\/supports\\/forum\\/plugins\\/woo-multi-currency\\/\\\"><b data-stringify-type=\\\"bold\\\">contact us\\u00a0<\\/b><\\/a>with the details and screenshots. We\\u2019ll do our best to find the solution!\\r\\n<div class=\\\"c-message_kit__attachments\\\">\\r\\n<div class=\\\"c-message_attachment\\\"><\\/div>\\r\\n<\\/div><\\/li>\\r\\n<\\/ul>\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-multi-currency\",\"slug\":\"woocommerce-multi-currency\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woo-multi-currency\"},{\"title\":\"WooCommerce Coupon Box\",\"link\":\"https:\\/\\/1.envato.market\\/DzJ12\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/280883533\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/280883534\\/01_preview.jpg\",\"description\":\"WooCommerce Coupon Box plugin is a powerful, professional solution to collect customers email addresses. The plugin will send discount coupons to subscribers. Emails will be saved in the backend and can be synced with MailChimp, Active Campaign or export as excel files.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-coupon-box-free\",\"slug\":\"woocommerce-coupon-box\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woo-coupon-box\"}]', 'no');
-INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
-(14031, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1604164291;s:7:\"checked\";a:19:{s:34:\"advanced-custom-fields-pro/acf.php\";s:5:\"5.9.2\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";s:5:\"1.8.0\";s:45:\"taxonomy-terms-order/taxonomy-terms-order.php\";s:7:\"1.5.7.3\";s:33:\"classic-editor/classic-editor.php\";s:3:\"1.6\";s:36:\"contact-form-7/wp-contact-form-7.php\";s:3:\"5.3\";s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";s:6:\"0.5.28\";s:43:\"custom-post-type-ui/custom-post-type-ui.php\";s:5:\"1.8.1\";s:22:\"cyr2lat/cyr-to-lat.php\";s:5:\"4.5.0\";s:115:\"express-checkout-paypal-payment-gateway-for-woocommerce/express-checkout-paypal-payment-gateway-for-woocommerce.php\";s:5:\"1.4.9\";s:41:\"woo-paypalplus/paypalplus-woocommerce.php\";s:5:\"2.2.1\";s:35:\"pre-orders-for-woocommerce/main.php\";s:6:\"1.0.10\";s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";s:5:\"1.8.4\";s:43:\"pw-woocommerce-gift-cards/pw-gift-cards.php\";s:5:\"1.150\";s:21:\"safe-svg/safe-svg.php\";s:5:\"1.9.9\";s:51:\"ti-woocommerce-wishlist/ti-woocommerce-wishlist.php\";s:7:\"1.21.12\";s:49:\"woo-variation-swatches/woo-variation-swatches.php\";s:5:\"1.1.0\";s:27:\"woocommerce/woocommerce.php\";s:5:\"4.6.1\";s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";s:5:\"1.7.1\";s:24:\"wordpress-seo/wp-seo.php\";s:4:\"15.2\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:1:{i:0;a:7:{s:4:\"type\";s:6:\"plugin\";s:4:\"slug\";s:13:\"wordpress-seo\";s:8:\"language\";s:5:\"ru_RU\";s:7:\"version\";s:4:\"15.2\";s:7:\"updated\";s:19:\"2020-10-27 09:31:27\";s:7:\"package\";s:79:\"https://downloads.wordpress.org/translation/plugin/wordpress-seo/15.2/ru_RU.zip\";s:10:\"autoupdate\";b:1;}}s:9:\"no_update\";a:18:{s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:41:\"w.org/plugins/ajax-search-for-woocommerce\";s:4:\"slug\";s:27:\"ajax-search-for-woocommerce\";s:6:\"plugin\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";s:11:\"new_version\";s:5:\"1.8.0\";s:3:\"url\";s:58:\"https://wordpress.org/plugins/ajax-search-for-woocommerce/\";s:7:\"package\";s:76:\"https://downloads.wordpress.org/plugin/ajax-search-for-woocommerce.1.8.0.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:80:\"https://ps.w.org/ajax-search-for-woocommerce/assets/icon-256x256.png?rev=2042590\";s:2:\"1x\";s:80:\"https://ps.w.org/ajax-search-for-woocommerce/assets/icon-128x128.png?rev=2042590\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:83:\"https://ps.w.org/ajax-search-for-woocommerce/assets/banner-1544x500.jpg?rev=2234615\";s:2:\"1x\";s:82:\"https://ps.w.org/ajax-search-for-woocommerce/assets/banner-772x250.jpg?rev=2234615\";}s:11:\"banners_rtl\";a:0:{}}s:45:\"taxonomy-terms-order/taxonomy-terms-order.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:34:\"w.org/plugins/taxonomy-terms-order\";s:4:\"slug\";s:20:\"taxonomy-terms-order\";s:6:\"plugin\";s:45:\"taxonomy-terms-order/taxonomy-terms-order.php\";s:11:\"new_version\";s:7:\"1.5.7.3\";s:3:\"url\";s:51:\"https://wordpress.org/plugins/taxonomy-terms-order/\";s:7:\"package\";s:71:\"https://downloads.wordpress.org/plugin/taxonomy-terms-order.1.5.7.3.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:73:\"https://ps.w.org/taxonomy-terms-order/assets/icon-256x256.png?rev=1564412\";s:2:\"1x\";s:73:\"https://ps.w.org/taxonomy-terms-order/assets/icon-128x128.png?rev=1564412\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:76:\"https://ps.w.org/taxonomy-terms-order/assets/banner-1544x500.png?rev=1564412\";s:2:\"1x\";s:75:\"https://ps.w.org/taxonomy-terms-order/assets/banner-772x250.png?rev=1564412\";}s:11:\"banners_rtl\";a:0:{}}s:33:\"classic-editor/classic-editor.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/classic-editor\";s:4:\"slug\";s:14:\"classic-editor\";s:6:\"plugin\";s:33:\"classic-editor/classic-editor.php\";s:11:\"new_version\";s:3:\"1.6\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/classic-editor/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/plugin/classic-editor.1.6.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/classic-editor/assets/icon-256x256.png?rev=1998671\";s:2:\"1x\";s:67:\"https://ps.w.org/classic-editor/assets/icon-128x128.png?rev=1998671\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:70:\"https://ps.w.org/classic-editor/assets/banner-1544x500.png?rev=1998671\";s:2:\"1x\";s:69:\"https://ps.w.org/classic-editor/assets/banner-772x250.png?rev=1998676\";}s:11:\"banners_rtl\";a:0:{}}s:36:\"contact-form-7/wp-contact-form-7.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/contact-form-7\";s:4:\"slug\";s:14:\"contact-form-7\";s:6:\"plugin\";s:36:\"contact-form-7/wp-contact-form-7.php\";s:11:\"new_version\";s:3:\"5.3\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/contact-form-7/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/plugin/contact-form-7.5.3.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:67:\"https://ps.w.org/contact-form-7/assets/icon-256x256.png?rev=2279696\";s:2:\"1x\";s:59:\"https://ps.w.org/contact-form-7/assets/icon.svg?rev=2339255\";s:3:\"svg\";s:59:\"https://ps.w.org/contact-form-7/assets/icon.svg?rev=2339255\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:69:\"https://ps.w.org/contact-form-7/assets/banner-1544x500.png?rev=860901\";s:2:\"1x\";s:68:\"https://ps.w.org/contact-form-7/assets/banner-772x250.png?rev=880427\";}s:11:\"banners_rtl\";a:0:{}}s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:48:\"w.org/plugins/contact-form-7-mailchimp-extension\";s:4:\"slug\";s:34:\"contact-form-7-mailchimp-extension\";s:6:\"plugin\";s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";s:11:\"new_version\";s:6:\"0.5.28\";s:3:\"url\";s:65:\"https://wordpress.org/plugins/contact-form-7-mailchimp-extension/\";s:7:\"package\";s:77:\"https://downloads.wordpress.org/plugin/contact-form-7-mailchimp-extension.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:87:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/icon-256x256.png?rev=1072113\";s:2:\"1x\";s:87:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/icon-128x128.png?rev=1072113\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:90:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/banner-1544x500.png?rev=1072092\";s:2:\"1x\";s:89:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/banner-772x250.png?rev=1625715\";}s:11:\"banners_rtl\";a:0:{}}s:43:\"custom-post-type-ui/custom-post-type-ui.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:33:\"w.org/plugins/custom-post-type-ui\";s:4:\"slug\";s:19:\"custom-post-type-ui\";s:6:\"plugin\";s:43:\"custom-post-type-ui/custom-post-type-ui.php\";s:11:\"new_version\";s:5:\"1.8.1\";s:3:\"url\";s:50:\"https://wordpress.org/plugins/custom-post-type-ui/\";s:7:\"package\";s:68:\"https://downloads.wordpress.org/plugin/custom-post-type-ui.1.8.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:72:\"https://ps.w.org/custom-post-type-ui/assets/icon-256x256.png?rev=1069557\";s:2:\"1x\";s:72:\"https://ps.w.org/custom-post-type-ui/assets/icon-128x128.png?rev=1069557\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:75:\"https://ps.w.org/custom-post-type-ui/assets/banner-1544x500.png?rev=1069557\";s:2:\"1x\";s:74:\"https://ps.w.org/custom-post-type-ui/assets/banner-772x250.png?rev=1069557\";}s:11:\"banners_rtl\";a:0:{}}s:22:\"cyr2lat/cyr-to-lat.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/cyr2lat\";s:4:\"slug\";s:7:\"cyr2lat\";s:6:\"plugin\";s:22:\"cyr2lat/cyr-to-lat.php\";s:11:\"new_version\";s:5:\"4.5.0\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/cyr2lat/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/cyr2lat.4.5.0.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:60:\"https://ps.w.org/cyr2lat/assets/icon-256x256.jpg?rev=2022835\";s:2:\"1x\";s:52:\"https://ps.w.org/cyr2lat/assets/icon.svg?rev=2022835\";s:3:\"svg\";s:52:\"https://ps.w.org/cyr2lat/assets/icon.svg?rev=2022835\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:63:\"https://ps.w.org/cyr2lat/assets/banner-1544x500.png?rev=2022835\";s:2:\"1x\";s:62:\"https://ps.w.org/cyr2lat/assets/banner-772x250.png?rev=2022835\";}s:11:\"banners_rtl\";a:0:{}}s:115:\"express-checkout-paypal-payment-gateway-for-woocommerce/express-checkout-paypal-payment-gateway-for-woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:69:\"w.org/plugins/express-checkout-paypal-payment-gateway-for-woocommerce\";s:4:\"slug\";s:55:\"express-checkout-paypal-payment-gateway-for-woocommerce\";s:6:\"plugin\";s:115:\"express-checkout-paypal-payment-gateway-for-woocommerce/express-checkout-paypal-payment-gateway-for-woocommerce.php\";s:11:\"new_version\";s:5:\"1.4.9\";s:3:\"url\";s:86:\"https://wordpress.org/plugins/express-checkout-paypal-payment-gateway-for-woocommerce/\";s:7:\"package\";s:104:\"https://downloads.wordpress.org/plugin/express-checkout-paypal-payment-gateway-for-woocommerce.1.4.9.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:108:\"https://ps.w.org/express-checkout-paypal-payment-gateway-for-woocommerce/assets/icon-256x256.jpg?rev=1952087\";s:2:\"1x\";s:108:\"https://ps.w.org/express-checkout-paypal-payment-gateway-for-woocommerce/assets/icon-128x128.png?rev=1906408\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:111:\"https://ps.w.org/express-checkout-paypal-payment-gateway-for-woocommerce/assets/banner-1544x500.jpg?rev=2067753\";s:2:\"1x\";s:110:\"https://ps.w.org/express-checkout-paypal-payment-gateway-for-woocommerce/assets/banner-772x250.jpg?rev=2067753\";}s:11:\"banners_rtl\";a:0:{}}s:41:\"woo-paypalplus/paypalplus-woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/woo-paypalplus\";s:4:\"slug\";s:14:\"woo-paypalplus\";s:6:\"plugin\";s:41:\"woo-paypalplus/paypalplus-woocommerce.php\";s:11:\"new_version\";s:5:\"2.2.1\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/woo-paypalplus/\";s:7:\"package\";s:63:\"https://downloads.wordpress.org/plugin/woo-paypalplus.2.2.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/woo-paypalplus/assets/icon-256x256.png?rev=1839228\";s:2:\"1x\";s:67:\"https://ps.w.org/woo-paypalplus/assets/icon-128x128.png?rev=1839228\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:70:\"https://ps.w.org/woo-paypalplus/assets/banner-1544x500.png?rev=1654845\";s:2:\"1x\";s:69:\"https://ps.w.org/woo-paypalplus/assets/banner-772x250.png?rev=1654846\";}s:11:\"banners_rtl\";a:0:{}}s:35:\"pre-orders-for-woocommerce/main.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:40:\"w.org/plugins/pre-orders-for-woocommerce\";s:4:\"slug\";s:26:\"pre-orders-for-woocommerce\";s:6:\"plugin\";s:35:\"pre-orders-for-woocommerce/main.php\";s:11:\"new_version\";s:6:\"1.0.10\";s:3:\"url\";s:57:\"https://wordpress.org/plugins/pre-orders-for-woocommerce/\";s:7:\"package\";s:76:\"https://downloads.wordpress.org/plugin/pre-orders-for-woocommerce.1.0.10.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:79:\"https://ps.w.org/pre-orders-for-woocommerce/assets/icon-256x256.jpg?rev=2281163\";s:2:\"1x\";s:79:\"https://ps.w.org/pre-orders-for-woocommerce/assets/icon-128x128.jpg?rev=2281163\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:82:\"https://ps.w.org/pre-orders-for-woocommerce/assets/banner-1544x500.jpg?rev=2281163\";s:2:\"1x\";s:81:\"https://ps.w.org/pre-orders-for-woocommerce/assets/banner-772x250.jpg?rev=2281163\";}s:11:\"banners_rtl\";a:0:{}}s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:43:\"w.org/plugins/product-import-export-for-woo\";s:4:\"slug\";s:29:\"product-import-export-for-woo\";s:6:\"plugin\";s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";s:11:\"new_version\";s:5:\"1.8.4\";s:3:\"url\";s:60:\"https://wordpress.org/plugins/product-import-export-for-woo/\";s:7:\"package\";s:72:\"https://downloads.wordpress.org/plugin/product-import-export-for-woo.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:82:\"https://ps.w.org/product-import-export-for-woo/assets/icon-256x256.png?rev=2010403\";s:2:\"1x\";s:82:\"https://ps.w.org/product-import-export-for-woo/assets/icon-128x128.jpg?rev=1906359\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:85:\"https://ps.w.org/product-import-export-for-woo/assets/banner-1544x500.jpg?rev=2065538\";s:2:\"1x\";s:84:\"https://ps.w.org/product-import-export-for-woo/assets/banner-772x250.jpg?rev=2065542\";}s:11:\"banners_rtl\";a:0:{}}s:43:\"pw-woocommerce-gift-cards/pw-gift-cards.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:39:\"w.org/plugins/pw-woocommerce-gift-cards\";s:4:\"slug\";s:25:\"pw-woocommerce-gift-cards\";s:6:\"plugin\";s:43:\"pw-woocommerce-gift-cards/pw-gift-cards.php\";s:11:\"new_version\";s:5:\"1.150\";s:3:\"url\";s:56:\"https://wordpress.org/plugins/pw-woocommerce-gift-cards/\";s:7:\"package\";s:74:\"https://downloads.wordpress.org/plugin/pw-woocommerce-gift-cards.1.150.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:78:\"https://ps.w.org/pw-woocommerce-gift-cards/assets/icon-256x256.png?rev=1809373\";s:2:\"1x\";s:78:\"https://ps.w.org/pw-woocommerce-gift-cards/assets/icon-128x128.png?rev=1809373\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:81:\"https://ps.w.org/pw-woocommerce-gift-cards/assets/banner-1544x500.png?rev=1809373\";s:2:\"1x\";s:80:\"https://ps.w.org/pw-woocommerce-gift-cards/assets/banner-772x250.png?rev=1809373\";}s:11:\"banners_rtl\";a:0:{}}s:21:\"safe-svg/safe-svg.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:22:\"w.org/plugins/safe-svg\";s:4:\"slug\";s:8:\"safe-svg\";s:6:\"plugin\";s:21:\"safe-svg/safe-svg.php\";s:11:\"new_version\";s:5:\"1.9.9\";s:3:\"url\";s:39:\"https://wordpress.org/plugins/safe-svg/\";s:7:\"package\";s:57:\"https://downloads.wordpress.org/plugin/safe-svg.1.9.9.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:61:\"https://ps.w.org/safe-svg/assets/icon-256x256.png?rev=1706191\";s:2:\"1x\";s:53:\"https://ps.w.org/safe-svg/assets/icon.svg?rev=1706191\";s:3:\"svg\";s:53:\"https://ps.w.org/safe-svg/assets/icon.svg?rev=1706191\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/safe-svg/assets/banner-1544x500.png?rev=1706191\";s:2:\"1x\";s:63:\"https://ps.w.org/safe-svg/assets/banner-772x250.png?rev=1706191\";}s:11:\"banners_rtl\";a:0:{}}s:51:\"ti-woocommerce-wishlist/ti-woocommerce-wishlist.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:37:\"w.org/plugins/ti-woocommerce-wishlist\";s:4:\"slug\";s:23:\"ti-woocommerce-wishlist\";s:6:\"plugin\";s:51:\"ti-woocommerce-wishlist/ti-woocommerce-wishlist.php\";s:11:\"new_version\";s:7:\"1.21.12\";s:3:\"url\";s:54:\"https://wordpress.org/plugins/ti-woocommerce-wishlist/\";s:7:\"package\";s:74:\"https://downloads.wordpress.org/plugin/ti-woocommerce-wishlist.1.21.12.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:76:\"https://ps.w.org/ti-woocommerce-wishlist/assets/icon-256x256.png?rev=2071101\";s:2:\"1x\";s:76:\"https://ps.w.org/ti-woocommerce-wishlist/assets/icon-128x128.png?rev=2071101\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:79:\"https://ps.w.org/ti-woocommerce-wishlist/assets/banner-1544x500.png?rev=2071101\";s:2:\"1x\";s:78:\"https://ps.w.org/ti-woocommerce-wishlist/assets/banner-772x250.png?rev=2071101\";}s:11:\"banners_rtl\";a:0:{}}s:49:\"woo-variation-swatches/woo-variation-swatches.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:36:\"w.org/plugins/woo-variation-swatches\";s:4:\"slug\";s:22:\"woo-variation-swatches\";s:6:\"plugin\";s:49:\"woo-variation-swatches/woo-variation-swatches.php\";s:11:\"new_version\";s:5:\"1.1.0\";s:3:\"url\";s:53:\"https://wordpress.org/plugins/woo-variation-swatches/\";s:7:\"package\";s:65:\"https://downloads.wordpress.org/plugin/woo-variation-swatches.zip\";s:5:\"icons\";a:1:{s:2:\"1x\";s:75:\"https://ps.w.org/woo-variation-swatches/assets/icon-128x128.png?rev=1864242\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:78:\"https://ps.w.org/woo-variation-swatches/assets/banner-1544x500.png?rev=2305235\";s:2:\"1x\";s:77:\"https://ps.w.org/woo-variation-swatches/assets/banner-772x250.png?rev=2305235\";}s:11:\"banners_rtl\";a:0:{}}s:27:\"woocommerce/woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:25:\"w.org/plugins/woocommerce\";s:4:\"slug\";s:11:\"woocommerce\";s:6:\"plugin\";s:27:\"woocommerce/woocommerce.php\";s:11:\"new_version\";s:5:\"4.6.1\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/woocommerce/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/woocommerce.4.6.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/woocommerce/assets/icon-256x256.png?rev=2366418\";s:2:\"1x\";s:64:\"https://ps.w.org/woocommerce/assets/icon-128x128.png?rev=2366418\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/woocommerce/assets/banner-1544x500.png?rev=2366418\";s:2:\"1x\";s:66:\"https://ps.w.org/woocommerce/assets/banner-772x250.png?rev=2366418\";}s:11:\"banners_rtl\";a:0:{}}s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:45:\"w.org/plugins/woocommerce-product-stock-alert\";s:4:\"slug\";s:31:\"woocommerce-product-stock-alert\";s:6:\"plugin\";s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";s:11:\"new_version\";s:5:\"1.7.1\";s:3:\"url\";s:62:\"https://wordpress.org/plugins/woocommerce-product-stock-alert/\";s:7:\"package\";s:80:\"https://downloads.wordpress.org/plugin/woocommerce-product-stock-alert.1.7.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:84:\"https://ps.w.org/woocommerce-product-stock-alert/assets/icon-256x256.png?rev=1592392\";s:2:\"1x\";s:84:\"https://ps.w.org/woocommerce-product-stock-alert/assets/icon-128x128.png?rev=1592392\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:86:\"https://ps.w.org/woocommerce-product-stock-alert/assets/banner-772x250.jpg?rev=2371395\";}s:11:\"banners_rtl\";a:0:{}}s:24:\"wordpress-seo/wp-seo.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:27:\"w.org/plugins/wordpress-seo\";s:4:\"slug\";s:13:\"wordpress-seo\";s:6:\"plugin\";s:24:\"wordpress-seo/wp-seo.php\";s:11:\"new_version\";s:4:\"15.2\";s:3:\"url\";s:44:\"https://wordpress.org/plugins/wordpress-seo/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/plugin/wordpress-seo.15.2.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:66:\"https://ps.w.org/wordpress-seo/assets/icon-256x256.png?rev=2363699\";s:2:\"1x\";s:58:\"https://ps.w.org/wordpress-seo/assets/icon.svg?rev=2363699\";s:3:\"svg\";s:58:\"https://ps.w.org/wordpress-seo/assets/icon.svg?rev=2363699\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:69:\"https://ps.w.org/wordpress-seo/assets/banner-1544x500.png?rev=1843435\";s:2:\"1x\";s:68:\"https://ps.w.org/wordpress-seo/assets/banner-772x250.png?rev=1843435\";}s:11:\"banners_rtl\";a:2:{s:2:\"2x\";s:73:\"https://ps.w.org/wordpress-seo/assets/banner-1544x500-rtl.png?rev=1843435\";s:2:\"1x\";s:72:\"https://ps.w.org/wordpress-seo/assets/banner-772x250-rtl.png?rev=1843435\";}}}}', 'no'),
+(14023, '_transient_villatheme_ads', '[{\"title\":\"WooCommerce Product Variations Swatches\",\"link\":\"https:\\/\\/1.envato.market\\/bd0ek\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/285353733\\/logo-pre.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/285166362\\/01_preview.jpg\",\"description\":\"\",\"free_url\":\"http:\\/\\/bit.ly\\/product-variations-swatches-for-woocommerce\",\"slug\":\"woocommerce-product-variations-swatches\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woo-product-variations-swatches\"},{\"title\":\"WooCommerce Email Template Customizer\",\"link\":\"https:\\/\\/1.envato.market\\/BZZv1\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/305875470\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/305875471\\/01_preview.jpg\",\"description\":\"<strong>WooCommerce Email Template Customizer<\\/strong> is a helpful tool that helps you build and customize the Email templates for WooCommerce. The plugin provides sufficient base elements and WooCommerce elements as well as developmental tools for users to build a completed email.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-email-template-customizer\",\"slug\":\"woocommerce-email-template-customizer\",\"demo_url\":\"https:\\/\\/new2new.com\\/?item=woocommerce-email-template-customizer\"},{\"title\":\"WooCommerce Abandoned Cart Recovery - Send Cart Recovery Email Plugin - SMS - Facebook Messenger\",\"link\":\"https:\\/\\/1.envato.market\\/roBbv\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/280988198\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/280988199\\/01_preview.jpg\",\"description\":\"\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-abandoned-cart-recovery\",\"slug\":\"woocommerce-abandoned-cart-recovery\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-abandoned-cart-recovery\"},{\"title\":\"WooCommerce Orders Tracking - SMS - PayPal Tracking Autopilot\",\"link\":\"https:\\/\\/1.envato.market\\/6ZPBE\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/304147128\\/logo-pre.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/304147130\\/01_preview.jpg\",\"description\":\"Order Tracking for WooCommerce allows you to add tracking code to your order. And sends emails with tracking code and tracking URL to your customers.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-orders-tracking\",\"slug\":\"woocommerce-orders-tracking\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woo-orders-tracking\"},{\"title\":\"S2W - Import Shopify to WooCommerce - Migrate from Shopify to WooCommerce\",\"link\":\"https:\\/\\/1.envato.market\\/9arQ5\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/280988792\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/280988793\\/01_preview.jpg\",\"description\":\"\",\"free_url\":\"http:\\/\\/bit.ly\\/import-shopify-to-woocommerce\",\"slug\":\"s2w-import-shopify-to-woocommerce\",\"demo_url\":\"\"},{\"title\":\"WooCommerce Thank You Page Customizer - Increase Customer Retention Rate - Boost Sales\",\"link\":\"https:\\/\\/1.envato.market\\/Q3Weo\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/281444301\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/281444302\\/01_preview.jpg\",\"description\":\"WooCommerce Thank You Page Customizer allows you to customize your \\\"Thank You\\\" page and give coupons to customers after a successful order.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-thank-you-page-customizer\",\"slug\":\"woocommerce-thank-you-page-customizer\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woo-thank-you-page-customizer\"},{\"title\":\"Sales Countdown Timer for WooCommerce and WordPress\",\"link\":\"https:\\/\\/1.envato.market\\/962d3\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/302694138\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/302694139\\/01_preview.jpg\",\"description\":\"Sales Countdown Timer helps you to maximize the revenue of\\u00a0your sale campaigns. The plugin\\u00a0display sales countdown timer in single product pages and shop page. Encourage customers to purchase by creating urgency\\u00a0psychology\",\"free_url\":\"http:\\/\\/bit.ly\\/sales-countdown-timer\",\"slug\":\"sales-countdown-timer\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=sales-countdown-timer\"},{\"title\":\"WordPress Lucky Wheel - WordPress subscription plugin\",\"link\":\"https:\\/\\/1.envato.market\\/xDRb1\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/281013744\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/281013745\\/01_preview.jpg\",\"description\":\"WordPress Lucky Wheel gives you the best solution to get emails address from visitors of your WordPress website. Offering visitors to fill in their email addresses to spins for prizes. This is the best way to collect email from visitors on your site, they will be pleased to fill in their email address.\",\"free_url\":\"http:\\/\\/bit.ly\\/wp-lucky-wheel\",\"slug\":\"wordpress-lucky-wheel\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=wordpress-lucky-wheel\"},{\"title\":\"WooCommerce Lucky Wheel - Spin to win\",\"link\":\"https:\\/\\/1.envato.market\\/qXBNY\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/280996372\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/280996374\\/01_preview.jpg\",\"description\":\"WooCommerce Lucky Wheel gives you the best way to collect emails from persons who visit your WooCommerce store. The plugin offers chances to winning coupon by spinning the Lucky Wheel to get customers emails. Customers will give you their email address happily.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-lucky-wheel\",\"slug\":\"woocommerce-lucky-wheel\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-lucky-wheel\"},{\"title\":\"WooCommerce Lookbook - Shop by Instagram - Shoppable with Product Tags\",\"link\":\"https:\\/\\/1.envato.market\\/mV0bM\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/280871714\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/280871715\\/01_preview.jpg\",\"description\":\"Make Instagram Shop, sync pictures from Instagram to your WooCommerce store. Create beautiful lookbooks of your products then display it as slides. Help customers\\u00a0imagine how will your products look like in reality.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-lookbook\",\"slug\":\"woocommerce-lookbook\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-lookbook\"},{\"title\":\"WooCommerce Photo Reviews - Review Reminders - Review for Discounts\",\"link\":\"https:\\/\\/1.envato.market\\/L3WrM\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/279611951\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/279611952\\/01_preview.jpg\",\"description\":\"Your product reviews now can include product pictures. Helping you to create social proof about your site and your products. With WooCommerce Photo Review you can import reviews with product pictures from AliExpress, send review reminder emails to customers and give coupons to customers who posted reviews.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-photo-reviews\",\"slug\":\"woocommerce-photo-reviews\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-photo-reviews\"},{\"title\":\"eCommerce Notification - Live feed recents sales\",\"link\":\"https:\\/\\/1.envato.market\\/K3W9N\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/237415399\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/239111681\\/01_preview.png\",\"description\":\"eCommerce Notification plugin boosts your sales by display virtual orders on your storefront. It\\u2019s the online equivalent of a busy store and shows prospective customers that other people are buying your products.\",\"free_url\":\"\",\"slug\":\"ecommerce-notification\",\"demo_url\":\"http:\\/new2new.com\\/?item=wordpress-ecommerce-notification\"},{\"title\":\"WooCommerce Product Builder - Let\'s build PC\",\"link\":\"https:\\/\\/1.envato.market\\/M3Wjq\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/248469691\\/logo.jpg\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/248469692\\/01_preview.jpg\",\"description\":\"<strong>WooCommerce Product Builder<\\/strong> is a plugin that allows your customers to build a full product set from small parts step by step. The plugin works base on WooCommerce with many useful features like compatible, email completed product, attributes filters ...\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-product-builder\",\"slug\":\"woocommerce-product-builder\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-product-builder\"},{\"title\":\"WooCommerce Boost Sales - WooCommerce Upsell and Cross-sell\",\"link\":\"https:\\/\\/1.envato.market\\/yQBL3\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/306758086\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/306758087\\/01_preview.jpg\",\"description\":\"WooCommerce Boost Sales\\u00a0- Apply Up-sell, Cross-sell technique to your online store.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-boost-sales\",\"slug\":\"woocommerce-boost-sales\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-boost-sales\"},{\"title\":\"WooCommerce Free Shipping Bar - WooCommerce Free Shipping Plugin\",\"link\":\"https:\\/\\/1.envato.market\\/N3mPV\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/307432058\\/icon-pro.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/307432059\\/01_preview.jpg\",\"description\":\"WooCommerce Free Shipping Bar display to your\\u00a0customers the information about the minimum spend to get free shipping, how much they spent and how much they need to spend more to claim the free shipping.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-free-shipping-bar\",\"slug\":\"woocommerce-free-shipping-bar\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-free-shipping-bar\"},{\"title\":\"WooCommerce Notification - Boost Your Sales\",\"link\":\"https:\\/\\/1.envato.market\\/djEZj\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/254345297\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/254345298\\/01_preview.jpg\",\"description\":\"WooCommerce Notification displays recent orders on your storefront. It\\u2019s the online equivalent of a busy store and shows prospective customers that other people are buying your products.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-notification\",\"slug\":\"woocommerce-notification\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woocommerce-notification\"},{\"title\":\"WooCommerce Multi Currency - Currency Switcher\",\"link\":\"https:\\/\\/1.envato.market\\/jABDP\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/253444721\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/253444722\\/01_preview.jpg\",\"description\":\"WooCommerce Multi Currency allows display prices and accepts payments in multiple currencies. WooCommerce Multi Currency is the best currency converter plugin for WooCommerce.\\r\\n\\r\\n<span style=\\\"color: #ff0000;\\\">**IMPORTANT**<\\/span>\\r\\n<ul>\\r\\n \\t<li>We have tested WooCommerce Multi Currency with many WordPress themes, plugins and 3rd party WooCommerce extensions, but it\\u2019s impossible to test them all, so some may still have compatibility issues. Please read <a href=\\\"https:\\/\\/docs.villatheme.com\\/woocommerce-multi-currency\\/#page_section_menu_3939\\\"><strong>the Compatibility documentation section.<\\/strong><\\/a> Should you notice any problem, please <a href=\\\"https:\\/\\/villatheme.com\\/supports\\/forum\\/plugins\\/woo-multi-currency\\/\\\"><b data-stringify-type=\\\"bold\\\">contact us\\u00a0<\\/b><\\/a>with the details and screenshots. We\\u2019ll do our best to find the solution!\\r\\n<div class=\\\"c-message_kit__attachments\\\">\\r\\n<div class=\\\"c-message_attachment\\\"><\\/div>\\r\\n<\\/div><\\/li>\\r\\n<\\/ul>\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-multi-currency\",\"slug\":\"woocommerce-multi-currency\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woo-multi-currency\"},{\"title\":\"WooCommerce Coupon Box\",\"link\":\"https:\\/\\/1.envato.market\\/DzJ12\",\"thumb\":\"https:\\/\\/s3.envato.com\\/files\\/280883533\\/logo.png\",\"image\":\"https:\\/\\/s3.envato.com\\/files\\/280883534\\/01_preview.jpg\",\"description\":\"WooCommerce Coupon Box plugin is a powerful, professional solution to collect customers email addresses. The plugin will send discount coupons to subscribers. Emails will be saved in the backend and can be synced with MailChimp, Active Campaign or export as excel files.\",\"free_url\":\"http:\\/\\/bit.ly\\/woo-coupon-box-free\",\"slug\":\"woocommerce-coupon-box\",\"demo_url\":\"http:\\/\\/new2new.com\\/?item=woo-coupon-box\"}]', 'no'),
 (14034, 'thwvs_swatches_advanced_settings', 'a:24:{s:24:\"attribute_other_settings\";s:0:\"\";s:11:\"icon_height\";s:4:\"45px\";s:10:\"icon_width\";s:4:\"45px\";s:10:\"icon_shape\";s:6:\"square\";s:12:\"auto_convert\";i:0;s:14:\"label_settings\";s:0:\"\";s:17:\"icon_label_height\";s:4:\"45px\";s:16:\"icon_label_width\";s:4:\"45px\";s:10:\"label_size\";s:4:\"16px\";s:22:\"label_background_color\";s:7:\"#ffffff\";s:16:\"label_text_color\";s:7:\"#000000\";s:17:\"tool_tip_settings\";s:0:\"\";s:14:\"tooltip_enable\";i:0;s:29:\"tooltip_text_background_color\";s:7:\"#000000\";s:18:\"tooltip_text_color\";s:7:\"#ffffff\";s:25:\"attribute_active_settings\";s:0:\"\";s:26:\"icon_border_color_selected\";s:7:\"#8b98a6\";s:23:\"icon_border_color_hover\";s:7:\"#b7bfc6\";s:14:\"other_settings\";s:0:\"\";s:34:\"behavior_for_unavailable_variation\";s:15:\"blur_with_cross\";s:24:\"behavior_of_out_of_stock\";s:7:\"default\";s:24:\"ajax_variation_threshold\";s:2:\"30\";s:12:\"clear_select\";s:3:\"yes\";s:19:\"disable_style_sheet\";i:0;}', 'yes'),
-(14045, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.5.3.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.5.3.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-5.5.3-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-5.5.3-new-bundled.zip\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"5.5.3\";s:7:\"version\";s:5:\"5.5.3\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1604163626;s:15:\"version_checked\";s:5:\"5.5.3\";s:12:\"translations\";a:1:{i:0;a:7:{s:4:\"type\";s:4:\"core\";s:4:\"slug\";s:7:\"default\";s:8:\"language\";s:5:\"ru_RU\";s:7:\"version\";s:5:\"5.5.3\";s:7:\"updated\";s:19:\"2020-10-31 13:18:03\";s:7:\"package\";s:64:\"https://downloads.wordpress.org/translation/core/5.5.3/ru_RU.zip\";s:10:\"autoupdate\";b:1;}}}', 'no'),
 (14047, 'action_scheduler_migration_status', 'complete', 'yes'),
 (14048, '_transient_wc_attribute_taxonomies', 'a:2:{i:0;O:8:\"stdClass\":6:{s:12:\"attribute_id\";s:1:\"3\";s:14:\"attribute_name\";s:18:\"kolichestvo-tovara\";s:15:\"attribute_label\";s:33:\"Количество товара\";s:14:\"attribute_type\";s:6:\"select\";s:17:\"attribute_orderby\";s:10:\"menu_order\";s:16:\"attribute_public\";s:1:\"1\";}i:1;O:8:\"stdClass\":6:{s:12:\"attribute_id\";s:1:\"2\";s:14:\"attribute_name\";s:6:\"weight\";s:15:\"attribute_label\";s:10:\"Объем\";s:14:\"attribute_type\";s:6:\"button\";s:17:\"attribute_orderby\";s:10:\"menu_order\";s:16:\"attribute_public\";s:1:\"0\";}}', 'yes'),
 (14064, 'woo_variation_swatches', 'a:15:{s:10:\"stylesheet\";s:1:\"1\";s:5:\"style\";s:7:\"squared\";s:17:\"default_to_button\";s:1:\"1\";s:9:\"threshold\";s:2:\"30\";s:20:\"show_variation_label\";s:1:\"1\";s:18:\"attribute_behavior\";s:4:\"blur\";s:20:\"attribute_image_size\";s:9:\"thumbnail\";s:5:\"width\";s:2:\"30\";s:6:\"height\";s:2:\"30\";s:16:\"single_font_size\";s:2:\"16\";s:16:\"_last_active_tab\";s:6:\"simple\";s:7:\"tooltip\";i:0;s:17:\"clear_on_reselect\";i:0;s:13:\"defer_load_js\";i:0;s:13:\"use_transient\";i:0;}', 'yes'),
@@ -951,8 +947,6 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (14191, '_transient_wc_related_64', 'a:1:{s:50:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=64\";a:6:{i:0;s:2:\"58\";i:1;s:2:\"68\";i:2;s:3:\"273\";i:3;s:3:\"275\";i:4;s:3:\"277\";i:5;s:3:\"279\";}}', 'no'),
 (14209, '_transient_timeout_wc_product_children_68', '1606760344', 'no'),
 (14210, '_transient_wc_product_children_68', 'a:2:{s:3:\"all\";a:2:{i:0;i:308;i:1;i:309;}s:7:\"visible\";a:2:{i:0;i:308;i:1;i:309;}}', 'no'),
-(14211, '_transient_timeout_woocommerce_admin_low_out_of_stock_count', '1604171945', 'no'),
-(14212, '_transient_woocommerce_admin_low_out_of_stock_count', '2', 'no'),
 (14213, '_transient_timeout_wc_term_counts', '1606760346', 'no'),
 (14214, '_transient_wc_term_counts', 'a:8:{i:24;s:1:\"7\";i:25;s:2:\"10\";i:26;s:1:\"1\";i:27;s:1:\"0\";i:28;s:1:\"0\";i:23;s:1:\"4\";i:56;s:1:\"5\";i:58;s:1:\"1\";}', 'no'),
 (14215, '_transient_timeout_wc_var_prices_68', '1606760346', 'no'),
@@ -962,12 +956,30 @@ INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload
 (14219, '_transient_timeout_wc_child_has_dimensions_68', '1606760354', 'no'),
 (14220, '_transient_wc_child_has_dimensions_68', '0', 'no'),
 (14221, '_transient_timeout_wc_related_68', '1604254754', 'no'),
-(14222, '_transient_wc_related_68', 'a:1:{s:183:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=68&exclude_ids%5B2%5D=245&exclude_ids%5B3%5D=58&exclude_ids%5B4%5D=53&exclude_ids%5B5%5D=41&exclude_ids%5B6%5D=56&exclude_ids%5B7%5D=30\";a:5:{i:0;s:2:\"64\";i:1;s:3:\"273\";i:2;s:3:\"275\";i:3;s:3:\"277\";i:4;s:3:\"279\";}}', 'no');
+(14222, '_transient_wc_related_68', 'a:1:{s:183:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=68&exclude_ids%5B2%5D=245&exclude_ids%5B3%5D=58&exclude_ids%5B4%5D=53&exclude_ids%5B5%5D=41&exclude_ids%5B6%5D=56&exclude_ids%5B7%5D=30\";a:5:{i:0;s:2:\"64\";i:1;s:3:\"273\";i:2;s:3:\"275\";i:3;s:3:\"277\";i:4;s:3:\"279\";}}', 'no'),
+(14252, '_transient_timeout_wc_related_30', '1604269411', 'no'),
+(14253, '_transient_wc_related_30', 'a:1:{s:50:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=30\";a:3:{i:0;s:3:\"225\";i:1;s:3:\"251\";i:2;s:3:\"266\";}}', 'no'),
+(14254, '_transient_timeout_wc_related_22', '1604269422', 'no'),
+(14255, '_transient_wc_related_22', 'a:1:{s:50:\"limit=4&exclude_ids%5B0%5D=0&exclude_ids%5B1%5D=22\";a:9:{i:0;s:2:\"41\";i:1;s:2:\"50\";i:2;s:2:\"53\";i:3;s:2:\"56\";i:4;s:3:\"209\";i:5;s:3:\"245\";i:6;s:3:\"263\";i:7;s:3:\"268\";i:8;s:3:\"270\";}}', 'no'),
+(14258, '_transient_timeout_wc_order_313_needs_processing', '1604269515', 'no'),
+(14259, '_transient_wc_order_313_needs_processing', '1', 'no'),
+(14298, '_site_transient_timeout_theme_roots', '1604186950', 'no'),
+(14299, '_site_transient_theme_roots', 'a:2:{s:8:\"cosmedoc\";s:7:\"/themes\";s:23:\"empty-theme/empty-theme\";s:7:\"/themes\";}', 'no'),
+(14300, '_transient_timeout__woocommerce_helper_updates', '1604228350', 'no'),
+(14301, '_transient__woocommerce_helper_updates', 'a:4:{s:4:\"hash\";s:32:\"d751713988987e9331980363e24189ce\";s:7:\"updated\";i:1604185150;s:8:\"products\";a:0:{}s:6:\"errors\";a:1:{i:0;s:10:\"http-error\";}}', 'no'),
+(14302, '_site_transient_update_core', 'O:8:\"stdClass\":4:{s:7:\"updates\";a:1:{i:0;O:8:\"stdClass\":10:{s:8:\"response\";s:6:\"latest\";s:8:\"download\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.5.3.zip\";s:6:\"locale\";s:5:\"en_US\";s:8:\"packages\";O:8:\"stdClass\":5:{s:4:\"full\";s:59:\"https://downloads.wordpress.org/release/wordpress-5.5.3.zip\";s:10:\"no_content\";s:70:\"https://downloads.wordpress.org/release/wordpress-5.5.3-no-content.zip\";s:11:\"new_bundled\";s:71:\"https://downloads.wordpress.org/release/wordpress-5.5.3-new-bundled.zip\";s:7:\"partial\";s:0:\"\";s:8:\"rollback\";s:0:\"\";}s:7:\"current\";s:5:\"5.5.3\";s:7:\"version\";s:5:\"5.5.3\";s:11:\"php_version\";s:6:\"5.6.20\";s:13:\"mysql_version\";s:3:\"5.0\";s:11:\"new_bundled\";s:3:\"5.3\";s:15:\"partial_version\";s:0:\"\";}}s:12:\"last_checked\";i:1604185153;s:15:\"version_checked\";s:5:\"5.5.3\";s:12:\"translations\";a:1:{i:0;a:7:{s:4:\"type\";s:4:\"core\";s:4:\"slug\";s:7:\"default\";s:8:\"language\";s:5:\"ru_RU\";s:7:\"version\";s:5:\"5.5.3\";s:7:\"updated\";s:19:\"2020-10-31 13:18:03\";s:7:\"package\";s:64:\"https://downloads.wordpress.org/translation/core/5.5.3/ru_RU.zip\";s:10:\"autoupdate\";b:1;}}}', 'no'),
+(14303, '_site_transient_update_themes', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1604185154;s:7:\"checked\";a:2:{s:8:\"cosmedoc\";s:5:\"2.0.0\";s:23:\"empty-theme/empty-theme\";s:5:\"1.0.0\";}s:8:\"response\";a:0:{}s:9:\"no_update\";a:0:{}s:12:\"translations\";a:0:{}}', 'no');
+INSERT INTO `wss_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
+(14304, '_site_transient_update_plugins', 'O:8:\"stdClass\":5:{s:12:\"last_checked\";i:1604185155;s:7:\"checked\";a:19:{s:34:\"advanced-custom-fields-pro/acf.php\";s:5:\"5.9.2\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";s:5:\"1.8.0\";s:45:\"taxonomy-terms-order/taxonomy-terms-order.php\";s:7:\"1.5.7.3\";s:33:\"classic-editor/classic-editor.php\";s:3:\"1.6\";s:36:\"contact-form-7/wp-contact-form-7.php\";s:3:\"5.3\";s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";s:6:\"0.5.28\";s:43:\"custom-post-type-ui/custom-post-type-ui.php\";s:5:\"1.8.1\";s:22:\"cyr2lat/cyr-to-lat.php\";s:5:\"4.5.0\";s:115:\"express-checkout-paypal-payment-gateway-for-woocommerce/express-checkout-paypal-payment-gateway-for-woocommerce.php\";s:5:\"1.4.9\";s:41:\"woo-paypalplus/paypalplus-woocommerce.php\";s:5:\"2.2.1\";s:35:\"pre-orders-for-woocommerce/main.php\";s:6:\"1.0.10\";s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";s:5:\"1.8.4\";s:43:\"pw-woocommerce-gift-cards/pw-gift-cards.php\";s:5:\"1.150\";s:21:\"safe-svg/safe-svg.php\";s:5:\"1.9.9\";s:51:\"ti-woocommerce-wishlist/ti-woocommerce-wishlist.php\";s:7:\"1.21.12\";s:49:\"woo-variation-swatches/woo-variation-swatches.php\";s:5:\"1.1.0\";s:27:\"woocommerce/woocommerce.php\";s:5:\"4.6.1\";s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";s:5:\"1.7.1\";s:24:\"wordpress-seo/wp-seo.php\";s:4:\"15.2\";}s:8:\"response\";a:0:{}s:12:\"translations\";a:1:{i:0;a:7:{s:4:\"type\";s:6:\"plugin\";s:4:\"slug\";s:13:\"wordpress-seo\";s:8:\"language\";s:5:\"ru_RU\";s:7:\"version\";s:4:\"15.2\";s:7:\"updated\";s:19:\"2020-10-27 09:31:27\";s:7:\"package\";s:79:\"https://downloads.wordpress.org/translation/plugin/wordpress-seo/15.2/ru_RU.zip\";s:10:\"autoupdate\";b:1;}}s:9:\"no_update\";a:18:{s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:41:\"w.org/plugins/ajax-search-for-woocommerce\";s:4:\"slug\";s:27:\"ajax-search-for-woocommerce\";s:6:\"plugin\";s:59:\"ajax-search-for-woocommerce/ajax-search-for-woocommerce.php\";s:11:\"new_version\";s:5:\"1.8.0\";s:3:\"url\";s:58:\"https://wordpress.org/plugins/ajax-search-for-woocommerce/\";s:7:\"package\";s:76:\"https://downloads.wordpress.org/plugin/ajax-search-for-woocommerce.1.8.0.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:80:\"https://ps.w.org/ajax-search-for-woocommerce/assets/icon-256x256.png?rev=2042590\";s:2:\"1x\";s:80:\"https://ps.w.org/ajax-search-for-woocommerce/assets/icon-128x128.png?rev=2042590\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:83:\"https://ps.w.org/ajax-search-for-woocommerce/assets/banner-1544x500.jpg?rev=2234615\";s:2:\"1x\";s:82:\"https://ps.w.org/ajax-search-for-woocommerce/assets/banner-772x250.jpg?rev=2234615\";}s:11:\"banners_rtl\";a:0:{}}s:45:\"taxonomy-terms-order/taxonomy-terms-order.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:34:\"w.org/plugins/taxonomy-terms-order\";s:4:\"slug\";s:20:\"taxonomy-terms-order\";s:6:\"plugin\";s:45:\"taxonomy-terms-order/taxonomy-terms-order.php\";s:11:\"new_version\";s:7:\"1.5.7.3\";s:3:\"url\";s:51:\"https://wordpress.org/plugins/taxonomy-terms-order/\";s:7:\"package\";s:71:\"https://downloads.wordpress.org/plugin/taxonomy-terms-order.1.5.7.3.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:73:\"https://ps.w.org/taxonomy-terms-order/assets/icon-256x256.png?rev=1564412\";s:2:\"1x\";s:73:\"https://ps.w.org/taxonomy-terms-order/assets/icon-128x128.png?rev=1564412\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:76:\"https://ps.w.org/taxonomy-terms-order/assets/banner-1544x500.png?rev=1564412\";s:2:\"1x\";s:75:\"https://ps.w.org/taxonomy-terms-order/assets/banner-772x250.png?rev=1564412\";}s:11:\"banners_rtl\";a:0:{}}s:33:\"classic-editor/classic-editor.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/classic-editor\";s:4:\"slug\";s:14:\"classic-editor\";s:6:\"plugin\";s:33:\"classic-editor/classic-editor.php\";s:11:\"new_version\";s:3:\"1.6\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/classic-editor/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/plugin/classic-editor.1.6.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/classic-editor/assets/icon-256x256.png?rev=1998671\";s:2:\"1x\";s:67:\"https://ps.w.org/classic-editor/assets/icon-128x128.png?rev=1998671\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:70:\"https://ps.w.org/classic-editor/assets/banner-1544x500.png?rev=1998671\";s:2:\"1x\";s:69:\"https://ps.w.org/classic-editor/assets/banner-772x250.png?rev=1998676\";}s:11:\"banners_rtl\";a:0:{}}s:36:\"contact-form-7/wp-contact-form-7.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/contact-form-7\";s:4:\"slug\";s:14:\"contact-form-7\";s:6:\"plugin\";s:36:\"contact-form-7/wp-contact-form-7.php\";s:11:\"new_version\";s:3:\"5.3\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/contact-form-7/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/plugin/contact-form-7.5.3.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:67:\"https://ps.w.org/contact-form-7/assets/icon-256x256.png?rev=2279696\";s:2:\"1x\";s:59:\"https://ps.w.org/contact-form-7/assets/icon.svg?rev=2339255\";s:3:\"svg\";s:59:\"https://ps.w.org/contact-form-7/assets/icon.svg?rev=2339255\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:69:\"https://ps.w.org/contact-form-7/assets/banner-1544x500.png?rev=860901\";s:2:\"1x\";s:68:\"https://ps.w.org/contact-form-7/assets/banner-772x250.png?rev=880427\";}s:11:\"banners_rtl\";a:0:{}}s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:48:\"w.org/plugins/contact-form-7-mailchimp-extension\";s:4:\"slug\";s:34:\"contact-form-7-mailchimp-extension\";s:6:\"plugin\";s:54:\"contact-form-7-mailchimp-extension/chimpmatic-lite.php\";s:11:\"new_version\";s:6:\"0.5.28\";s:3:\"url\";s:65:\"https://wordpress.org/plugins/contact-form-7-mailchimp-extension/\";s:7:\"package\";s:77:\"https://downloads.wordpress.org/plugin/contact-form-7-mailchimp-extension.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:87:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/icon-256x256.png?rev=1072113\";s:2:\"1x\";s:87:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/icon-128x128.png?rev=1072113\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:90:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/banner-1544x500.png?rev=1072092\";s:2:\"1x\";s:89:\"https://ps.w.org/contact-form-7-mailchimp-extension/assets/banner-772x250.png?rev=1625715\";}s:11:\"banners_rtl\";a:0:{}}s:43:\"custom-post-type-ui/custom-post-type-ui.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:33:\"w.org/plugins/custom-post-type-ui\";s:4:\"slug\";s:19:\"custom-post-type-ui\";s:6:\"plugin\";s:43:\"custom-post-type-ui/custom-post-type-ui.php\";s:11:\"new_version\";s:5:\"1.8.1\";s:3:\"url\";s:50:\"https://wordpress.org/plugins/custom-post-type-ui/\";s:7:\"package\";s:68:\"https://downloads.wordpress.org/plugin/custom-post-type-ui.1.8.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:72:\"https://ps.w.org/custom-post-type-ui/assets/icon-256x256.png?rev=1069557\";s:2:\"1x\";s:72:\"https://ps.w.org/custom-post-type-ui/assets/icon-128x128.png?rev=1069557\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:75:\"https://ps.w.org/custom-post-type-ui/assets/banner-1544x500.png?rev=1069557\";s:2:\"1x\";s:74:\"https://ps.w.org/custom-post-type-ui/assets/banner-772x250.png?rev=1069557\";}s:11:\"banners_rtl\";a:0:{}}s:22:\"cyr2lat/cyr-to-lat.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:21:\"w.org/plugins/cyr2lat\";s:4:\"slug\";s:7:\"cyr2lat\";s:6:\"plugin\";s:22:\"cyr2lat/cyr-to-lat.php\";s:11:\"new_version\";s:5:\"4.5.0\";s:3:\"url\";s:38:\"https://wordpress.org/plugins/cyr2lat/\";s:7:\"package\";s:56:\"https://downloads.wordpress.org/plugin/cyr2lat.4.5.0.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:60:\"https://ps.w.org/cyr2lat/assets/icon-256x256.jpg?rev=2022835\";s:2:\"1x\";s:52:\"https://ps.w.org/cyr2lat/assets/icon.svg?rev=2022835\";s:3:\"svg\";s:52:\"https://ps.w.org/cyr2lat/assets/icon.svg?rev=2022835\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:63:\"https://ps.w.org/cyr2lat/assets/banner-1544x500.png?rev=2022835\";s:2:\"1x\";s:62:\"https://ps.w.org/cyr2lat/assets/banner-772x250.png?rev=2022835\";}s:11:\"banners_rtl\";a:0:{}}s:115:\"express-checkout-paypal-payment-gateway-for-woocommerce/express-checkout-paypal-payment-gateway-for-woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:69:\"w.org/plugins/express-checkout-paypal-payment-gateway-for-woocommerce\";s:4:\"slug\";s:55:\"express-checkout-paypal-payment-gateway-for-woocommerce\";s:6:\"plugin\";s:115:\"express-checkout-paypal-payment-gateway-for-woocommerce/express-checkout-paypal-payment-gateway-for-woocommerce.php\";s:11:\"new_version\";s:5:\"1.4.9\";s:3:\"url\";s:86:\"https://wordpress.org/plugins/express-checkout-paypal-payment-gateway-for-woocommerce/\";s:7:\"package\";s:104:\"https://downloads.wordpress.org/plugin/express-checkout-paypal-payment-gateway-for-woocommerce.1.4.9.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:108:\"https://ps.w.org/express-checkout-paypal-payment-gateway-for-woocommerce/assets/icon-256x256.jpg?rev=1952087\";s:2:\"1x\";s:108:\"https://ps.w.org/express-checkout-paypal-payment-gateway-for-woocommerce/assets/icon-128x128.png?rev=1906408\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:111:\"https://ps.w.org/express-checkout-paypal-payment-gateway-for-woocommerce/assets/banner-1544x500.jpg?rev=2067753\";s:2:\"1x\";s:110:\"https://ps.w.org/express-checkout-paypal-payment-gateway-for-woocommerce/assets/banner-772x250.jpg?rev=2067753\";}s:11:\"banners_rtl\";a:0:{}}s:41:\"woo-paypalplus/paypalplus-woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:28:\"w.org/plugins/woo-paypalplus\";s:4:\"slug\";s:14:\"woo-paypalplus\";s:6:\"plugin\";s:41:\"woo-paypalplus/paypalplus-woocommerce.php\";s:11:\"new_version\";s:5:\"2.2.1\";s:3:\"url\";s:45:\"https://wordpress.org/plugins/woo-paypalplus/\";s:7:\"package\";s:63:\"https://downloads.wordpress.org/plugin/woo-paypalplus.2.2.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/woo-paypalplus/assets/icon-256x256.png?rev=1839228\";s:2:\"1x\";s:67:\"https://ps.w.org/woo-paypalplus/assets/icon-128x128.png?rev=1839228\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:70:\"https://ps.w.org/woo-paypalplus/assets/banner-1544x500.png?rev=1654845\";s:2:\"1x\";s:69:\"https://ps.w.org/woo-paypalplus/assets/banner-772x250.png?rev=1654846\";}s:11:\"banners_rtl\";a:0:{}}s:35:\"pre-orders-for-woocommerce/main.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:40:\"w.org/plugins/pre-orders-for-woocommerce\";s:4:\"slug\";s:26:\"pre-orders-for-woocommerce\";s:6:\"plugin\";s:35:\"pre-orders-for-woocommerce/main.php\";s:11:\"new_version\";s:6:\"1.0.10\";s:3:\"url\";s:57:\"https://wordpress.org/plugins/pre-orders-for-woocommerce/\";s:7:\"package\";s:76:\"https://downloads.wordpress.org/plugin/pre-orders-for-woocommerce.1.0.10.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:79:\"https://ps.w.org/pre-orders-for-woocommerce/assets/icon-256x256.jpg?rev=2281163\";s:2:\"1x\";s:79:\"https://ps.w.org/pre-orders-for-woocommerce/assets/icon-128x128.jpg?rev=2281163\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:82:\"https://ps.w.org/pre-orders-for-woocommerce/assets/banner-1544x500.jpg?rev=2281163\";s:2:\"1x\";s:81:\"https://ps.w.org/pre-orders-for-woocommerce/assets/banner-772x250.jpg?rev=2281163\";}s:11:\"banners_rtl\";a:0:{}}s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:43:\"w.org/plugins/product-import-export-for-woo\";s:4:\"slug\";s:29:\"product-import-export-for-woo\";s:6:\"plugin\";s:63:\"product-import-export-for-woo/product-import-export-for-woo.php\";s:11:\"new_version\";s:5:\"1.8.4\";s:3:\"url\";s:60:\"https://wordpress.org/plugins/product-import-export-for-woo/\";s:7:\"package\";s:72:\"https://downloads.wordpress.org/plugin/product-import-export-for-woo.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:82:\"https://ps.w.org/product-import-export-for-woo/assets/icon-256x256.png?rev=2010403\";s:2:\"1x\";s:82:\"https://ps.w.org/product-import-export-for-woo/assets/icon-128x128.jpg?rev=1906359\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:85:\"https://ps.w.org/product-import-export-for-woo/assets/banner-1544x500.jpg?rev=2065538\";s:2:\"1x\";s:84:\"https://ps.w.org/product-import-export-for-woo/assets/banner-772x250.jpg?rev=2065542\";}s:11:\"banners_rtl\";a:0:{}}s:43:\"pw-woocommerce-gift-cards/pw-gift-cards.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:39:\"w.org/plugins/pw-woocommerce-gift-cards\";s:4:\"slug\";s:25:\"pw-woocommerce-gift-cards\";s:6:\"plugin\";s:43:\"pw-woocommerce-gift-cards/pw-gift-cards.php\";s:11:\"new_version\";s:5:\"1.150\";s:3:\"url\";s:56:\"https://wordpress.org/plugins/pw-woocommerce-gift-cards/\";s:7:\"package\";s:74:\"https://downloads.wordpress.org/plugin/pw-woocommerce-gift-cards.1.150.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:78:\"https://ps.w.org/pw-woocommerce-gift-cards/assets/icon-256x256.png?rev=1809373\";s:2:\"1x\";s:78:\"https://ps.w.org/pw-woocommerce-gift-cards/assets/icon-128x128.png?rev=1809373\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:81:\"https://ps.w.org/pw-woocommerce-gift-cards/assets/banner-1544x500.png?rev=1809373\";s:2:\"1x\";s:80:\"https://ps.w.org/pw-woocommerce-gift-cards/assets/banner-772x250.png?rev=1809373\";}s:11:\"banners_rtl\";a:0:{}}s:21:\"safe-svg/safe-svg.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:22:\"w.org/plugins/safe-svg\";s:4:\"slug\";s:8:\"safe-svg\";s:6:\"plugin\";s:21:\"safe-svg/safe-svg.php\";s:11:\"new_version\";s:5:\"1.9.9\";s:3:\"url\";s:39:\"https://wordpress.org/plugins/safe-svg/\";s:7:\"package\";s:57:\"https://downloads.wordpress.org/plugin/safe-svg.1.9.9.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:61:\"https://ps.w.org/safe-svg/assets/icon-256x256.png?rev=1706191\";s:2:\"1x\";s:53:\"https://ps.w.org/safe-svg/assets/icon.svg?rev=1706191\";s:3:\"svg\";s:53:\"https://ps.w.org/safe-svg/assets/icon.svg?rev=1706191\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/safe-svg/assets/banner-1544x500.png?rev=1706191\";s:2:\"1x\";s:63:\"https://ps.w.org/safe-svg/assets/banner-772x250.png?rev=1706191\";}s:11:\"banners_rtl\";a:0:{}}s:51:\"ti-woocommerce-wishlist/ti-woocommerce-wishlist.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:37:\"w.org/plugins/ti-woocommerce-wishlist\";s:4:\"slug\";s:23:\"ti-woocommerce-wishlist\";s:6:\"plugin\";s:51:\"ti-woocommerce-wishlist/ti-woocommerce-wishlist.php\";s:11:\"new_version\";s:7:\"1.21.12\";s:3:\"url\";s:54:\"https://wordpress.org/plugins/ti-woocommerce-wishlist/\";s:7:\"package\";s:74:\"https://downloads.wordpress.org/plugin/ti-woocommerce-wishlist.1.21.12.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:76:\"https://ps.w.org/ti-woocommerce-wishlist/assets/icon-256x256.png?rev=2071101\";s:2:\"1x\";s:76:\"https://ps.w.org/ti-woocommerce-wishlist/assets/icon-128x128.png?rev=2071101\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:79:\"https://ps.w.org/ti-woocommerce-wishlist/assets/banner-1544x500.png?rev=2071101\";s:2:\"1x\";s:78:\"https://ps.w.org/ti-woocommerce-wishlist/assets/banner-772x250.png?rev=2071101\";}s:11:\"banners_rtl\";a:0:{}}s:49:\"woo-variation-swatches/woo-variation-swatches.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:36:\"w.org/plugins/woo-variation-swatches\";s:4:\"slug\";s:22:\"woo-variation-swatches\";s:6:\"plugin\";s:49:\"woo-variation-swatches/woo-variation-swatches.php\";s:11:\"new_version\";s:5:\"1.1.0\";s:3:\"url\";s:53:\"https://wordpress.org/plugins/woo-variation-swatches/\";s:7:\"package\";s:65:\"https://downloads.wordpress.org/plugin/woo-variation-swatches.zip\";s:5:\"icons\";a:1:{s:2:\"1x\";s:75:\"https://ps.w.org/woo-variation-swatches/assets/icon-128x128.png?rev=1864242\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:78:\"https://ps.w.org/woo-variation-swatches/assets/banner-1544x500.png?rev=2305235\";s:2:\"1x\";s:77:\"https://ps.w.org/woo-variation-swatches/assets/banner-772x250.png?rev=2305235\";}s:11:\"banners_rtl\";a:0:{}}s:27:\"woocommerce/woocommerce.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:25:\"w.org/plugins/woocommerce\";s:4:\"slug\";s:11:\"woocommerce\";s:6:\"plugin\";s:27:\"woocommerce/woocommerce.php\";s:11:\"new_version\";s:5:\"4.6.1\";s:3:\"url\";s:42:\"https://wordpress.org/plugins/woocommerce/\";s:7:\"package\";s:60:\"https://downloads.wordpress.org/plugin/woocommerce.4.6.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:64:\"https://ps.w.org/woocommerce/assets/icon-256x256.png?rev=2366418\";s:2:\"1x\";s:64:\"https://ps.w.org/woocommerce/assets/icon-128x128.png?rev=2366418\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:67:\"https://ps.w.org/woocommerce/assets/banner-1544x500.png?rev=2366418\";s:2:\"1x\";s:66:\"https://ps.w.org/woocommerce/assets/banner-772x250.png?rev=2366418\";}s:11:\"banners_rtl\";a:0:{}}s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:45:\"w.org/plugins/woocommerce-product-stock-alert\";s:4:\"slug\";s:31:\"woocommerce-product-stock-alert\";s:6:\"plugin\";s:55:\"woocommerce-product-stock-alert/product_stock_alert.php\";s:11:\"new_version\";s:5:\"1.7.1\";s:3:\"url\";s:62:\"https://wordpress.org/plugins/woocommerce-product-stock-alert/\";s:7:\"package\";s:80:\"https://downloads.wordpress.org/plugin/woocommerce-product-stock-alert.1.7.1.zip\";s:5:\"icons\";a:2:{s:2:\"2x\";s:84:\"https://ps.w.org/woocommerce-product-stock-alert/assets/icon-256x256.png?rev=1592392\";s:2:\"1x\";s:84:\"https://ps.w.org/woocommerce-product-stock-alert/assets/icon-128x128.png?rev=1592392\";}s:7:\"banners\";a:1:{s:2:\"1x\";s:86:\"https://ps.w.org/woocommerce-product-stock-alert/assets/banner-772x250.jpg?rev=2371395\";}s:11:\"banners_rtl\";a:0:{}}s:24:\"wordpress-seo/wp-seo.php\";O:8:\"stdClass\":9:{s:2:\"id\";s:27:\"w.org/plugins/wordpress-seo\";s:4:\"slug\";s:13:\"wordpress-seo\";s:6:\"plugin\";s:24:\"wordpress-seo/wp-seo.php\";s:11:\"new_version\";s:4:\"15.2\";s:3:\"url\";s:44:\"https://wordpress.org/plugins/wordpress-seo/\";s:7:\"package\";s:61:\"https://downloads.wordpress.org/plugin/wordpress-seo.15.2.zip\";s:5:\"icons\";a:3:{s:2:\"2x\";s:66:\"https://ps.w.org/wordpress-seo/assets/icon-256x256.png?rev=2363699\";s:2:\"1x\";s:58:\"https://ps.w.org/wordpress-seo/assets/icon.svg?rev=2363699\";s:3:\"svg\";s:58:\"https://ps.w.org/wordpress-seo/assets/icon.svg?rev=2363699\";}s:7:\"banners\";a:2:{s:2:\"2x\";s:69:\"https://ps.w.org/wordpress-seo/assets/banner-1544x500.png?rev=1843435\";s:2:\"1x\";s:68:\"https://ps.w.org/wordpress-seo/assets/banner-772x250.png?rev=1843435\";}s:11:\"banners_rtl\";a:2:{s:2:\"2x\";s:73:\"https://ps.w.org/wordpress-seo/assets/banner-1544x500-rtl.png?rev=1843435\";s:2:\"1x\";s:72:\"https://ps.w.org/wordpress-seo/assets/banner-772x250-rtl.png?rev=1843435\";}}}}', 'no'),
+(14436, '_transient_wc_count_comments', 'O:8:\"stdClass\":7:{s:14:\"total_comments\";i:0;s:3:\"all\";i:0;s:9:\"moderated\";i:0;s:8:\"approved\";i:0;s:4:\"spam\";i:0;s:5:\"trash\";i:0;s:12:\"post-trashed\";i:0;}', 'yes'),
+(14437, '_transient_timeout_woocommerce_admin_low_out_of_stock_count', '1604195954', 'no'),
+(14438, '_transient_woocommerce_admin_low_out_of_stock_count', '2', 'no'),
+(14441, 'woocommerce_cod_settings', 'a:6:{s:7:\"enabled\";s:3:\"yes\";s:5:\"title\";s:57:\"Оплата наличными при получении\";s:11:\"description\";s:0:\"\";s:12:\"instructions\";s:0:\"\";s:18:\"enable_for_methods\";a:1:{i:0;s:12:\"local_pickup\";}s:18:\"enable_for_virtual\";s:2:\"no\";}', 'yes');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_pimwick_gift_card`
+-- Table structure for table `wss_pimwick_gift_card`
 --
 
 CREATE TABLE `wss_pimwick_gift_card` (
@@ -981,7 +993,7 @@ CREATE TABLE `wss_pimwick_gift_card` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_pimwick_gift_card_activity`
+-- Table structure for table `wss_pimwick_gift_card_activity`
 --
 
 CREATE TABLE `wss_pimwick_gift_card_activity` (
@@ -998,7 +1010,7 @@ CREATE TABLE `wss_pimwick_gift_card_activity` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_postmeta`
+-- Table structure for table `wss_postmeta`
 --
 
 CREATE TABLE `wss_postmeta` (
@@ -1009,7 +1021,7 @@ CREATE TABLE `wss_postmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_postmeta`
+-- Dumping data for table `wss_postmeta`
 --
 
 INSERT INTO `wss_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
@@ -3090,12 +3102,47 @@ INSERT INTO `wss_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (2334, 309, '_crosssell_ids', 'a:7:{i:0;i:245;i:1;i:270;i:2;i:58;i:3;i:53;i:4;i:30;i:5;i:277;i:6;i:251;}'),
 (2393, 68, '_default_attributes', 'a:1:{s:9:\"pa_weight\";s:5:\"50-ml\";}'),
 (2394, 68, '_price', '20000'),
-(2395, 68, '_price', '40000');
+(2395, 68, '_price', '40000'),
+(2396, 313, '_order_key', 'wc_order_WjzaHTX4DSfip'),
+(2397, 313, '_customer_user', '0'),
+(2398, 313, '_payment_method', 'paypal_plus'),
+(2399, 313, '_payment_method_title', 'PayPal, Direct Debit, Credit Card and Invoice (if available)'),
+(2400, 313, '_customer_ip_address', '127.0.0.1'),
+(2401, 313, '_customer_user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36'),
+(2402, 313, '_created_via', 'checkout'),
+(2403, 313, '_cart_hash', '28508ad00ded01e0977f79fbd265b7f0'),
+(2404, 313, '_billing_first_name', 'test'),
+(2405, 313, '_billing_last_name', 'test'),
+(2406, 313, '_billing_address_1', 'test'),
+(2407, 313, '_billing_city', 'Moody'),
+(2408, 313, '_billing_postcode', '35004'),
+(2409, 313, '_billing_country', 'IL'),
+(2410, 313, '_billing_email', 'gfhf@gmail.com'),
+(2411, 313, '_billing_phone', '3453543543'),
+(2412, 313, '_shipping_first_name', 'test'),
+(2413, 313, '_shipping_last_name', 'test'),
+(2414, 313, '_shipping_address_1', 'test'),
+(2415, 313, '_shipping_city', 'Moody'),
+(2416, 313, '_shipping_postcode', '35004'),
+(2417, 313, '_shipping_country', 'IL'),
+(2418, 313, '_order_currency', 'RUB'),
+(2419, 313, '_cart_discount', '0'),
+(2420, 313, '_cart_discount_tax', '0'),
+(2421, 313, '_order_shipping', '0.00'),
+(2422, 313, '_order_shipping_tax', '0'),
+(2423, 313, '_order_tax', '0'),
+(2424, 313, '_order_total', '91161.00'),
+(2425, 313, '_order_version', '4.6.1'),
+(2426, 313, '_prices_include_tax', 'no'),
+(2427, 313, '_billing_address_index', 'test test  test  Moody  35004 IL gfhf@gmail.com 3453543543'),
+(2428, 313, '_shipping_address_index', 'test test  test  Moody  35004 IL'),
+(2429, 313, '_billing_office', ''),
+(2430, 313, 'is_vat_exempt', 'no');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_posts`
+-- Table structure for table `wss_posts`
 --
 
 CREATE TABLE `wss_posts` (
@@ -3125,7 +3172,7 @@ CREATE TABLE `wss_posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_posts`
+-- Dumping data for table `wss_posts`
 --
 
 INSERT INTO `wss_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
@@ -3402,12 +3449,13 @@ INSERT INTO `wss_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (309, 1, '2020-10-30 10:50:59', '2020-10-30 10:50:59', '', 'BB-крем с солнцезащитой SPF 30+ PA++ - 50 мл', 'Объем: 50 мл', 'publish', 'closed', 'closed', '', 'bb-krem-s-solnczezashhitoj-spf-30-pa-2', '', '', '2020-10-31 18:18:59', '2020-10-31 18:18:59', '', 68, 'http://cosmedoc.local/?post_type=product_variation&#038;p=309', 1, 'product_variation', '', 0),
 (310, 1, '2020-10-30 12:00:09', '2020-10-30 12:00:09', '<p>Интенсивный BB-крем борется со старением, восстанавливает и защищает кожу от ультрафиолетового излучения. Идеально маскирует несовершенства, пигментные пятна и красноту. Глубоко питает и увлажняет кожу, активно заживляет. Заменяет тональное средство, помогает создать ровный рельеф и тон кожи с сияющим<br />\nфинишем.</p>\n', 'BB-крем с солнцезащитой SPF 30+ PA++', '', 'inherit', 'closed', 'closed', '', '68-autosave-v1', '', '', '2020-10-30 12:00:09', '2020-10-30 12:00:09', '', 68, 'http://cosmedoc.local/68-autosave-v1/', 0, 'revision', '', 0),
 (311, 1, '2020-10-31 10:54:14', '2020-10-31 10:54:14', 'a:8:{s:4:\"type\";s:9:\"accordion\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:4:\"open\";i:0;s:12:\"multi_expand\";i:0;s:8:\"endpoint\";i:0;}', 'Категории', 'kategorii', 'publish', 'closed', 'closed', '', 'field_5f9d420f3f02f', '', '', '2020-10-31 10:54:14', '2020-10-31 10:54:14', '', 85, 'http://cosmedoc.local/?post_type=acf-field&p=311', 14, 'acf-field', '', 0),
-(312, 1, '2020-10-31 10:54:14', '2020-10-31 10:54:14', 'a:15:{s:4:\"type\";s:5:\"image\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"return_format\";s:3:\"url\";s:12:\"preview_size\";s:6:\"medium\";s:7:\"library\";s:3:\"all\";s:9:\"min_width\";s:0:\"\";s:10:\"min_height\";s:0:\"\";s:8:\"min_size\";s:0:\"\";s:9:\"max_width\";s:0:\"\";s:10:\"max_height\";s:0:\"\";s:8:\"max_size\";s:0:\"\";s:10:\"mime_types\";s:0:\"\";}', 'Изображение для категории', 'default_placeholder', 'publish', 'closed', 'closed', '', 'field_5f9d421b3f030', '', '', '2020-10-31 10:58:09', '2020-10-31 10:58:09', '', 85, 'http://cosmedoc.local/?post_type=acf-field&#038;p=312', 15, 'acf-field', '', 0);
+(312, 1, '2020-10-31 10:54:14', '2020-10-31 10:54:14', 'a:15:{s:4:\"type\";s:5:\"image\";s:12:\"instructions\";s:0:\"\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"return_format\";s:3:\"url\";s:12:\"preview_size\";s:6:\"medium\";s:7:\"library\";s:3:\"all\";s:9:\"min_width\";s:0:\"\";s:10:\"min_height\";s:0:\"\";s:8:\"min_size\";s:0:\"\";s:9:\"max_width\";s:0:\"\";s:10:\"max_height\";s:0:\"\";s:8:\"max_size\";s:0:\"\";s:10:\"mime_types\";s:0:\"\";}', 'Изображение для категории', 'default_placeholder', 'publish', 'closed', 'closed', '', 'field_5f9d421b3f030', '', '', '2020-10-31 10:58:09', '2020-10-31 10:58:09', '', 85, 'http://cosmedoc.local/?post_type=acf-field&#038;p=312', 15, 'acf-field', '', 0),
+(313, 1, '2020-10-31 22:25:13', '2020-10-31 22:25:13', '', 'Order &ndash; October 31, 2020 @ 10:25 PM', '', 'wc-cancelled', 'open', 'closed', 'wc_order_WjzaHTX4DSfip', 'order-oct-31-2020-1025-pm', '', '', '2020-11-01 00:18:09', '2020-11-01 00:18:09', '', 0, 'http://cosmedoc.local/?post_type=shop_order&#038;p=313', 0, 'shop_order', '', 1);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_termmeta`
+-- Table structure for table `wss_termmeta`
 --
 
 CREATE TABLE `wss_termmeta` (
@@ -3418,7 +3466,7 @@ CREATE TABLE `wss_termmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_termmeta`
+-- Dumping data for table `wss_termmeta`
 --
 
 INSERT INTO `wss_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALUES
@@ -3466,7 +3514,7 @@ INSERT INTO `wss_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALU
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_terms`
+-- Table structure for table `wss_terms`
 --
 
 CREATE TABLE `wss_terms` (
@@ -3478,7 +3526,7 @@ CREATE TABLE `wss_terms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_terms`
+-- Dumping data for table `wss_terms`
 --
 
 INSERT INTO `wss_terms` (`term_id`, `name`, `slug`, `term_group`, `term_order`) VALUES
@@ -3553,7 +3601,7 @@ INSERT INTO `wss_terms` (`term_id`, `name`, `slug`, `term_group`, `term_order`) 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_term_relationships`
+-- Table structure for table `wss_term_relationships`
 --
 
 CREATE TABLE `wss_term_relationships` (
@@ -3563,7 +3611,7 @@ CREATE TABLE `wss_term_relationships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_term_relationships`
+-- Dumping data for table `wss_term_relationships`
 --
 
 INSERT INTO `wss_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
@@ -3743,7 +3791,7 @@ INSERT INTO `wss_term_relationships` (`object_id`, `term_taxonomy_id`, `term_ord
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_term_taxonomy`
+-- Table structure for table `wss_term_taxonomy`
 --
 
 CREATE TABLE `wss_term_taxonomy` (
@@ -3756,7 +3804,7 @@ CREATE TABLE `wss_term_taxonomy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_term_taxonomy`
+-- Dumping data for table `wss_term_taxonomy`
 --
 
 INSERT INTO `wss_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
@@ -3831,7 +3879,7 @@ INSERT INTO `wss_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `des
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_tinvwl_analytics`
+-- Table structure for table `wss_tinvwl_analytics`
 --
 
 CREATE TABLE `wss_tinvwl_analytics` (
@@ -3849,7 +3897,7 @@ CREATE TABLE `wss_tinvwl_analytics` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `wss_tinvwl_analytics`
+-- Dumping data for table `wss_tinvwl_analytics`
 --
 
 INSERT INTO `wss_tinvwl_analytics` (`ID`, `wishlist_id`, `product_id`, `variation_id`, `visite_author`, `visite`, `click_author`, `click`, `cart`, `sell_of_wishlist`, `sell_as_gift`) VALUES
@@ -3868,7 +3916,7 @@ INSERT INTO `wss_tinvwl_analytics` (`ID`, `wishlist_id`, `product_id`, `variatio
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_tinvwl_items`
+-- Table structure for table `wss_tinvwl_items`
 --
 
 CREATE TABLE `wss_tinvwl_items` (
@@ -3885,7 +3933,7 @@ CREATE TABLE `wss_tinvwl_items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `wss_tinvwl_items`
+-- Dumping data for table `wss_tinvwl_items`
 --
 
 INSERT INTO `wss_tinvwl_items` (`ID`, `wishlist_id`, `product_id`, `variation_id`, `formdata`, `author`, `date`, `quantity`, `price`, `in_stock`) VALUES
@@ -3900,7 +3948,7 @@ INSERT INTO `wss_tinvwl_items` (`ID`, `wishlist_id`, `product_id`, `variation_id
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_tinvwl_lists`
+-- Table structure for table `wss_tinvwl_lists`
 --
 
 CREATE TABLE `wss_tinvwl_lists` (
@@ -3914,7 +3962,7 @@ CREATE TABLE `wss_tinvwl_lists` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `wss_tinvwl_lists`
+-- Dumping data for table `wss_tinvwl_lists`
 --
 
 INSERT INTO `wss_tinvwl_lists` (`ID`, `author`, `date`, `title`, `status`, `type`, `share_key`) VALUES
@@ -3926,7 +3974,7 @@ INSERT INTO `wss_tinvwl_lists` (`ID`, `author`, `date`, `title`, `status`, `type
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_usermeta`
+-- Table structure for table `wss_usermeta`
 --
 
 CREATE TABLE `wss_usermeta` (
@@ -3937,7 +3985,7 @@ CREATE TABLE `wss_usermeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_usermeta`
+-- Dumping data for table `wss_usermeta`
 --
 
 INSERT INTO `wss_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES
@@ -3959,7 +4007,7 @@ INSERT INTO `wss_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 (17, 1, 'wss_dashboard_quick_press_last_post_id', '297'),
 (18, 1, 'community-events-location', 'a:1:{s:2:\"ip\";s:9:\"127.0.0.0\";}'),
 (19, 1, '_woocommerce_tracks_anon_id', 'woo:UlmwLMQ1eYyvavNAMFmJOFyo'),
-(20, 1, 'wc_last_active', '1604102400'),
+(20, 1, 'wc_last_active', '1604188800'),
 (24, 1, 'wss_user-settings', 'libraryContent=browse&editor=html&advImgDetails=hide&hidetb=0&imgsize=large&editor_plain_text_paste_warning=1'),
 (25, 1, 'wss_user-settings-time', '1603705364'),
 (26, 1, 'closedpostboxes_product', 'a:1:{i:0;s:23:\"acf-group_5f65f791de5c9\";}'),
@@ -4164,7 +4212,7 @@ INSERT INTO `wss_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 (249, 12, 'session_tokens', 'a:1:{s:64:\"65d583c19bf332b1edd5259a1066a0ef53ba095d4a35421075ae1db1ca3a4f71\";a:4:{s:10:\"expiration\";i:1603723104;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:114:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36\";s:5:\"login\";i:1602513504;}}'),
 (250, 12, 'wc_last_active', '1602460800'),
 (259, 1, 'dismissed_no_secure_connection_notice', '1'),
-(260, 1, 'session_tokens', 'a:6:{s:64:\"ecf12bad0b7ff87b140169e3ab8fcf75aa9cf4f8ab4c3c18a411f3b8ec9a6fa3\";a:4:{s:10:\"expiration\";i:1604144792;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1603971992;}s:64:\"1d8532260f4aae09e21e5729a32a4e118ea33d0d219e46b8c518a22275adb1cf\";a:4:{s:10:\"expiration\";i:1604225615;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604052815;}s:64:\"2da56bd0b5dad0b33cb65610a2d64bacd532abbf6dfef13a32d8f5ba13f659bf\";a:4:{s:10:\"expiration\";i:1604264521;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604091721;}s:64:\"271f63314e6cdaa10bfc1b526fbf588deef4bc18ee70da902ef39952af1832f6\";a:4:{s:10:\"expiration\";i:1604311219;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604138419;}s:64:\"eb0af8672cbdb8efe7452170db59fa092687ec45baa908e2e9c152277fabe1f6\";a:4:{s:10:\"expiration\";i:1604312664;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604139864;}s:64:\"fb71dbddb915d154064a716d145b8d16dacd13db02e8dabdfe3b42385fd8560c\";a:4:{s:10:\"expiration\";i:1604316979;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604144179;}}'),
+(260, 1, 'session_tokens', 'a:6:{s:64:\"1d8532260f4aae09e21e5729a32a4e118ea33d0d219e46b8c518a22275adb1cf\";a:4:{s:10:\"expiration\";i:1604225615;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604052815;}s:64:\"2da56bd0b5dad0b33cb65610a2d64bacd532abbf6dfef13a32d8f5ba13f659bf\";a:4:{s:10:\"expiration\";i:1604264521;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604091721;}s:64:\"271f63314e6cdaa10bfc1b526fbf588deef4bc18ee70da902ef39952af1832f6\";a:4:{s:10:\"expiration\";i:1604311219;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604138419;}s:64:\"eb0af8672cbdb8efe7452170db59fa092687ec45baa908e2e9c152277fabe1f6\";a:4:{s:10:\"expiration\";i:1604312664;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604139864;}s:64:\"fb71dbddb915d154064a716d145b8d16dacd13db02e8dabdfe3b42385fd8560c\";a:4:{s:10:\"expiration\";i:1604316979;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604144179;}s:64:\"4fc34e0d8b8ac31ed6b002324d4d06dd1d7e1162d43eee5c2ea06b77ef20532e\";a:4:{s:10:\"expiration\";i:1604365153;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:115:\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36\";s:5:\"login\";i:1604192353;}}'),
 (261, 1, 'billing_first_name', 'Aleks'),
 (262, 1, 'billing_last_name', 'Piven'),
 (263, 1, 'billing_address_1', 'ttt'),
@@ -4204,7 +4252,7 @@ INSERT INTO `wss_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_users`
+-- Table structure for table `wss_users`
 --
 
 CREATE TABLE `wss_users` (
@@ -4221,7 +4269,7 @@ CREATE TABLE `wss_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_users`
+-- Dumping data for table `wss_users`
 --
 
 INSERT INTO `wss_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
@@ -4242,7 +4290,7 @@ INSERT INTO `wss_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_admin_notes`
+-- Table structure for table `wss_wc_admin_notes`
 --
 
 CREATE TABLE `wss_wc_admin_notes` (
@@ -4265,7 +4313,7 @@ CREATE TABLE `wss_wc_admin_notes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_wc_admin_notes`
+-- Dumping data for table `wss_wc_admin_notes`
 --
 
 INSERT INTO `wss_wc_admin_notes` (`note_id`, `name`, `type`, `locale`, `title`, `content`, `content_data`, `status`, `source`, `date_created`, `date_reminder`, `is_snoozable`, `layout`, `image`, `is_deleted`, `icon`) VALUES
@@ -4286,7 +4334,7 @@ INSERT INTO `wss_wc_admin_notes` (`note_id`, `name`, `type`, `locale`, `title`, 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_admin_note_actions`
+-- Table structure for table `wss_wc_admin_note_actions`
 --
 
 CREATE TABLE `wss_wc_admin_note_actions` (
@@ -4301,7 +4349,7 @@ CREATE TABLE `wss_wc_admin_note_actions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_wc_admin_note_actions`
+-- Dumping data for table `wss_wc_admin_note_actions`
 --
 
 INSERT INTO `wss_wc_admin_note_actions` (`action_id`, `note_id`, `name`, `label`, `query`, `status`, `is_primary`, `actioned_text`) VALUES
@@ -4323,7 +4371,7 @@ INSERT INTO `wss_wc_admin_note_actions` (`action_id`, `note_id`, `name`, `label`
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_category_lookup`
+-- Table structure for table `wss_wc_category_lookup`
 --
 
 CREATE TABLE `wss_wc_category_lookup` (
@@ -4332,7 +4380,7 @@ CREATE TABLE `wss_wc_category_lookup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_wc_category_lookup`
+-- Dumping data for table `wss_wc_category_lookup`
 --
 
 INSERT INTO `wss_wc_category_lookup` (`category_tree_id`, `category_id`) VALUES
@@ -4351,7 +4399,7 @@ INSERT INTO `wss_wc_category_lookup` (`category_tree_id`, `category_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_customer_lookup`
+-- Table structure for table `wss_wc_customer_lookup`
 --
 
 CREATE TABLE `wss_wc_customer_lookup` (
@@ -4370,11 +4418,11 @@ CREATE TABLE `wss_wc_customer_lookup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_wc_customer_lookup`
+-- Dumping data for table `wss_wc_customer_lookup`
 --
 
 INSERT INTO `wss_wc_customer_lookup` (`customer_id`, `user_id`, `username`, `first_name`, `last_name`, `email`, `date_last_active`, `date_registered`, `country`, `postcode`, `city`, `state`) VALUES
-(1, 1, 'wss_develop', 'Aleks', 'Piven', 'irwintram@gmail.com', '2020-10-30 22:00:00', '2020-09-18 07:59:08', 'IL', '44444', 'gdfgdfg', ''),
+(1, 1, 'wss_develop', 'Aleks', 'Piven', 'irwintram@gmail.com', '2020-10-31 22:00:00', '2020-09-18 07:59:08', 'IL', '44444', 'gdfgdfg', ''),
 (2, NULL, '', 'Aleks', 'Piven', 'gfhf@gmail.com', '2020-10-27 20:47:43', NULL, 'IL', '3453453', 'fsdfs', ''),
 (3, 13, 'test-2886', 'TEst', 'test', 'test@test12345.com', '2020-10-28 22:00:00', '2020-10-28 16:33:17', '', '', '', ''),
 (4, 10, 'test123', 'Test', 'Test', 'test123@123.com', '2020-10-29 22:00:00', '2020-10-06 11:31:40', '', '', '', '');
@@ -4382,7 +4430,7 @@ INSERT INTO `wss_wc_customer_lookup` (`customer_id`, `user_id`, `username`, `fir
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_download_log`
+-- Table structure for table `wss_wc_download_log`
 --
 
 CREATE TABLE `wss_wc_download_log` (
@@ -4396,7 +4444,7 @@ CREATE TABLE `wss_wc_download_log` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_order_coupon_lookup`
+-- Table structure for table `wss_wc_order_coupon_lookup`
 --
 
 CREATE TABLE `wss_wc_order_coupon_lookup` (
@@ -4409,7 +4457,7 @@ CREATE TABLE `wss_wc_order_coupon_lookup` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_order_product_lookup`
+-- Table structure for table `wss_wc_order_product_lookup`
 --
 
 CREATE TABLE `wss_wc_order_product_lookup` (
@@ -4429,7 +4477,7 @@ CREATE TABLE `wss_wc_order_product_lookup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_wc_order_product_lookup`
+-- Dumping data for table `wss_wc_order_product_lookup`
 --
 
 INSERT INTO `wss_wc_order_product_lookup` (`order_item_id`, `order_id`, `product_id`, `variation_id`, `customer_id`, `date_created`, `product_qty`, `product_net_revenue`, `product_gross_revenue`, `coupon_amount`, `tax_amount`, `shipping_amount`, `shipping_tax_amount`) VALUES
@@ -4448,12 +4496,15 @@ INSERT INTO `wss_wc_order_product_lookup` (`order_item_id`, `order_id`, `product
 (16, 301, 273, 0, 1, '2020-10-27 22:48:40', 1, 8400, 8400, 0, 0, 0, 0),
 (17, 301, 58, 0, 1, '2020-10-27 22:48:40', 1, 4240, 4240, 0, 0, 0, 0),
 (19, 302, 273, 0, 1, '2020-10-27 22:48:57', 1, 8400, 8400, 0, 0, 0, 0),
-(20, 302, 58, 0, 1, '2020-10-27 22:48:57', 1, 4240, 4240, 0, 0, 0, 0);
+(20, 302, 58, 0, 1, '2020-10-27 22:48:57', 1, 4240, 4240, 0, 0, 0, 0),
+(22, 313, 275, 0, 2, '2020-10-31 22:25:13', 1, 11160, 11160, 0, 0, 0, 0),
+(23, 313, 68, 308, 2, '2020-10-31 22:25:13', 2, 80000, 80000, 0, 0, 0, 0),
+(24, 313, 270, 0, 2, '2020-10-31 22:25:13', 1, 1, 1, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_order_stats`
+-- Table structure for table `wss_wc_order_stats`
 --
 
 CREATE TABLE `wss_wc_order_stats` (
@@ -4472,7 +4523,7 @@ CREATE TABLE `wss_wc_order_stats` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_wc_order_stats`
+-- Dumping data for table `wss_wc_order_stats`
 --
 
 INSERT INTO `wss_wc_order_stats` (`order_id`, `parent_id`, `date_created`, `date_created_gmt`, `num_items_sold`, `total_sales`, `tax_total`, `shipping_total`, `net_total`, `returning_customer`, `status`, `customer_id`) VALUES
@@ -4481,12 +4532,13 @@ INSERT INTO `wss_wc_order_stats` (`order_id`, `parent_id`, `date_created`, `date
 (299, 0, '2020-10-27 22:48:23', '2020-10-27 22:48:23', 2, 12640, 0, 0, 12640, 0, 'wc-cancelled', 1),
 (300, 0, '2020-10-27 22:48:32', '2020-10-27 22:48:32', 2, 12640, 0, 0, 12640, 0, 'wc-cancelled', 1),
 (301, 0, '2020-10-27 22:48:40', '2020-10-27 22:48:40', 2, 12640, 0, 0, 12640, 0, 'wc-cancelled', 1),
-(302, 0, '2020-10-27 22:48:57', '2020-10-27 22:48:57', 2, 12640, 0, 0, 12640, 0, 'wc-cancelled', 1);
+(302, 0, '2020-10-27 22:48:57', '2020-10-27 22:48:57', 2, 12640, 0, 0, 12640, 0, 'wc-cancelled', 1),
+(313, 0, '2020-10-31 22:25:13', '2020-10-31 22:25:13', 4, 91161, 0, 0, 91161, 0, 'wc-cancelled', 2);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_order_tax_lookup`
+-- Table structure for table `wss_wc_order_tax_lookup`
 --
 
 CREATE TABLE `wss_wc_order_tax_lookup` (
@@ -4501,7 +4553,7 @@ CREATE TABLE `wss_wc_order_tax_lookup` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_product_meta_lookup`
+-- Table structure for table `wss_wc_product_meta_lookup`
 --
 
 CREATE TABLE `wss_wc_product_meta_lookup` (
@@ -4522,7 +4574,7 @@ CREATE TABLE `wss_wc_product_meta_lookup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_wc_product_meta_lookup`
+-- Dumping data for table `wss_wc_product_meta_lookup`
 --
 
 INSERT INTO `wss_wc_product_meta_lookup` (`product_id`, `sku`, `virtual`, `downloadable`, `min_price`, `max_price`, `onsale`, `stock_quantity`, `stock_status`, `rating_count`, `average_rating`, `total_sales`, `tax_status`, `tax_class`) VALUES
@@ -4559,7 +4611,7 @@ INSERT INTO `wss_wc_product_meta_lookup` (`product_id`, `sku`, `virtual`, `downl
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_reserved_stock`
+-- Table structure for table `wss_wc_reserved_stock`
 --
 
 CREATE TABLE `wss_wc_reserved_stock` (
@@ -4573,7 +4625,7 @@ CREATE TABLE `wss_wc_reserved_stock` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_tax_rate_classes`
+-- Table structure for table `wss_wc_tax_rate_classes`
 --
 
 CREATE TABLE `wss_wc_tax_rate_classes` (
@@ -4583,7 +4635,7 @@ CREATE TABLE `wss_wc_tax_rate_classes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_wc_tax_rate_classes`
+-- Dumping data for table `wss_wc_tax_rate_classes`
 --
 
 INSERT INTO `wss_wc_tax_rate_classes` (`tax_rate_class_id`, `name`, `slug`) VALUES
@@ -4593,7 +4645,7 @@ INSERT INTO `wss_wc_tax_rate_classes` (`tax_rate_class_id`, `name`, `slug`) VALU
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_wc_webhooks`
+-- Table structure for table `wss_wc_webhooks`
 --
 
 CREATE TABLE `wss_wc_webhooks` (
@@ -4616,7 +4668,7 @@ CREATE TABLE `wss_wc_webhooks` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_api_keys`
+-- Table structure for table `wss_woocommerce_api_keys`
 --
 
 CREATE TABLE `wss_woocommerce_api_keys` (
@@ -4634,7 +4686,7 @@ CREATE TABLE `wss_woocommerce_api_keys` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_attribute_taxonomies`
+-- Table structure for table `wss_woocommerce_attribute_taxonomies`
 --
 
 CREATE TABLE `wss_woocommerce_attribute_taxonomies` (
@@ -4647,7 +4699,7 @@ CREATE TABLE `wss_woocommerce_attribute_taxonomies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_woocommerce_attribute_taxonomies`
+-- Dumping data for table `wss_woocommerce_attribute_taxonomies`
 --
 
 INSERT INTO `wss_woocommerce_attribute_taxonomies` (`attribute_id`, `attribute_name`, `attribute_label`, `attribute_type`, `attribute_orderby`, `attribute_public`) VALUES
@@ -4657,7 +4709,7 @@ INSERT INTO `wss_woocommerce_attribute_taxonomies` (`attribute_id`, `attribute_n
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_downloadable_product_permissions`
+-- Table structure for table `wss_woocommerce_downloadable_product_permissions`
 --
 
 CREATE TABLE `wss_woocommerce_downloadable_product_permissions` (
@@ -4677,7 +4729,7 @@ CREATE TABLE `wss_woocommerce_downloadable_product_permissions` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_log`
+-- Table structure for table `wss_woocommerce_log`
 --
 
 CREATE TABLE `wss_woocommerce_log` (
@@ -4692,7 +4744,7 @@ CREATE TABLE `wss_woocommerce_log` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_order_itemmeta`
+-- Table structure for table `wss_woocommerce_order_itemmeta`
 --
 
 CREATE TABLE `wss_woocommerce_order_itemmeta` (
@@ -4703,7 +4755,7 @@ CREATE TABLE `wss_woocommerce_order_itemmeta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_woocommerce_order_itemmeta`
+-- Dumping data for table `wss_woocommerce_order_itemmeta`
 --
 
 INSERT INTO `wss_woocommerce_order_itemmeta` (`meta_id`, `order_item_id`, `meta_key`, `meta_value`) VALUES
@@ -4881,12 +4933,46 @@ INSERT INTO `wss_woocommerce_order_itemmeta` (`meta_id`, `order_item_id`, `meta_
 (172, 21, 'cost', '0.00'),
 (173, 21, 'total_tax', '0'),
 (174, 21, 'taxes', 'a:1:{s:5:\"total\";a:0:{}}'),
-(175, 21, 'Items', 'Интенсивная разглаживающая и укрепляющая сыворотка для глаз &times; 1, Консилер 20spf Light &times; 1');
+(175, 21, 'Items', 'Интенсивная разглаживающая и укрепляющая сыворотка для глаз &times; 1, Консилер 20spf Light &times; 1'),
+(176, 22, '_product_id', '275'),
+(177, 22, '_variation_id', '0'),
+(178, 22, '_qty', '1'),
+(179, 22, '_tax_class', ''),
+(180, 22, '_line_subtotal', '11160'),
+(181, 22, '_line_subtotal_tax', '0'),
+(182, 22, '_line_total', '11160'),
+(183, 22, '_line_tax', '0'),
+(184, 22, '_line_tax_data', 'a:2:{s:5:\"total\";a:0:{}s:8:\"subtotal\";a:0:{}}'),
+(185, 23, '_product_id', '68'),
+(186, 23, '_variation_id', '308'),
+(187, 23, '_qty', '2'),
+(188, 23, '_tax_class', ''),
+(189, 23, '_line_subtotal', '80000'),
+(190, 23, '_line_subtotal_tax', '0'),
+(191, 23, '_line_total', '80000'),
+(192, 23, '_line_tax', '0'),
+(193, 23, '_line_tax_data', 'a:2:{s:5:\"total\";a:0:{}s:8:\"subtotal\";a:0:{}}'),
+(194, 23, 'pa_weight', '300-ml'),
+(195, 24, '_product_id', '270'),
+(196, 24, '_variation_id', '0'),
+(197, 24, '_qty', '1'),
+(198, 24, '_tax_class', ''),
+(199, 24, '_line_subtotal', '1'),
+(200, 24, '_line_subtotal_tax', '0'),
+(201, 24, '_line_total', '1'),
+(202, 24, '_line_tax', '0'),
+(203, 24, '_line_tax_data', 'a:2:{s:5:\"total\";a:0:{}s:8:\"subtotal\";a:0:{}}'),
+(204, 25, 'method_id', 'local_pickup'),
+(205, 25, 'instance_id', '1'),
+(206, 25, 'cost', '0.00'),
+(207, 25, 'total_tax', '0'),
+(208, 25, 'taxes', 'a:1:{s:5:\"total\";a:0:{}}'),
+(209, 25, 'Items', 'Разглаживающая и подтягивающая сыворотка для глаз c Ацил-Глутатионом &times; 1, BB-крем с солнцезащитой SPF 30+ PA++ - 300 мл &times; 2, Керамическая щетка/брашинг, диам. 33 мм черная &times; 1');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_order_items`
+-- Table structure for table `wss_woocommerce_order_items`
 --
 
 CREATE TABLE `wss_woocommerce_order_items` (
@@ -4897,7 +4983,7 @@ CREATE TABLE `wss_woocommerce_order_items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_woocommerce_order_items`
+-- Dumping data for table `wss_woocommerce_order_items`
 --
 
 INSERT INTO `wss_woocommerce_order_items` (`order_item_id`, `order_item_name`, `order_item_type`, `order_id`) VALUES
@@ -4921,12 +5007,16 @@ INSERT INTO `wss_woocommerce_order_items` (`order_item_id`, `order_item_name`, `
 (18, 'Самовывоз из клиники', 'shipping', 301),
 (19, 'Интенсивная разглаживающая и укрепляющая сыворотка для глаз', 'line_item', 302),
 (20, 'Консилер 20spf Light', 'line_item', 302),
-(21, 'Самовывоз из клиники', 'shipping', 302);
+(21, 'Самовывоз из клиники', 'shipping', 302),
+(22, 'Разглаживающая и подтягивающая сыворотка для глаз c Ацил-Глутатионом', 'line_item', 313),
+(23, 'BB-крем с солнцезащитой SPF 30+ PA++ - 300 мл', 'line_item', 313),
+(24, 'Керамическая щетка/брашинг, диам. 33 мм черная', 'line_item', 313),
+(25, 'Самовывоз из клиники', 'shipping', 313);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_payment_tokenmeta`
+-- Table structure for table `wss_woocommerce_payment_tokenmeta`
 --
 
 CREATE TABLE `wss_woocommerce_payment_tokenmeta` (
@@ -4939,7 +5029,7 @@ CREATE TABLE `wss_woocommerce_payment_tokenmeta` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_payment_tokens`
+-- Table structure for table `wss_woocommerce_payment_tokens`
 --
 
 CREATE TABLE `wss_woocommerce_payment_tokens` (
@@ -4954,7 +5044,7 @@ CREATE TABLE `wss_woocommerce_payment_tokens` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_sessions`
+-- Table structure for table `wss_woocommerce_sessions`
 --
 
 CREATE TABLE `wss_woocommerce_sessions` (
@@ -4965,17 +5055,17 @@ CREATE TABLE `wss_woocommerce_sessions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_woocommerce_sessions`
+-- Dumping data for table `wss_woocommerce_sessions`
 --
 
 INSERT INTO `wss_woocommerce_sessions` (`session_id`, `session_key`, `session_value`, `session_expiry`) VALUES
 (631, '10', 'a:8:{s:4:\"cart\";s:1791:\"a:4:{s:32:\"20f07591c6fcb220ffe637cda29bb3f6\";a:11:{s:3:\"key\";s:32:\"20f07591c6fcb220ffe637cda29bb3f6\";s:10:\"product_id\";i:277;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:11160;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:11160;s:8:\"line_tax\";i:0;}s:32:\"66f041e16a60928b05a7e228a89c3799\";a:12:{s:3:\"key\";s:32:\"66f041e16a60928b05a7e228a89c3799\";s:10:\"product_id\";i:58;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:15:\"tinvwl_formdata\";a:1:{s:11:\"product_sku\";s:8:\"KL_PR016\";}s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:4240;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:4240;s:8:\"line_tax\";i:0;}s:32:\"4e3aed5196ac0b532a7732b62f89e5dd\";a:11:{s:3:\"key\";s:32:\"4e3aed5196ac0b532a7732b62f89e5dd\";s:10:\"product_id\";i:68;s:12:\"variation_id\";i:308;s:9:\"variation\";a:1:{s:19:\"attribute_pa_weight\";s:6:\"300-ml\";}s:8:\"quantity\";i:2;s:9:\"data_hash\";s:32:\"2963c4ac5fa217b51d2b4067268066aa\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:80000;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:80000;s:8:\"line_tax\";i:0;}s:32:\"35dbf35f680b82bd280bee5b9e7b6c1d\";a:11:{s:3:\"key\";s:32:\"35dbf35f680b82bd280bee5b9e7b6c1d\";s:10:\"product_id\";i:68;s:12:\"variation_id\";i:309;s:9:\"variation\";a:1:{s:19:\"attribute_pa_weight\";s:5:\"50-ml\";}s:8:\"quantity\";i:2;s:9:\"data_hash\";s:32:\"d5a24166a2cea5c135314ae781b74139\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:40000;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:40000;s:8:\"line_tax\";i:0;}}\";s:11:\"cart_totals\";s:417:\"a:15:{s:8:\"subtotal\";s:9:\"135400.00\";s:12:\"subtotal_tax\";d:0;s:14:\"shipping_total\";s:4:\"0.00\";s:12:\"shipping_tax\";i:0;s:14:\"shipping_taxes\";a:0:{}s:14:\"discount_total\";i:0;s:12:\"discount_tax\";i:0;s:19:\"cart_contents_total\";s:9:\"135400.00\";s:17:\"cart_contents_tax\";i:0;s:19:\"cart_contents_taxes\";a:0:{}s:9:\"fee_total\";s:4:\"0.00\";s:7:\"fee_tax\";i:0;s:9:\"fee_taxes\";a:0:{}s:5:\"total\";s:9:\"135400.00\";s:9:\"total_tax\";d:0;}\";s:15:\"applied_coupons\";s:6:\"a:0:{}\";s:22:\"coupon_discount_totals\";s:6:\"a:0:{}\";s:26:\"coupon_discount_tax_totals\";s:6:\"a:0:{}\";s:21:\"removed_cart_contents\";s:1834:\"a:4:{s:32:\"63923f49e5241343aa7acb6a06a751e7\";a:11:{s:3:\"key\";s:32:\"63923f49e5241343aa7acb6a06a751e7\";s:10:\"product_id\";i:275;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:11160;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:11160;s:8:\"line_tax\";i:0;}s:32:\"d395771085aab05244a4fb8fd91bf4ee\";a:12:{s:3:\"key\";s:32:\"d395771085aab05244a4fb8fd91bf4ee\";s:10:\"product_id\";i:279;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:15:\"tinvwl_formdata\";a:1:{s:11:\"product_sku\";s:8:\"KL_PR026\";}s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:11728;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:11728;s:8:\"line_tax\";i:0;}s:32:\"b6d767d2f8ed5d21a44b0e5886680cb9\";a:12:{s:3:\"key\";s:32:\"b6d767d2f8ed5d21a44b0e5886680cb9\";s:10:\"product_id\";i:22;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:15:\"tinvwl_formdata\";a:2:{s:6:\"action\";s:16:\"add_gift_product\";s:7:\"product\";s:2:\"22\";}s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:1;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:1;s:8:\"line_tax\";i:0;}s:32:\"4e3aed5196ac0b532a7732b62f89e5dd\";a:11:{s:3:\"key\";s:32:\"4e3aed5196ac0b532a7732b62f89e5dd\";s:10:\"product_id\";i:68;s:12:\"variation_id\";i:308;s:9:\"variation\";a:1:{s:19:\"attribute_pa_weight\";s:6:\"300-ml\";}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"2963c4ac5fa217b51d2b4067268066aa\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:40000;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:40000;s:8:\"line_tax\";i:0;}}\";s:8:\"customer\";s:687:\"a:26:{s:2:\"id\";s:1:\"0\";s:13:\"date_modified\";s:0:\"\";s:8:\"postcode\";s:0:\"\";s:4:\"city\";s:0:\"\";s:9:\"address_1\";s:0:\"\";s:7:\"address\";s:0:\"\";s:9:\"address_2\";s:0:\"\";s:5:\"state\";s:0:\"\";s:7:\"country\";s:2:\"IL\";s:17:\"shipping_postcode\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:18:\"shipping_address_1\";s:0:\"\";s:16:\"shipping_address\";s:0:\"\";s:18:\"shipping_address_2\";s:0:\"\";s:14:\"shipping_state\";s:0:\"\";s:16:\"shipping_country\";s:2:\"IL\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:10:\"first_name\";s:0:\"\";s:9:\"last_name\";s:0:\"\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:0:\"\";s:5:\"email\";s:0:\"\";s:19:\"shipping_first_name\";s:0:\"\";s:18:\"shipping_last_name\";s:0:\"\";s:16:\"shipping_company\";s:0:\"\";}\";s:10:\"wc_notices\";N;}', 1604235166),
-(632, '1', 'a:12:{s:4:\"cart\";s:869:\"a:2:{s:32:\"63923f49e5241343aa7acb6a06a751e7\";a:11:{s:3:\"key\";s:32:\"63923f49e5241343aa7acb6a06a751e7\";s:10:\"product_id\";i:275;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:11160;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:11160;s:8:\"line_tax\";i:0;}s:32:\"4e3aed5196ac0b532a7732b62f89e5dd\";a:11:{s:3:\"key\";s:32:\"4e3aed5196ac0b532a7732b62f89e5dd\";s:10:\"product_id\";i:68;s:12:\"variation_id\";i:308;s:9:\"variation\";a:1:{s:19:\"attribute_pa_weight\";s:6:\"300-ml\";}s:8:\"quantity\";i:2;s:9:\"data_hash\";s:32:\"2963c4ac5fa217b51d2b4067268066aa\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:80000;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:80000;s:8:\"line_tax\";i:0;}}\";s:11:\"cart_totals\";s:414:\"a:15:{s:8:\"subtotal\";s:8:\"91160.00\";s:12:\"subtotal_tax\";d:0;s:14:\"shipping_total\";s:4:\"0.00\";s:12:\"shipping_tax\";i:0;s:14:\"shipping_taxes\";a:0:{}s:14:\"discount_total\";i:0;s:12:\"discount_tax\";i:0;s:19:\"cart_contents_total\";s:8:\"91160.00\";s:17:\"cart_contents_tax\";i:0;s:19:\"cart_contents_taxes\";a:0:{}s:9:\"fee_total\";s:4:\"0.00\";s:7:\"fee_tax\";i:0;s:9:\"fee_taxes\";a:0:{}s:5:\"total\";s:8:\"91160.00\";s:9:\"total_tax\";d:0;}\";s:15:\"applied_coupons\";s:6:\"a:0:{}\";s:22:\"coupon_discount_totals\";s:6:\"a:0:{}\";s:26:\"coupon_discount_tax_totals\";s:6:\"a:0:{}\";s:21:\"removed_cart_contents\";s:417:\"a:1:{s:32:\"63923f49e5241343aa7acb6a06a751e7\";a:11:{s:3:\"key\";s:32:\"63923f49e5241343aa7acb6a06a751e7\";s:10:\"product_id\";i:275;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:11160;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:11160;s:8:\"line_tax\";i:0;}}\";s:8:\"customer\";s:771:\"a:26:{s:2:\"id\";s:1:\"1\";s:13:\"date_modified\";s:25:\"2020-10-30T10:48:52+00:00\";s:8:\"postcode\";s:5:\"44444\";s:4:\"city\";s:7:\"gdfgdfg\";s:9:\"address_1\";s:3:\"ttt\";s:7:\"address\";s:3:\"ttt\";s:9:\"address_2\";s:0:\"\";s:5:\"state\";s:0:\"\";s:7:\"country\";s:2:\"IL\";s:17:\"shipping_postcode\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:18:\"shipping_address_1\";s:0:\"\";s:16:\"shipping_address\";s:0:\"\";s:18:\"shipping_address_2\";s:0:\"\";s:14:\"shipping_state\";s:0:\"\";s:16:\"shipping_country\";s:2:\"IL\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:10:\"first_name\";s:5:\"Aleks\";s:9:\"last_name\";s:5:\"Piven\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:9:\"546456456\";s:5:\"email\";s:20:\"alekspvn25@gmail.com\";s:19:\"shipping_first_name\";s:0:\"\";s:18:\"shipping_last_name\";s:0:\"\";s:16:\"shipping_company\";s:0:\"\";}\";s:10:\"wc_notices\";N;s:22:\"shipping_for_package_0\";s:1601:\"a:2:{s:12:\"package_hash\";s:40:\"wc_ship_1898da0c977d1c92d0c4fb4aab838572\";s:5:\"rates\";a:3:{s:14:\"local_pickup:1\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:14:\"local_pickup:1\";s:9:\"method_id\";s:12:\"local_pickup\";s:11:\"instance_id\";i:1;s:5:\"label\";s:38:\"Самовывоз из клиники\";s:4:\"cost\";s:4:\"0.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:5:\"Items\";s:137:\"Разглаживающая и подтягивающая сыворотка для глаз c Ацил-Глутатионом &times; 1\";}}s:14:\"local_pickup:2\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:14:\"local_pickup:2\";s:9:\"method_id\";s:12:\"local_pickup\";s:11:\"instance_id\";i:2;s:5:\"label\";s:137:\"Курьер до двери (будет использоваться адрес указанный в Контактные данных)\";s:4:\"cost\";s:5:\"21.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:5:\"Items\";s:137:\"Разглаживающая и подтягивающая сыворотка для глаз c Ацил-Глутатионом &times; 1\";}}s:14:\"local_pickup:3\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:14:\"local_pickup:3\";s:9:\"method_id\";s:12:\"local_pickup\";s:11:\"instance_id\";i:3;s:5:\"label\";s:119:\"Почта (будет использоваться адрес указанный в Контактные данных)\";s:4:\"cost\";s:4:\"0.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:5:\"Items\";s:137:\"Разглаживающая и подтягивающая сыворотка для глаз c Ацил-Глутатионом &times; 1\";}}}}\";s:25:\"previous_shipping_methods\";s:94:\"a:1:{i:0;a:3:{i:0;s:14:\"local_pickup:1\";i:1;s:14:\"local_pickup:2\";i:2;s:14:\"local_pickup:3\";}}\";s:23:\"chosen_shipping_methods\";s:32:\"a:1:{i:0;s:14:\"local_pickup:1\";}\";s:22:\"shipping_method_counts\";s:14:\"a:1:{i:0;i:3;}\";}', 1604225617);
+(632, '1', 'a:18:{s:4:\"cart\";s:1362:\"a:3:{s:32:\"63923f49e5241343aa7acb6a06a751e7\";a:11:{s:3:\"key\";s:32:\"63923f49e5241343aa7acb6a06a751e7\";s:10:\"product_id\";i:275;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:11160;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:11160;s:8:\"line_tax\";i:0;}s:32:\"4e3aed5196ac0b532a7732b62f89e5dd\";a:11:{s:3:\"key\";s:32:\"4e3aed5196ac0b532a7732b62f89e5dd\";s:10:\"product_id\";i:68;s:12:\"variation_id\";i:308;s:9:\"variation\";a:1:{s:19:\"attribute_pa_weight\";s:6:\"300-ml\";}s:8:\"quantity\";i:2;s:9:\"data_hash\";s:32:\"2963c4ac5fa217b51d2b4067268066aa\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:80000;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:80000;s:8:\"line_tax\";i:0;}s:32:\"39059724f73a9969845dfe4146c5660e\";a:12:{s:3:\"key\";s:32:\"39059724f73a9969845dfe4146c5660e\";s:10:\"product_id\";i:270;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:15:\"tinvwl_formdata\";a:2:{s:6:\"action\";s:16:\"add_gift_product\";s:7:\"product\";s:3:\"270\";}s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:1;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:1;s:8:\"line_tax\";i:0;}}\";s:11:\"cart_totals\";s:414:\"a:15:{s:8:\"subtotal\";s:8:\"91161.00\";s:12:\"subtotal_tax\";d:0;s:14:\"shipping_total\";s:4:\"0.00\";s:12:\"shipping_tax\";i:0;s:14:\"shipping_taxes\";a:0:{}s:14:\"discount_total\";i:0;s:12:\"discount_tax\";i:0;s:19:\"cart_contents_total\";s:8:\"91161.00\";s:17:\"cart_contents_tax\";i:0;s:19:\"cart_contents_taxes\";a:0:{}s:9:\"fee_total\";s:4:\"0.00\";s:7:\"fee_tax\";i:0;s:9:\"fee_taxes\";a:0:{}s:5:\"total\";s:8:\"91161.00\";s:9:\"total_tax\";d:0;}\";s:15:\"applied_coupons\";s:6:\"a:0:{}\";s:22:\"coupon_discount_totals\";s:6:\"a:0:{}\";s:26:\"coupon_discount_tax_totals\";s:6:\"a:0:{}\";s:21:\"removed_cart_contents\";s:417:\"a:1:{s:32:\"63923f49e5241343aa7acb6a06a751e7\";a:11:{s:3:\"key\";s:32:\"63923f49e5241343aa7acb6a06a751e7\";s:10:\"product_id\";i:275;s:12:\"variation_id\";i:0;s:9:\"variation\";a:0:{}s:8:\"quantity\";i:1;s:9:\"data_hash\";s:32:\"b5c1d5ca8bae6d4896cf1807cdf763f0\";s:13:\"line_tax_data\";a:2:{s:8:\"subtotal\";a:0:{}s:5:\"total\";a:0:{}}s:13:\"line_subtotal\";d:11160;s:17:\"line_subtotal_tax\";i:0;s:10:\"line_total\";d:11160;s:8:\"line_tax\";i:0;}}\";s:8:\"customer\";s:771:\"a:26:{s:2:\"id\";s:1:\"1\";s:13:\"date_modified\";s:25:\"2020-10-30T10:48:52+00:00\";s:8:\"postcode\";s:5:\"44444\";s:4:\"city\";s:7:\"gdfgdfg\";s:9:\"address_1\";s:3:\"ttt\";s:7:\"address\";s:3:\"ttt\";s:9:\"address_2\";s:0:\"\";s:5:\"state\";s:0:\"\";s:7:\"country\";s:2:\"IL\";s:17:\"shipping_postcode\";s:0:\"\";s:13:\"shipping_city\";s:0:\"\";s:18:\"shipping_address_1\";s:0:\"\";s:16:\"shipping_address\";s:0:\"\";s:18:\"shipping_address_2\";s:0:\"\";s:14:\"shipping_state\";s:0:\"\";s:16:\"shipping_country\";s:2:\"IL\";s:13:\"is_vat_exempt\";s:0:\"\";s:19:\"calculated_shipping\";s:0:\"\";s:10:\"first_name\";s:5:\"Aleks\";s:9:\"last_name\";s:5:\"Piven\";s:7:\"company\";s:0:\"\";s:5:\"phone\";s:9:\"546456456\";s:5:\"email\";s:20:\"alekspvn25@gmail.com\";s:19:\"shipping_first_name\";s:0:\"\";s:18:\"shipping_last_name\";s:0:\"\";s:16:\"shipping_company\";s:0:\"\";}\";s:10:\"wc_notices\";N;s:22:\"shipping_for_package_0\";s:2114:\"a:2:{s:12:\"package_hash\";s:40:\"wc_ship_95b8ce5fe0cfe2b11279015c248025a0\";s:5:\"rates\";a:3:{s:14:\"local_pickup:1\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:14:\"local_pickup:1\";s:9:\"method_id\";s:12:\"local_pickup\";s:11:\"instance_id\";i:1;s:5:\"label\";s:38:\"Самовывоз из клиники\";s:4:\"cost\";s:4:\"0.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:5:\"Items\";s:308:\"Разглаживающая и подтягивающая сыворотка для глаз c Ацил-Глутатионом &times; 1, BB-крем с солнцезащитой SPF 30+ PA++ - 300 мл &times; 2, Керамическая щетка/брашинг, диам. 33 мм черная &times; 1\";}}s:14:\"local_pickup:2\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:14:\"local_pickup:2\";s:9:\"method_id\";s:12:\"local_pickup\";s:11:\"instance_id\";i:2;s:5:\"label\";s:137:\"Курьер до двери (будет использоваться адрес указанный в Контактные данных)\";s:4:\"cost\";s:5:\"21.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:5:\"Items\";s:308:\"Разглаживающая и подтягивающая сыворотка для глаз c Ацил-Глутатионом &times; 1, BB-крем с солнцезащитой SPF 30+ PA++ - 300 мл &times; 2, Керамическая щетка/брашинг, диам. 33 мм черная &times; 1\";}}s:14:\"local_pickup:3\";O:16:\"WC_Shipping_Rate\":2:{s:7:\"\0*\0data\";a:6:{s:2:\"id\";s:14:\"local_pickup:3\";s:9:\"method_id\";s:12:\"local_pickup\";s:11:\"instance_id\";i:3;s:5:\"label\";s:119:\"Почта (будет использоваться адрес указанный в Контактные данных)\";s:4:\"cost\";s:4:\"0.00\";s:5:\"taxes\";a:0:{}}s:12:\"\0*\0meta_data\";a:1:{s:5:\"Items\";s:308:\"Разглаживающая и подтягивающая сыворотка для глаз c Ацил-Глутатионом &times; 1, BB-крем с солнцезащитой SPF 30+ PA++ - 300 мл &times; 2, Керамическая щетка/брашинг, диам. 33 мм черная &times; 1\";}}}}\";s:25:\"previous_shipping_methods\";s:94:\"a:1:{i:0;a:3:{i:0;s:14:\"local_pickup:1\";i:1;s:14:\"local_pickup:2\";i:2;s:14:\"local_pickup:3\";}}\";s:23:\"chosen_shipping_methods\";s:32:\"a:1:{i:0;s:14:\"local_pickup:1\";}\";s:22:\"shipping_method_counts\";s:14:\"a:1:{i:0;i:3;}\";s:21:\"chosen_payment_method\";s:3:\"cod\";s:26:\"_ppp_default_override_flag\";s:1:\"1\";s:14:\"ppp_payment_id\";s:30:\"PAYID-L6O6IOY2N419286N85642428\";s:16:\"ppp_approval_url\";s:94:\"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-95602059PA255802R\";s:22:\"order_awaiting_payment\";i:313;s:12:\"ppp_order_id\";i:313;}', 1604341164);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_shipping_zones`
+-- Table structure for table `wss_woocommerce_shipping_zones`
 --
 
 CREATE TABLE `wss_woocommerce_shipping_zones` (
@@ -4985,7 +5075,7 @@ CREATE TABLE `wss_woocommerce_shipping_zones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_woocommerce_shipping_zones`
+-- Dumping data for table `wss_woocommerce_shipping_zones`
 --
 
 INSERT INTO `wss_woocommerce_shipping_zones` (`zone_id`, `zone_name`, `zone_order`) VALUES
@@ -4994,7 +5084,7 @@ INSERT INTO `wss_woocommerce_shipping_zones` (`zone_id`, `zone_name`, `zone_orde
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_shipping_zone_locations`
+-- Table structure for table `wss_woocommerce_shipping_zone_locations`
 --
 
 CREATE TABLE `wss_woocommerce_shipping_zone_locations` (
@@ -5007,7 +5097,7 @@ CREATE TABLE `wss_woocommerce_shipping_zone_locations` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_shipping_zone_methods`
+-- Table structure for table `wss_woocommerce_shipping_zone_methods`
 --
 
 CREATE TABLE `wss_woocommerce_shipping_zone_methods` (
@@ -5019,7 +5109,7 @@ CREATE TABLE `wss_woocommerce_shipping_zone_methods` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 --
--- Дамп данных таблицы `wss_woocommerce_shipping_zone_methods`
+-- Dumping data for table `wss_woocommerce_shipping_zone_methods`
 --
 
 INSERT INTO `wss_woocommerce_shipping_zone_methods` (`zone_id`, `instance_id`, `method_id`, `method_order`, `is_enabled`) VALUES
@@ -5030,7 +5120,7 @@ INSERT INTO `wss_woocommerce_shipping_zone_methods` (`zone_id`, `instance_id`, `
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_tax_rates`
+-- Table structure for table `wss_woocommerce_tax_rates`
 --
 
 CREATE TABLE `wss_woocommerce_tax_rates` (
@@ -5049,7 +5139,7 @@ CREATE TABLE `wss_woocommerce_tax_rates` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woocommerce_tax_rate_locations`
+-- Table structure for table `wss_woocommerce_tax_rate_locations`
 --
 
 CREATE TABLE `wss_woocommerce_tax_rate_locations` (
@@ -5062,7 +5152,7 @@ CREATE TABLE `wss_woocommerce_tax_rate_locations` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_woof_query_cache`
+-- Table structure for table `wss_woof_query_cache`
 --
 
 CREATE TABLE `wss_woof_query_cache` (
@@ -5073,7 +5163,7 @@ CREATE TABLE `wss_woof_query_cache` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_yith_wcwl`
+-- Table structure for table `wss_yith_wcwl`
 --
 
 CREATE TABLE `wss_yith_wcwl` (
@@ -5090,7 +5180,7 @@ CREATE TABLE `wss_yith_wcwl` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `wss_yith_wcwl`
+-- Dumping data for table `wss_yith_wcwl`
 --
 
 INSERT INTO `wss_yith_wcwl` (`ID`, `prod_id`, `quantity`, `user_id`, `wishlist_id`, `position`, `original_price`, `original_currency`, `dateadded`, `on_sale`) VALUES
@@ -5099,7 +5189,7 @@ INSERT INTO `wss_yith_wcwl` (`ID`, `prod_id`, `quantity`, `user_id`, `wishlist_i
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wss_yith_wcwl_lists`
+-- Table structure for table `wss_yith_wcwl_lists`
 --
 
 CREATE TABLE `wss_yith_wcwl_lists` (
@@ -5116,18 +5206,18 @@ CREATE TABLE `wss_yith_wcwl_lists` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `wss_yith_wcwl_lists`
+-- Dumping data for table `wss_yith_wcwl_lists`
 --
 
 INSERT INTO `wss_yith_wcwl_lists` (`ID`, `user_id`, `session_id`, `wishlist_slug`, `wishlist_name`, `wishlist_token`, `wishlist_privacy`, `is_default`, `dateadded`, `expiration`) VALUES
 (1, 1, NULL, '', '', 'AHWBFE4CVR1T', 0, 1, '2020-10-06 15:26:20', NULL);
 
 --
--- Индексы сохранённых таблиц
+-- Indexes for dumped tables
 --
 
 --
--- Индексы таблицы `wss_actionscheduler_actions`
+-- Indexes for table `wss_actionscheduler_actions`
 --
 ALTER TABLE `wss_actionscheduler_actions`
   ADD PRIMARY KEY (`action_id`),
@@ -5140,21 +5230,21 @@ ALTER TABLE `wss_actionscheduler_actions`
   ADD KEY `claim_id` (`claim_id`);
 
 --
--- Индексы таблицы `wss_actionscheduler_claims`
+-- Indexes for table `wss_actionscheduler_claims`
 --
 ALTER TABLE `wss_actionscheduler_claims`
   ADD PRIMARY KEY (`claim_id`),
   ADD KEY `date_created_gmt` (`date_created_gmt`);
 
 --
--- Индексы таблицы `wss_actionscheduler_groups`
+-- Indexes for table `wss_actionscheduler_groups`
 --
 ALTER TABLE `wss_actionscheduler_groups`
   ADD PRIMARY KEY (`group_id`),
   ADD KEY `slug` (`slug`(191));
 
 --
--- Индексы таблицы `wss_actionscheduler_logs`
+-- Indexes for table `wss_actionscheduler_logs`
 --
 ALTER TABLE `wss_actionscheduler_logs`
   ADD PRIMARY KEY (`log_id`),
@@ -5162,7 +5252,7 @@ ALTER TABLE `wss_actionscheduler_logs`
   ADD KEY `log_date_gmt` (`log_date_gmt`);
 
 --
--- Индексы таблицы `wss_commentmeta`
+-- Indexes for table `wss_commentmeta`
 --
 ALTER TABLE `wss_commentmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -5170,7 +5260,7 @@ ALTER TABLE `wss_commentmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Индексы таблицы `wss_comments`
+-- Indexes for table `wss_comments`
 --
 ALTER TABLE `wss_comments`
   ADD PRIMARY KEY (`comment_ID`),
@@ -5182,21 +5272,21 @@ ALTER TABLE `wss_comments`
   ADD KEY `woo_idx_comment_type` (`comment_type`);
 
 --
--- Индексы таблицы `wss_duplicator_packages`
+-- Indexes for table `wss_duplicator_packages`
 --
 ALTER TABLE `wss_duplicator_packages`
   ADD PRIMARY KEY (`id`),
   ADD KEY `hash` (`hash`);
 
 --
--- Индексы таблицы `wss_links`
+-- Indexes for table `wss_links`
 --
 ALTER TABLE `wss_links`
   ADD PRIMARY KEY (`link_id`),
   ADD KEY `link_visible` (`link_visible`);
 
 --
--- Индексы таблицы `wss_options`
+-- Indexes for table `wss_options`
 --
 ALTER TABLE `wss_options`
   ADD PRIMARY KEY (`option_id`),
@@ -5204,21 +5294,21 @@ ALTER TABLE `wss_options`
   ADD KEY `autoload` (`autoload`);
 
 --
--- Индексы таблицы `wss_pimwick_gift_card`
+-- Indexes for table `wss_pimwick_gift_card`
 --
 ALTER TABLE `wss_pimwick_gift_card`
   ADD PRIMARY KEY (`pimwick_gift_card_id`),
   ADD UNIQUE KEY `wss_ix_pimwick_gift_card_number` (`number`(128));
 
 --
--- Индексы таблицы `wss_pimwick_gift_card_activity`
+-- Indexes for table `wss_pimwick_gift_card_activity`
 --
 ALTER TABLE `wss_pimwick_gift_card_activity`
   ADD PRIMARY KEY (`pimwick_gift_card_activity_id`),
   ADD KEY `wss_ix_pimwick_gift_card_id` (`pimwick_gift_card_id`);
 
 --
--- Индексы таблицы `wss_postmeta`
+-- Indexes for table `wss_postmeta`
 --
 ALTER TABLE `wss_postmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -5226,7 +5316,7 @@ ALTER TABLE `wss_postmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Индексы таблицы `wss_posts`
+-- Indexes for table `wss_posts`
 --
 ALTER TABLE `wss_posts`
   ADD PRIMARY KEY (`ID`),
@@ -5236,7 +5326,7 @@ ALTER TABLE `wss_posts`
   ADD KEY `post_author` (`post_author`);
 
 --
--- Индексы таблицы `wss_termmeta`
+-- Indexes for table `wss_termmeta`
 --
 ALTER TABLE `wss_termmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -5244,7 +5334,7 @@ ALTER TABLE `wss_termmeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Индексы таблицы `wss_terms`
+-- Indexes for table `wss_terms`
 --
 ALTER TABLE `wss_terms`
   ADD PRIMARY KEY (`term_id`),
@@ -5252,14 +5342,14 @@ ALTER TABLE `wss_terms`
   ADD KEY `name` (`name`(191));
 
 --
--- Индексы таблицы `wss_term_relationships`
+-- Indexes for table `wss_term_relationships`
 --
 ALTER TABLE `wss_term_relationships`
   ADD PRIMARY KEY (`object_id`,`term_taxonomy_id`),
   ADD KEY `term_taxonomy_id` (`term_taxonomy_id`);
 
 --
--- Индексы таблицы `wss_term_taxonomy`
+-- Indexes for table `wss_term_taxonomy`
 --
 ALTER TABLE `wss_term_taxonomy`
   ADD PRIMARY KEY (`term_taxonomy_id`),
@@ -5267,26 +5357,26 @@ ALTER TABLE `wss_term_taxonomy`
   ADD KEY `taxonomy` (`taxonomy`);
 
 --
--- Индексы таблицы `wss_tinvwl_analytics`
+-- Indexes for table `wss_tinvwl_analytics`
 --
 ALTER TABLE `wss_tinvwl_analytics`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `unique_product` (`wishlist_id`,`product_id`,`variation_id`);
 
 --
--- Индексы таблицы `wss_tinvwl_items`
+-- Indexes for table `wss_tinvwl_items`
 --
 ALTER TABLE `wss_tinvwl_items`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Индексы таблицы `wss_tinvwl_lists`
+-- Indexes for table `wss_tinvwl_lists`
 --
 ALTER TABLE `wss_tinvwl_lists`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Индексы таблицы `wss_usermeta`
+-- Indexes for table `wss_usermeta`
 --
 ALTER TABLE `wss_usermeta`
   ADD PRIMARY KEY (`umeta_id`),
@@ -5294,7 +5384,7 @@ ALTER TABLE `wss_usermeta`
   ADD KEY `meta_key` (`meta_key`(191));
 
 --
--- Индексы таблицы `wss_users`
+-- Indexes for table `wss_users`
 --
 ALTER TABLE `wss_users`
   ADD PRIMARY KEY (`ID`),
@@ -5303,26 +5393,26 @@ ALTER TABLE `wss_users`
   ADD KEY `user_email` (`user_email`);
 
 --
--- Индексы таблицы `wss_wc_admin_notes`
+-- Indexes for table `wss_wc_admin_notes`
 --
 ALTER TABLE `wss_wc_admin_notes`
   ADD PRIMARY KEY (`note_id`);
 
 --
--- Индексы таблицы `wss_wc_admin_note_actions`
+-- Indexes for table `wss_wc_admin_note_actions`
 --
 ALTER TABLE `wss_wc_admin_note_actions`
   ADD PRIMARY KEY (`action_id`),
   ADD KEY `note_id` (`note_id`);
 
 --
--- Индексы таблицы `wss_wc_category_lookup`
+-- Indexes for table `wss_wc_category_lookup`
 --
 ALTER TABLE `wss_wc_category_lookup`
   ADD PRIMARY KEY (`category_tree_id`,`category_id`);
 
 --
--- Индексы таблицы `wss_wc_customer_lookup`
+-- Indexes for table `wss_wc_customer_lookup`
 --
 ALTER TABLE `wss_wc_customer_lookup`
   ADD PRIMARY KEY (`customer_id`),
@@ -5330,7 +5420,7 @@ ALTER TABLE `wss_wc_customer_lookup`
   ADD KEY `email` (`email`);
 
 --
--- Индексы таблицы `wss_wc_download_log`
+-- Indexes for table `wss_wc_download_log`
 --
 ALTER TABLE `wss_wc_download_log`
   ADD PRIMARY KEY (`download_log_id`),
@@ -5338,7 +5428,7 @@ ALTER TABLE `wss_wc_download_log`
   ADD KEY `timestamp` (`timestamp`);
 
 --
--- Индексы таблицы `wss_wc_order_coupon_lookup`
+-- Indexes for table `wss_wc_order_coupon_lookup`
 --
 ALTER TABLE `wss_wc_order_coupon_lookup`
   ADD PRIMARY KEY (`order_id`,`coupon_id`),
@@ -5346,7 +5436,7 @@ ALTER TABLE `wss_wc_order_coupon_lookup`
   ADD KEY `date_created` (`date_created`);
 
 --
--- Индексы таблицы `wss_wc_order_product_lookup`
+-- Indexes for table `wss_wc_order_product_lookup`
 --
 ALTER TABLE `wss_wc_order_product_lookup`
   ADD PRIMARY KEY (`order_item_id`),
@@ -5356,7 +5446,7 @@ ALTER TABLE `wss_wc_order_product_lookup`
   ADD KEY `date_created` (`date_created`);
 
 --
--- Индексы таблицы `wss_wc_order_stats`
+-- Indexes for table `wss_wc_order_stats`
 --
 ALTER TABLE `wss_wc_order_stats`
   ADD PRIMARY KEY (`order_id`),
@@ -5365,7 +5455,7 @@ ALTER TABLE `wss_wc_order_stats`
   ADD KEY `status` (`status`(191));
 
 --
--- Индексы таблицы `wss_wc_order_tax_lookup`
+-- Indexes for table `wss_wc_order_tax_lookup`
 --
 ALTER TABLE `wss_wc_order_tax_lookup`
   ADD PRIMARY KEY (`order_id`,`tax_rate_id`),
@@ -5373,7 +5463,7 @@ ALTER TABLE `wss_wc_order_tax_lookup`
   ADD KEY `date_created` (`date_created`);
 
 --
--- Индексы таблицы `wss_wc_product_meta_lookup`
+-- Indexes for table `wss_wc_product_meta_lookup`
 --
 ALTER TABLE `wss_wc_product_meta_lookup`
   ADD PRIMARY KEY (`product_id`),
@@ -5385,27 +5475,27 @@ ALTER TABLE `wss_wc_product_meta_lookup`
   ADD KEY `min_max_price` (`min_price`,`max_price`);
 
 --
--- Индексы таблицы `wss_wc_reserved_stock`
+-- Indexes for table `wss_wc_reserved_stock`
 --
 ALTER TABLE `wss_wc_reserved_stock`
   ADD PRIMARY KEY (`order_id`,`product_id`);
 
 --
--- Индексы таблицы `wss_wc_tax_rate_classes`
+-- Indexes for table `wss_wc_tax_rate_classes`
 --
 ALTER TABLE `wss_wc_tax_rate_classes`
   ADD PRIMARY KEY (`tax_rate_class_id`),
   ADD UNIQUE KEY `slug` (`slug`(191));
 
 --
--- Индексы таблицы `wss_wc_webhooks`
+-- Indexes for table `wss_wc_webhooks`
 --
 ALTER TABLE `wss_wc_webhooks`
   ADD PRIMARY KEY (`webhook_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Индексы таблицы `wss_woocommerce_api_keys`
+-- Indexes for table `wss_woocommerce_api_keys`
 --
 ALTER TABLE `wss_woocommerce_api_keys`
   ADD PRIMARY KEY (`key_id`),
@@ -5413,14 +5503,14 @@ ALTER TABLE `wss_woocommerce_api_keys`
   ADD KEY `consumer_secret` (`consumer_secret`);
 
 --
--- Индексы таблицы `wss_woocommerce_attribute_taxonomies`
+-- Indexes for table `wss_woocommerce_attribute_taxonomies`
 --
 ALTER TABLE `wss_woocommerce_attribute_taxonomies`
   ADD PRIMARY KEY (`attribute_id`),
   ADD KEY `attribute_name` (`attribute_name`(20));
 
 --
--- Индексы таблицы `wss_woocommerce_downloadable_product_permissions`
+-- Indexes for table `wss_woocommerce_downloadable_product_permissions`
 --
 ALTER TABLE `wss_woocommerce_downloadable_product_permissions`
   ADD PRIMARY KEY (`permission_id`),
@@ -5430,14 +5520,14 @@ ALTER TABLE `wss_woocommerce_downloadable_product_permissions`
   ADD KEY `user_order_remaining_expires` (`user_id`,`order_id`,`downloads_remaining`,`access_expires`);
 
 --
--- Индексы таблицы `wss_woocommerce_log`
+-- Indexes for table `wss_woocommerce_log`
 --
 ALTER TABLE `wss_woocommerce_log`
   ADD PRIMARY KEY (`log_id`),
   ADD KEY `level` (`level`);
 
 --
--- Индексы таблицы `wss_woocommerce_order_itemmeta`
+-- Indexes for table `wss_woocommerce_order_itemmeta`
 --
 ALTER TABLE `wss_woocommerce_order_itemmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -5445,14 +5535,14 @@ ALTER TABLE `wss_woocommerce_order_itemmeta`
   ADD KEY `meta_key` (`meta_key`(32));
 
 --
--- Индексы таблицы `wss_woocommerce_order_items`
+-- Indexes for table `wss_woocommerce_order_items`
 --
 ALTER TABLE `wss_woocommerce_order_items`
   ADD PRIMARY KEY (`order_item_id`),
   ADD KEY `order_id` (`order_id`);
 
 --
--- Индексы таблицы `wss_woocommerce_payment_tokenmeta`
+-- Indexes for table `wss_woocommerce_payment_tokenmeta`
 --
 ALTER TABLE `wss_woocommerce_payment_tokenmeta`
   ADD PRIMARY KEY (`meta_id`),
@@ -5460,27 +5550,27 @@ ALTER TABLE `wss_woocommerce_payment_tokenmeta`
   ADD KEY `meta_key` (`meta_key`(32));
 
 --
--- Индексы таблицы `wss_woocommerce_payment_tokens`
+-- Indexes for table `wss_woocommerce_payment_tokens`
 --
 ALTER TABLE `wss_woocommerce_payment_tokens`
   ADD PRIMARY KEY (`token_id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Индексы таблицы `wss_woocommerce_sessions`
+-- Indexes for table `wss_woocommerce_sessions`
 --
 ALTER TABLE `wss_woocommerce_sessions`
   ADD PRIMARY KEY (`session_id`),
   ADD UNIQUE KEY `session_key` (`session_key`);
 
 --
--- Индексы таблицы `wss_woocommerce_shipping_zones`
+-- Indexes for table `wss_woocommerce_shipping_zones`
 --
 ALTER TABLE `wss_woocommerce_shipping_zones`
   ADD PRIMARY KEY (`zone_id`);
 
 --
--- Индексы таблицы `wss_woocommerce_shipping_zone_locations`
+-- Indexes for table `wss_woocommerce_shipping_zone_locations`
 --
 ALTER TABLE `wss_woocommerce_shipping_zone_locations`
   ADD PRIMARY KEY (`location_id`),
@@ -5488,13 +5578,13 @@ ALTER TABLE `wss_woocommerce_shipping_zone_locations`
   ADD KEY `location_type_code` (`location_type`(10),`location_code`(20));
 
 --
--- Индексы таблицы `wss_woocommerce_shipping_zone_methods`
+-- Indexes for table `wss_woocommerce_shipping_zone_methods`
 --
 ALTER TABLE `wss_woocommerce_shipping_zone_methods`
   ADD PRIMARY KEY (`instance_id`);
 
 --
--- Индексы таблицы `wss_woocommerce_tax_rates`
+-- Indexes for table `wss_woocommerce_tax_rates`
 --
 ALTER TABLE `wss_woocommerce_tax_rates`
   ADD PRIMARY KEY (`tax_rate_id`),
@@ -5504,7 +5594,7 @@ ALTER TABLE `wss_woocommerce_tax_rates`
   ADD KEY `tax_rate_priority` (`tax_rate_priority`);
 
 --
--- Индексы таблицы `wss_woocommerce_tax_rate_locations`
+-- Indexes for table `wss_woocommerce_tax_rate_locations`
 --
 ALTER TABLE `wss_woocommerce_tax_rate_locations`
   ADD PRIMARY KEY (`location_id`),
@@ -5512,20 +5602,20 @@ ALTER TABLE `wss_woocommerce_tax_rate_locations`
   ADD KEY `location_type_code` (`location_type`(10),`location_code`(20));
 
 --
--- Индексы таблицы `wss_woof_query_cache`
+-- Indexes for table `wss_woof_query_cache`
 --
 ALTER TABLE `wss_woof_query_cache`
   ADD KEY `mkey` (`mkey`);
 
 --
--- Индексы таблицы `wss_yith_wcwl`
+-- Indexes for table `wss_yith_wcwl`
 --
 ALTER TABLE `wss_yith_wcwl`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `prod_id` (`prod_id`);
 
 --
--- Индексы таблицы `wss_yith_wcwl_lists`
+-- Indexes for table `wss_yith_wcwl_lists`
 --
 ALTER TABLE `wss_yith_wcwl_lists`
   ADD PRIMARY KEY (`ID`),
@@ -5533,267 +5623,267 @@ ALTER TABLE `wss_yith_wcwl_lists`
   ADD KEY `wishlist_slug` (`wishlist_slug`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT для таблицы `wss_actionscheduler_actions`
+-- AUTO_INCREMENT for table `wss_actionscheduler_actions`
 --
 ALTER TABLE `wss_actionscheduler_actions`
-  MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
--- AUTO_INCREMENT для таблицы `wss_actionscheduler_claims`
+-- AUTO_INCREMENT for table `wss_actionscheduler_claims`
 --
 ALTER TABLE `wss_actionscheduler_claims`
-  MODIFY `claim_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=219;
+  MODIFY `claim_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=454;
 
 --
--- AUTO_INCREMENT для таблицы `wss_actionscheduler_groups`
+-- AUTO_INCREMENT for table `wss_actionscheduler_groups`
 --
 ALTER TABLE `wss_actionscheduler_groups`
   MODIFY `group_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `wss_actionscheduler_logs`
+-- AUTO_INCREMENT for table `wss_actionscheduler_logs`
 --
 ALTER TABLE `wss_actionscheduler_logs`
-  MODIFY `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 
 --
--- AUTO_INCREMENT для таблицы `wss_commentmeta`
+-- AUTO_INCREMENT for table `wss_commentmeta`
 --
 ALTER TABLE `wss_commentmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_comments`
+-- AUTO_INCREMENT for table `wss_comments`
 --
 ALTER TABLE `wss_comments`
-  MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `comment_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT для таблицы `wss_duplicator_packages`
+-- AUTO_INCREMENT for table `wss_duplicator_packages`
 --
 ALTER TABLE `wss_duplicator_packages`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `wss_links`
+-- AUTO_INCREMENT for table `wss_links`
 --
 ALTER TABLE `wss_links`
   MODIFY `link_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_options`
+-- AUTO_INCREMENT for table `wss_options`
 --
 ALTER TABLE `wss_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14246;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14520;
 
 --
--- AUTO_INCREMENT для таблицы `wss_pimwick_gift_card`
+-- AUTO_INCREMENT for table `wss_pimwick_gift_card`
 --
 ALTER TABLE `wss_pimwick_gift_card`
   MODIFY `pimwick_gift_card_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_pimwick_gift_card_activity`
+-- AUTO_INCREMENT for table `wss_pimwick_gift_card_activity`
 --
 ALTER TABLE `wss_pimwick_gift_card_activity`
   MODIFY `pimwick_gift_card_activity_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_postmeta`
+-- AUTO_INCREMENT for table `wss_postmeta`
 --
 ALTER TABLE `wss_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2396;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2431;
 
 --
--- AUTO_INCREMENT для таблицы `wss_posts`
+-- AUTO_INCREMENT for table `wss_posts`
 --
 ALTER TABLE `wss_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=313;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=314;
 
 --
--- AUTO_INCREMENT для таблицы `wss_termmeta`
+-- AUTO_INCREMENT for table `wss_termmeta`
 --
 ALTER TABLE `wss_termmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
--- AUTO_INCREMENT для таблицы `wss_terms`
+-- AUTO_INCREMENT for table `wss_terms`
 --
 ALTER TABLE `wss_terms`
   MODIFY `term_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
--- AUTO_INCREMENT для таблицы `wss_term_taxonomy`
+-- AUTO_INCREMENT for table `wss_term_taxonomy`
 --
 ALTER TABLE `wss_term_taxonomy`
   MODIFY `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
--- AUTO_INCREMENT для таблицы `wss_tinvwl_items`
+-- AUTO_INCREMENT for table `wss_tinvwl_items`
 --
 ALTER TABLE `wss_tinvwl_items`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT для таблицы `wss_tinvwl_lists`
+-- AUTO_INCREMENT for table `wss_tinvwl_lists`
 --
 ALTER TABLE `wss_tinvwl_lists`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `wss_usermeta`
+-- AUTO_INCREMENT for table `wss_usermeta`
 --
 ALTER TABLE `wss_usermeta`
-  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=305;
+  MODIFY `umeta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=306;
 
 --
--- AUTO_INCREMENT для таблицы `wss_users`
+-- AUTO_INCREMENT for table `wss_users`
 --
 ALTER TABLE `wss_users`
   MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT для таблицы `wss_wc_admin_notes`
+-- AUTO_INCREMENT for table `wss_wc_admin_notes`
 --
 ALTER TABLE `wss_wc_admin_notes`
   MODIFY `note_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT для таблицы `wss_wc_admin_note_actions`
+-- AUTO_INCREMENT for table `wss_wc_admin_note_actions`
 --
 ALTER TABLE `wss_wc_admin_note_actions`
   MODIFY `action_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=393;
 
 --
--- AUTO_INCREMENT для таблицы `wss_wc_customer_lookup`
+-- AUTO_INCREMENT for table `wss_wc_customer_lookup`
 --
 ALTER TABLE `wss_wc_customer_lookup`
   MODIFY `customer_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT для таблицы `wss_wc_download_log`
+-- AUTO_INCREMENT for table `wss_wc_download_log`
 --
 ALTER TABLE `wss_wc_download_log`
   MODIFY `download_log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_wc_tax_rate_classes`
+-- AUTO_INCREMENT for table `wss_wc_tax_rate_classes`
 --
 ALTER TABLE `wss_wc_tax_rate_classes`
   MODIFY `tax_rate_class_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `wss_wc_webhooks`
+-- AUTO_INCREMENT for table `wss_wc_webhooks`
 --
 ALTER TABLE `wss_wc_webhooks`
   MODIFY `webhook_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_api_keys`
+-- AUTO_INCREMENT for table `wss_woocommerce_api_keys`
 --
 ALTER TABLE `wss_woocommerce_api_keys`
   MODIFY `key_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_attribute_taxonomies`
+-- AUTO_INCREMENT for table `wss_woocommerce_attribute_taxonomies`
 --
 ALTER TABLE `wss_woocommerce_attribute_taxonomies`
   MODIFY `attribute_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_downloadable_product_permissions`
+-- AUTO_INCREMENT for table `wss_woocommerce_downloadable_product_permissions`
 --
 ALTER TABLE `wss_woocommerce_downloadable_product_permissions`
   MODIFY `permission_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_log`
+-- AUTO_INCREMENT for table `wss_woocommerce_log`
 --
 ALTER TABLE `wss_woocommerce_log`
   MODIFY `log_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_order_itemmeta`
+-- AUTO_INCREMENT for table `wss_woocommerce_order_itemmeta`
 --
 ALTER TABLE `wss_woocommerce_order_itemmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=210;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_order_items`
+-- AUTO_INCREMENT for table `wss_woocommerce_order_items`
 --
 ALTER TABLE `wss_woocommerce_order_items`
-  MODIFY `order_item_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `order_item_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_payment_tokenmeta`
+-- AUTO_INCREMENT for table `wss_woocommerce_payment_tokenmeta`
 --
 ALTER TABLE `wss_woocommerce_payment_tokenmeta`
   MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_payment_tokens`
+-- AUTO_INCREMENT for table `wss_woocommerce_payment_tokens`
 --
 ALTER TABLE `wss_woocommerce_payment_tokens`
   MODIFY `token_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_sessions`
+-- AUTO_INCREMENT for table `wss_woocommerce_sessions`
 --
 ALTER TABLE `wss_woocommerce_sessions`
-  MODIFY `session_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=667;
+  MODIFY `session_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=854;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_shipping_zones`
+-- AUTO_INCREMENT for table `wss_woocommerce_shipping_zones`
 --
 ALTER TABLE `wss_woocommerce_shipping_zones`
   MODIFY `zone_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_shipping_zone_locations`
+-- AUTO_INCREMENT for table `wss_woocommerce_shipping_zone_locations`
 --
 ALTER TABLE `wss_woocommerce_shipping_zone_locations`
   MODIFY `location_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_shipping_zone_methods`
+-- AUTO_INCREMENT for table `wss_woocommerce_shipping_zone_methods`
 --
 ALTER TABLE `wss_woocommerce_shipping_zone_methods`
   MODIFY `instance_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_tax_rates`
+-- AUTO_INCREMENT for table `wss_woocommerce_tax_rates`
 --
 ALTER TABLE `wss_woocommerce_tax_rates`
   MODIFY `tax_rate_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_woocommerce_tax_rate_locations`
+-- AUTO_INCREMENT for table `wss_woocommerce_tax_rate_locations`
 --
 ALTER TABLE `wss_woocommerce_tax_rate_locations`
   MODIFY `location_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT для таблицы `wss_yith_wcwl`
+-- AUTO_INCREMENT for table `wss_yith_wcwl`
 --
 ALTER TABLE `wss_yith_wcwl`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT для таблицы `wss_yith_wcwl_lists`
+-- AUTO_INCREMENT for table `wss_yith_wcwl_lists`
 --
 ALTER TABLE `wss_yith_wcwl_lists`
   MODIFY `ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Ограничения внешнего ключа сохраненных таблиц
+-- Constraints for dumped tables
 --
 
 --
--- Ограничения внешнего ключа таблицы `wss_wc_download_log`
+-- Constraints for table `wss_wc_download_log`
 --
 ALTER TABLE `wss_wc_download_log`
   ADD CONSTRAINT `fk_wss_wc_download_log_permission_id` FOREIGN KEY (`permission_id`) REFERENCES `wss_woocommerce_downloadable_product_permissions` (`permission_id`) ON DELETE CASCADE;
