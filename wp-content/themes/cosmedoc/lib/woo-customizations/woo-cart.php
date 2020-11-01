@@ -13,7 +13,7 @@ function woo_in_cart($product_id)
 
 function woo_gift_product($product_id)
 {
-	if( has_term( 75, 'cos_product_types', $product_id)) {
+	if( has_term( 91, 'cos_gifts', $product_id)) {
 		return true;
 	}
 	return false;
@@ -26,7 +26,7 @@ function woocommerce_calculate_totals( $cart ) {
 	$needed_sum = isset($fields_cart['gift_products']['gift_sum'])?$fields_cart['gift_products']['gift_sum']:'';
 	if ($needed_sum && $needed_sum > intval($total)) {
 		foreach ($cart->get_cart() as $cart_item) {
-			if (has_term(75, 'cos_product_types', $cart_item['product_id'])) {
+			if (has_term(91, 'cos_gifts', $cart_item['product_id'])) {
 				$product_cart_id = WC()->cart->generate_cart_id($cart_item['product_id']);
 				WC()->cart->remove_cart_item($product_cart_id);
 			}
@@ -39,7 +39,7 @@ add_action( 'woocommerce_before_calculate_totals', 'custom_woocommerce_before_ca
 
 function custom_woocommerce_before_calculate_totals( $cart ) {
 	foreach ( $cart->get_cart() as $cart_item ) {
-		if( has_term( 75, 'cos_product_types', $cart_item['product_id'])) {
+		if( has_term( 91, 'cos_gifts', $cart_item['product_id'])) {
 			$cart_item['data']->set_price(1);
 		}
 	}
@@ -58,7 +58,7 @@ function add_gift_product()
 	if (isset($_POST['product']) && $needed_sum && $needed_sum < intval($total)) {
 		$product_id = $_POST['product'];
 		foreach ( WC()->cart->get_cart() as $cart_item ) {
-			if( has_term( 75, 'cos_product_types', $cart_item['product_id'])) {
+			if( has_term( 91, 'cos_gifts', $cart_item['product_id'])) {
 				$product_cart_id = WC()->cart->generate_cart_id( $cart_item['product_id'] );
 				WC()->cart->remove_cart_item( $product_cart_id);
 			}

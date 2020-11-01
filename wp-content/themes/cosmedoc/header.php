@@ -53,6 +53,7 @@
 		</nav><!-- /.nav-main -->
 
 		<div class="header__links">
+			<?php do_action('wpml_add_language_selector');?>
 			<a href="#search" class="header__links-link link link-search">
 				<span class="icon"></span>
 			</a>
@@ -97,6 +98,7 @@
 		<?php endif; ?>
 	</a><!-- /.brand -->
 	<div class="header__links">
+		<?php do_action('wpml_add_language_selector');?>
 		<?php if(!is_cart() && !is_checkout()):?>
 		<a href="#mini-cart" class="header__links-link link link-cart">
 			<span class="icon"><span class="header-cart-count count no-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span></span>

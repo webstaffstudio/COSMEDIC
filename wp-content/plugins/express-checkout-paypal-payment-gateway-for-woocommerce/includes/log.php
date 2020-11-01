@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
 class Eh_PayPal_Log {
 
     public static function init_log() {
-        $content = "<------------------- ExtensionHawk PayPal Express Payment Log File ( " . EH_PAYPAL_VERSION . " ) ------------------->\n";
+        $content = "<------------------- WebToffee PayPal Express Payment Log File ( " . EH_PAYPAL_VERSION . " ) ------------------->\n";
         return $content;
     }
 
@@ -25,13 +25,13 @@ class Eh_PayPal_Log {
         if ('yes' === $check['paypal_logging']) {
             if (WC()->version >= '2.7.0') {
                 $log = wc_get_logger();
-                $head = "<------------------- ExtensionHawk PayPal Express Payment ( " . $title . " ) ------------------->\n";
+                $head = "<------------------- WebToffee PayPal Express Payment ( " . $title . " ) ------------------->\n";
                 $log_text = $head . print_r((object) $msg, true);
                 $context = array('source' => 'eh_paypal_express_log');
                 $log->log("debug", $log_text, $context);
             } else {
                 $log = new WC_Logger();
-                $head = "<------------------- ExtensionHawk PayPal Express Payment ( " . $title . " ) ------------------->\n";
+                $head = "<------------------- WebToffee PayPal Express Payment ( " . $title . " ) ------------------->\n";
                 $log_text = $head . print_r((object) $msg, true);
                 $log->add("eh_paypal_express_log", $log_text);
             }

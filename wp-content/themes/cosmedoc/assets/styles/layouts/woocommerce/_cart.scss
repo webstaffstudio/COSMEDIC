@@ -568,7 +568,24 @@
     .product-price,
     .product-subtotal,
     .product-thumbnail {
-      min-width: 120px;
+      min-width: 140px;
+    }
+
+    .variation {
+      font-size: 11px;
+
+      dt {
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+
+      .variation-Message {
+        display: none;
+      }
     }
 
     @include breakpoint(770px down) {

@@ -298,8 +298,8 @@ jQuery(function($) {
       });
     }
 
-		qty_cart();
-	});
+    qty_cart();
+  });
 });
 
 jQuery(document).ready(() => {

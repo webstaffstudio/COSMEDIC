@@ -25,7 +25,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 ?>
 
 <?php
-if(!has_term( 75, 'cos_product_types', $product->get_id())):?>
+if(!has_term( 91, 'cos_gifts', $product->get_id())):?>
 <li <?php wc_product_class( '', $product ); ?>>
 	<?php
 

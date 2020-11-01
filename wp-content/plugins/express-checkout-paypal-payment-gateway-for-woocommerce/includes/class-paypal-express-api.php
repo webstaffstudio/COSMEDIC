@@ -298,7 +298,7 @@ class Eh_PayPal_Express_Payment extends WC_Payment_Gateway {
                         if(isset($response['L_LONGMESSAGE0'])){
                             wc_add_notice(__($response['L_ERRORCODE0'].' error - '.$response['L_LONGMESSAGE0'], 'express-checkout-paypal-payment-gateway-for-woocommerce'), 'error');
                         }elseif(isset($response['http_request_failed'])){
-                            wc_add_notice(__($response['http_request_failed'], 'express-checkout-paypal-payment-gateway-for-woocommerce'), 'error');
+                            wc_add_notice(__($response['http_request_failed'][0], 'express-checkout-paypal-payment-gateway-for-woocommerce'), 'error');
                         }else{
                             wc_add_notice(__('An error occured.Please refresh and try again', 'express-checkout-paypal-payment-gateway-for-woocommerce'), 'error');
                         }
@@ -494,7 +494,7 @@ class Eh_PayPal_Express_Payment extends WC_Payment_Gateway {
                         'method' => 'DoExpressCheckoutPayment',
                         'token' => WC()->session->eh_pe_checkout['token'],
                         'payer_id' => WC()->session->eh_pe_checkout['payer_id'],
-                        'button' => 'ExtensionHawk PE Checkout',
+                        'button' => 'WebToffee PE Checkout',
                         'instant_payment' => true,
                         'notify_url' => ($this->ipn_url === '') ? '' : $this->ipn_url,
                         'invoice_prefix' => apply_filters('eh_paypal_invoice_prefix','EH_'),
@@ -626,7 +626,7 @@ class Eh_PayPal_Express_Payment extends WC_Payment_Gateway {
     }
 
     public function hide_checkout_fields_on_review($checkout_fields) {
-        $checkout_shipping = WC()->session->eh_pe_checkout['shipping'];
+        $checkout_shipping = isset(WC()->session->eh_pe_checkout['shipping']) ? WC()->session->eh_pe_checkout['shipping'] : '';
         if (isset(WC()->session->eh_pe_checkout) || !empty($checkout_shipping)) {
             foreach ($checkout_shipping as $key => $value) {
                 if (isset($checkout_fields['billing']) && isset($checkout_fields['billing']['billing_' . $key])) {
@@ -651,7 +651,7 @@ class Eh_PayPal_Express_Payment extends WC_Payment_Gateway {
                 $checkout_shipping = WC()->session->eh_pe_checkout['shipping'];
             }
         }else{
-            $checkout_shipping = WC()->session->eh_pe_checkout['shipping'];
+            $checkout_shipping = isset(WC()->session->eh_pe_checkout['shipping']) ? WC()->session->eh_pe_checkout['shipping'] : '';
         }
 
         if (isset(WC()->session->eh_pe_checkout) && !empty($checkout_shipping)) {
@@ -770,7 +770,7 @@ class Eh_PayPal_Express_Payment extends WC_Payment_Gateway {
                 return;
             }
         }else{
-            $checkout_shipping = WC()->session->eh_pe_checkout['shipping'];
+            $checkout_shipping = isset(WC()->session->eh_pe_checkout['shipping']) ? WC()->session->eh_pe_checkout['shipping'] : '';
             if (isset(WC()->session->eh_pe_checkout) || !empty($checkout_shipping)) {
                 foreach ($checkout_shipping as $key => $value) {
                     if ($value) {

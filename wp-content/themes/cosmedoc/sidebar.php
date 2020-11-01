@@ -8,22 +8,21 @@
 
 if (!is_active_sidebar('sidebar-1')) {
 	return;
-}
-?>
+} ?>
 
-<aside id="secondary" class="widget-area" role="complementary" >
+<aside id="secondary" class="widget-area" role="complementary">
 	<?php dynamic_sidebar('sidebar-1'); ?>
 	<form action="" class="filters-shop">
 
 		<ul class="filters" data-accordion="owy3ap-accordion" data-allow-all-closed="true" role="tablist">
 			<li class="clearall">
-				<div  class="clear-btn cosmedoc-btn" id="clearFilters"><?=__('Очистить все', THEME_TD);?></div>
+				<div class="clear-btn cosmedoc-btn" id="clearFilters"><?= __('Очистить все', THEME_TD); ?></div>
 			</li>
 			<?php
-			$product_type = get_terms([
-				'taxonomy' => 'cos_product_types',
-				'hide_empty' => false,
-			]);
+			$product_type = get_terms(array(
+					'taxonomy' => 'cos_product_types',
+					'hide_empty' => false,
+			));
 			?>
 			<li class="filters__item" data-accordion-item="" role="presentation">
 				<a href="#" class="filters__item--title" aria-controls="types-accordion" role="tab"
@@ -34,10 +33,11 @@ if (!is_active_sidebar('sidebar-1')) {
 					style="display: none;">
 					<?php foreach ($product_type as $type):
 						$term_id = $type->term_id; ?>
-					<?php if ($term_id !== 75): //exclude gifts ?>
+						<?php if ($term_id !== 75): //exclude gifts ?>
 						<li id="type-box">
 							<label for="type_<?= $term_id; ?>">
-								<input class="filter-item" data-filterbox="product_type" type="checkbox" name="type_<?= $term_id; ?>" value="<?= $term_id ?>"
+								<input class="filter-item" data-filterbox="product_type" type="checkbox"
+									   name="type_<?= $term_id; ?>" value="<?= $term_id ?>"
 									   id="type_<?= $term_id ?>">
 								<span class="name"><?= $type->name; ?></span>
 								<span class="count">(<?= $type->count; ?>)</span>
@@ -49,8 +49,9 @@ if (!is_active_sidebar('sidebar-1')) {
 			</li>
 			<?php
 			$brands = get_terms([
-				'taxonomy' => 'cos_brands',
-				'hide_empty' => false,
+					'taxonomy' => 'cos_brands',
+					'hide_empty' => true,
+
 			]);
 			?>
 			<li class="filters__item" data-accordion-item="" role="presentation">
@@ -64,10 +65,34 @@ if (!is_active_sidebar('sidebar-1')) {
 						$term_id = $brand->term_id; ?>
 						<li class="brand-box" data-action="brand" data-term="<?= $term_id; ?>">
 							<label for="brand_<?= $term_id; ?>">
-								<input class="filter-item" data-filterbox="brand" type="checkbox" name="brand_<?= $term_id; ?>" value="<?= $term_id ?>"
+								<input class="filter-item" data-filterbox="brand" type="checkbox"
+									   name="brand_<?= $term_id; ?>" value="<?= $term_id ?>"
 									   id="brand_<?= $term_id ?>">
 								<span class="name"><?= $brand->name; ?></span>
-								<span class="count">(<?= $brand->count; ?>)</span>
+								<span class="count">(<?php
+									$args = array(
+											'post_type' => 'product',
+											'posts_per_page' => -1,
+											'tax_query' => array(
+													'relation' => 'AND',
+
+													array(
+															'taxonomy' => 'cos_brands',
+															'field' => 'id',
+															'terms' => $term_id,
+													),
+													array(
+															'taxonomy' => 'cos_gifts',
+															'field' => 'id',
+															'terms' => 91,
+															'operator' => 'NOT EXISTS'
+													),
+											)
+
+									);
+
+									$query = get_posts($args);
+									echo count($query) ?>)</span>
 							</label>
 						</li>
 					<?php endforeach; ?>
@@ -83,14 +108,15 @@ if (!is_active_sidebar('sidebar-1')) {
 					<?php
 					global $product;
 					$country_terms = get_terms([
-						'taxonomy' => 'cos_countries',
-						'hide_empty' => false,
+							'taxonomy' => 'cos_countries',
+							'hide_empty' => false,
 					]);
 					foreach ($country_terms as $country):
 						$term_id = $country->term_id; ?>
-						<li id="country-box" >
+						<li id="country-box">
 							<label for="country_<?= $term_id; ?>">
-								<input class="filter-item" type="checkbox" data-filterbox="country" name="country_<?= $term_id; ?>" value="<?= $term_id ?>"
+								<input class="filter-item" type="checkbox" data-filterbox="country"
+									   name="country_<?= $term_id; ?>" value="<?= $term_id ?>"
 									   id="country_<?= $term_id ?>">
 								<span class="name"><?= $country->name; ?></span>
 								<span class="count">(<?= $country->count; ?>)</span>

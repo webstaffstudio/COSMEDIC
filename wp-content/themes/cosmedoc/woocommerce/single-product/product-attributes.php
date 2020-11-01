@@ -37,7 +37,10 @@ $countries_terms = get_the_terms(get_the_ID(),'cos_countries');
 			<?php endforeach; ?>
 		</div>
 	<?php endif; ?>
-	<?= '<span class="sku">' . __('Артикул: ', THEME_TD) . $product->get_sku() . '</span>'; ?>
+	<?php if($product->get_sku()):?>
+	<?= '<span class="sku">' . __('Артикул: ', THEME_TD) . $product->get_sku() . '</span>';
+	endif;
+	?>
 </div>
 <?php get_template_part('/woocommerce/single-product/about-accordeon'); ?>
 

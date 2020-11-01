@@ -5,7 +5,7 @@ Tags: paypal, express checkout, payment, credit card, woocommerce, cart page che
 Requires at least: 3.0.1
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 1.4.9
+Stable tag: 1.5.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -25,7 +25,7 @@ With this plugin, your customer can use their credit cards or PayPal Money to ma
 &#128312; Complete order from cart page. Premium version supports even Product Page!
 &#128312; Customize each user facing elements by various settings options.
 &#128312; Faster Checkout by skipping order review page.
-&#128312; Tested OK with WooCommerce 4.5.2
+&#128312; Tested OK with WooCommerce 4.6.1
 
 = Premium version video demo =
 [youtube https://www.youtube.com/watch?v=KP-h-0pPo7Y]
@@ -68,6 +68,10 @@ The plugin is very easy to configure. We have a step by step tutorial on setting
 3. Order Review Page
 
 == Changelog ==
+
+= 1.5.0 =
+* Tested OK with WC 4.6.1
+* fix: order total mismatch error.
 
 = 1.4.9 =
 * Tested OK with WC 4.5.2
@@ -214,6 +218,6 @@ The plugin is very easy to configure. We have a step by step tutorial on setting
  * Customize your PayPal Transactions.
 
 == Upgrade Notice ==
-= 1.4.9 =
-* Tested OK with WC 4.5.2
-* fix: string translations in order review page
+= 1.5.0 =
+* Tested OK with WC 4.6.1
+* fix: order total mismatch error.

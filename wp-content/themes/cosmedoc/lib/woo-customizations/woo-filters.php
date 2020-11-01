@@ -133,6 +133,7 @@ function filters_ajax()
 		while ($query->have_posts()) {
 			$query->the_post();
 			global $product;
+			error_log(print_r(get_the_ID(), true));
 			$id = get_the_ID();
 			array_push($product_ids, $id);
 

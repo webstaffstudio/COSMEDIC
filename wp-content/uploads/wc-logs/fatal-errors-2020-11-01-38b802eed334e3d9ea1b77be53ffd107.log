@@ -1,2 +1,76 @@
 2020-11-01T10:15:35+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-checkout.php on line 94
 
+2020-11-01T19:40:37+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php на строке 29
+
+2020-11-01T19:40:39+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php на строке 29
+
+2020-11-01T19:40:42+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php на строке 29
+
+2020-11-01T19:40:51+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php на строке 29
+
+2020-11-01T19:40:54+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php на строке 29
+
+2020-11-01T19:40:57+00:00 CRITICAL syntax error, unexpected '<', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php на строке 29
+
+2020-11-01T20:09:01+00:00 CRITICAL syntax error, unexpected '}' в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\sidebar.php на строке 84
+
+2020-11-01T20:36:57+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\sidebar.php на строке 25
+
+2020-11-01T20:40:24+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:40:24+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:40:27+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:40:27+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:40:28+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:40:31+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:40:48+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:40:48+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:40:49+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:40:52+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:09+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:09+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:10+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:13+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:30+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:30+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:31+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:33+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:51+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:52+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:52+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:41:54+00:00 CRITICAL Cannot redeclare cosmedoc_taxonomy_product_types() (previously declared in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-gifts-tax.php:5) в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\lib\woo-customizations\woo-type-product-tax.php на строке 31
+
+2020-11-01T20:42:07+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\sidebar.php на строке 25
+
+2020-11-01T20:47:45+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\sidebar.php на строке 25
+
+2020-11-01T20:54:22+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\sidebar.php на строке 25
+
+2020-11-01T20:55:23+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\sidebar.php на строке 25
+
+2020-11-01T20:58:26+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\sidebar.php на строке 25
+
+2020-11-01T20:58:33+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\sidebar.php на строке 25
+
+2020-11-01T20:58:48+00:00 CRITICAL syntax error, unexpected '.', expecting end of file в C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\sidebar.php на строке 25
+

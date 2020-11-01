@@ -13,6 +13,7 @@
     color: #363636;
     padding-bottom: 3px;
     margin-bottom: 18px !important;
+
     @include breakpoint(small down) {
       font-size: 22px !important;
     }
@@ -31,6 +32,7 @@
 
         .column-content {
           display: flex;
+
           @include breakpoint(medium down) {
             flex-direction: column;
           }
@@ -38,6 +40,7 @@
           .column-1 {
             width: 70%;
             padding-right: 100px;
+
             @include breakpoint(medium down) {
               width: 100%;
               padding-right: 0;
@@ -46,6 +49,7 @@
 
           .column-2 {
             width: 30%;
+
             @include breakpoint(medium down) {
               width: 100%;
             }
@@ -91,6 +95,7 @@
               &.form-row {
                 max-width: 300px;
                 width: 100%;
+
                 @include breakpoint(small down) {
                   width: 100%;
                   max-width: 100%;
@@ -132,7 +137,6 @@
             &.invalid {
               border-color: red;
             }
-
           }
         }
 
@@ -200,6 +204,7 @@
           border-bottom: 1px solid #000;
           margin-bottom: 25px;
           padding-bottom: 8px;
+
           @include breakpoint(small down) {
             font-size: 22px;
           }
@@ -209,12 +214,10 @@
           display: flex;
           flex-direction: column;
 
-
           li.inactive {
             h5 {
               opacity: 0.4;
             }
-
           }
 
           h5 {
@@ -330,6 +333,7 @@
 
           .order-comments-section {
             display: flex;
+
             @include breakpoint(small down) {
               flex-direction: column;
             }
@@ -337,6 +341,7 @@
             .order-comments-field {
               width: 50%;
               padding-right: 30px;
+
               @include breakpoint(small down) {
                 width: 100%;
                 padding-right: 0;
@@ -350,7 +355,7 @@
               textarea#order_comments {
                 height: 112px;
                 border-radius: 3px;
-                border: 1px solid #D8D8D8;
+                border: 1px solid #d8d8d8;
               }
             }
 
@@ -359,6 +364,7 @@
               font-size: 13px;
               padding-top: 26px;
               line-height: 1.5;
+
               @include breakpoint(small down) {
                 width: 100%;
                 padding-top: 5px;
@@ -402,6 +408,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
+
     @include breakpoint(small down) {
       margin-bottom: 20px;
       flex-direction: column;
@@ -420,9 +427,9 @@
   }
 
   .woocommerce-table--order-details {
-
     li {
-      strong, bdi {
+      strong,
+      bdi {
         @include breakpoint(small down) {
           font-size: 14px;
         }
@@ -441,7 +448,6 @@
       small {
         font-size: 14px;
       }
-
     }
   }
 }

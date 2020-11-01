@@ -19,8 +19,42 @@
 
 .woocommerce {
   &.single {
+    input {
+      padding: 3px 8px 3px;
+      border-radius: 3px;
+      border: 1px solid #c7c6c4;
+      box-shadow: none;
+      font-size: 13px;
+      height: 40px;
+      line-height: 1.3;
+      width: 100%;
+    }
+
     span.onsale {
       display: none;
+    }
+
+    .product-type-pw-gift-card {
+      .variations_form {
+        flex-direction: column !important;
+      }
+
+      .product-attr {
+        display: none !important;
+      }
+    }
+
+    .pwgc-field-container {
+      textarea {
+        padding: 8px;
+        border-radius: 3px;
+        border: 1px solid #c7c6c4;
+        box-shadow: none;
+        font-size: 13px;
+        line-height: 1.3;
+        width: 100% !important;
+        resize: none;
+      }
     }
 
     .product-single-content {
@@ -230,8 +264,13 @@
       figure {
         position: relative;
 
+        @include breakpoint(767px down) {
+          margin-bottom: 40px;
+        }
+
         img {
           height: 560px !important;
+          object-fit: contain;
 
           @include breakpoint(767px down) {
             height: 300px !important;
@@ -523,11 +562,11 @@
       }
     }
 
-    .woocommerce-product-gallery__wrapper {
-      @include mq(0, 991) {
-        height: 575px;
-      }
-    }
+    //.woocommerce-product-gallery__wrapper {
+    //  @include mq(0, 991) {
+    //    height: 575px;
+    //  }
+    //}
 
     .woocommerce-message,
     .woocommerce-error {
@@ -546,6 +585,7 @@
         align-items: center;
         display: flex;
         flex-direction: row-reverse;
+
         @include breakpoint(small down) {
           flex-direction: column-reverse;
         }
@@ -557,6 +597,7 @@
 
       a.button {
         margin-left: auto;
+
         @include breakpoint(small down) {
           margin-left: 0;
           margin-top: 15px;
