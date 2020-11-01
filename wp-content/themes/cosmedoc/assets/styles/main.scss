@@ -1,0 +1,35 @@
+@import "common/variables";
+@import "common/settings";
+@import "common/fonts";
+
+/** Import everything from autoload */
+@import "./autoload/**/*";
+@import "common/global";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/fron-page";
+@import "layouts/faq-template";
+
+//woocommerce styles
+@import "layouts/woocommerce/single-product";
+@import "layouts/woocommerce/archive-product";
+@import "layouts/woocommerce/account";
+@import "layouts/woocommerce/cart";
+@import "layouts/woocommerce/checkout";
+@import "layouts/woocommerce/template-parts/mini-cart";
+@import "layouts/woocommerce/template-parts/quantity-input";
+@import "layouts/woocommerce/template-parts/car-page";
+@import "layouts/woocommerce/template-parts/sidebar";
+@import "layouts/woocommerce/wishlist";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+@import "~aos/src/sass/aos";

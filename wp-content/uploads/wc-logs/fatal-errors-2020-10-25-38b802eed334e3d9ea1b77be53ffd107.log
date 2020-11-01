@@ -1,0 +1,54 @@
+2020-10-25T10:57:03+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function remove_action(), 1 passed in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php on line 221 and at least 2 expected in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php:583
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php(221): remove_action('woocommerce_cro...')
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\shortcodes\class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+ in C:\OSPanel\domains\localhost\cosmedoc\wp-includes\plugin.php on line 583
+
+2020-10-25T15:45:28+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php:29
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(283): load_template('C:\\OSPanel\\doma...', false)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cross-sells.php(38): wc_get_template_part('content', 'product')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2100): wc_get_template('cart/cross-sell...', Array)
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php(175): woocommerce_cross_sell_display(6, 1)
+#6 C:\OSPanel\dom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php on line 29
+
+2020-10-25T15:45:34+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php:29
+Stack trace:
+#0 C:\OSPanel\domains\localhost\cosmedoc\wp-includes\template.php(732): require()
+#1 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(283): load_template('C:\\OSPanel\\doma...', false)
+#2 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cross-sells.php(38): wc_get_template_part('content', 'product')
+#3 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-core-functions.php(344): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\cosmedoc\wp-content\plugins\woocommerce\includes\wc-template-functions.php(2100): wc_get_template('cart/cross-sell...', Array)
+#5 C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\cart\cart.php(175): woocommerce_cross_sell_display(6, 1)
+#6 C:\OSPanel\dom in C:\OSPanel\domains\localhost\cosmedoc\wp-content\themes\cosmedoc\woocommerce\content-product.php on line 29
+
+2020-10-25T19:24:10+00:00 CRITICAL Uncaught Error: Class 'DgoraWcas\Admin\Troubleshooting' not found in D:\OSPanel\domains\cosmedic\wp-content\plugins\ajax-search-for-woocommerce\ajax-search-for-woocommerce.php:86
+Stack trace:
+#0 D:\OSPanel\domains\cosmedic\wp-content\plugins\ajax-search-for-woocommerce\ajax-search-for-woocommerce.php(358): DGWT_WC_Ajax_Search::getInstance()
+#1 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(287): DGWT_WCAS('')
+#2 D:\OSPanel\domains\cosmedic\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#3 D:\OSPanel\domains\cosmedic\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 D:\OSPanel\domains\cosmedic\wp-settings.php(409): do_action('plugins_loaded')
+#5 D:\OSPanel\domains\cosmedic\wp-config.php(29): require_once('D:\\OSPanel\\doma...')
+#6 D:\OSPanel\domains\cosmedic\wp-load.php(37): require_once('D:\\OSPanel\\doma...')
+#7 D:\OSPanel\domains\cosmedic\wp-admin\admin-ajax.php(22): require_once('D:\\OSPanel\\doma...')
+#8 {main}
+  thrown in D:\OSPanel\domains\cosmedic\wp-content\plugins\ajax-search-for-woocommerce\ajax-search-for-woocommerce.php on line 86
+
+2020-10-25T21:04:29+00:00 CRITICAL syntax error, unexpected ';', expecting ',' or ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 153
+
+2020-10-25T22:11:19+00:00 CRITICAL syntax error, unexpected ''prev_text'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 154
+
+2020-10-25T22:19:38+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 9
+
+2020-10-25T22:19:38+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 9
+
+2020-10-25T22:19:57+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 9
+
+2020-10-25T22:19:59+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 9
+

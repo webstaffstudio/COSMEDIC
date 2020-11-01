@@ -1,0 +1,197 @@
+/* stylelint-disable */
+.sidebar-container {
+  position: relative;
+  width: 100%;
+
+  .sidebar-shop {
+    position: relative;
+    padding: 20px 60px 20px 0;
+    z-index: 5;
+
+    @include mq(0, 1023) {
+      padding-right: 0;
+    }
+
+    .widget-area {
+      //&.fixed-top {
+      //  position: fixed;
+      //  top: 0;
+      //}
+    }
+
+    .widget_product_categories {
+      border-bottom: 1px solid #363636;
+      padding: 10px 0;
+
+      .cat-item {
+        transition: 0.3s ease-in-out;
+        margin-bottom: 14px;
+
+        a:hover {
+          text-decoration: underline;
+          color: #363636;
+          opacity: 1;
+
+          .count {
+            text-decoration: none;
+            color: #c7c6c4;
+            font-size: 14px;
+          }
+        }
+
+        a,
+        .count {
+          color: #c7c6c4;
+        }
+
+        &.current-cat {
+          .children {
+            padding: 10px 20px 10px 10px;
+            margin-bottom: -10px;
+
+            li {
+              color: #363636;
+            }
+          }
+
+          li {
+            margin-bottom: 0;
+          }
+
+          a {
+            text-decoration: underline;
+            color: #363636;
+          }
+
+          .children {
+            padding-left: 10px;
+            padding-bottom: 10px;
+
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    ul {
+      li {
+        a {
+          display: inline-block;
+          transition: all 0.3s ease;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .filters-shop {
+      .filters {
+        li {
+          .clear-btn {
+            display: none !important;
+            margin: 20px 0;
+            background-color: transparent !important;
+            color: #363636 !important;
+            border-color: #363636 !important;
+            width: 100%;
+            line-height: 36px;
+
+            &.visible {
+              display: block !important;
+            }
+          }
+        }
+
+        &__item {
+          user-select: none;
+          font-weight: normal;
+          margin-bottom: 0;
+          position: relative;
+          display: block;
+          padding-bottom: 5px;
+          padding-top: 5px;
+          border-bottom: 1px solid #363636;
+
+          &::after {
+            position: absolute;
+            content: " ";
+            width: 20px;
+            height: 50px;
+            background-image: url("assets/images/cosmedoc.svg");
+            background-position: -99px -221px;
+            background-repeat: no-repeat;
+            right: 0;
+            top: 0;
+          }
+
+          &--content {
+            max-height: 290px;
+            overflow-y: auto;
+
+            --scrollbarBG: #e0e5de;
+            --thumbBG: #89937a;
+
+            &::-webkit-scrollbar {
+              width: 6px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background-color: var(--thumbBG);
+              border-radius: 3px;
+              border: 1px solid var(--scrollbarBG);
+            }
+
+            &::-webkit-scrollbar-track {
+              background: var(--scrollbarBG);
+            }
+
+            li {
+              margin-bottom: 9px;
+            }
+          }
+
+          &.is-active {
+            &::after {
+              background-position: -121px -221px;
+            }
+          }
+
+          a {
+            display: block;
+            padding: 9px 0;
+            position: relative;
+            z-index: 2;
+          }
+
+          input[type="checkbox"] {
+            width: 15px;
+            height: 17px;
+            cursor: pointer;
+            position: relative;
+            top: 2px;
+            margin: 0;
+            padding-right: 25px;
+            background-repeat: no-repeat;
+            -webkit-appearance: none;
+            background-size: 20px 20px;
+            background: transparent url("assets/images/cosmedoc.svg") no-repeat -5px -370px;
+
+            &:checked {
+              background-position: -35px -370px;
+            }
+          }
+
+          label {
+            display: inline-block;
+            cursor: pointer;
+
+            .count {
+              color: #c7c6c4;
+            }
+          }
+        }
+      }
+    }
+  }
+}

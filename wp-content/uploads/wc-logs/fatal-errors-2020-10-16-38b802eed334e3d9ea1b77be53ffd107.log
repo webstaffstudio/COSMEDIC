@@ -1,0 +1,30 @@
+2020-10-16T13:33:42+00:00 CRITICAL syntax error, unexpected ';', expecting ',' or ')' in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\lib\woo-customizations\woo-filters.php on line 7
+
+2020-10-16T21:18:01+00:00 CRITICAL Error locating /lib/woo-customizations/woo-brands-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:18:01+00:00 CRITICAL Error locating /lib/woo-customizations/woo-brands-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:18:02+00:00 CRITICAL Error locating /lib/woo-customizations/woo-brands-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:18:03+00:00 CRITICAL Error locating /lib/woo-customizations/woo-brands-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:18:03+00:00 CRITICAL Error locating /lib/woo-customizations/woo-brands-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:18:04+00:00 CRITICAL Error locating /lib/woo-customizations/woo-brands-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:19:31+00:00 CRITICAL Error locating /lib/woo-customizations/woo-brands-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:19:32+00:00 CRITICAL Error locating /lib/woo-customizations/woo-brands-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:19:44+00:00 CRITICAL Error locating /lib/woo-customizations/woo-brands-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:19:45+00:00 CRITICAL Error locating /lib/woo-customizations/woo-brands-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:20:04+00:00 CRITICAL Error locating /lib/woo-customizations/woo-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:20:05+00:00 CRITICAL Error locating /lib/woo-customizations/woo-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:20:06+00:00 CRITICAL Error locating /lib/woo-customizations/woo-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+
+2020-10-16T21:20:06+00:00 CRITICAL Error locating /lib/woo-customizations/woo-countries.php for inclusion in D:\OSPanel\domains\cosmedic\wp-content\themes\cosmedoc\functions.php on line 42
+

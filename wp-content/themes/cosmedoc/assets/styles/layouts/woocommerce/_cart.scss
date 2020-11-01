@@ -1,0 +1,725 @@
+/* stylelint-disable */
+.gift-label {
+  color: #e88565;
+}
+
+.gift-count {
+  display: inline-block;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.gift-label {
+  color: #e88565;
+}
+
+.woocommerce-cart {
+  .cart-title {
+    text-align: center;
+    border-bottom: none;
+    padding: 60px 0;
+    font-size: 18px !important;
+  }
+
+  @include breakpoint(770px down) {
+    .cart-title {
+      padding: 0;
+      margin-bottom: 15px;
+      font-size: 14px !important;
+    }
+  }
+
+  .cart-sidebar {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 0 15px 10px;
+
+    .checkout-button {
+      width: 100%;
+    }
+
+    .cart-subtotal {
+      display: flex;
+      justify-content: space-between;
+      opacity: 0.4;
+      font-size: 14px;
+    }
+
+    .order-total {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+
+      strong {
+        font-weight: normal;
+      }
+    }
+
+    .accordion {
+      margin: 0 auto 26px !important;
+      max-width: 970px;
+      width: 100%;
+      background-color: transparent;
+
+      &__item {
+        font-size: 14px;
+        position: relative;
+        z-index: 0;
+        outline: none;
+
+        &.coupon {
+          border-bottom: 1px solid #363636;
+
+          > a {
+            position: relative;
+            padding-left: 30px;
+
+            &::before {
+              content: " ";
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              position: absolute;
+              top: 50%;
+              left: 3px;
+              transform: translateY(-50%);
+              vertical-align: middle;
+              background-image: url("images/cosmedoc.svg");
+              background-color: transparent;
+              background-repeat: no-repeat;
+              background-position: -158px -238px;
+            }
+          }
+        }
+
+        &.gift-cart {
+          .accordion__item--content .input-text {
+            border-color: #89937a;
+            border-radius: 3px;
+            height: 40px;
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 14px;
+            line-height: 40px;
+            margin-right: 10px;
+          }
+
+          .cosmedoc-btn {
+            width: 100%;
+          }
+
+          > a {
+            position: relative;
+            padding-left: 30px;
+
+            &::before {
+              content: " ";
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              position: absolute;
+              top: 50%;
+              left: 3px;
+              transform: translateY(-50%);
+              vertical-align: middle;
+              background-image: url("images/cosmedoc.svg");
+              background-color: transparent;
+              background-repeat: no-repeat;
+              background-position: -125px -183px;
+            }
+          }
+        }
+
+        &.is-active {
+          a::after {
+            transform: rotate(180deg);
+          }
+        }
+
+        &--title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          pointer-events: initial;
+          font-size: 14px;
+          padding: 14px 3px;
+
+          &::after {
+            content: "";
+            background-image: url("assets/images/select-arrow.svg");
+            width: 14px;
+            height: 14px;
+            display: inline-flex;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 5px;
+            transition: 0.3s ease-in-out;
+          }
+        }
+
+        &--content {
+          font-size: 14px;
+          line-height: 24px;
+          max-width: 780px;
+          padding: 0 0 36px;
+          margin: 0 auto;
+
+          > label {
+            font-size: 14px;
+            font-weight: normal;
+            text-align: left;
+            width: 100%;
+            display: inline-block;
+            text-transform: none;
+          }
+
+          .wrapper {
+            display: flex;
+
+            > input {
+              border-color: #89937a;
+              border-radius: 3px;
+              height: 40px;
+              width: 100%;
+              display: inline-block;
+              vertical-align: top;
+              font-size: 14px;
+              line-height: 40px;
+              margin-right: 10px;
+              margin-bottom: 0;
+            }
+
+            .cosmedoc-button {
+              background-color: #89937a;
+              display: inline-block;
+              color: #fff;
+              font-size: 11px;
+              font-weight: normal;
+              letter-spacing: 1.5px;
+              line-height: 38px;
+              border-radius: 3px;
+              border: 1px solid transparent;
+              text-align: center;
+              text-transform: uppercase;
+              vertical-align: middle;
+              white-space: nowrap;
+              transition: 0.3s ease;
+              cursor: pointer;
+              width: 50px;
+              height: 40px;
+
+              &:hover {
+                background-color: transparent !important;
+                color: #000 !important;
+                border-color: #000 !important;
+              }
+            }
+          }
+
+          a {
+            color: #c26b6a;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .woocommerce-cart-form {
+    margin-bottom: 30px;
+
+    .product-attr {
+      a,
+      span {
+        pointer-events: none;
+        color: #c7c6c4 !important;
+      }
+
+      @include breakpoint(770px down) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &.grid-container {
+      @include breakpoint(770px down) {
+        padding: 0 !important;
+      }
+    }
+
+    .cross-sells {
+      &-title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 18px !important;
+        font-weight: normal;
+        margin-bottom: 0;
+        padding: 10px 0 50px;
+
+        @include breakpoint(770px down) {
+          font-size: 14px !important;
+          line-height: 1;
+          margin-bottom: 0;
+          padding-bottom: 30px;
+        }
+      }
+
+      .cart-cross-sells {
+        margin: 0 auto 50px;
+        padding: 0 0 40px;
+        border-bottom: 1px solid #000;
+
+        .brand,
+        .price {
+          display: inline-block;
+        }
+
+        .bottom-labels {
+          left: 12px;
+          right: 4px;
+        }
+
+        .product-label {
+          font-size: 8px;
+          line-height: 1.3;
+        }
+
+        a.button {
+          min-width: 0 !important;
+        }
+
+        .slick-dots {
+          bottom: 35px;
+
+          > li {
+            height: 10px;
+            width: 10px;
+            margin: 0 4px;
+          }
+        }
+
+        /* the slides */
+        .slick-slide {
+          margin: 0 5px;
+        }
+
+        /* the parent */
+        .slick-list {
+          margin: 0 -5px;
+        }
+      }
+    }
+
+    .gift-note {
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      padding: 40px 0;
+      text-transform: uppercase;
+      line-height: 30px;
+      margin: 0 auto 40px;
+      background: #e88565;
+      border-radius: 5px;
+
+      @include breakpoint(770px down) {
+        margin: 0 auto 20px;
+      }
+
+      > p {
+        margin: 0 auto 20px;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        text-transform: uppercase;
+        line-height: 30px;
+
+        @include breakpoint(770px down) {
+          font-size: 14px;
+          line-height: 1.3;
+        }
+      }
+
+      .cosmedoc-white {
+        background: #fff;
+        color: #363636;
+        border-color: #fff;
+        min-width: 210px;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: normal;
+        letter-spacing: 1.5px;
+        line-height: 38px;
+        border-radius: 3px;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: middle;
+        white-space: nowrap;
+        transition: 0.3s ease;
+        height: 40px;
+
+        @include breakpoint(770px down) {
+          font-size: 9px;
+        }
+      }
+    }
+
+    .gift-products {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #000;
+      border-top: 1px solid #000;
+      text-align: center;
+
+      .gift-heading {
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 30px;
+        padding: 35px 0;
+        margin-bottom: 0;
+      }
+
+      &-wrapper {
+        max-width: 210px;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+      }
+
+      &-slider {
+        width: 100%;
+        height: 100%;
+
+        .slick-arrow {
+          top: 244px;
+          background-image: url("images/cosmedoc.svg");
+          background-repeat: no-repeat;
+          background-size: auto;
+          background-color: #fff;
+          border: 1px solid #000;
+          border-radius: 3px;
+          width: 40px;
+          height: 40px;
+          z-index: 89;
+          transition: background-color 0.3s ease-in-out;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+            transition: background-color 0.3s ease-in-out;
+          }
+
+          &::before {
+            content: none;
+          }
+        }
+
+        .slick-prev {
+          left: 0;
+          background-position: -27px -230px;
+        }
+
+        .slick-next {
+          background-position: 9px -230px;
+          right: 0;
+        }
+      }
+
+      &__item {
+        .img-box {
+          position: relative;
+          z-index: 0;
+          border: 1px solid #000;
+          border-radius: 5px;
+          padding: 5px;
+          margin-bottom: 14px;
+          height: 210px;
+
+          .mask {
+            content: " ";
+            background: rgba(0, 0, 0, 0.04);
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            position: absolute;
+            border-radius: 5px;
+            border: 5px solid #fff;
+          }
+        }
+
+        .info {
+          .brand {
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: #c7c6c4;
+
+            @include breakpoint(770px down) {
+              font-size: 12px;
+            }
+          }
+
+          .item-name {
+            font-size: 14px !important;
+            line-height: 20px;
+            margin-bottom: 0.5em;
+
+            @include breakpoint(770px down) {
+              font-size: 12px !important;
+              line-height: 1.3;
+            }
+          }
+        }
+
+        .cosmedoc-btn-gift {
+          border: 1px solid #000;
+          background-color: transparent;
+          color: #000;
+          display: inline-block;
+          font-size: 11px;
+          font-weight: normal;
+          line-height: 38px;
+          border-radius: 3px;
+          text-align: center;
+          text-transform: uppercase;
+          vertical-align: middle;
+          white-space: nowrap;
+          transition: 0.3s ease;
+          height: 40px;
+          width: 120px;
+          cursor: pointer;
+          margin-bottom: 30px;
+
+          &.checked {
+            background-color: #89937a;
+            border-color: #89937a;
+            color: #fff;
+            cursor: not-allowed;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+
+          &:hover {
+            opacity: 0.5;
+            transition: 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+
+  .cross-sells {
+    padding-right: 20px !important;
+
+    @include breakpoint(medium down) {
+      padding-right: 0 !important;
+    }
+  }
+
+  .shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents,
+  .gift-products,
+  .gift-note {
+    margin-right: 20px !important;
+
+    @include breakpoint(medium down) {
+      margin-right: 0 !important;
+    }
+  }
+
+  .woocommerce-cart-form__cart-item.cart_item {
+    display: flex;
+    border-top: 1px solid #363636;
+    background-color: transparent;
+    padding: 38px 0;
+    font-size: 14px;
+    line-height: 20px;
+    justify-content: space-between;
+
+    @include breakpoint(770px down) {
+      padding-left: 120px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      position: relative;
+      flex-direction: column;
+
+      .product-thumbnail {
+        position: absolute;
+        top: 20px;
+        left: 0;
+      }
+    }
+
+    @include breakpoint(570px down) {
+      padding-right: 20px;
+    }
+
+    .product-thumbnail {
+      padding-right: 15px;
+
+      img {
+        max-width: 104px;
+        width: 100%;
+      }
+    }
+
+    .product-price,
+    .product-subtotal,
+    .product-thumbnail {
+      min-width: 120px;
+    }
+
+    @include breakpoint(770px down) {
+      .product-price {
+        display: none;
+      }
+    }
+
+    .product-price,
+    .product-subtotal {
+      padding: 0 15px;
+
+      @include breakpoint(770px down) {
+        padding: 0;
+      }
+    }
+
+    .product-quantity {
+      .qty-label {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 16px;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+    }
+
+    .quantity__wrapp {
+      margin: 0;
+    }
+
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      padding: 0 15px;
+      max-width: 233px;
+      width: 100%;
+
+      @include breakpoint(770px down) {
+        max-width: 400px;
+        padding: 0;
+
+        .product-name {
+          margin-bottom: 9px;
+        }
+
+        .product-remove {
+          position: absolute;
+          right: 0;
+          top: 15px;
+          background-image: url("images/cosmedoc.svg");
+          background-position: -1px -182px;
+          border: none;
+          width: 20px;
+          height: 20px;
+
+          > a {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            position: absolute;
+            text-indent: -9999999px;
+            top: 0;
+            left: 0;
+            border: 0;
+          }
+        }
+      }
+
+      a {
+        color: #363636;
+        font-size: 14px;
+      }
+    }
+
+    .product-remove {
+      padding-top: 20px;
+
+      > a {
+        border-bottom: 1px solid #363636;
+        border-radius: 0;
+        color: #363636 !important;
+        display: inline-block;
+        height: auto;
+        width: auto;
+        font-weight: normal;
+
+        &:hover {
+          color: #363636 !important;
+          background: transparent !important;
+        }
+      }
+    }
+
+    @include breakpoint(medium down) {
+      margin-right: 0;
+    }
+  }
+
+  @include breakpoint(770px down) {
+    .woocommerce .products .product .brands a,
+    .woocommerce .products .product .woocommerce-loop-product__title {
+      font-size: 12px !important;
+      line-height: 1.3;
+    }
+
+    .woocommerce ul.products li.product .price {
+      font-size: 14px !important;
+      line-height: 1.3;
+    }
+
+    .cart-sidebar {
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .woocommerce-cart-form {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include breakpoint(770px down) {
+  [data-aos="un-sticky"] {
+    opacity: 1;
+    transition-property: opacity;
+
+    &.aos-animate {
+      opacity: 0;
+    }
+  }
+
+  .mobile-proceed-to-checkout {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 96;
+    box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.15);
+    background: #fff;
+    padding: 15px 10px;
+    text-align: center;
+
+    > a {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+  }
+}

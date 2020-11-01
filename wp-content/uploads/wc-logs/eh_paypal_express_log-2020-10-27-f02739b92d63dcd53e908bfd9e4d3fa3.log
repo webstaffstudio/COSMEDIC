@@ -1,0 +1,233 @@
+2020-10-27T22:48:23+00:00 DEBUG <------------------- ExtensionHawk PayPal Express Payment ( Setting Express Checkout ) ------------------->
+stdClass Object
+(
+    [METHOD] => SetExpressCheckout
+    [RETURNURL] => http://cosmedoc.local/wc-api/Eh_PayPal_Express_Payment/?c=express_details&p=http://cosmedoc.local/oformlenie-pokupki/
+    [CANCELURL] => http://cosmedoc.local/oformlenie-pokupki/?cancel_express_checkout=cancel
+    [ADDROVERRIDE] => 
+    [BRANDNAME] => Cosmedoc
+    [HDRIMG] => 
+    [LOGOIMG] => 
+    [SOLUTIONTYPE] => Sole
+    [CUSTOMERSERVICENUMBER] => 
+    [LOCALECODE] => en_US
+    [LANDINGPAGE] => Billing
+    [L_PAYMENTREQUEST_0_NAME0] => Интенсивная разглаживающая и укрепляющая сыворотка для глаз
+    [L_PAYMENTREQUEST_0_DESC0] => 
+    [L_PAYMENTREQUEST_0_AMT0] => 8400
+    [L_PAYMENTREQUEST_0_QTY0] => 1
+    [L_PAYMENTREQUEST_0_ITEMURL0] => http://cosmedoc.local/product/intensivnaya-razglazhivayushhaya-i-ukreplyayushhaya-syvorotka-dlya-glaz/
+    [L_PAYMENTREQUEST_0_NAME1] => Консилер 20spf Light
+    [L_PAYMENTREQUEST_0_DESC1] => 
+    [L_PAYMENTREQUEST_0_AMT1] => 4240
+    [L_PAYMENTREQUEST_0_QTY1] => 1
+    [L_PAYMENTREQUEST_0_ITEMURL1] => http://cosmedoc.local/product/konsiler-20spf-light/
+    [PAYMENTREQUEST_0_AMT] => 12640
+    [PAYMENTREQUEST_0_CURRENCYCODE] => RUB
+    [PAYMENTREQUEST_0_ITEMAMT] => 12640
+    [PAYMENTREQUEST_0_SHIPPINGAMT] => 0
+    [PAYMENTREQUEST_0_TAXAMT] => 0
+    [PAYMENTREQUEST_0_PAYMENTACTION] => Sale
+    [MAXAMT] => 22120
+    [PAYMENTREQUEST_0_SHIPTONAME] => Aleks Piven 
+    [PAYMENTREQUEST_0_SHIPTOSTREET] => ttt
+    [PAYMENTREQUEST_0_SHIPTOSTREET2] => 
+    [PAYMENTREQUEST_0_SHIPTOCITY] => gdfgdfg
+    [PAYMENTREQUEST_0_SHIPTOSTATE] => 
+    [PAYMENTREQUEST_0_SHIPTOZIP] => 44444
+    [PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE] => IL
+    [PAYMENTREQUEST_0_SHIPTOPHONENUM] => 546456456
+    [PAYMENTREQUEST_0_NOTETEXT] => 
+    [PAYMENTREQUEST_0_EMAIL] => alekspvn25@gmail.com
+    [PAYMENTREQUEST_0_PAYMENTREQUESTID] => 299
+    [PAYMENTREQUEST_0_NOTIFYURL] => 
+)
+
+2020-10-27T22:48:25+00:00 DEBUG <------------------- ExtensionHawk PayPal Express Payment ( Response on Express Start/Credit Start ) ------------------->
+stdClass Object
+(
+    [TIMESTAMP] => 2020-10-27T22:48:24Z
+    [CORRELATIONID] => b6b7a7717426
+    [ACK] => Failure
+    [BUILD] => 55009056
+    [L_ERRORCODE0] => 10002
+    [L_SHORTMESSAGE0] => Security error
+    [L_LONGMESSAGE0] => Security header is not valid
+    [L_SEVERITYCODE0] => Error
+)
+
+2020-10-27T22:48:32+00:00 DEBUG <------------------- ExtensionHawk PayPal Express Payment ( Setting Express Checkout ) ------------------->
+stdClass Object
+(
+    [METHOD] => SetExpressCheckout
+    [RETURNURL] => http://cosmedoc.local/wc-api/Eh_PayPal_Express_Payment/?c=express_details&p=http://cosmedoc.local/cart/
+    [CANCELURL] => http://cosmedoc.local/cart/?cancel_express_checkout=cancel
+    [ADDROVERRIDE] => 
+    [BRANDNAME] => Cosmedoc
+    [HDRIMG] => 
+    [LOGOIMG] => 
+    [SOLUTIONTYPE] => Sole
+    [CUSTOMERSERVICENUMBER] => 
+    [LOCALECODE] => en_US
+    [USERSELECTEDFUNDINGSOURCE] => CreditCard
+    [LANDINGPAGE] => Billing
+    [L_PAYMENTREQUEST_0_NAME0] => Интенсивная разглаживающая и укрепляющая сыворотка для глаз
+    [L_PAYMENTREQUEST_0_DESC0] => 
+    [L_PAYMENTREQUEST_0_AMT0] => 8400
+    [L_PAYMENTREQUEST_0_QTY0] => 1
+    [L_PAYMENTREQUEST_0_ITEMURL0] => http://cosmedoc.local/product/intensivnaya-razglazhivayushhaya-i-ukreplyayushhaya-syvorotka-dlya-glaz/
+    [L_PAYMENTREQUEST_0_NAME1] => Консилер 20spf Light
+    [L_PAYMENTREQUEST_0_DESC1] => 
+    [L_PAYMENTREQUEST_0_AMT1] => 4240
+    [L_PAYMENTREQUEST_0_QTY1] => 1
+    [L_PAYMENTREQUEST_0_ITEMURL1] => http://cosmedoc.local/product/konsiler-20spf-light/
+    [PAYMENTREQUEST_0_AMT] => 12640
+    [PAYMENTREQUEST_0_CURRENCYCODE] => RUB
+    [PAYMENTREQUEST_0_ITEMAMT] => 12640
+    [PAYMENTREQUEST_0_SHIPPINGAMT] => 0
+    [PAYMENTREQUEST_0_TAXAMT] => 0
+    [PAYMENTREQUEST_0_PAYMENTACTION] => Sale
+    [MAXAMT] => 22120
+    [PAYMENTREQUEST_0_SHIPTONAME] => Aleks Piven 
+    [PAYMENTREQUEST_0_SHIPTOSTREET] => ttt
+    [PAYMENTREQUEST_0_SHIPTOSTREET2] => 
+    [PAYMENTREQUEST_0_SHIPTOCITY] => gdfgdfg
+    [PAYMENTREQUEST_0_SHIPTOSTATE] => 
+    [PAYMENTREQUEST_0_SHIPTOZIP] => 44444
+    [PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE] => IL
+    [PAYMENTREQUEST_0_SHIPTOPHONENUM] => 546456456
+    [PAYMENTREQUEST_0_NOTETEXT] => 
+    [PAYMENTREQUEST_0_EMAIL] => alekspvn25@gmail.com
+    [PAYMENTREQUEST_0_PAYMENTREQUESTID] => 300
+    [PAYMENTREQUEST_0_NOTIFYURL] => 
+)
+
+2020-10-27T22:48:34+00:00 DEBUG <------------------- ExtensionHawk PayPal Express Payment ( Response on Express Start/Credit Start ) ------------------->
+stdClass Object
+(
+    [TIMESTAMP] => 2020-10-27T22:48:34Z
+    [CORRELATIONID] => 9385e990e261e
+    [ACK] => Failure
+    [BUILD] => 55009056
+    [L_ERRORCODE0] => 10002
+    [L_SHORTMESSAGE0] => Security error
+    [L_LONGMESSAGE0] => Security header is not valid
+    [L_SEVERITYCODE0] => Error
+)
+
+2020-10-27T22:48:40+00:00 DEBUG <------------------- ExtensionHawk PayPal Express Payment ( Setting Express Checkout ) ------------------->
+stdClass Object
+(
+    [METHOD] => SetExpressCheckout
+    [RETURNURL] => http://cosmedoc.local/wc-api/Eh_PayPal_Express_Payment/?c=express_details&p=http://cosmedoc.local/cart/
+    [CANCELURL] => http://cosmedoc.local/cart/?cancel_express_checkout=cancel
+    [ADDROVERRIDE] => 
+    [BRANDNAME] => Cosmedoc
+    [HDRIMG] => 
+    [LOGOIMG] => 
+    [SOLUTIONTYPE] => Sole
+    [CUSTOMERSERVICENUMBER] => 
+    [LOCALECODE] => en_US
+    [LANDINGPAGE] => Billing
+    [L_PAYMENTREQUEST_0_NAME0] => Интенсивная разглаживающая и укрепляющая сыворотка для глаз
+    [L_PAYMENTREQUEST_0_DESC0] => 
+    [L_PAYMENTREQUEST_0_AMT0] => 8400
+    [L_PAYMENTREQUEST_0_QTY0] => 1
+    [L_PAYMENTREQUEST_0_ITEMURL0] => http://cosmedoc.local/product/intensivnaya-razglazhivayushhaya-i-ukreplyayushhaya-syvorotka-dlya-glaz/
+    [L_PAYMENTREQUEST_0_NAME1] => Консилер 20spf Light
+    [L_PAYMENTREQUEST_0_DESC1] => 
+    [L_PAYMENTREQUEST_0_AMT1] => 4240
+    [L_PAYMENTREQUEST_0_QTY1] => 1
+    [L_PAYMENTREQUEST_0_ITEMURL1] => http://cosmedoc.local/product/konsiler-20spf-light/
+    [PAYMENTREQUEST_0_AMT] => 12640
+    [PAYMENTREQUEST_0_CURRENCYCODE] => RUB
+    [PAYMENTREQUEST_0_ITEMAMT] => 12640
+    [PAYMENTREQUEST_0_SHIPPINGAMT] => 0
+    [PAYMENTREQUEST_0_TAXAMT] => 0
+    [PAYMENTREQUEST_0_PAYMENTACTION] => Sale
+    [MAXAMT] => 22120
+    [PAYMENTREQUEST_0_SHIPTONAME] => Aleks Piven 
+    [PAYMENTREQUEST_0_SHIPTOSTREET] => ttt
+    [PAYMENTREQUEST_0_SHIPTOSTREET2] => 
+    [PAYMENTREQUEST_0_SHIPTOCITY] => gdfgdfg
+    [PAYMENTREQUEST_0_SHIPTOSTATE] => 
+    [PAYMENTREQUEST_0_SHIPTOZIP] => 44444
+    [PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE] => IL
+    [PAYMENTREQUEST_0_SHIPTOPHONENUM] => 546456456
+    [PAYMENTREQUEST_0_NOTETEXT] => 
+    [PAYMENTREQUEST_0_EMAIL] => alekspvn25@gmail.com
+    [PAYMENTREQUEST_0_PAYMENTREQUESTID] => 301
+    [PAYMENTREQUEST_0_NOTIFYURL] => 
+)
+
+2020-10-27T22:48:41+00:00 DEBUG <------------------- ExtensionHawk PayPal Express Payment ( Response on Express Start/Credit Start ) ------------------->
+stdClass Object
+(
+    [TIMESTAMP] => 2020-10-27T22:48:41Z
+    [CORRELATIONID] => 44b6816c4c103
+    [ACK] => Failure
+    [BUILD] => 55009056
+    [L_ERRORCODE0] => 10002
+    [L_SHORTMESSAGE0] => Security error
+    [L_LONGMESSAGE0] => Security header is not valid
+    [L_SEVERITYCODE0] => Error
+)
+
+2020-10-27T22:48:57+00:00 DEBUG <------------------- ExtensionHawk PayPal Express Payment ( Setting Express Checkout ) ------------------->
+stdClass Object
+(
+    [METHOD] => SetExpressCheckout
+    [RETURNURL] => http://cosmedoc.local/wc-api/Eh_PayPal_Express_Payment/?c=express_details&p=http://cosmedoc.local/oformlenie-pokupki/
+    [CANCELURL] => http://cosmedoc.local/oformlenie-pokupki/?cancel_express_checkout=cancel
+    [ADDROVERRIDE] => 
+    [BRANDNAME] => Cosmedoc
+    [HDRIMG] => 
+    [LOGOIMG] => 
+    [SOLUTIONTYPE] => Sole
+    [CUSTOMERSERVICENUMBER] => 
+    [LOCALECODE] => en_US
+    [LANDINGPAGE] => Billing
+    [L_PAYMENTREQUEST_0_NAME0] => Интенсивная разглаживающая и укрепляющая сыворотка для глаз
+    [L_PAYMENTREQUEST_0_DESC0] => 
+    [L_PAYMENTREQUEST_0_AMT0] => 8400
+    [L_PAYMENTREQUEST_0_QTY0] => 1
+    [L_PAYMENTREQUEST_0_ITEMURL0] => http://cosmedoc.local/product/intensivnaya-razglazhivayushhaya-i-ukreplyayushhaya-syvorotka-dlya-glaz/
+    [L_PAYMENTREQUEST_0_NAME1] => Консилер 20spf Light
+    [L_PAYMENTREQUEST_0_DESC1] => 
+    [L_PAYMENTREQUEST_0_AMT1] => 4240
+    [L_PAYMENTREQUEST_0_QTY1] => 1
+    [L_PAYMENTREQUEST_0_ITEMURL1] => http://cosmedoc.local/product/konsiler-20spf-light/
+    [PAYMENTREQUEST_0_AMT] => 12640
+    [PAYMENTREQUEST_0_CURRENCYCODE] => RUB
+    [PAYMENTREQUEST_0_ITEMAMT] => 12640
+    [PAYMENTREQUEST_0_SHIPPINGAMT] => 0
+    [PAYMENTREQUEST_0_TAXAMT] => 0
+    [PAYMENTREQUEST_0_PAYMENTACTION] => Sale
+    [MAXAMT] => 22120
+    [PAYMENTREQUEST_0_SHIPTONAME] => Aleks Piven
+    [PAYMENTREQUEST_0_SHIPTOSTREET] => ttt
+    [PAYMENTREQUEST_0_SHIPTOSTREET2] => 
+    [PAYMENTREQUEST_0_SHIPTOCITY] => gdfgdfg
+    [PAYMENTREQUEST_0_SHIPTOSTATE] => 
+    [PAYMENTREQUEST_0_SHIPTOZIP] => 44444
+    [PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE] => IL
+    [PAYMENTREQUEST_0_SHIPTOPHONENUM] => 546456456
+    [PAYMENTREQUEST_0_NOTETEXT] => 
+    [PAYMENTREQUEST_0_EMAIL] => alekspvn25@gmail.com
+    [PAYMENTREQUEST_0_PAYMENTREQUESTID] => 302
+    [PAYMENTREQUEST_0_NOTIFYURL] => 
+)
+
+2020-10-27T22:48:58+00:00 DEBUG <------------------- ExtensionHawk PayPal Express Payment ( Response on Express Start/Credit Start ) ------------------->
+stdClass Object
+(
+    [TIMESTAMP] => 2020-10-27T22:48:58Z
+    [CORRELATIONID] => 8519c61460b4c
+    [ACK] => Failure
+    [BUILD] => 55009056
+    [L_ERRORCODE0] => 10002
+    [L_SHORTMESSAGE0] => Security error
+    [L_LONGMESSAGE0] => Security header is not valid
+    [L_SEVERITYCODE0] => Error
+)
+

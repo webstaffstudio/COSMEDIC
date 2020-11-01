@@ -1,0 +1,23 @@
+.empty-cart {
+  min-height: 300px;
+
+  &-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  p {
+    color: #363636;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  a {
+    border-bottom: 1px solid #000;
+    color: #363636;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
